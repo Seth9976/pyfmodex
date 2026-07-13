@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+	version = "1.0">
+	<Group
+		location = "container:"
+		name = "Plugins">
+		<Group
+			location = "container:"
+			name = "DLLs">
+			<FileRef
+				location = "group:Ak3DAudioBedMixer/Mac/Ak3DAudioBedMixer.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkAudioInput/Mac/AkAudioInput.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkCompressor/Mac/AkCompressor.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkConvolutionReverb/Mac/AkConvolutionReverb.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkCustomPanner/Mac/AkCustomPanner.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkDelay/Mac/AkDelay.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkFlanger/Mac/AkFlanger.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkGain/Mac/AkGain.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkGuitarDistortion/Mac/AkGuitarDistortion.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkHarmonizer/Mac/AkHarmonizer.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkImpacter/Mac/AkImpacter.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkMatrixReverb/Mac/AkMatrixReverb.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkMeter/Mac/AkMeter.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkMotion/Mac/AkMotion.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkParametricEQ/Mac/AkParametricEQ.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkPeakLimiter/Mac/AkPeakLimiter.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkPitchShifter/Mac/AkPitchShifter.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkRecorder/Mac/AkRecorder.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkRecorderADM/Mac/AkRecorderADM.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkReflect/Mac/AkReflect.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkRoomVerb/Mac/AkRoomVerb.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkSidechain/Mac/AkSidechain.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkSilenceGenerator/Mac/AkSilenceGenerator.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkSineTone/Mac/AkSineTone.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkSoundSeedAir/Mac/AkSoundSeedAir.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkSoundSeedGrain/Mac/AkSoundSeedGrain.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkStereoDelay/Mac/AkStereoDelay.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkSynthOne/Mac/AkSynthOne.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkTimeStretch/Mac/AkTimeStretch.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkToneGen/Mac/AkToneGen.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:AkTremolo/Mac/AkTremolo.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:Auro/Mac/Auro.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:MasteringSuite/Mac/MasteringSuite.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:McDSP/Mac/McDSP.xcodeproj">
+			</FileRef>
+			<FileRef
+				location = "group:iZotope/Mac/iZotope.xcodeproj">
+			</FileRef>
+		</Group>
+	</Group>
+	<Group
+		location = "container:"
+		name = "Samples">
+		<FileRef
+			location = "group:AkSoundEngineDLL/Mac/AkSoundEngineDLL.xcodeproj">
+		</FileRef>
+		<FileRef
+			location = "group:DLLDemo/Mac/DLLDemo_Mac.xcodeproj">
+		</FileRef>
+	</Group>
+</Workspace>

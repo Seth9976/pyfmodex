@@ -1,0 +1,1165 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F1B315B71C1E68CEC276350 /* WwiseDirectoryVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2771C5961267E37A6B6A612E /* WwiseDirectoryVisitor.cpp */; };
+		11E19147F8190CED391EEB7C /* WwiseProjectDatabaseLoggingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A52698BC859B455F1402797 /* WwiseProjectDatabaseLoggingUtils.cpp */; };
+		14902263B9770DBC70EFAC21 /* WwiseGeneratedFiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC857D7BBEF86ED2149F63D9 /* WwiseGeneratedFiles.cpp */; };
+		1E234EB76F5DEB2BAC011B97 /* WwiseMetadataDialogue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA564120C5B31FFDCAECF9BD /* WwiseMetadataDialogue.cpp */; };
+		1F1563C1EAF08F07D7947507 /* WwiseMetadataGameParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1AE15E598F3B4ADB1D0EA5C /* WwiseMetadataGameParameter.cpp */; };
+		1FC87752A353A69AAF0123EE /* WwiseRefBus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F153ED45994636CF6ECA0894 /* WwiseRefBus.cpp */; };
+		22A6FD0D767816B201EC4763 /* WwiseRefPluginLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BA22B201AE810723BE42A10 /* WwiseRefPluginLib.cpp */; };
+		22F68E3314E2ED8847E8B8B4 /* WwiseRefPluginShareSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A5C5D2FAFA650386C6A32F /* WwiseRefPluginShareSet.cpp */; };
+		22FD6ED8CCA2FB4F607FECC0 /* WwiseRefSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43EFF79EE148702021AFD4C7 /* WwiseRefSwitch.cpp */; };
+		26D54189D8D9A562839E9343 /* WwiseRefDialogueArgument.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43F0B9A961FE843B1A5571E5 /* WwiseRefDialogueArgument.cpp */; };
+		27E3B52DB9C026A9722FE5A8 /* WwiseMetadataGroupValueReference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC731E46A0107ECFFFCBD010 /* WwiseMetadataGroupValueReference.cpp */; };
+		2C64023A383FE4B5F6382DC4 /* WwiseMetadataPluginLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C73B1B9D816C02446FBDD2 /* WwiseMetadataPluginLib.cpp */; };
+		31AA86408769D841A37AC0B8 /* WwiseRefSwitchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76D95F7FE541B020A7301BF5 /* WwiseRefSwitchGroup.cpp */; };
+		40DA6134384D26A24D3F0C60 /* WwiseMetadataEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D6ABEBA5E16A02BC5AF62 /* WwiseMetadataEvent.cpp */; };
+		421E6D3C2FF1FF2F99B2464F /* WwiseMetadataTrigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E856AC98796223A99C31740A /* WwiseMetadataTrigger.cpp */; };
+		466C1E1B0F5C8E66D06B5B10 /* WwiseMetadataStateGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1A44AD54B6F22F925F20073 /* WwiseMetadataStateGroup.cpp */; };
+		4B53FF30CCBB4D873BC83E8A /* WwiseRefAudioDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 029046C18AD096362449C162 /* WwiseRefAudioDevice.cpp */; };
+		4D628E1FB57CE247531578EB /* WwiseMetadataState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40009D225EDFCEF40BDBF8CF /* WwiseMetadataState.cpp */; };
+		4FAE06AAC72577E4B0D28D2E /* WwiseAnyRef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3A8CB099A3FD54F3D695D95 /* WwiseAnyRef.cpp */; };
+		504C10D806FAC3C9FAB9A82B /* WwiseMetadataPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52BC216AF3F6F6FF82364389 /* WwiseMetadataPlugin.cpp */; };
+		524245B43D13C598FABA6873 /* WwiseRefStateGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7641C8FA37AC6A62FBF7D173 /* WwiseRefStateGroup.cpp */; };
+		560A7FAAC27335E6AF36B7B8 /* WwiseRefPlatformInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F83ADB9D22CE281E746703D /* WwiseRefPlatformInfo.cpp */; };
+		56F5D41D8AB6A07243429CB8 /* WwiseRefEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEFE29FEA4146023203AB50E /* WwiseRefEvent.cpp */; };
+		59AC19550A80066C738B57F6 /* WwiseMetadataBus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9425AA4B03D2D6BF66D5F9 /* WwiseMetadataBus.cpp */; };
+		5AAE1F0DB9BD611A75381580 /* WwiseMetadataProject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B44D72FDF21159E4E7F2CDC /* WwiseMetadataProject.cpp */; };
+		5D35CE1E421C80A14A59E14A /* WwiseRefLanguage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A81849F02EA54741FA90981C /* WwiseRefLanguage.cpp */; };
+		5EC91C069EC46F616B0B1C44 /* WwiseMetadataPluginGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D26FC9D3CDABE426E3AE68D4 /* WwiseMetadataPluginGroup.cpp */; };
+		5F4D8A3724704BBD83E178A5 /* WwiseMetadataLanguage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 705C61F0F2F7127F4A993FD8 /* WwiseMetadataLanguage.cpp */; };
+		5FF450AE6AB39BBF2CDF20AD /* WwiseRefSoundBanksInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D52146FEEA361D09B06971AD /* WwiseRefSoundBanksInfo.cpp */; };
+		63E5EEF6B9D4D777B2938133 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF448693CD872DC4A08E5B2B /* main.cpp */; };
+		7216CF89B4F010FAF2180383 /* WwiseRefPluginInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C5488CC58ADCB19E5FA920 /* WwiseRefPluginInfo.cpp */; };
+		743CF597D32B4356F5A74EB8 /* WwiseMetadataSoundBank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BF245F3D31088933BEFE78F /* WwiseMetadataSoundBank.cpp */; };
+		76B0C5EBCC59AFC641AE910A /* WwiseMetadataPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4046D46F1F37FC4DF9DC657 /* WwiseMetadataPlatform.cpp */; };
+		797318477C17346C01DFCBCC /* WwiseMetadataSwitchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02B07CC8DF2AAD5A9BD2A59E /* WwiseMetadataSwitchGroup.cpp */; };
+		7ECDC1D5119FBFABAE001DEC /* WwiseMetadataSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3A6BFE211168BFFC5872FA6 /* WwiseMetadataSettings.cpp */; };
+		838962FD128338D692D7CF39 /* WwiseProjectDatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10DBBB6EA6054684E9D69DA5 /* WwiseProjectDatabase.cpp */; };
+		87BE352E40505D8DC32A5678 /* WwiseMetadataRootFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D83D58B4020146BD3A1FF686 /* WwiseMetadataRootFile.cpp */; };
+		8A4DFD18B2F69EACD5F1D339 /* WwiseRefMedia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F67CE12CDB7DF63979A15 /* WwiseRefMedia.cpp */; };
+		8FBE67F4DA76F752D530C19B /* WwiseMetadataSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 483314624F396C29C2A05896 /* WwiseMetadataSwitch.cpp */; };
+		907CBD38D07D0C78114BC71F /* WwiseRefSoundBank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01969F7BD29B3FC2BAB47091 /* WwiseRefSoundBank.cpp */; };
+		950DD6CF64D03D42F2C64E6D /* WwiseMetadataPlatformInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C97909EE48612214DA653A7 /* WwiseMetadataPlatformInfo.cpp */; };
+		950F509BFCD6B7A9B9EC586B /* WwiseMetadataLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 059E3722D7EEA3FCA0C3C32C /* WwiseMetadataLoader.cpp */; };
+		9EED4508907039464D946140 /* WwiseRefAcousticTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72A44C3CD144FB8BD93DD75C /* WwiseRefAcousticTexture.cpp */; };
+		A32B9333555669A6AAA2A574 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E11BB6996DDF3592DFDD3 /* stdafx.cpp */; };
+		B4D9A6D5C1EE1ED40E1BAA9E /* WwiseMetadataExternalSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BA100F22CC6BF20C1265692 /* WwiseMetadataExternalSource.cpp */; };
+		B8F35B90D150EDCF3750E07E /* WwiseDataStructure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BE031E27798EFDCCF79DDB /* WwiseDataStructure.cpp */; };
+		B93888759E99952008165499 /* WwiseMetadataActionEntries.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87868A5256010C02EF86CD5B /* WwiseMetadataActionEntries.cpp */; };
+		BC02ED0F85E0BE1D84A89EE3 /* WwiseMetadataLoadable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DD9EF0A579704835452C8E2 /* WwiseMetadataLoadable.cpp */; };
+		C03C7B8D75BD3724DB35AFE9 /* WwiseMetadataPluginInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8AC73ADD6164B056F623962 /* WwiseMetadataPluginInfo.cpp */; };
+		C1B0C572644B7D25AAFCF4CD /* WwiseMetadataAcousticTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4314BE36A91141BBDFF9E3 /* WwiseMetadataAcousticTexture.cpp */; };
+		C2336F202DBAA8D0F5FC3E84 /* WwiseMetadataSwitchContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDFC1BA0B820171616716887 /* WwiseMetadataSwitchContainer.cpp */; };
+		C3052B355C58A415E1AA03A5 /* WwiseMetadataSwitchValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD4C1D12EA4CC0749A7C621A /* WwiseMetadataSwitchValue.cpp */; };
+		C87541D4DFB222BC916EC3A5 /* WwiseRefDialogueEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F84063F81FC108A22EFB060 /* WwiseRefDialogueEvent.cpp */; };
+		C8B529B55CAF032BC6E1DFC5 /* WwiseRefCustomPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18BF3AC838204C02605AA4F7 /* WwiseRefCustomPlugin.cpp */; };
+		C92F09C62536A73F7083534A /* WwiseMetadataRootPaths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82FFDFC4E9675BF3F0D427F4 /* WwiseMetadataRootPaths.cpp */; };
+		C94294F98FE9269A000DC0E4 /* WwiseRefRootFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62F3E4F5D68A9F7A6A6554F5 /* WwiseRefRootFile.cpp */; };
+		C99314A0AF30A5035A884CBE /* WwiseRefSwitchContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF605350A6CF0FC43E78DC4C /* WwiseRefSwitchContainer.cpp */; };
+		CF856E968670513B55333434 /* WwiseMetadataMedia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A802598D90007140821D0B7B /* WwiseMetadataMedia.cpp */; };
+		D3653EFF434FABDD970638A2 /* WwiseRefPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F946F0EF71CF71C894C2B224 /* WwiseRefPlatform.cpp */; };
+		D6B11FA9F9B6EA4FC34A0C77 /* WwiseRefState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C106ECA83C81085BEE4D1D2D /* WwiseRefState.cpp */; };
+		DA8A713A01353C87242DC168 /* WwiseRefTrigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33D3CD50B47E7FC0F344329D /* WwiseRefTrigger.cpp */; };
+		E4ED8974130D36995A078486 /* WwiseRefExternalSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E058E33CF0E271DD29CBC47 /* WwiseRefExternalSource.cpp */; };
+		E6B8FA57BADB400477937048 /* WwiseMetadataProjectInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F327B82D23299C6E508068D /* WwiseMetadataProjectInfo.cpp */; };
+		E91D36B51628986F1F135D14 /* WwiseMetadataBasicReference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C283959D18EC4EED395D631B /* WwiseMetadataBasicReference.cpp */; };
+		EADFA71532A53CA59112B7D0 /* WwiseRefProjectInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01CBB8515CEE2D8A315D7134 /* WwiseRefProjectInfo.cpp */; };
+		F0DA273E53B42D5FB94582FC /* WwiseDatabaseIdentifiers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C42384964607333BB8FB77F /* WwiseDatabaseIdentifiers.cpp */; };
+		F204DD25DCBE56CE6B76D91E /* WwiseRefAuxBus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55BC71A062FD5D680CA185AD /* WwiseRefAuxBus.cpp */; };
+		F2EE8F8BA023BE3E014BD08F /* WwiseProjectDatabaseStandardLogging.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8E9478971EB85D33BE4559B /* WwiseProjectDatabaseStandardLogging.cpp */; };
+		FCA5261F54E674F8C89FF3BA /* WwiseMetadataSoundBanksInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB180468A292DDF116E26601 /* WwiseMetadataSoundBanksInfo.cpp */; };
+		FD7C25D5CEBDA0C945D854D3 /* WwiseRefGameParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C65B34D209A51DF231C916EE /* WwiseRefGameParameter.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00C73B1B9D816C02446FBDD2 /* WwiseMetadataPluginLib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataPluginLib.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPluginLib.cpp; sourceTree = "<group>"; };
+		01969F7BD29B3FC2BAB47091 /* WwiseRefSoundBank.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefSoundBank.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefSoundBank.cpp; sourceTree = "<group>"; };
+		01CBB8515CEE2D8A315D7134 /* WwiseRefProjectInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefProjectInfo.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefProjectInfo.cpp; sourceTree = "<group>"; };
+		02570DEB1E812AAC823B6299 /* WwiseRefAuxBus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefAuxBus.h; path = ../WwiseProjectDatabase/Ref/WwiseRefAuxBus.h; sourceTree = "<group>"; };
+		029046C18AD096362449C162 /* WwiseRefAudioDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefAudioDevice.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefAudioDevice.cpp; sourceTree = "<group>"; };
+		02B07CC8DF2AAD5A9BD2A59E /* WwiseMetadataSwitchGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataSwitchGroup.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSwitchGroup.cpp; sourceTree = "<group>"; };
+		04A5C5D2FAFA650386C6A32F /* WwiseRefPluginShareSet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefPluginShareSet.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefPluginShareSet.cpp; sourceTree = "<group>"; };
+		059E3722D7EEA3FCA0C3C32C /* WwiseMetadataLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataLoader.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataLoader.cpp; sourceTree = "<group>"; };
+		05C5488CC58ADCB19E5FA920 /* WwiseRefPluginInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefPluginInfo.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefPluginInfo.cpp; sourceTree = "<group>"; };
+		06A58D7E63ABBD08D30AF03B /* WwiseDirectoryVisitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseDirectoryVisitor.h; path = ../WwiseProjectDatabase/WwiseDirectoryVisitor.h; sourceTree = "<group>"; };
+		0BF245F3D31088933BEFE78F /* WwiseMetadataSoundBank.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataSoundBank.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSoundBank.cpp; sourceTree = "<group>"; };
+		10DBBB6EA6054684E9D69DA5 /* WwiseProjectDatabase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseProjectDatabase.cpp; path = ../WwiseProjectDatabase.cpp; sourceTree = "<group>"; };
+		10E6F017AD4A4C5B3AF19513 /* WwiseRefDialogueArgument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefDialogueArgument.h; path = ../WwiseProjectDatabase/Ref/WwiseRefDialogueArgument.h; sourceTree = "<group>"; };
+		125338513D7A816942ED54D8 /* WwiseMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMap.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseMap.h; sourceTree = "<group>"; };
+		14F1D55CA32F0D5B62EA4EF8 /* WwiseMetadataStateGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataStateGroup.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataStateGroup.h; sourceTree = "<group>"; };
+		15502ACFBFC348C14880796E /* WwiseMetadataSwitchValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataSwitchValue.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSwitchValue.h; sourceTree = "<group>"; };
+		18BF3AC838204C02605AA4F7 /* WwiseRefCustomPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefCustomPlugin.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefCustomPlugin.cpp; sourceTree = "<group>"; };
+		18F3DAE2464F644D12059576 /* WwiseStandardPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardPair.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardPair.h; sourceTree = "<group>"; };
+		19F3560CA8B5EB9033533319 /* WwiseProjectDatabaseLoggingUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseProjectDatabaseLoggingUtils.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseProjectDatabaseLoggingUtils.h; sourceTree = "<group>"; };
+		1C42384964607333BB8FB77F /* WwiseDatabaseIdentifiers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseDatabaseIdentifiers.cpp; path = ../WwiseProjectDatabase/WwiseDatabaseIdentifiers.cpp; sourceTree = "<group>"; };
+		1D51585ED278527CDF8F3F93 /* WwiseFuture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseFuture.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseFuture.h; sourceTree = "<group>"; };
+		242B23D2D1C2FFBDE1EC77E4 /* WwiseJsonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseJsonObject.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseJsonObject.h; sourceTree = "<group>"; };
+		24F526C69327D8A0C76C9A73 /* WwiseMetadataSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataSwitch.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSwitch.h; sourceTree = "<group>"; };
+		252948099A4CA6C966DFE781 /* WwiseRefState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefState.h; path = ../WwiseProjectDatabase/Ref/WwiseRefState.h; sourceTree = "<group>"; };
+		263C05DB6CC151B15DE84481 /* WwiseStandardGuid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardGuid.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardGuid.h; sourceTree = "<group>"; };
+		26F3AF531FDDDD7BEBBADF17 /* WwiseRefProjectInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefProjectInfo.h; path = ../WwiseProjectDatabase/Ref/WwiseRefProjectInfo.h; sourceTree = "<group>"; };
+		2767E879EE25193F5AEF3173 /* WwiseStandardTuple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardTuple.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardTuple.h; sourceTree = "<group>"; };
+		2771C5961267E37A6B6A612E /* WwiseDirectoryVisitor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseDirectoryVisitor.cpp; path = ../WwiseProjectDatabase/WwiseDirectoryVisitor.cpp; sourceTree = "<group>"; };
+		28224AF97C8177DCD6122C58 /* WwiseRefStateGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefStateGroup.h; path = ../WwiseProjectDatabase/Ref/WwiseRefStateGroup.h; sourceTree = "<group>"; };
+		2852771EA10FF70B13453C28 /* WwiseDataTypesAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseDataTypesAdapter.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseDataTypesAdapter.h; sourceTree = "<group>"; };
+		2AFED5C7B11C1FA5CECA205C /* WwiseMetadataSoundBank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataSoundBank.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSoundBank.h; sourceTree = "<group>"; };
+		2B926C1E54F2C324D96E0121 /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stdafx.h; path = ../stdafx.h; sourceTree = "<group>"; };
+		2C2DFCCC2FC12C10EE16BCE6 /* WwiseRefEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefEvent.h; path = ../WwiseProjectDatabase/Ref/WwiseRefEvent.h; sourceTree = "<group>"; };
+		2DD9EF0A579704835452C8E2 /* WwiseMetadataLoadable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataLoadable.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataLoadable.cpp; sourceTree = "<group>"; };
+		2E058E33CF0E271DD29CBC47 /* WwiseRefExternalSource.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefExternalSource.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefExternalSource.cpp; sourceTree = "<group>"; };
+		2E88DC54CDEA3EFA9B21DD10 /* WwiseRefType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefType.h; path = ../WwiseProjectDatabase/Ref/WwiseRefType.h; sourceTree = "<group>"; };
+		2F3FD766F6884DCF5C6FC092 /* WwiseProjectDatabaseIntegrationTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = WwiseProjectDatabaseIntegrationTests; path = WwiseProjectDatabaseIntegrationTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F83ADB9D22CE281E746703D /* WwiseRefPlatformInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefPlatformInfo.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefPlatformInfo.cpp; sourceTree = "<group>"; };
+		2FD766C0D1E4936EEC5EC76B /* WwiseMetadataGroupValueReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataGroupValueReference.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataGroupValueReference.h; sourceTree = "<group>"; };
+		308227CEE7827C5DFE80A92E /* WwiseStandardArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardArray.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardArray.h; sourceTree = "<group>"; };
+		30C3DAF3887A607CF2D6A333 /* WwiseMultiMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMultiMap.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseMultiMap.h; sourceTree = "<group>"; };
+		31C03B80B3F37EE792E4FB78 /* WwiseMetadataCollections.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataCollections.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataCollections.h; sourceTree = "<group>"; };
+		32BE031E27798EFDCCF79DDB /* WwiseDataStructure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseDataStructure.cpp; path = ../WwiseProjectDatabase/WwiseDataStructure.cpp; sourceTree = "<group>"; };
+		32D62AD31FC43D16483F8FFF /* WwiseTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseTask.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseTask.h; sourceTree = "<group>"; };
+		32EBA032994B2DD74F406DDF /* WwiseString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseString.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseString.h; sourceTree = "<group>"; };
+		33D3CD50B47E7FC0F344329D /* WwiseRefTrigger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefTrigger.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefTrigger.cpp; sourceTree = "<group>"; };
+		35EBEE49BCCABD8882ED8204 /* WwiseMetadataProject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataProject.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataProject.h; sourceTree = "<group>"; };
+		3764112979E28EC18024471B /* WwiseWrapperTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseWrapperTypes.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseWrapperTypes.h; sourceTree = "<group>"; };
+		3A52698BC859B455F1402797 /* WwiseProjectDatabaseLoggingUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseProjectDatabaseLoggingUtils.cpp; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseProjectDatabaseLoggingUtils.cpp; sourceTree = "<group>"; };
+		3B96D03AAAD92E5343360D36 /* WwiseMetadataPluginLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataPluginLib.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPluginLib.h; sourceTree = "<group>"; };
+		3C1E11BB6996DDF3592DFDD3 /* stdafx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stdafx.cpp; path = ../stdafx.cpp; sourceTree = "<group>"; };
+		3C9909305B858EA3B4C85BE3 /* WwiseMetadataSwitchContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataSwitchContainer.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSwitchContainer.h; sourceTree = "<group>"; };
+		40009D225EDFCEF40BDBF8CF /* WwiseMetadataState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataState.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataState.cpp; sourceTree = "<group>"; };
+		43EFF79EE148702021AFD4C7 /* WwiseRefSwitch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefSwitch.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefSwitch.cpp; sourceTree = "<group>"; };
+		43F0B9A961FE843B1A5571E5 /* WwiseRefDialogueArgument.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefDialogueArgument.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefDialogueArgument.cpp; sourceTree = "<group>"; };
+		46365EFE9E7A3EB4BA3E03EB /* WwiseRefBus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefBus.h; path = ../WwiseProjectDatabase/Ref/WwiseRefBus.h; sourceTree = "<group>"; };
+		46DFE8E468F4ECDC0367DFD2 /* WwiseMetadataEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataEvent.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataEvent.h; sourceTree = "<group>"; };
+		482433B5FE0C89CDDB2941F3 /* WwiseTuple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseTuple.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseTuple.h; sourceTree = "<group>"; };
+		483314624F396C29C2A05896 /* WwiseMetadataSwitch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataSwitch.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSwitch.cpp; sourceTree = "<group>"; };
+		4C1F67CE12CDB7DF63979A15 /* WwiseRefMedia.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefMedia.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefMedia.cpp; sourceTree = "<group>"; };
+		4F327B82D23299C6E508068D /* WwiseMetadataProjectInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataProjectInfo.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataProjectInfo.cpp; sourceTree = "<group>"; };
+		4FD4214969A1DFD24EEDFE5E /* WwiseRefGameParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefGameParameter.h; path = ../WwiseProjectDatabase/Ref/WwiseRefGameParameter.h; sourceTree = "<group>"; };
+		5069A0032CB12AE160CF0F29 /* WwiseRefLanguage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefLanguage.h; path = ../WwiseProjectDatabase/Ref/WwiseRefLanguage.h; sourceTree = "<group>"; };
+		511566FDB8420C8DB22B4CF1 /* WwiseDataStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseDataStructure.h; path = ../WwiseProjectDatabase/WwiseDataStructure.h; sourceTree = "<group>"; };
+		52BC216AF3F6F6FF82364389 /* WwiseMetadataPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataPlugin.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPlugin.cpp; sourceTree = "<group>"; };
+		538A0F21BF05F0389B4C2CBB /* WwiseMetadataLanguage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataLanguage.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataLanguage.h; sourceTree = "<group>"; };
+		55BC71A062FD5D680CA185AD /* WwiseRefAuxBus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefAuxBus.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefAuxBus.cpp; sourceTree = "<group>"; };
+		5AA8A3B2399A085C59BE1BA5 /* WwiseMetadataPluginGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataPluginGroup.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPluginGroup.h; sourceTree = "<group>"; };
+		5CC59FA4192097A99E3EEF3D /* WwiseGuid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseGuid.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseGuid.h; sourceTree = "<group>"; };
+		5D98AC3D1C3CB414DDFDD5E0 /* WwiseDatabaseIdentifiers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseDatabaseIdentifiers.h; path = ../WwiseProjectDatabase/WwiseDatabaseIdentifiers.h; sourceTree = "<group>"; };
+		5F84063F81FC108A22EFB060 /* WwiseRefDialogueEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefDialogueEvent.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefDialogueEvent.cpp; sourceTree = "<group>"; };
+		618A784ED43240928CBDBB12 /* WwiseMetadataGameParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataGameParameter.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataGameParameter.h; sourceTree = "<group>"; };
+		61B1B5FB3188E022AC5A4ADE /* WwiseStandardString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardString.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardString.h; sourceTree = "<group>"; };
+		62F3E4F5D68A9F7A6A6554F5 /* WwiseRefRootFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefRootFile.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefRootFile.cpp; sourceTree = "<group>"; };
+		64AA278AD5AD225723E592B8 /* WwiseMetadataActionEntries.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataActionEntries.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataActionEntries.h; sourceTree = "<group>"; };
+		667D88364D209A348FB2251C /* WwiseRefSoundBank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefSoundBank.h; path = ../WwiseProjectDatabase/Ref/WwiseRefSoundBank.h; sourceTree = "<group>"; };
+		66F6DB90BE3B67C4909463B5 /* WwiseMetadataRootPaths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataRootPaths.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataRootPaths.h; sourceTree = "<group>"; };
+		67A180AD0C8A461401832442 /* WwiseProjectDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseProjectDatabase.h; path = ../WwiseProjectDatabase.h; sourceTree = "<group>"; };
+		68180B2CCFA05C56AC115C0F /* WwiseRefSwitchGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefSwitchGroup.h; path = ../WwiseProjectDatabase/Ref/WwiseRefSwitchGroup.h; sourceTree = "<group>"; };
+		69E8BB80B67F76AA87451EEF /* WwiseStandardTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardTypes.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardTypes.h; sourceTree = "<group>"; };
+		6A1614C85CC363BEFAB61ED3 /* WwiseRefExternalSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefExternalSource.h; path = ../WwiseProjectDatabase/Ref/WwiseRefExternalSource.h; sourceTree = "<group>"; };
+		6C7A534CE14F5D49B9BB8FE1 /* WwiseRefTrigger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefTrigger.h; path = ../WwiseProjectDatabase/Ref/WwiseRefTrigger.h; sourceTree = "<group>"; };
+		705C61F0F2F7127F4A993FD8 /* WwiseMetadataLanguage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataLanguage.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataLanguage.cpp; sourceTree = "<group>"; };
+		72A44C3CD144FB8BD93DD75C /* WwiseRefAcousticTexture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefAcousticTexture.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefAcousticTexture.cpp; sourceTree = "<group>"; };
+		7641C8FA37AC6A62FBF7D173 /* WwiseRefStateGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefStateGroup.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefStateGroup.cpp; sourceTree = "<group>"; };
+		76D95F7FE541B020A7301BF5 /* WwiseRefSwitchGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefSwitchGroup.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefSwitchGroup.cpp; sourceTree = "<group>"; };
+		77A0E99C9970984D222F01F2 /* WwiseProjectDatabaseStandardLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseProjectDatabaseStandardLogging.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseProjectDatabaseStandardLogging.h; sourceTree = "<group>"; };
+		7A9425AA4B03D2D6BF66D5F9 /* WwiseMetadataBus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataBus.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataBus.cpp; sourceTree = "<group>"; };
+		7BA100F22CC6BF20C1265692 /* WwiseMetadataExternalSource.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataExternalSource.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataExternalSource.cpp; sourceTree = "<group>"; };
+		7BA22B201AE810723BE42A10 /* WwiseRefPluginLib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefPluginLib.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefPluginLib.cpp; sourceTree = "<group>"; };
+		7C97909EE48612214DA653A7 /* WwiseMetadataPlatformInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataPlatformInfo.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPlatformInfo.cpp; sourceTree = "<group>"; };
+		804FFB43118B20D48D5D7565 /* WwiseMetadataLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataLoader.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataLoader.h; sourceTree = "<group>"; };
+		80F59E6B6412FBBF9E68389C /* WwiseStandardMultiMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardMultiMap.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardMultiMap.h; sourceTree = "<group>"; };
+		82B9DF5FECBB751ECA2EA587 /* WwiseMetadataRootFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataRootFile.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataRootFile.h; sourceTree = "<group>"; };
+		82FFDFC4E9675BF3F0D427F4 /* WwiseMetadataRootPaths.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataRootPaths.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataRootPaths.cpp; sourceTree = "<group>"; };
+		85AFBC6DEFA55FD80A4D3CE8 /* WwiseRefRootFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefRootFile.h; path = ../WwiseProjectDatabase/Ref/WwiseRefRootFile.h; sourceTree = "<group>"; };
+		86985678915D07ECF32F0836 /* WwiseProjectDatabaseLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseProjectDatabaseLogging.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseProjectDatabaseLogging.h; sourceTree = "<group>"; };
+		87868A5256010C02EF86CD5B /* WwiseMetadataActionEntries.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataActionEntries.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataActionEntries.cpp; sourceTree = "<group>"; };
+		89CBF0907EBA2B76C012BA3D /* WwiseStandardMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardMap.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardMap.h; sourceTree = "<group>"; };
+		8A4C4F772A98A2F9A968E905 /* WwiseDBSharedLanguageId.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseDBSharedLanguageId.h; path = ../WwiseProjectDatabase/WwiseDBSharedLanguageId.h; sourceTree = "<group>"; };
+		8B0FC6EA27465CCFC2681808 /* WwiseMetadataBasicReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataBasicReference.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataBasicReference.h; sourceTree = "<group>"; };
+		8B44D72FDF21159E4E7F2CDC /* WwiseMetadataProject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataProject.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataProject.cpp; sourceTree = "<group>"; };
+		8DA50A71D444FA4CD8126AD9 /* WwiseRefCollections.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefCollections.h; path = ../WwiseProjectDatabase/Ref/WwiseRefCollections.h; sourceTree = "<group>"; };
+		8FA75DC09E59FBD99BFCC252 /* WwiseMetadataPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataPlugin.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPlugin.h; sourceTree = "<group>"; };
+		953F8C689B473CC440139F14 /* WwiseStandardSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardSet.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardSet.h; sourceTree = "<group>"; };
+		95617AF7C6453F4DC0D6719D /* WwiseStandardAsync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardAsync.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardAsync.h; sourceTree = "<group>"; };
+		95C4372DD33A1D2A2FE5F25E /* WwiseArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseArray.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseArray.h; sourceTree = "<group>"; };
+		9CDD6700C1C1D742302D9097 /* WwiseRefSoundBanksInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefSoundBanksInfo.h; path = ../WwiseProjectDatabase/Ref/WwiseRefSoundBanksInfo.h; sourceTree = "<group>"; };
+		9E2643BFDB1E4BCF9035C54A /* WwiseRefPlatformInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefPlatformInfo.h; path = ../WwiseProjectDatabase/Ref/WwiseRefPlatformInfo.h; sourceTree = "<group>"; };
+		A32BB0BDDC2B3CCAFECAB42D /* WwiseRefPluginShareSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefPluginShareSet.h; path = ../WwiseProjectDatabase/Ref/WwiseRefPluginShareSet.h; sourceTree = "<group>"; };
+		A38D6ABEBA5E16A02BC5AF62 /* WwiseMetadataEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataEvent.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataEvent.cpp; sourceTree = "<group>"; };
+		A3A6BFE211168BFFC5872FA6 /* WwiseMetadataSettings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataSettings.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSettings.cpp; sourceTree = "<group>"; };
+		A3A8CB099A3FD54F3D695D95 /* WwiseAnyRef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseAnyRef.cpp; path = ../WwiseProjectDatabase/Ref/WwiseAnyRef.cpp; sourceTree = "<group>"; };
+		A414C3D8CABC57C774988DF3 /* WwiseStandardParallelFor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardParallelFor.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardParallelFor.h; sourceTree = "<group>"; };
+		A48BD3555B83E7BA0AC222C9 /* WwiseMetadataAcousticTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataAcousticTexture.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataAcousticTexture.h; sourceTree = "<group>"; };
+		A5070A72EDA9C0781A841873 /* WwiseRefAcousticTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefAcousticTexture.h; path = ../WwiseProjectDatabase/Ref/WwiseRefAcousticTexture.h; sourceTree = "<group>"; };
+		A67CF8D11B941F10037CF392 /* WwiseMetadataDialogue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataDialogue.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataDialogue.h; sourceTree = "<group>"; };
+		A6DEC017B673986364926E89 /* WwiseRefDialogueEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefDialogueEvent.h; path = ../WwiseProjectDatabase/Ref/WwiseRefDialogueEvent.h; sourceTree = "<group>"; };
+		A78EEDF2AD37DBA4A04899C7 /* WwiseMetadataState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataState.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataState.h; sourceTree = "<group>"; };
+		A802598D90007140821D0B7B /* WwiseMetadataMedia.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataMedia.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataMedia.cpp; sourceTree = "<group>"; };
+		A81849F02EA54741FA90981C /* WwiseRefLanguage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefLanguage.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefLanguage.cpp; sourceTree = "<group>"; };
+		AA564120C5B31FFDCAECF9BD /* WwiseMetadataDialogue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataDialogue.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataDialogue.cpp; sourceTree = "<group>"; };
+		AD2C25E23027AFA5A6675FCC /* WwiseMetadataForwardDeclarations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataForwardDeclarations.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataForwardDeclarations.h; sourceTree = "<group>"; };
+		AEC1383BAB17E6F32676E113 /* WwiseMetadataSoundBanksInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataSoundBanksInfo.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSoundBanksInfo.h; sourceTree = "<group>"; };
+		AEFE29FEA4146023203AB50E /* WwiseRefEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefEvent.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefEvent.cpp; sourceTree = "<group>"; };
+		B1A44AD54B6F22F925F20073 /* WwiseMetadataStateGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataStateGroup.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataStateGroup.cpp; sourceTree = "<group>"; };
+		B1FA41E50E33CB3C1ABF84FC /* WwiseSharedDBPlatformId.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseSharedDBPlatformId.h; path = ../WwiseProjectDatabase/WwiseSharedDBPlatformId.h; sourceTree = "<group>"; };
+		B25319DE5D50AAE956B8F1B8 /* WwiseGeneratedFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseGeneratedFiles.h; path = ../WwiseProjectDatabase/WwiseGeneratedFiles.h; sourceTree = "<group>"; };
+		B4046D46F1F37FC4DF9DC657 /* WwiseMetadataPlatform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataPlatform.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPlatform.cpp; sourceTree = "<group>"; };
+		B6E1CDBF2256195586923D0C /* WwiseAnyRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseAnyRef.h; path = ../WwiseProjectDatabase/Ref/WwiseAnyRef.h; sourceTree = "<group>"; };
+		B86983A72A9F7F6234687A54 /* WwiseRefPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefPlatform.h; path = ../WwiseProjectDatabase/Ref/WwiseRefPlatform.h; sourceTree = "<group>"; };
+		BA4314BE36A91141BBDFF9E3 /* WwiseMetadataAcousticTexture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataAcousticTexture.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataAcousticTexture.cpp; sourceTree = "<group>"; };
+		BB8DACD29944E3361F5EF333 /* WwiseRefMedia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefMedia.h; path = ../WwiseProjectDatabase/Ref/WwiseRefMedia.h; sourceTree = "<group>"; };
+		BD4C1D12EA4CC0749A7C621A /* WwiseMetadataSwitchValue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataSwitchValue.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSwitchValue.cpp; sourceTree = "<group>"; };
+		BEDF7411ED6A73CFD9BFB47B /* WwiseRefAudioDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefAudioDevice.h; path = ../WwiseProjectDatabase/Ref/WwiseRefAudioDevice.h; sourceTree = "<group>"; };
+		BFBBF9A2E1B809D1DAD01F71 /* WwiseStandardJsonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardJsonObject.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardJsonObject.h; sourceTree = "<group>"; };
+		BFC510D88B1D70896B443CC2 /* WwiseMetadataSwitchGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataSwitchGroup.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSwitchGroup.h; sourceTree = "<group>"; };
+		C0216B1DA5346F187B2EBB36 /* WwiseProjectDatabaseLoggingSeverity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseProjectDatabaseLoggingSeverity.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseProjectDatabaseLoggingSeverity.h; sourceTree = "<group>"; };
+		C106ECA83C81085BEE4D1D2D /* WwiseRefState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefState.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefState.cpp; sourceTree = "<group>"; };
+		C283959D18EC4EED395D631B /* WwiseMetadataBasicReference.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataBasicReference.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataBasicReference.cpp; sourceTree = "<group>"; };
+		C41DF433D6EE9679DB706756 /* WwiseSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseSet.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseSet.h; sourceTree = "<group>"; };
+		C57490C8D9185BABCA0FB8A5 /* IWwiseMetadataLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IWwiseMetadataLoader.h; path = ../WwiseProjectDatabase/Metadata/IWwiseMetadataLoader.h; sourceTree = "<group>"; };
+		C65B34D209A51DF231C916EE /* WwiseRefGameParameter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefGameParameter.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefGameParameter.cpp; sourceTree = "<group>"; };
+		C8AC73ADD6164B056F623962 /* WwiseMetadataPluginInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataPluginInfo.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPluginInfo.cpp; sourceTree = "<group>"; };
+		C8D58463DB474C6E132259DD /* WwiseMetadataPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataPlatform.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPlatform.h; sourceTree = "<group>"; };
+		CA72BA91E523E48B5540DFD9 /* WwiseStandardSharedPtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardSharedPtr.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardSharedPtr.h; sourceTree = "<group>"; };
+		CB23FF7E3E5257DE5AAD699D /* WwiseRefCustomPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefCustomPlugin.h; path = ../WwiseProjectDatabase/Ref/WwiseRefCustomPlugin.h; sourceTree = "<group>"; };
+		CB2A6593F6A301CE054BB4D9 /* WwiseRefSwitchContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefSwitchContainer.h; path = ../WwiseProjectDatabase/Ref/WwiseRefSwitchContainer.h; sourceTree = "<group>"; };
+		CCA1907E14513DEF3B8F79A0 /* WwiseStandardFuture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardFuture.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardFuture.h; sourceTree = "<group>"; };
+		CDFC1BA0B820171616716887 /* WwiseMetadataSwitchContainer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataSwitchContainer.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSwitchContainer.cpp; sourceTree = "<group>"; };
+		CF9B398EC5B3FDE5D0B9FB43 /* WwiseRefPluginLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefPluginLib.h; path = ../WwiseProjectDatabase/Ref/WwiseRefPluginLib.h; sourceTree = "<group>"; };
+		D01FD06D9332765824ADA1DC /* IWwiseDirectoryVisitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IWwiseDirectoryVisitor.h; path = ../WwiseProjectDatabase/AdapterTypes/IWwiseDirectoryVisitor.h; sourceTree = "<group>"; };
+		D255DF91F5BCF4D79A60C058 /* WwiseMetadataTrigger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataTrigger.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataTrigger.h; sourceTree = "<group>"; };
+		D26FC9D3CDABE426E3AE68D4 /* WwiseMetadataPluginGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataPluginGroup.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPluginGroup.cpp; sourceTree = "<group>"; };
+		D52146FEEA361D09B06971AD /* WwiseRefSoundBanksInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefSoundBanksInfo.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefSoundBanksInfo.cpp; sourceTree = "<group>"; };
+		D54836817F1C26BD85B822ED /* WwiseMetadataMedia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataMedia.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataMedia.h; sourceTree = "<group>"; };
+		D7598F8C2A5A5D2A363F414D /* WwiseMetadataSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataSettings.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSettings.h; sourceTree = "<group>"; };
+		D83D58B4020146BD3A1FF686 /* WwiseMetadataRootFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataRootFile.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataRootFile.cpp; sourceTree = "<group>"; };
+		DC857D7BBEF86ED2149F63D9 /* WwiseGeneratedFiles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseGeneratedFiles.cpp; path = ../WwiseProjectDatabase/WwiseGeneratedFiles.cpp; sourceTree = "<group>"; };
+		DF376D42A06E18FD13987ECE /* WwiseMetadataExternalSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataExternalSource.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataExternalSource.h; sourceTree = "<group>"; };
+		E44BA4B61979E24A752B3B6C /* WwiseStandardTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseStandardTask.h; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseStandardTask.h; sourceTree = "<group>"; };
+		E856AC98796223A99C31740A /* WwiseMetadataTrigger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataTrigger.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataTrigger.cpp; sourceTree = "<group>"; };
+		E8C50601A641180C2DB85C55 /* WwiseRefPluginInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefPluginInfo.h; path = ../WwiseProjectDatabase/Ref/WwiseRefPluginInfo.h; sourceTree = "<group>"; };
+		E8D9E4109D1C4B127CCF5F06 /* WwisePair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwisePair.h; path = ../WwiseProjectDatabase/AdapterTypes/WwisePair.h; sourceTree = "<group>"; };
+		E8E9478971EB85D33BE4559B /* WwiseProjectDatabaseStandardLogging.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseProjectDatabaseStandardLogging.cpp; path = ../WwiseProjectDatabase/AdapterTypes/Standard/WwiseProjectDatabaseStandardLogging.cpp; sourceTree = "<group>"; };
+		E992257EBF6173962BDDD45F /* WwiseSharedPtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseSharedPtr.h; path = ../WwiseProjectDatabase/AdapterTypes/WwiseSharedPtr.h; sourceTree = "<group>"; };
+		EC731E46A0107ECFFFCBD010 /* WwiseMetadataGroupValueReference.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataGroupValueReference.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataGroupValueReference.cpp; sourceTree = "<group>"; };
+		EF605350A6CF0FC43E78DC4C /* WwiseRefSwitchContainer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefSwitchContainer.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefSwitchContainer.cpp; sourceTree = "<group>"; };
+		F0B3D433D9E9A912F9D95F27 /* WwiseMetadataBus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataBus.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataBus.h; sourceTree = "<group>"; };
+		F153ED45994636CF6ECA0894 /* WwiseRefBus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefBus.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefBus.cpp; sourceTree = "<group>"; };
+		F1A8C5D9F1918FE818D2F5A2 /* WwiseMetadataLoadable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataLoadable.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataLoadable.h; sourceTree = "<group>"; };
+		F1AE15E598F3B4ADB1D0EA5C /* WwiseMetadataGameParameter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataGameParameter.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataGameParameter.cpp; sourceTree = "<group>"; };
+		F2CE5376D9A45FA77BFE95DC /* WwiseRefForwardDeclarations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefForwardDeclarations.h; path = ../WwiseProjectDatabase/Ref/WwiseRefForwardDeclarations.h; sourceTree = "<group>"; };
+		F385606FB9D362D1B71FEE28 /* WwiseRefSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseRefSwitch.h; path = ../WwiseProjectDatabase/Ref/WwiseRefSwitch.h; sourceTree = "<group>"; };
+		F4210356485D344EA85D2683 /* WwiseMetadataPlatformInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataPlatformInfo.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPlatformInfo.h; sourceTree = "<group>"; };
+		F946F0EF71CF71C894C2B224 /* WwiseRefPlatform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseRefPlatform.cpp; path = ../WwiseProjectDatabase/Ref/WwiseRefPlatform.cpp; sourceTree = "<group>"; };
+		FA19ECE84771D892E93348D4 /* WwiseMetadataProjectInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataProjectInfo.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataProjectInfo.h; sourceTree = "<group>"; };
+		FB180468A292DDF116E26601 /* WwiseMetadataSoundBanksInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseMetadataSoundBanksInfo.cpp; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataSoundBanksInfo.cpp; sourceTree = "<group>"; };
+		FCF11868A132AF6BC309D19F /* WwiseMetadataPluginInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WwiseMetadataPluginInfo.h; path = ../WwiseProjectDatabase/Metadata/WwiseMetadataPluginInfo.h; sourceTree = "<group>"; };
+		FF448693CD872DC4A08E5B2B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Tests/main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		523BF92C6BF4DCA8DD5C8007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D12DF994213CAD4A5136B0E7 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		087A6FF08023D171EFFA9292 /* WwiseProjectDatabaseIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0A082AEEF6FF5A27CDDC0 /* .. */,
+				356D981D7B07C531A4B8A0A7 /* Tests */,
+				1C9FFA62804A8D7D4F18C366 /* Resources */,
+				990A9E97AA7ABFD9D0C572FA /* Products */,
+			);
+			name = WwiseProjectDatabaseIntegrationTests;
+			sourceTree = "<group>";
+		};
+		1C9FFA62804A8D7D4F18C366 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1FF0A082AEEF6FF5A27CDDC0 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				10DBBB6EA6054684E9D69DA5 /* WwiseProjectDatabase.cpp */,
+				67A180AD0C8A461401832442 /* WwiseProjectDatabase.h */,
+				E05625796B4A7E187E730792 /* WwiseProjectDatabase */,
+				3C1E11BB6996DDF3592DFDD3 /* stdafx.cpp */,
+				2B926C1E54F2C324D96E0121 /* stdafx.h */,
+			);
+			name = ..;
+			sourceTree = "<group>";
+		};
+		356D981D7B07C531A4B8A0A7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FF448693CD872DC4A08E5B2B /* main.cpp */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		48F6A332F304FE1BD1A9B0BA /* Ref */ = {
+			isa = PBXGroup;
+			children = (
+				A3A8CB099A3FD54F3D695D95 /* WwiseAnyRef.cpp */,
+				B6E1CDBF2256195586923D0C /* WwiseAnyRef.h */,
+				72A44C3CD144FB8BD93DD75C /* WwiseRefAcousticTexture.cpp */,
+				A5070A72EDA9C0781A841873 /* WwiseRefAcousticTexture.h */,
+				029046C18AD096362449C162 /* WwiseRefAudioDevice.cpp */,
+				BEDF7411ED6A73CFD9BFB47B /* WwiseRefAudioDevice.h */,
+				55BC71A062FD5D680CA185AD /* WwiseRefAuxBus.cpp */,
+				02570DEB1E812AAC823B6299 /* WwiseRefAuxBus.h */,
+				F153ED45994636CF6ECA0894 /* WwiseRefBus.cpp */,
+				46365EFE9E7A3EB4BA3E03EB /* WwiseRefBus.h */,
+				8DA50A71D444FA4CD8126AD9 /* WwiseRefCollections.h */,
+				18BF3AC838204C02605AA4F7 /* WwiseRefCustomPlugin.cpp */,
+				CB23FF7E3E5257DE5AAD699D /* WwiseRefCustomPlugin.h */,
+				43F0B9A961FE843B1A5571E5 /* WwiseRefDialogueArgument.cpp */,
+				10E6F017AD4A4C5B3AF19513 /* WwiseRefDialogueArgument.h */,
+				5F84063F81FC108A22EFB060 /* WwiseRefDialogueEvent.cpp */,
+				A6DEC017B673986364926E89 /* WwiseRefDialogueEvent.h */,
+				AEFE29FEA4146023203AB50E /* WwiseRefEvent.cpp */,
+				2C2DFCCC2FC12C10EE16BCE6 /* WwiseRefEvent.h */,
+				2E058E33CF0E271DD29CBC47 /* WwiseRefExternalSource.cpp */,
+				6A1614C85CC363BEFAB61ED3 /* WwiseRefExternalSource.h */,
+				F2CE5376D9A45FA77BFE95DC /* WwiseRefForwardDeclarations.h */,
+				C65B34D209A51DF231C916EE /* WwiseRefGameParameter.cpp */,
+				4FD4214969A1DFD24EEDFE5E /* WwiseRefGameParameter.h */,
+				A81849F02EA54741FA90981C /* WwiseRefLanguage.cpp */,
+				5069A0032CB12AE160CF0F29 /* WwiseRefLanguage.h */,
+				4C1F67CE12CDB7DF63979A15 /* WwiseRefMedia.cpp */,
+				BB8DACD29944E3361F5EF333 /* WwiseRefMedia.h */,
+				F946F0EF71CF71C894C2B224 /* WwiseRefPlatform.cpp */,
+				B86983A72A9F7F6234687A54 /* WwiseRefPlatform.h */,
+				2F83ADB9D22CE281E746703D /* WwiseRefPlatformInfo.cpp */,
+				9E2643BFDB1E4BCF9035C54A /* WwiseRefPlatformInfo.h */,
+				05C5488CC58ADCB19E5FA920 /* WwiseRefPluginInfo.cpp */,
+				E8C50601A641180C2DB85C55 /* WwiseRefPluginInfo.h */,
+				7BA22B201AE810723BE42A10 /* WwiseRefPluginLib.cpp */,
+				CF9B398EC5B3FDE5D0B9FB43 /* WwiseRefPluginLib.h */,
+				04A5C5D2FAFA650386C6A32F /* WwiseRefPluginShareSet.cpp */,
+				A32BB0BDDC2B3CCAFECAB42D /* WwiseRefPluginShareSet.h */,
+				01CBB8515CEE2D8A315D7134 /* WwiseRefProjectInfo.cpp */,
+				26F3AF531FDDDD7BEBBADF17 /* WwiseRefProjectInfo.h */,
+				62F3E4F5D68A9F7A6A6554F5 /* WwiseRefRootFile.cpp */,
+				85AFBC6DEFA55FD80A4D3CE8 /* WwiseRefRootFile.h */,
+				01969F7BD29B3FC2BAB47091 /* WwiseRefSoundBank.cpp */,
+				667D88364D209A348FB2251C /* WwiseRefSoundBank.h */,
+				D52146FEEA361D09B06971AD /* WwiseRefSoundBanksInfo.cpp */,
+				9CDD6700C1C1D742302D9097 /* WwiseRefSoundBanksInfo.h */,
+				C106ECA83C81085BEE4D1D2D /* WwiseRefState.cpp */,
+				252948099A4CA6C966DFE781 /* WwiseRefState.h */,
+				7641C8FA37AC6A62FBF7D173 /* WwiseRefStateGroup.cpp */,
+				28224AF97C8177DCD6122C58 /* WwiseRefStateGroup.h */,
+				43EFF79EE148702021AFD4C7 /* WwiseRefSwitch.cpp */,
+				F385606FB9D362D1B71FEE28 /* WwiseRefSwitch.h */,
+				EF605350A6CF0FC43E78DC4C /* WwiseRefSwitchContainer.cpp */,
+				CB2A6593F6A301CE054BB4D9 /* WwiseRefSwitchContainer.h */,
+				76D95F7FE541B020A7301BF5 /* WwiseRefSwitchGroup.cpp */,
+				68180B2CCFA05C56AC115C0F /* WwiseRefSwitchGroup.h */,
+				33D3CD50B47E7FC0F344329D /* WwiseRefTrigger.cpp */,
+				6C7A534CE14F5D49B9BB8FE1 /* WwiseRefTrigger.h */,
+				2E88DC54CDEA3EFA9B21DD10 /* WwiseRefType.h */,
+			);
+			name = Ref;
+			sourceTree = "<group>";
+		};
+		7CB8E0CEC3163FAD8045A105 /* AdapterTypes */ = {
+			isa = PBXGroup;
+			children = (
+				D01FD06D9332765824ADA1DC /* IWwiseDirectoryVisitor.h */,
+				BE367DD9A910679309498D27 /* Standard */,
+				95C4372DD33A1D2A2FE5F25E /* WwiseArray.h */,
+				2852771EA10FF70B13453C28 /* WwiseDataTypesAdapter.h */,
+				1D51585ED278527CDF8F3F93 /* WwiseFuture.h */,
+				5CC59FA4192097A99E3EEF3D /* WwiseGuid.h */,
+				242B23D2D1C2FFBDE1EC77E4 /* WwiseJsonObject.h */,
+				125338513D7A816942ED54D8 /* WwiseMap.h */,
+				30C3DAF3887A607CF2D6A333 /* WwiseMultiMap.h */,
+				E8D9E4109D1C4B127CCF5F06 /* WwisePair.h */,
+				86985678915D07ECF32F0836 /* WwiseProjectDatabaseLogging.h */,
+				C0216B1DA5346F187B2EBB36 /* WwiseProjectDatabaseLoggingSeverity.h */,
+				C41DF433D6EE9679DB706756 /* WwiseSet.h */,
+				E992257EBF6173962BDDD45F /* WwiseSharedPtr.h */,
+				32EBA032994B2DD74F406DDF /* WwiseString.h */,
+				32D62AD31FC43D16483F8FFF /* WwiseTask.h */,
+				482433B5FE0C89CDDB2941F3 /* WwiseTuple.h */,
+				3764112979E28EC18024471B /* WwiseWrapperTypes.h */,
+			);
+			name = AdapterTypes;
+			sourceTree = "<group>";
+		};
+		990A9E97AA7ABFD9D0C572FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F3FD766F6884DCF5C6FC092 /* WwiseProjectDatabaseIntegrationTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE367DD9A910679309498D27 /* Standard */ = {
+			isa = PBXGroup;
+			children = (
+				3A52698BC859B455F1402797 /* WwiseProjectDatabaseLoggingUtils.cpp */,
+				19F3560CA8B5EB9033533319 /* WwiseProjectDatabaseLoggingUtils.h */,
+				E8E9478971EB85D33BE4559B /* WwiseProjectDatabaseStandardLogging.cpp */,
+				77A0E99C9970984D222F01F2 /* WwiseProjectDatabaseStandardLogging.h */,
+				308227CEE7827C5DFE80A92E /* WwiseStandardArray.h */,
+				95617AF7C6453F4DC0D6719D /* WwiseStandardAsync.h */,
+				CCA1907E14513DEF3B8F79A0 /* WwiseStandardFuture.h */,
+				263C05DB6CC151B15DE84481 /* WwiseStandardGuid.h */,
+				BFBBF9A2E1B809D1DAD01F71 /* WwiseStandardJsonObject.h */,
+				89CBF0907EBA2B76C012BA3D /* WwiseStandardMap.h */,
+				80F59E6B6412FBBF9E68389C /* WwiseStandardMultiMap.h */,
+				18F3DAE2464F644D12059576 /* WwiseStandardPair.h */,
+				A414C3D8CABC57C774988DF3 /* WwiseStandardParallelFor.h */,
+				953F8C689B473CC440139F14 /* WwiseStandardSet.h */,
+				CA72BA91E523E48B5540DFD9 /* WwiseStandardSharedPtr.h */,
+				61B1B5FB3188E022AC5A4ADE /* WwiseStandardString.h */,
+				E44BA4B61979E24A752B3B6C /* WwiseStandardTask.h */,
+				2767E879EE25193F5AEF3173 /* WwiseStandardTuple.h */,
+				69E8BB80B67F76AA87451EEF /* WwiseStandardTypes.h */,
+			);
+			name = Standard;
+			sourceTree = "<group>";
+		};
+		E05625796B4A7E187E730792 /* WwiseProjectDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				7CB8E0CEC3163FAD8045A105 /* AdapterTypes */,
+				F2003D610543B245AFB841DF /* Metadata */,
+				48F6A332F304FE1BD1A9B0BA /* Ref */,
+				8A4C4F772A98A2F9A968E905 /* WwiseDBSharedLanguageId.h */,
+				32BE031E27798EFDCCF79DDB /* WwiseDataStructure.cpp */,
+				511566FDB8420C8DB22B4CF1 /* WwiseDataStructure.h */,
+				1C42384964607333BB8FB77F /* WwiseDatabaseIdentifiers.cpp */,
+				5D98AC3D1C3CB414DDFDD5E0 /* WwiseDatabaseIdentifiers.h */,
+				2771C5961267E37A6B6A612E /* WwiseDirectoryVisitor.cpp */,
+				06A58D7E63ABBD08D30AF03B /* WwiseDirectoryVisitor.h */,
+				DC857D7BBEF86ED2149F63D9 /* WwiseGeneratedFiles.cpp */,
+				B25319DE5D50AAE956B8F1B8 /* WwiseGeneratedFiles.h */,
+				B1FA41E50E33CB3C1ABF84FC /* WwiseSharedDBPlatformId.h */,
+			);
+			name = WwiseProjectDatabase;
+			sourceTree = "<group>";
+		};
+		F2003D610543B245AFB841DF /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				C57490C8D9185BABCA0FB8A5 /* IWwiseMetadataLoader.h */,
+				BA4314BE36A91141BBDFF9E3 /* WwiseMetadataAcousticTexture.cpp */,
+				A48BD3555B83E7BA0AC222C9 /* WwiseMetadataAcousticTexture.h */,
+				87868A5256010C02EF86CD5B /* WwiseMetadataActionEntries.cpp */,
+				64AA278AD5AD225723E592B8 /* WwiseMetadataActionEntries.h */,
+				C283959D18EC4EED395D631B /* WwiseMetadataBasicReference.cpp */,
+				8B0FC6EA27465CCFC2681808 /* WwiseMetadataBasicReference.h */,
+				7A9425AA4B03D2D6BF66D5F9 /* WwiseMetadataBus.cpp */,
+				F0B3D433D9E9A912F9D95F27 /* WwiseMetadataBus.h */,
+				31C03B80B3F37EE792E4FB78 /* WwiseMetadataCollections.h */,
+				AA564120C5B31FFDCAECF9BD /* WwiseMetadataDialogue.cpp */,
+				A67CF8D11B941F10037CF392 /* WwiseMetadataDialogue.h */,
+				A38D6ABEBA5E16A02BC5AF62 /* WwiseMetadataEvent.cpp */,
+				46DFE8E468F4ECDC0367DFD2 /* WwiseMetadataEvent.h */,
+				7BA100F22CC6BF20C1265692 /* WwiseMetadataExternalSource.cpp */,
+				DF376D42A06E18FD13987ECE /* WwiseMetadataExternalSource.h */,
+				AD2C25E23027AFA5A6675FCC /* WwiseMetadataForwardDeclarations.h */,
+				F1AE15E598F3B4ADB1D0EA5C /* WwiseMetadataGameParameter.cpp */,
+				618A784ED43240928CBDBB12 /* WwiseMetadataGameParameter.h */,
+				EC731E46A0107ECFFFCBD010 /* WwiseMetadataGroupValueReference.cpp */,
+				2FD766C0D1E4936EEC5EC76B /* WwiseMetadataGroupValueReference.h */,
+				705C61F0F2F7127F4A993FD8 /* WwiseMetadataLanguage.cpp */,
+				538A0F21BF05F0389B4C2CBB /* WwiseMetadataLanguage.h */,
+				2DD9EF0A579704835452C8E2 /* WwiseMetadataLoadable.cpp */,
+				F1A8C5D9F1918FE818D2F5A2 /* WwiseMetadataLoadable.h */,
+				059E3722D7EEA3FCA0C3C32C /* WwiseMetadataLoader.cpp */,
+				804FFB43118B20D48D5D7565 /* WwiseMetadataLoader.h */,
+				A802598D90007140821D0B7B /* WwiseMetadataMedia.cpp */,
+				D54836817F1C26BD85B822ED /* WwiseMetadataMedia.h */,
+				B4046D46F1F37FC4DF9DC657 /* WwiseMetadataPlatform.cpp */,
+				C8D58463DB474C6E132259DD /* WwiseMetadataPlatform.h */,
+				7C97909EE48612214DA653A7 /* WwiseMetadataPlatformInfo.cpp */,
+				F4210356485D344EA85D2683 /* WwiseMetadataPlatformInfo.h */,
+				52BC216AF3F6F6FF82364389 /* WwiseMetadataPlugin.cpp */,
+				8FA75DC09E59FBD99BFCC252 /* WwiseMetadataPlugin.h */,
+				D26FC9D3CDABE426E3AE68D4 /* WwiseMetadataPluginGroup.cpp */,
+				5AA8A3B2399A085C59BE1BA5 /* WwiseMetadataPluginGroup.h */,
+				C8AC73ADD6164B056F623962 /* WwiseMetadataPluginInfo.cpp */,
+				FCF11868A132AF6BC309D19F /* WwiseMetadataPluginInfo.h */,
+				00C73B1B9D816C02446FBDD2 /* WwiseMetadataPluginLib.cpp */,
+				3B96D03AAAD92E5343360D36 /* WwiseMetadataPluginLib.h */,
+				8B44D72FDF21159E4E7F2CDC /* WwiseMetadataProject.cpp */,
+				35EBEE49BCCABD8882ED8204 /* WwiseMetadataProject.h */,
+				4F327B82D23299C6E508068D /* WwiseMetadataProjectInfo.cpp */,
+				FA19ECE84771D892E93348D4 /* WwiseMetadataProjectInfo.h */,
+				D83D58B4020146BD3A1FF686 /* WwiseMetadataRootFile.cpp */,
+				82B9DF5FECBB751ECA2EA587 /* WwiseMetadataRootFile.h */,
+				82FFDFC4E9675BF3F0D427F4 /* WwiseMetadataRootPaths.cpp */,
+				66F6DB90BE3B67C4909463B5 /* WwiseMetadataRootPaths.h */,
+				A3A6BFE211168BFFC5872FA6 /* WwiseMetadataSettings.cpp */,
+				D7598F8C2A5A5D2A363F414D /* WwiseMetadataSettings.h */,
+				0BF245F3D31088933BEFE78F /* WwiseMetadataSoundBank.cpp */,
+				2AFED5C7B11C1FA5CECA205C /* WwiseMetadataSoundBank.h */,
+				FB180468A292DDF116E26601 /* WwiseMetadataSoundBanksInfo.cpp */,
+				AEC1383BAB17E6F32676E113 /* WwiseMetadataSoundBanksInfo.h */,
+				40009D225EDFCEF40BDBF8CF /* WwiseMetadataState.cpp */,
+				A78EEDF2AD37DBA4A04899C7 /* WwiseMetadataState.h */,
+				B1A44AD54B6F22F925F20073 /* WwiseMetadataStateGroup.cpp */,
+				14F1D55CA32F0D5B62EA4EF8 /* WwiseMetadataStateGroup.h */,
+				483314624F396C29C2A05896 /* WwiseMetadataSwitch.cpp */,
+				24F526C69327D8A0C76C9A73 /* WwiseMetadataSwitch.h */,
+				CDFC1BA0B820171616716887 /* WwiseMetadataSwitchContainer.cpp */,
+				3C9909305B858EA3B4C85BE3 /* WwiseMetadataSwitchContainer.h */,
+				02B07CC8DF2AAD5A9BD2A59E /* WwiseMetadataSwitchGroup.cpp */,
+				BFC510D88B1D70896B443CC2 /* WwiseMetadataSwitchGroup.h */,
+				BD4C1D12EA4CC0749A7C621A /* WwiseMetadataSwitchValue.cpp */,
+				15502ACFBFC348C14880796E /* WwiseMetadataSwitchValue.h */,
+				E856AC98796223A99C31740A /* WwiseMetadataTrigger.cpp */,
+				D255DF91F5BCF4D79A60C058 /* WwiseMetadataTrigger.h */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFBC8C8244180D2001422D32 /* WwiseProjectDatabaseIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BEB51326A2F01CD57731340 /* Build configuration list for PBXNativeTarget "WwiseProjectDatabaseIntegrationTests" */;
+			buildPhases = (
+				A2E1F011853A7FF42C1B95E1 /* Resources */,
+				604B36F0332A6A4449644E2D /* Sources */,
+				523BF92C6BF4DCA8DD5C8007 /* Frameworks */,
+				D12DF994213CAD4A5136B0E7 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WwiseProjectDatabaseIntegrationTests;
+			productInstallPath = "$(HOME)/bin";
+			productName = WwiseProjectDatabaseIntegrationTests;
+			productReference = 2F3FD766F6884DCF5C6FC092 /* WwiseProjectDatabaseIntegrationTests */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "WwiseProjectDatabaseIntegrationTests" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 087A6FF08023D171EFFA9292 /* WwiseProjectDatabaseIntegrationTests */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFBC8C8244180D2001422D32 /* WwiseProjectDatabaseIntegrationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2E1F011853A7FF42C1B95E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		604B36F0332A6A4449644E2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838962FD128338D692D7CF39 /* WwiseProjectDatabase.cpp in Sources */,
+				11E19147F8190CED391EEB7C /* WwiseProjectDatabaseLoggingUtils.cpp in Sources */,
+				F2EE8F8BA023BE3E014BD08F /* WwiseProjectDatabaseStandardLogging.cpp in Sources */,
+				C1B0C572644B7D25AAFCF4CD /* WwiseMetadataAcousticTexture.cpp in Sources */,
+				B93888759E99952008165499 /* WwiseMetadataActionEntries.cpp in Sources */,
+				E91D36B51628986F1F135D14 /* WwiseMetadataBasicReference.cpp in Sources */,
+				59AC19550A80066C738B57F6 /* WwiseMetadataBus.cpp in Sources */,
+				1E234EB76F5DEB2BAC011B97 /* WwiseMetadataDialogue.cpp in Sources */,
+				40DA6134384D26A24D3F0C60 /* WwiseMetadataEvent.cpp in Sources */,
+				B4D9A6D5C1EE1ED40E1BAA9E /* WwiseMetadataExternalSource.cpp in Sources */,
+				1F1563C1EAF08F07D7947507 /* WwiseMetadataGameParameter.cpp in Sources */,
+				27E3B52DB9C026A9722FE5A8 /* WwiseMetadataGroupValueReference.cpp in Sources */,
+				5F4D8A3724704BBD83E178A5 /* WwiseMetadataLanguage.cpp in Sources */,
+				BC02ED0F85E0BE1D84A89EE3 /* WwiseMetadataLoadable.cpp in Sources */,
+				950F509BFCD6B7A9B9EC586B /* WwiseMetadataLoader.cpp in Sources */,
+				CF856E968670513B55333434 /* WwiseMetadataMedia.cpp in Sources */,
+				76B0C5EBCC59AFC641AE910A /* WwiseMetadataPlatform.cpp in Sources */,
+				950DD6CF64D03D42F2C64E6D /* WwiseMetadataPlatformInfo.cpp in Sources */,
+				504C10D806FAC3C9FAB9A82B /* WwiseMetadataPlugin.cpp in Sources */,
+				5EC91C069EC46F616B0B1C44 /* WwiseMetadataPluginGroup.cpp in Sources */,
+				C03C7B8D75BD3724DB35AFE9 /* WwiseMetadataPluginInfo.cpp in Sources */,
+				2C64023A383FE4B5F6382DC4 /* WwiseMetadataPluginLib.cpp in Sources */,
+				5AAE1F0DB9BD611A75381580 /* WwiseMetadataProject.cpp in Sources */,
+				E6B8FA57BADB400477937048 /* WwiseMetadataProjectInfo.cpp in Sources */,
+				87BE352E40505D8DC32A5678 /* WwiseMetadataRootFile.cpp in Sources */,
+				C92F09C62536A73F7083534A /* WwiseMetadataRootPaths.cpp in Sources */,
+				7ECDC1D5119FBFABAE001DEC /* WwiseMetadataSettings.cpp in Sources */,
+				743CF597D32B4356F5A74EB8 /* WwiseMetadataSoundBank.cpp in Sources */,
+				FCA5261F54E674F8C89FF3BA /* WwiseMetadataSoundBanksInfo.cpp in Sources */,
+				4D628E1FB57CE247531578EB /* WwiseMetadataState.cpp in Sources */,
+				466C1E1B0F5C8E66D06B5B10 /* WwiseMetadataStateGroup.cpp in Sources */,
+				8FBE67F4DA76F752D530C19B /* WwiseMetadataSwitch.cpp in Sources */,
+				C2336F202DBAA8D0F5FC3E84 /* WwiseMetadataSwitchContainer.cpp in Sources */,
+				797318477C17346C01DFCBCC /* WwiseMetadataSwitchGroup.cpp in Sources */,
+				C3052B355C58A415E1AA03A5 /* WwiseMetadataSwitchValue.cpp in Sources */,
+				421E6D3C2FF1FF2F99B2464F /* WwiseMetadataTrigger.cpp in Sources */,
+				4FAE06AAC72577E4B0D28D2E /* WwiseAnyRef.cpp in Sources */,
+				9EED4508907039464D946140 /* WwiseRefAcousticTexture.cpp in Sources */,
+				4B53FF30CCBB4D873BC83E8A /* WwiseRefAudioDevice.cpp in Sources */,
+				F204DD25DCBE56CE6B76D91E /* WwiseRefAuxBus.cpp in Sources */,
+				1FC87752A353A69AAF0123EE /* WwiseRefBus.cpp in Sources */,
+				C8B529B55CAF032BC6E1DFC5 /* WwiseRefCustomPlugin.cpp in Sources */,
+				26D54189D8D9A562839E9343 /* WwiseRefDialogueArgument.cpp in Sources */,
+				C87541D4DFB222BC916EC3A5 /* WwiseRefDialogueEvent.cpp in Sources */,
+				56F5D41D8AB6A07243429CB8 /* WwiseRefEvent.cpp in Sources */,
+				E4ED8974130D36995A078486 /* WwiseRefExternalSource.cpp in Sources */,
+				FD7C25D5CEBDA0C945D854D3 /* WwiseRefGameParameter.cpp in Sources */,
+				5D35CE1E421C80A14A59E14A /* WwiseRefLanguage.cpp in Sources */,
+				8A4DFD18B2F69EACD5F1D339 /* WwiseRefMedia.cpp in Sources */,
+				D3653EFF434FABDD970638A2 /* WwiseRefPlatform.cpp in Sources */,
+				560A7FAAC27335E6AF36B7B8 /* WwiseRefPlatformInfo.cpp in Sources */,
+				7216CF89B4F010FAF2180383 /* WwiseRefPluginInfo.cpp in Sources */,
+				22A6FD0D767816B201EC4763 /* WwiseRefPluginLib.cpp in Sources */,
+				22F68E3314E2ED8847E8B8B4 /* WwiseRefPluginShareSet.cpp in Sources */,
+				EADFA71532A53CA59112B7D0 /* WwiseRefProjectInfo.cpp in Sources */,
+				C94294F98FE9269A000DC0E4 /* WwiseRefRootFile.cpp in Sources */,
+				907CBD38D07D0C78114BC71F /* WwiseRefSoundBank.cpp in Sources */,
+				5FF450AE6AB39BBF2CDF20AD /* WwiseRefSoundBanksInfo.cpp in Sources */,
+				D6B11FA9F9B6EA4FC34A0C77 /* WwiseRefState.cpp in Sources */,
+				524245B43D13C598FABA6873 /* WwiseRefStateGroup.cpp in Sources */,
+				22FD6ED8CCA2FB4F607FECC0 /* WwiseRefSwitch.cpp in Sources */,
+				C99314A0AF30A5035A884CBE /* WwiseRefSwitchContainer.cpp in Sources */,
+				31AA86408769D841A37AC0B8 /* WwiseRefSwitchGroup.cpp in Sources */,
+				DA8A713A01353C87242DC168 /* WwiseRefTrigger.cpp in Sources */,
+				B8F35B90D150EDCF3750E07E /* WwiseDataStructure.cpp in Sources */,
+				F0DA273E53B42D5FB94582FC /* WwiseDatabaseIdentifiers.cpp in Sources */,
+				0F1B315B71C1E68CEC276350 /* WwiseDirectoryVisitor.cpp in Sources */,
+				14902263B9770DBC70EFAC21 /* WwiseGeneratedFiles.cpp in Sources */,
+				A32B9333555669A6AAA2A574 /* stdafx.cpp in Sources */,
+				63E5EEF6B9D4D777B2938133 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29699133E85A50E8AE2C009F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					AK_OPTIMIZED,
+					WWISE_DB_STANDARD_TYPES,
+					TESTING_WWISE_PROJECT_DATABASE,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = ".. ../WwiseProjectDatabase ../../3rdParty/subprojects/rapidjson/include";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = NO;
+				OBJROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Release/obj/WwiseProjectDatabaseIntegrationTests";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-Wno-null-conversion",
+					"-Wno-invalid-offsetof",
+					"-Wno-nontrivial-memcall",
+					"-Wno-unknown-warning-option",
+					"-fno-objc-msgsend-selector-stubs",
+					"-Qunused-arguments",
+				);
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Release/bin";
+			};
+			name = Release;
+		};
+		9EED3D8C590640550CCD0ECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					_DEBUG,
+					WWISE_DB_STANDARD_TYPES,
+					TESTING_WWISE_PROJECT_DATABASE,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = ".. ../WwiseProjectDatabase ../../3rdParty/subprojects/rapidjson/include";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = NO;
+				OBJROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Debug/obj/WwiseProjectDatabaseIntegrationTests";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-Wno-null-conversion",
+					"-Wno-invalid-offsetof",
+					"-Wno-nontrivial-memcall",
+					"-Wno-unknown-warning-option",
+					"-fno-objc-msgsend-selector-stubs",
+					"-Qunused-arguments",
+				);
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Debug/bin";
+			};
+			name = Debug;
+		};
+		C813A0390587CA5F3B78C523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Debug/bin";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/bin;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = WwiseProjectDatabaseIntegrationTests;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		D20687D92E072C4FD21D749C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Release/bin";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/bin;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = WwiseProjectDatabaseIntegrationTests;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		DBF15028A5602431255D7197 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					AK_ENABLE_ASSERTS,
+					WWISE_DB_STANDARD_TYPES,
+					TESTING_WWISE_PROJECT_DATABASE,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = ".. ../WwiseProjectDatabase ../../3rdParty/subprojects/rapidjson/include";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = NO;
+				OBJROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Profile/obj/WwiseProjectDatabaseIntegrationTests";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-Wno-null-conversion",
+					"-Wno-invalid-offsetof",
+					"-Wno-nontrivial-memcall",
+					"-Wno-unknown-warning-option",
+					"-fno-objc-msgsend-selector-stubs",
+					"-Qunused-arguments",
+				);
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Profile/bin";
+			};
+			name = Profile;
+		};
+		EE434F8202D15EBA60AF1312 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Profile/bin";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/bin;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = WwiseProjectDatabaseIntegrationTests;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Profile;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "WwiseProjectDatabaseIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EED3D8C590640550CCD0ECD /* Debug */,
+				DBF15028A5602431255D7197 /* Profile */,
+				29699133E85A50E8AE2C009F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7BEB51326A2F01CD57731340 /* Build configuration list for PBXNativeTarget "WwiseProjectDatabaseIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C813A0390587CA5F3B78C523 /* Debug */,
+				EE434F8202D15EBA60AF1312 /* Profile */,
+				D20687D92E072C4FD21D749C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

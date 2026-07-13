@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+	version = "1.0">
+	<Group
+		location = "container:"
+		name = "Samples">
+		<FileRef
+			location = "group:WwiseProjectDatabase/WwiseProjectDatabaseMac.xcodeproj">
+		</FileRef>
+		<FileRef
+			location = "group:WwiseProjectDatabaseIntegrationTests/WwiseProjectDatabaseIntegrationTestsMac.xcodeproj">
+		</FileRef>
+		<FileRef
+			location = "group:WwiseProjectDatabaseTests/WwiseProjectDatabaseTestsMac.xcodeproj">
+		</FileRef>
+	</Group>
+	<Group
+		location = "container:"
+		name = "ThirdParty">
+		<FileRef
+			location = "group:../Catch2/Mac/Catch2_Mac.xcodeproj">
+		</FileRef>
+	</Group>
+</Workspace>

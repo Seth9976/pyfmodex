@@ -1,0 +1,1170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug(StaticCRT)|Win32">
+      <Configuration>Debug(StaticCRT)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug(StaticCRT)|x64">
+      <Configuration>Debug(StaticCRT)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug(StaticCRT)|ARM64">
+      <Configuration>Debug(StaticCRT)</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Win32">
+      <Configuration>Profile</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|x64">
+      <Configuration>Profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|ARM64">
+      <Configuration>Profile</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile(StaticCRT)|Win32">
+      <Configuration>Profile(StaticCRT)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile(StaticCRT)|x64">
+      <Configuration>Profile(StaticCRT)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile(StaticCRT)|ARM64">
+      <Configuration>Profile(StaticCRT)</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release(StaticCRT)|Win32">
+      <Configuration>Release(StaticCRT)</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release(StaticCRT)|x64">
+      <Configuration>Release(StaticCRT)</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release(StaticCRT)|ARM64">
+      <Configuration>Release(StaticCRT)</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B879FD6D-7F52-5E2C-DD49-620920EC870D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>WwiseProjectDatabaseIntegrationTests</RootNamespace>
+    <ProjectName>WwiseProjectDatabaseIntegrationTests</ProjectName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|ARM64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Profile|ARM64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|ARM64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">false</VcpkgEnabled>
+    <VcpkgEnabled Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|ARM64'">false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|ARM64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/Debug_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/Debug_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/Debug_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/Debug_StaticCRT_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/Debug_StaticCRT_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|ARM64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/Debug_StaticCRT_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Profile|ARM64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|ARM64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|ARM64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="../../../source/Build/PropertySheets/Win32/NDebug_StaticCRT_vc170.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug(StaticCRT)\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug(StaticCRT)\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug(StaticCRT)\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug(StaticCRT)\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|ARM64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug(StaticCRT)\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Debug(StaticCRT)\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ARM64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile(StaticCRT)\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile(StaticCRT)\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile(StaticCRT)\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile(StaticCRT)\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|ARM64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile(StaticCRT)\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Profile(StaticCRT)\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release(StaticCRT)\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release(StaticCRT)\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release(StaticCRT)\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release(StaticCRT)\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|ARM64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release(StaticCRT)\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\..\..\$(Platform)_vc170\Release(StaticCRT)\obj\WwiseProjectDatabaseIntegrationTests\</IntDir>
+    <TargetName>WwiseProjectDatabaseIntegrationTests</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_DEBUG;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_DEBUG;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_DEBUG;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_DEBUG;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_DEBUG;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(StaticCRT)|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_DEBUG;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile(StaticCRT)|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_ENABLE_ASSERTS;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN32;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;WIN64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release(StaticCRT)|ARM64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AK_OPTIMIZED;ARM64;WIN32_LEAN_AND_MEAN;WWISE_DB_STANDARD_TYPES;TESTING_WWISE_PROJECT_DATABASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;..\WwiseProjectDatabase;..\..\3rdParty\subprojects\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <FullProgramDatabaseFile>false</FullProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\$(Platform)_vc170\$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\WwiseProjectDatabase.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\IWwiseDirectoryVisitor.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseProjectDatabaseLoggingUtils.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseProjectDatabaseStandardLogging.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardArray.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardAsync.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardFuture.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardGuid.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardJsonObject.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardMap.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardMultiMap.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardPair.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardParallelFor.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardSet.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardSharedPtr.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardString.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardTask.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardTuple.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardTypes.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseArray.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseDataTypesAdapter.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseFuture.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseGuid.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseJsonObject.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseMap.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseMultiMap.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwisePair.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseProjectDatabaseLogging.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseProjectDatabaseLoggingSeverity.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseSet.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseSharedPtr.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseString.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseTask.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseTuple.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseWrapperTypes.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\IWwiseMetadataLoader.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataAcousticTexture.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataActionEntries.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataBasicReference.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataBus.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataCollections.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataDialogue.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataEvent.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataExternalSource.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataForwardDeclarations.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataGameParameter.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataGroupValueReference.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLanguage.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLoadable.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLoader.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataMedia.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlatform.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlatformInfo.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlugin.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginGroup.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginInfo.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginLib.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataProject.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataProjectInfo.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataRootFile.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataRootPaths.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSettings.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSoundBank.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSoundBanksInfo.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataState.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataStateGroup.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitch.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchContainer.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchGroup.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchValue.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataTrigger.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseAnyRef.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefAcousticTexture.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefAudioDevice.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefAuxBus.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefBus.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefCollections.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefCustomPlugin.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefDialogueArgument.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefDialogueEvent.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefEvent.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefExternalSource.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefForwardDeclarations.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefGameParameter.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefLanguage.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefMedia.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPlatform.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPlatformInfo.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginInfo.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginLib.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginShareSet.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefProjectInfo.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefRootFile.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSoundBank.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSoundBanksInfo.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefState.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefStateGroup.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitch.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitchContainer.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitchGroup.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefTrigger.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefType.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseDBSharedLanguageId.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseDataStructure.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseDatabaseIdentifiers.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseDirectoryVisitor.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseGeneratedFiles.h" />
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseSharedDBPlatformId.h" />
+    <ClInclude Include="..\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\WwiseProjectDatabase.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseProjectDatabaseLoggingUtils.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseProjectDatabaseStandardLogging.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataAcousticTexture.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataActionEntries.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataBasicReference.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataBus.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataDialogue.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataEvent.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataExternalSource.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataGameParameter.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataGroupValueReference.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLanguage.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLoadable.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLoader.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataMedia.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlatform.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlatformInfo.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlugin.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginGroup.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginInfo.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginLib.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataProject.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataProjectInfo.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataRootFile.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataRootPaths.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSettings.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSoundBank.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSoundBanksInfo.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataState.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataStateGroup.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitch.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchContainer.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchGroup.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchValue.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataTrigger.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseAnyRef.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefAcousticTexture.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefAudioDevice.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefAuxBus.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefBus.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefCustomPlugin.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefDialogueArgument.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefDialogueEvent.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefEvent.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefExternalSource.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefGameParameter.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefLanguage.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefMedia.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPlatform.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPlatformInfo.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginInfo.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginLib.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginShareSet.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefProjectInfo.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefRootFile.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSoundBank.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSoundBanksInfo.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefState.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefStateGroup.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitch.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitchContainer.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitchGroup.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefTrigger.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\WwiseDataStructure.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\WwiseDatabaseIdentifiers.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\WwiseDirectoryVisitor.cpp" />
+    <ClCompile Include="..\WwiseProjectDatabase\WwiseGeneratedFiles.cpp" />
+    <ClCompile Include="..\stdafx.cpp" />
+    <ClCompile Include="Tests\main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

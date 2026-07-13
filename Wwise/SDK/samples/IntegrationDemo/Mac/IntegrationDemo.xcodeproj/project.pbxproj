@@ -1,0 +1,2691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00D93C41E680117CD6B44714 /* DemoAutobanks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BB5E94E91F88F310CF8255D /* DemoAutobanks.cpp */; };
+		0130D8087AE3C849B84EBD3D /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5FFFA081794235D180C09F3 /* stdafx.cpp */; };
+		04D245934E7B2FC74E0F5C60 /* libAkRecorderFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CC89ED598DC2E9766C7A97 /* libAkRecorderFX.a */; };
+		05BFF2CAC31CD874B2BFC5A0 /* Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42B901D4F41BE0002EB93AFE /* Control.cpp */; };
+		0A9FFE110D8BBA0A3A6F45E4 /* DemoMusicCallbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA6A994B522A5A5C0CA233 /* DemoMusicCallbacks.cpp */; };
+		0ABF03CF51CE862E038BF447 /* DemoSpatialAudioReverbZones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4497E84B6C4A4F404F0009FE /* DemoSpatialAudioReverbZones.cpp */; };
+		0B1BEAC418CF81FD0A985DE0 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED02069D3D2EC3B7A29E4985 /* CoreAudio.framework */; };
+		0C6AE1E662FA01C7163A9AB6 /* libAkMemoryMgr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D1E6113C4BF7CFCF07881E /* libAkMemoryMgr.a */; };
+		0DD1E001B3CC38048EDD37E8 /* DemoDialogueMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC58C51D3B0FD26134CFB8C /* DemoDialogueMenu.cpp */; };
+		1143B57FE52932CED4EA3553 /* DemoSpatialAudioGeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CA2964E7DED234BEA152653 /* DemoSpatialAudioGeometry.cpp */; };
+		133E3777FFBC7A76337465EC /* AppleInputMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0EDEF3CD9E577409FE4FD96 /* AppleInputMgr.cpp */; };
+		162EA1EC754C2B1E9E7D91A8 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECA5AC5410FDF4CECAF307C0 /* stdafx.cpp */; };
+		169110DE97A1F7C75FDB5ED1 /* SoundInputMgrBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCA6606EACC72DF83D0E1888 /* SoundInputMgrBase.cpp */; };
+		1C568B90D087A4B9E20A16D1 /* IntegrationDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF81154C41E203C270136BE8 /* IntegrationDemo.cpp */; };
+		1D14013B73685938A1AE40D9 /* DemoGMEVoiceChatPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF9E950E62AA7CC07A553DF2 /* DemoGMEVoiceChatPage.cpp */; };
+		203BFDDD15E210C70A813FCC /* DemoSpatialAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5AC1D7B863E48E19BD12F59 /* DemoSpatialAudio.cpp */; };
+		20CB2CA2D0CFC1E51DD835FB /* libAkMeterFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B898A82DCEFB7903A2A4EB00 /* libAkMeterFX.a */; };
+		25E13521D2C3E4A920CEB357 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8174D990F46C4ACD178E97F3 /* GLUT.framework */; };
+		2A549CDFDEECA349BCEF1291 /* libAkSidechainFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACE28F27F211A1698D300F3 /* libAkSidechainFX.a */; };
+		2A7184DD1B69C9BBF7D67B22 /* MovableChip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA2AD2BF1901DAADA0BE202D /* MovableChip.cpp */; };
+		2DAF88B8479F188FCBBE5ED8 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854B0E3E6B2C7745F9761653 /* GameController.framework */; };
+		341C75FA8204FB15937131F4 /* DemoSpeechEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B49029F2BFC366BBE31634A0 /* DemoSpeechEngine.cpp */; };
+		354E0CB85DD456442CB7EA30 /* DemoMotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4F00051E9CCC7D1707F817E /* DemoMotion.cpp */; };
+		3A18658DB95DDBB73E8F8570 /* libAk3DAudioBedMixerFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86EB91566C22DD4C7CAE619C /* libAk3DAudioBedMixerFX.a */; };
+		3C769D060E7C7B84ACEE60FC /* SpatialAudioHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B826F831BD089D95C569DAC2 /* SpatialAudioHelpers.cpp */; };
+		3D666B1F4A610C14F2F21FCE /* DemoMicrophone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0337976B064EA80FF524700 /* DemoMicrophone.cpp */; };
+		3DD82CECAE76ED12140ED606 /* AkFileLocationBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AED252C391ECD44F7F4D0006 /* AkFileLocationBase.cpp */; };
+		3E6EE0F26EC34B3907BE9515 /* CoreAudioInputDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1335396810630FE30D114350 /* CoreAudioInputDevice.cpp */; };
+		419874FE24826B9D3EBEB3B7 /* DemoSpatialAudioMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1554C478C9C2F6C79F3F3E7F /* DemoSpatialAudioMenu.cpp */; };
+		4321D127D7BB314BA67CBADB /* libAkSpatialAudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF5E61CEB0FD2F2C9B9465D /* libAkSpatialAudio.a */; };
+		4A86EB446A4EBDF95D670BF9 /* AkPlatformProfilerHookStubs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE03ECD5FA0F2EB1D7FF62B /* AkPlatformProfilerHookStubs.cpp */; };
+		4D057EDCA0A00EE0306CE146 /* libAkGainFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA845D41FD88910BDA8F8B4 /* libAkGainFX.a */; };
+		4D223C43F95464D89B87889E /* NumericControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF8ABB246AA56FA4913BD1D9 /* NumericControl.cpp */; };
+		4D25D3502ACB898E22E335D1 /* RenderSDL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9422C780B169AAA2745CFE71 /* RenderSDL.cpp */; };
+		512A377BE61EF73331F486EB /* DemoMarkers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDE070DB7D3198588742B6A9 /* DemoMarkers.cpp */; };
+		52AB39757CAFA7E3B430E2AE /* libAkFlangerFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 951B72908CD0891130CBBE15 /* libAkFlangerFX.a */; };
+		532BE824DA007A044B366CA8 /* libAkMatrixReverbFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7730FEA8D7F7C24F2A1A911 /* libAkMatrixReverbFX.a */; };
+		572CFF0ED34963ABDF8BB329 /* IntegrationDemoPlugins.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7371D0F83B0E651DBCD2E7C /* IntegrationDemoPlugins.cpp */; };
+		581D91A32B68F81414F51848 /* SDLInputMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 566B625B9FD0D009235F9BF3 /* SDLInputMgr.cpp */; };
+		58490416A69C07722CE5172E /* DemoFootstepsManyVariables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBD933055F5DEED93A8AFE4B /* DemoFootstepsManyVariables.cpp */; };
+		596FB01AD0D4DD2F17D845C1 /* DemoGMEVoiceMessagePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7EE23E4A18A1B2DFB2CB7456 /* DemoGMEVoiceMessagePage.cpp */; };
+		59BB6A0A5037C6B8F80DFC5B /* AkGeneratedSoundBanksResolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14D94FCD1BD9A53B3AE433C7 /* AkGeneratedSoundBanksResolver.cpp */; };
+		5AE03D1A397DE1A59DA5C216 /* Demo3dAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EA12157BCD84D2C44D609D0 /* Demo3dAudio.cpp */; };
+		5BB124AD56AF69BB417346DF /* AkJobWorkerMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8DB75C95EEDA2831E9C509 /* AkJobWorkerMgr.cpp */; };
+		5C1E55E232FB6CF156E3EEB7 /* PlatformHooks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7ACB440A57AA7F09F9590A8 /* PlatformHooks.cpp */; };
+		616527D1E3521EC77A965AF1 /* libAkSineSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3196E5BF7FFD464833A73A02 /* libAkSineSource.a */; };
+		6A4C799BC5100C9F39ACC00D /* libAkSynthOneSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF5756D921A417E3110036 /* libAkSynthOneSource.a */; };
+		6C4CDF3884811A35BF852422 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2212F4A1548127FD342E336 /* MainMenu.xib */; };
+		6D197615D53373F4017AD1A9 /* DemoAppLifecycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C408169B78802D9C0C715E06 /* DemoAppLifecycle.cpp */; };
+		6D88EB46EE2924D14FD4B0F7 /* libAkDelayFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF75C79F70FD0C5737BF28B1 /* libAkDelayFX.a */; };
+		6EE96E81C3E8B8DA7975C7D8 /* libAkPitchShifterFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D9EA0F8903024076FC365F /* libAkPitchShifterFX.a */; };
+		70006416B220795FE3CB59E0 /* UniversalInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8958EEDD7D94041913051C19 /* UniversalInput.cpp */; };
+		71865A85CA0CA0D1F86FE2F5 /* DemoExternalSources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF31AC9DEBF7ABC4D99C32E4 /* DemoExternalSources.cpp */; };
+		71B732B56C954D9F1292102B /* DemoLocalization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7FA5FAD24941962EC94C8078 /* DemoLocalization.cpp */; };
+		71B73801832CAE80806C2F47 /* DemoGMEBaseMenuPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 699F3E957930CE2B3AE54E72 /* DemoGMEBaseMenuPage.cpp */; };
+		74F693F72082DFA48A9F4BB1 /* DemoMIDIMetronome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48C3347D8A754E70A9D7CC4B /* DemoMIDIMetronome.cpp */; };
+		7B31ADF741A5AB819175471F /* SoundInputMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35B82232EABB210711EB63E1 /* SoundInputMgr.cpp */; };
+		81EA466A179278A283038046 /* libAkRoomVerbFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C650C817A1367E8BA8214837 /* libAkRoomVerbFX.a */; };
+		826755C99117C6629F2EAEAC /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ACB50334357419DBB501595 /* Menu.cpp */; };
+		826DD69A625B7A43F8D3302C /* BaseMenuPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07A2BC8835BE7D8C69165FE7 /* BaseMenuPage.cpp */; };
+		83996A15B4708DF134EC5CC2 /* Helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 489937CA6C53B0BDCD62A685 /* Helpers.cpp */; };
+		8C1C37B4D91FA81D25EE2D0E /* AkDefaultIOHookDeferred.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551A45192FD638F625E9164D /* AkDefaultIOHookDeferred.cpp */; };
+		8D129621B6BA3D8CAC80FBB1 /* libAkSoundEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF48BD43B7CFDFEB3F72964 /* libAkSoundEngine.a */; };
+		8E16687CB4DE7294AD659BCE /* Demo3dBus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E4602AEA8D10F013FBD2480 /* Demo3dBus.cpp */; };
+		8EB72840AFFF29FF232FC618 /* libAkHarmonizerFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 192975F712CD9333DA5690DE /* libAkHarmonizerFX.a */; };
+		90DA661D51900F5BA809F268 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856DC2DE3AD5CF7279EB39C0 /* AppKit.framework */; };
+		90EBFFDCDE1356CF5D8BD4FE /* DemoBGM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0F15F21178EA4F239FB42E2 /* DemoBGM.cpp */; };
+		913FA4A18F76AC837F8643B5 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF52B217EF103F501274815 /* libSDL2.a */; };
+		93FD2033AC787D98A5969300 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CAAB948A6E2D5E3E67CA34 /* AudioUnit.framework */; };
+		96A2FA7D475B8A02606F99B3 /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31FFA20C97347E3FEB98C821 /* Platform.cpp */; };
+		988CB889A3791927F4872C2A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B587975EA46A3FBB349F0F7 /* Cocoa.framework */; };
+		9D019D30DAE10DD010F2EF3F /* DemoCommandBufferCrowd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1714A235D933C2B86C3C87DF /* DemoCommandBufferCrowd.cpp */; };
+		9D409BAB01D693E6BBE89334 /* DemoOptionsUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7989BA172F77F675032AC1F9 /* DemoOptionsUtil.cpp */; };
+		A4532C8A2B746DBEA430E5A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78DDE0250B37C2BBA624AF6 /* Foundation.framework */; };
+		A7206EBD675DE9DF0AD9AAE1 /* DemoGMEServerAudioRoutePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1017C03C1ADF53E7CD1F97D2 /* DemoGMEServerAudioRoutePage.cpp */; };
+		ACE72EB8D91EE4A3EAE8D960 /* ButtonControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9810E92244DBB17468C351 /* ButtonControl.cpp */; };
+		ADC97286BED80579064DAFF9 /* PartnerPluginsMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B20930B3A4A9DBD2DF2324F3 /* PartnerPluginsMenu.cpp */; };
+		AEA7DA6199CAA1214D8BC89A /* libAkParametricEQFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A650F50B51C0B3C2447EEC /* libAkParametricEQFX.a */; };
+		AEEED62CFA29E49D2E0F0886 /* GControllerMgr.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4DC2BC9D79CCDE52BCBC348 /* GControllerMgr.mm */; };
+		AFF560255CF7E90D24D548AE /* AkFilePackage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EE41C973118A5E3D8A043 /* AkFilePackage.cpp */; };
+		B0AFAA301A923FBE69DECABB /* Drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECDF4445B84C4DB32C693B36 /* Drawing.cpp */; };
+		B113367BEE516970A4FE5E85 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE557C96207ECEAD199B3BEE /* QuartzCore.framework */; };
+		B27E4A295BDDB7AD8D733516 /* ToggleControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 716D0D16732F387EF7E03183 /* ToggleControl.cpp */; };
+		B350A267B93419F1C5AC2341 /* DemoDynamicDialogue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF67E78A5DD50CACE4D6F2F2 /* DemoDynamicDialogue.cpp */; };
+		B462B639831D9BA1A976BEFE /* libAkAudioInputSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B61525914A198B30598467 /* libAkAudioInputSource.a */; };
+		B51703658DECD89BB825A5BA /* DemoOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C22F97C19752EBBF5D153441 /* DemoOptions.cpp */; };
+		B8269C35602BADDB9CD01CEB /* MessagePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 881732C5E17C10BE5B3F9607 /* MessagePage.cpp */; };
+		B98ECB90ED88D7D1486F2479 /* libAkRecorderADMFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA242C6FF72BE152DFB0DA7A /* libAkRecorderADMFX.a */; };
+		BDE9F5374637E1FB30F41CA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C2460559AC98060808A998 /* main.m */; };
+		BE5CF85102BDEBC20A407EBF /* IntegrationDemoAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B98F2F6A23CFE70B4A2AFAE7 /* IntegrationDemoAppDelegate.mm */; };
+		C392267AF373BE00AD98126C /* libAkTremoloFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C74C49DD1DB11B056F099B /* libAkTremoloFX.a */; };
+		C48C157BEB695F35A1347899 /* SoundInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6939584784CD4AEBD81F9380 /* SoundInput.cpp */; };
+		C73A21AE417CF215A8428091 /* libAkCompressorFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB789B138BFC4E57E4B5FCF8 /* libAkCompressorFX.a */; };
+		C755B8BE31B7D20A14CD6CC6 /* libAkGuitarDistortionFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 305198CA85B75C71F24F9DEB /* libAkGuitarDistortionFX.a */; };
+		C91043D396A94382B58BF6D0 /* SDLWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71810AA5B9D1F43AB49E8C3F /* SDLWindow.cpp */; };
+		CB2CEF7883334FA9787F7001 /* libAkVorbisDecoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D4CDE1A01D8F79AB8F8815 /* libAkVorbisDecoder.a */; };
+		CDE76F4E21363CDD8CEEA5CF /* IOBufferQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AABF31A7C2179622FEE534A /* IOBufferQueue.cpp */; };
+		CEBD78F9B1D2E998EE6FDE9B /* DemoPositioning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F40F2BFE4899AA7045BE4E15 /* DemoPositioning.cpp */; };
+		D2ADF5806C6C1BAF4D19D5ED /* libAkPeakLimiterFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F291EF88AA6439FA8AE18D1 /* libAkPeakLimiterFX.a */; };
+		D2E259383ED79AB341B8B5D3 /* DemoRTPCCarEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01C9057E8D7D7E95ED214456 /* DemoRTPCCarEngine.cpp */; };
+		D311229D4F8FA5487E1DD6E2 /* MultiplayerPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7D672C6D22D9732D0B6B6F /* MultiplayerPage.cpp */; };
+		D328A6D61C17336670898780 /* DemoChannels.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F21A1B55D7839858C29E4A1 /* DemoChannels.cpp */; };
+		D894854AE7E8E07E1327FAD9 /* libAkTimeStretchFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B409B35AFACD5B2CDC540 /* libAkTimeStretchFX.a */; };
+		DAE607AC4131B5F03FF282AA /* Page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD923F6A56DD1C1A4E669111 /* Page.cpp */; };
+		DBC4154B9C9E4782701B9A06 /* DemoGMEPositioningPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A52D4A49D4B8B3A1BA0DA495 /* DemoGMEPositioningPage.cpp */; };
+		DCC92CC7E46AD5777CC43A15 /* LabelControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2CFF1B43134B66C74F68E1 /* LabelControl.cpp */; };
+		DDD457BFDE7B823358105BAB /* CoreHaptics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D91F50DE1E79CBE74ABBB /* CoreHaptics.framework */; };
+		DEDD0BBCFED8DA0B219D6020 /* DemoPrepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8797D6B1EAA3610C7A2B14C /* DemoPrepare.cpp */; };
+		DFD3CE41EE6C755072D154A5 /* FreetypeGraphicRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 429EC9E7413EC14D8E90ECF1 /* FreetypeGraphicRenderer.cpp */; };
+		E06734B1F6BDD5C817ADE52B /* SoundInputBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C9DC8AAFC7A8A40A4EDA2 /* SoundInputBase.cpp */; };
+		E499CBBAD6BF693EEDE23340 /* libAkStreamMgr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7770D97D760A5D9F046BA5 /* libAkStreamMgr.a */; };
+		E6E4A9EA42129165EFDB24C0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF5A2FED66DB13038FEA2D6 /* OpenGL.framework */; };
+		E97939D08679DD99CD34D03D /* DemoSpatialAudioReflect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFF579B8DEDA316BE38B7F4E /* DemoSpatialAudioReflect.cpp */; };
+		E9CB974BC4D56F8C62467839 /* DemoPositioningMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9E7D0443BFC55B40C78C83 /* DemoPositioningMenu.cpp */; };
+		EBA2C0C7496588F8FD212C81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70244462EE75D3CF568266DB /* AVFoundation.framework */; };
+		ED1A0595E1495ED4EC21723B /* libAkSilenceSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E540DCD66F33E1AEDC25A7C /* libAkSilenceSource.a */; };
+		F06A7252EB2EBAE6B0882078 /* DemoMusicMIDIMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E31CE7ED916C11AFB45B6FEB /* DemoMusicMIDIMenu.cpp */; };
+		F092DA3A3D56C747D7C6A252 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63CB65A9C970277BA0FDC67 /* AudioToolbox.framework */; };
+		F18A1B0DEB107E26DB1BCFF9 /* libAkOpusDecoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B35F205C89F56D18B887DB5 /* libAkOpusDecoder.a */; };
+		F271B10B7CB08A38DC3970E4 /* AkMultipleFileLocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C489257BDCA1E657619CB1EB /* AkMultipleFileLocation.cpp */; };
+		F556396376B67738AA63F30F /* libAkToneSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE6C64EC34EC13E906284B3 /* libAkToneSource.a */; };
+		F6E8B73B19126DE63709EF11 /* DemoInteractiveMusic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B20E4886E802322B98558648 /* DemoInteractiveMusic.cpp */; };
+		F8A367828E4CAD0B54B6F480 /* libAkStereoDelayFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E651BC38E115290BE6684FD4 /* libAkStereoDelayFX.a */; };
+		F8EC6590B4EDAED67B2FF8BC /* DemoGMERoutePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 085F01A9DE925792E68EAB35 /* DemoGMERoutePage.cpp */; };
+		FA43915AF6383D904D1AA7A1 /* DemoSpatialAudioPortalReflect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 034C8DB3CE31F0929979C3F5 /* DemoSpatialAudioPortalReflect.cpp */; };
+		FBF639AD59C44A81C9FF8620 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5E0782185724FAB29182FB /* IOKit.framework */; };
+		FC26F87F753EDBDB36318D84 /* DemoBankLoadingMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17C9A7F7DF3DB4FD6F6712AD /* DemoBankLoadingMenu.cpp */; };
+		FE0AF9A1A16BA519E3CCDF13 /* AkFilePackageLUT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31A58377E41EFC560A2D35E7 /* AkFilePackageLUT.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0166A75A0B52F43106888F70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DA346226C459F7C347C0869 /* AkOpusDecoderMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C725264C2383259CDD375B8B;
+			remoteInfo = libAkOpusDecoder.a;
+		};
+		02AAB2242E3D6CC9803DBA1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DA346226C459F7C347C0869 /* AkOpusDecoderMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 296AE0CE0899FBB8D320A2B1;
+			remoteInfo = libAkOpusDecoder.a;
+		};
+		08806837F8DC960521E8433B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB51CAE5EC90ADD1B259F7E6 /* AkStereoDelayFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B6CCE26CC223558E63F95FF5;
+			remoteInfo = libAkStereoDelayFX.a;
+		};
+		0B97477588FAC88FE470B22C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFC7E78DF5708C9C0FC45ADA /* AkCompressorFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DD181914B772A977266EEFB;
+			remoteInfo = libAkCompressorFX.a;
+		};
+		0BF82B922BB405E49525DAFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DAD5C9C83C1A926E8255F20 /* AkMemoryMgrMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 62B2B516939AF1AD65DA306A;
+			remoteInfo = libAkMemoryMgr.a;
+		};
+		11F270E6EBDE042227D5B52B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1496B83D80980BB99F9215E /* AkVorbisDecoderMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F33796634BE01B16CD0C0FC0;
+			remoteInfo = libAkVorbisDecoder.a;
+		};
+		13F15DE92AA7901EB54706E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DAD5C9C83C1A926E8255F20 /* AkMemoryMgrMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4627EA17D1E6253A847F4A0F;
+			remoteInfo = libAkMemoryMgr.a;
+		};
+		19A1B1A2B6722E143764E828 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6456B42CEB60AB54EB995508 /* AkSoundEngineMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B25A86CC616E525F1C3F6F1F;
+			remoteInfo = libAkSoundEngine.a;
+		};
+		19B99EB70654BEE43B14713F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1496B83D80980BB99F9215E /* AkVorbisDecoderMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 524A196025E9EE9BFE4173FE;
+			remoteInfo = libAkVorbisDecoder.a;
+		};
+		24394800E85BE4B1274DA945 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADC46CF258DD805EE6818C8B /* SDL2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B08F017DAF19385B4A7C164C;
+			remoteInfo = libSDL2.a;
+		};
+		24E651DA9F23DF0B229D0B1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C87180C212AE0C0D361E7C79 /* AkPitchShifterFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 342B0762FB1360024D1B7E41;
+			remoteInfo = libAkPitchShifterFX.a;
+		};
+		2A0EE51D508A18FA4E24FE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16CFD050E55D5ED4817B3BDF /* AkGainFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 45D1A7AC2C336A7316FD05F1;
+			remoteInfo = libAkGainFX.a;
+		};
+		2A49F12D5F764BECAE214669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DA94E4779866135B033956E /* AkTremoloFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 29A1B4076D43A9F8C5ECC4AF;
+			remoteInfo = libAkTremoloFX.a;
+		};
+		3046085095CB25AD2594FE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41012A57C7869CC7DD4BCCA2 /* AkHarmonizerFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE5592E33A9A94F706D39FDA;
+			remoteInfo = libAkHarmonizerFX.a;
+		};
+		327623057E62CF5251D34F3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BDD30AB6E9392582AB48C5C /* AkRecorderADMFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E992A7AE11CB8938C6A2745F;
+			remoteInfo = libAkRecorderADMFX.a;
+		};
+		37501336B22D7813342F36FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE5A2BF218CC7CD7FE1B3E0 /* AkFlangerFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 59E971C7BC5827A8F8741631;
+			remoteInfo = libAkFlangerFX.a;
+		};
+		389E2D1FDB8440BAFE7DCDF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBA3E55D0A0D31A45EFDACA5 /* AkSynthOneSourceMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B27C5B0716B78A15B266563;
+			remoteInfo = libAkSynthOneSource.a;
+		};
+		3FB037BE0DAA96FE218FC884 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB439CF65A550DE6BC41CF41 /* Ak3DAudioBedMixerFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B6A0983A564E687F257F073;
+			remoteInfo = libAk3DAudioBedMixerFX.a;
+		};
+		407C3D5B19314693B6806CC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C87180C212AE0C0D361E7C79 /* AkPitchShifterFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A6D74312F76875C4A4BDBF4A;
+			remoteInfo = libAkPitchShifterFX.a;
+		};
+		573D8B8040E31C54953B759F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB51CAE5EC90ADD1B259F7E6 /* AkStereoDelayFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC80688AF7407EF23F159C2A;
+			remoteInfo = libAkStereoDelayFX.a;
+		};
+		5890B16080B1BE95BAD47376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C954296A099966775C275AC7 /* AkSidechainFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 528A52E3AB6D772FBA198B8D;
+			remoteInfo = libAkSidechainFX.a;
+		};
+		5996C39A9B5CDAC683A5A6F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7911EEC895E8C9ADF2AD6205 /* AkToneSourceMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A804F34300A0179DDF7D4D8A;
+			remoteInfo = libAkToneSource.a;
+		};
+		5D163A03C9180E1E52DCEA11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC67FA1670E3AB3F9A699565 /* AkTimeStretchFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 215CD33639CC03CFD906A339;
+			remoteInfo = libAkTimeStretchFX.a;
+		};
+		652673A97824A4721F7C75F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CE6F03347D26F44B271C9F1 /* AkDelayFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 712AD9DEFE2947D2919A122F;
+			remoteInfo = libAkDelayFX.a;
+		};
+		65AF9B887BC447E0A049E1BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA3D0437CD7A774BDBAAB7DA /* AkRecorderFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB80BFAF4D279AA536B0B62F;
+			remoteInfo = libAkRecorderFX.a;
+		};
+		66CE10FCD3488BDD3B071ABC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 656C1FBFBD6B94B5895B64C7 /* AkGuitarDistortionFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 75B8E65E68630783A371685F;
+			remoteInfo = libAkGuitarDistortionFX.a;
+		};
+		6AC3C5919EC2EBEFE37C302F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44D3A95F24C917F62F3ECC9A /* AkMatrixReverbFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 31EA3B57F456F375F5A30CB6;
+			remoteInfo = libAkMatrixReverbFX.a;
+		};
+		6D439509CD6528DC408AACFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53B8CEFD63EE8390A63206D2 /* AkMeterFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21E3D42529D0CE60BA7D9F1F;
+			remoteInfo = libAkMeterFX.a;
+		};
+		70E3F5622254290483E68F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F25D64B6BCFABBED25192153 /* AkParametricEQFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E698185011952566126964E4;
+			remoteInfo = libAkParametricEQFX.a;
+		};
+		7300DDD3E093FC6728200E67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC67FA1670E3AB3F9A699565 /* AkTimeStretchFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FD1AD0CC6B654A5127544308;
+			remoteInfo = libAkTimeStretchFX.a;
+		};
+		7867F3C17FC87D992225DE94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADC46CF258DD805EE6818C8B /* SDL2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 11A4BEC69F1D953FE4CA52FE;
+			remoteInfo = libSDL2.a;
+		};
+		7C0E0CF7F3AD843EDB113B71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFC7E78DF5708C9C0FC45ADA /* AkCompressorFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 383795C603CB99A073FC1FA9;
+			remoteInfo = libAkCompressorFX.a;
+		};
+		85638B44726AA6834B1882D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53B8CEFD63EE8390A63206D2 /* AkMeterFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D59C522C656318D8CC7D1CFA;
+			remoteInfo = libAkMeterFX.a;
+		};
+		8BC3620B9F2CD79B91CE5212 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1472F2F096427CDE37D00657 /* AkSpatialAudioMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A70414D6949EDDD94AD1D54;
+			remoteInfo = libAkSpatialAudio.a;
+		};
+		8F81A4D4A39D4005190A2FBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7911EEC895E8C9ADF2AD6205 /* AkToneSourceMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 705D87CE365CD9823FDA4BC9;
+			remoteInfo = libAkToneSource.a;
+		};
+		99A5CA6900C1DB92DB2E1F52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBA3E55D0A0D31A45EFDACA5 /* AkSynthOneSourceMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BED3FC64B7F822F7109601E2;
+			remoteInfo = libAkSynthOneSource.a;
+		};
+		9EC405202C7F71B06DB02C11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3B46DC2AD3031A8605DB5BD /* AkSineSourceMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 963B44936D551516C123D358;
+			remoteInfo = libAkSineSource.a;
+		};
+		A6CA33FACD3391BBB28BD943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6456B42CEB60AB54EB995508 /* AkSoundEngineMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FBFEFB7B7ECF31BC41075788;
+			remoteInfo = libAkSoundEngine.a;
+		};
+		AAE3696D958A057FF2A1F718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DA94E4779866135B033956E /* AkTremoloFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B54A8FA2D11FC3A1F468017;
+			remoteInfo = libAkTremoloFX.a;
+		};
+		AB4A2E3916789F6078FA85AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 656C1FBFBD6B94B5895B64C7 /* AkGuitarDistortionFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B1E91FA3732F986BDB07A07;
+			remoteInfo = libAkGuitarDistortionFX.a;
+		};
+		B02FFAF1912EB0BEB7E42E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B730FBCE8E8EB74303700C62 /* AkSilenceSourceMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A05A07485A1A1E2D99BCFE1B;
+			remoteInfo = libAkSilenceSource.a;
+		};
+		B2E13C27580CEA8811C56079 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44D3A95F24C917F62F3ECC9A /* AkMatrixReverbFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 89DA5C635C4DECCD5D9B4EB4;
+			remoteInfo = libAkMatrixReverbFX.a;
+		};
+		BB6646F55FC290EE1902CEF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 666ABA7111023953B51644BE /* AkStreamMgrMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9FCFCAEAD88069647B1AD5E;
+			remoteInfo = libAkStreamMgr.a;
+		};
+		C0EDB178A5B05940152DF6EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F25D64B6BCFABBED25192153 /* AkParametricEQFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A103B465D95BCBFA46EDCCDE;
+			remoteInfo = libAkParametricEQFX.a;
+		};
+		C38AB3A7AE8B5E72ACE258D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90545E0931355C45D443E02F /* AkAudioInputSourceMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B5727E3D624FD7BC80B8ECE;
+			remoteInfo = libAkAudioInputSource.a;
+		};
+		C405A0F90E420DA60A50D503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB439CF65A550DE6BC41CF41 /* Ak3DAudioBedMixerFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 942814F230244DAFA8DA0741;
+			remoteInfo = libAk3DAudioBedMixerFX.a;
+		};
+		C8E4ADDB18663D2367E46F48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90545E0931355C45D443E02F /* AkAudioInputSourceMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1E5AC4682AF991EB9CE88CC;
+			remoteInfo = libAkAudioInputSource.a;
+		};
+		CB999769B48F1AB2B0FE006E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3B46DC2AD3031A8605DB5BD /* AkSineSourceMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8740C8313E90E2E44AFF8739;
+			remoteInfo = libAkSineSource.a;
+		};
+		CF6FA242BCC80A045D47FA54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1472F2F096427CDE37D00657 /* AkSpatialAudioMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA803407E9E996E4FCB70FDC;
+			remoteInfo = libAkSpatialAudio.a;
+		};
+		DCB4AC744985AF277BBFC49E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 666ABA7111023953B51644BE /* AkStreamMgrMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EFBFAA78029A3867D112FF1D;
+			remoteInfo = libAkStreamMgr.a;
+		};
+		DECF9811EACA1AC7593CA04D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE9C1C0711610E1507112C52 /* AkPeakLimiterFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4AF528AD41F8537C8727B2B;
+			remoteInfo = libAkPeakLimiterFX.a;
+		};
+		DF80DF3F5436320373946968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA0989B92E85823ACA46B8C8 /* AkRoomVerbFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6866190ADC980E3D4DC1C539;
+			remoteInfo = libAkRoomVerbFX.a;
+		};
+		E85D54C3063738FF75C370C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41012A57C7869CC7DD4BCCA2 /* AkHarmonizerFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 068E92ED724714DB126753FD;
+			remoteInfo = libAkHarmonizerFX.a;
+		};
+		EC3445F0AF2E0CEA798E0923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BDD30AB6E9392582AB48C5C /* AkRecorderADMFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E7761BCBCF306F45F1B99E4D;
+			remoteInfo = libAkRecorderADMFX.a;
+		};
+		EC4D62EC3EC56C3383D399C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA0989B92E85823ACA46B8C8 /* AkRoomVerbFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 926791B41DA8DC85AAB11F99;
+			remoteInfo = libAkRoomVerbFX.a;
+		};
+		EDD82AD7CDCD3A12C3FDFE7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C954296A099966775C275AC7 /* AkSidechainFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BB19BA7900D4E88A6C22375;
+			remoteInfo = libAkSidechainFX.a;
+		};
+		EDDA31B47DB060EBAF5A2564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B730FBCE8E8EB74303700C62 /* AkSilenceSourceMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 74B9BC145A6E8FD42933092D;
+			remoteInfo = libAkSilenceSource.a;
+		};
+		EFF11EDBD4621D6A7836EBF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CE6F03347D26F44B271C9F1 /* AkDelayFXMac.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1D544CEF90BE23E9B294C8E;
+			remoteInfo = libAkDelayFX.a;
+		};
+		F03B7861CFE78ABDD4D10C69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16CFD050E55D5ED4817B3BDF /* AkGainFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25B4DD9D5ABEA619CB2A323F;
+			remoteInfo = libAkGainFX.a;
+		};
+		F0C2375D30DE43EB63126BEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE5A2BF218CC7CD7FE1B3E0 /* AkFlangerFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F4EBB7DBC530CC090906F688;
+			remoteInfo = libAkFlangerFX.a;
+		};
+		F5D11D17AB88E0E5AF2E636E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE9C1C0711610E1507112C52 /* AkPeakLimiterFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F729F2C4905CA0A6A0F4ABD;
+			remoteInfo = libAkPeakLimiterFX.a;
+		};
+		FFAE2C1C2AD589B1F713AB41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA3D0437CD7A774BDBAAB7DA /* AkRecorderFXMac.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E8A59BE1F141280226908F0;
+			remoteInfo = libAkRecorderFX.a;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007152EAB0117F825EA2231E /* DemoGMEBaseMenuPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoGMEBaseMenuPage.h; path = ../DemoPages/PartnerPlugins/GME/DemoGMEBaseMenuPage.h; sourceTree = "<group>"; };
+		01C9057E8D7D7E95ED214456 /* DemoRTPCCarEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoRTPCCarEngine.cpp; path = ../DemoPages/DemoRTPCCarEngine.cpp; sourceTree = "<group>"; };
+		034C8DB3CE31F0929979C3F5 /* DemoSpatialAudioPortalReflect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoSpatialAudioPortalReflect.cpp; path = ../DemoPages/DemoSpatialAudioPortalReflect.cpp; sourceTree = "<group>"; };
+		07A2BC8835BE7D8C69165FE7 /* BaseMenuPage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BaseMenuPage.cpp; path = ../DemoPages/BaseMenuPage.cpp; sourceTree = "<group>"; };
+		085F01A9DE925792E68EAB35 /* DemoGMERoutePage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoGMERoutePage.cpp; path = ../DemoPages/PartnerPlugins/GME/DemoGMERoutePage.cpp; sourceTree = "<group>"; };
+		09122FDCB61C6A28E30B18B9 /* stb_truetype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_truetype.h; path = ../FreetypeRenderer/stb_truetype.h; sourceTree = "<group>"; };
+		0AABF31A7C2179622FEE534A /* IOBufferQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = IOBufferQueue.cpp; path = ../AppleCommon/IOBufferQueue.cpp; sourceTree = "<group>"; };
+		0BB5E94E91F88F310CF8255D /* DemoAutobanks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoAutobanks.cpp; path = ../DemoPages/DemoAutobanks.cpp; sourceTree = "<group>"; };
+		0C5D07C3C5E5A95EAEDAF2FE /* DemoSpeechEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoSpeechEngine.h; path = ../DemoPages/PartnerPlugins/speechEngine/DemoSpeechEngine.h; sourceTree = "<group>"; };
+		0D3EE41C973118A5E3D8A043 /* AkFilePackage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AkFilePackage.cpp; path = ../../SoundEngine/Common/AkFilePackage.cpp; sourceTree = "<group>"; };
+		0E4602AEA8D10F013FBD2480 /* Demo3dBus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Demo3dBus.cpp; path = ../DemoPages/Demo3dBus.cpp; sourceTree = "<group>"; };
+		1017C03C1ADF53E7CD1F97D2 /* DemoGMEServerAudioRoutePage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoGMEServerAudioRoutePage.cpp; path = ../DemoPages/PartnerPlugins/GME/DemoGMEServerAudioRoutePage.cpp; sourceTree = "<group>"; };
+		1335396810630FE30D114350 /* CoreAudioInputDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CoreAudioInputDevice.cpp; path = CoreAudioInputDevice.cpp; sourceTree = "<group>"; };
+		1392EF788F54BDD3F61A58FF /* DemoSpatialAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoSpatialAudio.h; path = ../DemoPages/DemoSpatialAudio.h; sourceTree = "<group>"; };
+		13FE6D5F9C0E863EDA1FE681 /* DemoGMEPositioningPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoGMEPositioningPage.h; path = ../DemoPages/PartnerPlugins/GME/DemoGMEPositioningPage.h; sourceTree = "<group>"; };
+		142FAF099025C531A0E5ACE1 /* MovableChip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MovableChip.h; path = ../MenuSystem/MovableChip.h; sourceTree = "<group>"; };
+		1472F2F096427CDE37D00657 /* libAkSpatialAudio.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkSpatialAudioMac.xcodeproj"; path = ../../../source/SpatialAudio/Mac/AkSpatialAudioMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		14D94FCD1BD9A53B3AE433C7 /* AkGeneratedSoundBanksResolver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AkGeneratedSoundBanksResolver.cpp; path = ../../SoundEngine/Common/AkGeneratedSoundBanksResolver.cpp; sourceTree = "<group>"; };
+		151FDE94092F22BB91279524 /* DemoOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoOptions.h; path = ../DemoPages/DemoOptions.h; sourceTree = "<group>"; };
+		1554C478C9C2F6C79F3F3E7F /* DemoSpatialAudioMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoSpatialAudioMenu.cpp; path = ../DemoPages/DemoSpatialAudioMenu.cpp; sourceTree = "<group>"; };
+		15C980DE4CF5C2FE173A138F /* MessagePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MessagePage.h; path = ../MenuSystem/MessagePage.h; sourceTree = "<group>"; };
+		16CFD050E55D5ED4817B3BDF /* libAkGainFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkGainFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkGain/Mac/AkGainFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		1714A235D933C2B86C3C87DF /* DemoCommandBufferCrowd.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoCommandBufferCrowd.cpp; path = ../DemoPages/DemoCommandBufferCrowd.cpp; sourceTree = "<group>"; };
+		17C9A7F7DF3DB4FD6F6712AD /* DemoBankLoadingMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoBankLoadingMenu.cpp; path = ../DemoPages/DemoBankLoadingMenu.cpp; sourceTree = "<group>"; };
+		1817430569E9C6CEA93AA6C3 /* AkFileLocationBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AkFileLocationBase.h; path = ../../SoundEngine/Common/AkFileLocationBase.h; sourceTree = "<group>"; };
+		1C59E7F04DCBF0767BA4A8DB /* DemoCommandBufferCrowd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoCommandBufferCrowd.h; path = ../DemoPages/DemoCommandBufferCrowd.h; sourceTree = "<group>"; };
+		1F1F585AAC54E29515979DDC /* AkGeneratedSoundBanksResolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AkGeneratedSoundBanksResolver.h; path = ../../SoundEngine/Common/AkGeneratedSoundBanksResolver.h; sourceTree = "<group>"; };
+		1F2DDB0E853B61E2A75A32D8 /* SoundInputMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SoundInputMgr.h; path = SoundInputMgr.h; sourceTree = "<group>"; };
+		21F500EBD3F2320BC0E2DEF0 /* SoundInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SoundInput.h; path = SoundInput.h; sourceTree = "<group>"; };
+		224728C86216E10D52C7EB2B /* AkMultipleFileLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AkMultipleFileLocation.h; path = ../../SoundEngine/Common/AkMultipleFileLocation.h; sourceTree = "<group>"; };
+		2421EF39CCF69F81D353B051 /* Menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = ../MenuSystem/Menu.h; sourceTree = "<group>"; };
+		2A7C9DC8AAFC7A8A40A4EDA2 /* SoundInputBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInputBase.cpp; path = ../Common/SoundInputBase.cpp; sourceTree = "<group>"; };
+		2AA8F730D954A2AD24A671D4 /* DemoMusicCallbacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoMusicCallbacks.h; path = ../DemoPages/DemoMusicCallbacks.h; sourceTree = "<group>"; };
+		2BC3435E3137E988E284F2F3 /* DemoGMEServerAudioRoutePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoGMEServerAudioRoutePage.h; path = ../DemoPages/PartnerPlugins/GME/DemoGMEServerAudioRoutePage.h; sourceTree = "<group>"; };
+		2D161A9CB29D12F68DF3E89A /* DemoSpatialAudioReverbZones.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoSpatialAudioReverbZones.h; path = ../DemoPages/DemoSpatialAudioReverbZones.h; sourceTree = "<group>"; };
+		2DA346226C459F7C347C0869 /* libAkOpusDecoder.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkOpusDecoderMac.xcodeproj"; path = ../../../source/SoundEngine/Codecs/AkOpusDecoder/Mac/AkOpusDecoderMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		2DAD5C9C83C1A926E8255F20 /* libAkMemoryMgr.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkMemoryMgrMac.xcodeproj"; path = ../../../source/SoundEngine/AkMemoryMgr/Mac/AkMemoryMgrMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		2DBA6A994B522A5A5C0CA233 /* DemoMusicCallbacks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoMusicCallbacks.cpp; path = ../DemoPages/DemoMusicCallbacks.cpp; sourceTree = "<group>"; };
+		305D91F50DE1E79CBE74ABBB /* CoreHaptics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreHaptics.framework; path = System/Library/Frameworks/CoreHaptics.framework; sourceTree = SDKROOT; };
+		31725040187F7E195E1F45EB /* GMEDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GMEDefines.h; path = ../DemoPages/PartnerPlugins/GME/GMEDefines.h; sourceTree = "<group>"; };
+		31A58377E41EFC560A2D35E7 /* AkFilePackageLUT.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AkFilePackageLUT.cpp; path = ../../SoundEngine/Common/AkFilePackageLUT.cpp; sourceTree = "<group>"; };
+		31FFA20C97347E3FEB98C821 /* Platform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Platform.cpp; path = Platform.cpp; sourceTree = "<group>"; };
+		3232C10EBD5FEA1ED7D5A6BB /* DemoExternalSources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoExternalSources.h; path = ../DemoPages/DemoExternalSources.h; sourceTree = "<group>"; };
+		33D8E668CF689E13668FFF35 /* AppleInputMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppleInputMgr.h; path = ../AppleCommon/AppleInputMgr.h; sourceTree = "<group>"; };
+		3406996E9226C90E8294B2C0 /* GentiumPlusAm-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = text; name = "GentiumPlusAm-R.ttf"; path = "../FreetypeRenderer/Assets/GentiumPlusAm-R.ttf"; sourceTree = "<group>"; };
+		35B82232EABB210711EB63E1 /* SoundInputMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInputMgr.cpp; path = SoundInputMgr.cpp; sourceTree = "<group>"; };
+		36764E73FB5D6FE6AB32B809 /* DemoMusicMIDIMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoMusicMIDIMenu.h; path = ../DemoPages/DemoMusicMIDIMenu.h; sourceTree = "<group>"; };
+		397EFD2E5409BEBDB49DC1FA /* AkDefaultIOHookDeferred.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AkDefaultIOHookDeferred.h; path = ../../SoundEngine/POSIX/AkDefaultIOHookDeferred.h; sourceTree = "<group>"; };
+		3B9207294F392B64E80A5DBC /* DemoGMERoutePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoGMERoutePage.h; path = ../DemoPages/PartnerPlugins/GME/DemoGMERoutePage.h; sourceTree = "<group>"; };
+		3EA1AD7C6E8B7999C22231AE /* DemoOptionsUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoOptionsUtil.h; path = ../Common/DemoOptionsUtil.h; sourceTree = "<group>"; };
+		40397CC0950FB73126311562 /* SDLInputMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDLInputMgr.h; path = ../SDL/SDLInputMgr.h; sourceTree = "<group>"; };
+		41012A57C7869CC7DD4BCCA2 /* libAkHarmonizerFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkHarmonizerFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkHarmonizer/Mac/AkHarmonizerFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		429EC9E7413EC14D8E90ECF1 /* FreetypeGraphicRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FreetypeGraphicRenderer.cpp; path = ../FreetypeRenderer/FreetypeGraphicRenderer.cpp; sourceTree = "<group>"; };
+		42B901D4F41BE0002EB93AFE /* Control.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Control.cpp; path = ../MenuSystem/Control.cpp; sourceTree = "<group>"; };
+		4338B3B1E0EC167507D118A6 /* Page.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Page.h; path = ../MenuSystem/Page.h; sourceTree = "<group>"; };
+		4497E84B6C4A4F404F0009FE /* DemoSpatialAudioReverbZones.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoSpatialAudioReverbZones.cpp; path = ../DemoPages/DemoSpatialAudioReverbZones.cpp; sourceTree = "<group>"; };
+		44D3A95F24C917F62F3ECC9A /* libAkMatrixReverbFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkMatrixReverbFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkFDNReverb/Mac/AkMatrixReverbFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		489937CA6C53B0BDCD62A685 /* Helpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Helpers.cpp; path = ../Common/Helpers.cpp; sourceTree = "<group>"; };
+		48C3347D8A754E70A9D7CC4B /* DemoMIDIMetronome.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoMIDIMetronome.cpp; path = ../DemoPages/DemoMIDIMetronome.cpp; sourceTree = "<group>"; };
+		4A8DB75C95EEDA2831E9C509 /* AkJobWorkerMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AkJobWorkerMgr.cpp; path = ../../SoundEngine/Common/AkJobWorkerMgr.cpp; sourceTree = "<group>"; };
+		4ACB50334357419DBB501595 /* Menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Menu.cpp; path = ../MenuSystem/Menu.cpp; sourceTree = "<group>"; };
+		4B36A4A3D4D731A9B7E22EC5 /* ToggleControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ToggleControl.h; path = ../MenuSystem/ToggleControl.h; sourceTree = "<group>"; };
+		4BE03ECD5FA0F2EB1D7FF62B /* AkPlatformProfilerHookStubs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AkPlatformProfilerHookStubs.cpp; path = ../../SoundEngine/Common/AkPlatformProfilerHookStubs.cpp; sourceTree = "<group>"; };
+		4CB6B7CE1139B1BFF0324D7E /* DemoSpatialAudioMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoSpatialAudioMenu.h; path = ../DemoPages/DemoSpatialAudioMenu.h; sourceTree = "<group>"; };
+		4E3015A001E9877D33844CFA /* DemoDialogueMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoDialogueMenu.h; path = ../DemoPages/DemoDialogueMenu.h; sourceTree = "<group>"; };
+		4FF2B0A9A28EF9BDF118E675 /* PartnerPluginsMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PartnerPluginsMenu.h; path = ../DemoPages/PartnerPlugins/PartnerPluginsMenu.h; sourceTree = "<group>"; };
+		53B8CEFD63EE8390A63206D2 /* libAkMeterFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkMeterFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkMeter/Mac/AkMeterFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		54C03F890ECB91DCD880D19A /* AkFileHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AkFileHelpers.h; path = ../../SoundEngine/POSIX/AkFileHelpers.h; sourceTree = "<group>"; };
+		54F8C205FA1576CD08344E8C /* SoundInputBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SoundInputBase.h; path = ../Common/SoundInputBase.h; sourceTree = "<group>"; };
+		551A45192FD638F625E9164D /* AkDefaultIOHookDeferred.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AkDefaultIOHookDeferred.cpp; path = ../../SoundEngine/POSIX/AkDefaultIOHookDeferred.cpp; sourceTree = "<group>"; };
+		566B625B9FD0D009235F9BF3 /* SDLInputMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SDLInputMgr.cpp; path = ../SDL/SDLInputMgr.cpp; sourceTree = "<group>"; };
+		57A4C3560AD9BAD55A8F7082 /* IntegrationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = IntegrationDemo.app; path = IntegrationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A702FCF7BAFA5A9FD880381 /* IAkInputMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IAkInputMgr.h; path = ../Common/IAkInputMgr.h; sourceTree = "<group>"; };
+		5BD7A6BB47F505C919131047 /* GControllerMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GControllerMgr.h; path = ../AppleCommon/GControllerMgr.h; sourceTree = "<group>"; };
+		5C9C8CFC1DA09268B7742B91 /* IntegrationDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntegrationDemo.h; path = ../Common/IntegrationDemo.h; sourceTree = "<group>"; };
+		5CE6F03347D26F44B271C9F1 /* libAkDelayFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkDelayFXMac.xcodeproj"; path = ../../Plugins/AkDelay/Sources/AudioEngineFX/Mac/AkDelayFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		5DA94E4779866135B033956E /* libAkTremoloFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkTremoloFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkTremolo/Mac/AkTremoloFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		63C542B02A6F2D36BA921727 /* Demo3dBus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Demo3dBus.h; path = ../DemoPages/Demo3dBus.h; sourceTree = "<group>"; };
+		6456B42CEB60AB54EB995508 /* libAkSoundEngine.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkSoundEngineMac.xcodeproj"; path = ../../../source/SoundEngine/AkAudiolib/Mac/AkSoundEngineMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		656C1FBFBD6B94B5895B64C7 /* libAkGuitarDistortionFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkGuitarDistortionFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkGuitarDistortion/Mac/AkGuitarDistortionFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		666ABA7111023953B51644BE /* libAkStreamMgr.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkStreamMgrMac.xcodeproj"; path = ../../../source/StreamManager/Mac/AkStreamMgrMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6875D677ECDEE010AC8F9ED5 /* LabelControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LabelControl.h; path = ../MenuSystem/LabelControl.h; sourceTree = "<group>"; };
+		6939584784CD4AEBD81F9380 /* SoundInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInput.cpp; path = SoundInput.cpp; sourceTree = "<group>"; };
+		699F3E957930CE2B3AE54E72 /* DemoGMEBaseMenuPage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoGMEBaseMenuPage.cpp; path = ../DemoPages/PartnerPlugins/GME/DemoGMEBaseMenuPage.cpp; sourceTree = "<group>"; };
+		6B3381C19591CA974EE4AE32 /* DemoPrepare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoPrepare.h; path = ../DemoPages/DemoPrepare.h; sourceTree = "<group>"; };
+		6C275AC38E52581C50B98329 /* DemoPositioningMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoPositioningMenu.h; path = ../DemoPages/DemoPositioningMenu.h; sourceTree = "<group>"; };
+		6E02E53C203E7A64646A2E76 /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stdafx.h; path = stdafx.h; sourceTree = "<group>"; };
+		6EA12157BCD84D2C44D609D0 /* Demo3dAudio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Demo3dAudio.cpp; path = ../DemoPages/Demo3dAudio.cpp; sourceTree = "<group>"; };
+		70244462EE75D3CF568266DB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		716D0D16732F387EF7E03183 /* ToggleControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ToggleControl.cpp; path = ../MenuSystem/ToggleControl.cpp; sourceTree = "<group>"; };
+		71810AA5B9D1F43AB49E8C3F /* SDLWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SDLWindow.cpp; path = ../SDL/SDLWindow.cpp; sourceTree = "<group>"; };
+		78225B78DCBEA2EE31B6FB5E /* UniversalInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UniversalInput.h; path = ../Common/UniversalInput.h; sourceTree = "<group>"; };
+		7911EEC895E8C9ADF2AD6205 /* libAkToneSource.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkToneSourceMac.xcodeproj"; path = ../../Plugins/AkToneGenerator/Sources/AudioEngineFX/Mac/AkToneSourceMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		7989BA172F77F675032AC1F9 /* DemoOptionsUtil.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoOptionsUtil.cpp; path = ../AppleCommon/DemoOptionsUtil.cpp; sourceTree = "<group>"; };
+		7B4BA906287F80D96E510A2A /* CoreAudioInputDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CoreAudioInputDevice.h; path = CoreAudioInputDevice.h; sourceTree = "<group>"; };
+		7B587975EA46A3FBB349F0F7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7CA2964E7DED234BEA152653 /* DemoSpatialAudioGeometry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoSpatialAudioGeometry.cpp; path = ../DemoPages/DemoSpatialAudioGeometry.cpp; sourceTree = "<group>"; };
+		7DFE2B94ACC4E6A7DC5300DD /* SoundInputMgrBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SoundInputMgrBase.h; path = ../Common/SoundInputMgrBase.h; sourceTree = "<group>"; };
+		7E6C50CE969BD3B7A874B59D /* SDLWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDLWindow.h; path = ../SDL/SDLWindow.h; sourceTree = "<group>"; };
+		7EE23E4A18A1B2DFB2CB7456 /* DemoGMEVoiceMessagePage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoGMEVoiceMessagePage.cpp; path = ../DemoPages/PartnerPlugins/GME/DemoGMEVoiceMessagePage.cpp; sourceTree = "<group>"; };
+		7F21A1B55D7839858C29E4A1 /* DemoChannels.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoChannels.cpp; path = ../DemoPages/DemoChannels.cpp; sourceTree = "<group>"; };
+		7FA5FAD24941962EC94C8078 /* DemoLocalization.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoLocalization.cpp; path = ../DemoPages/DemoLocalization.cpp; sourceTree = "<group>"; };
+		8174D990F46C4ACD178E97F3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		854B0E3E6B2C7745F9761653 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		855CCE55393ED6CE37F26808 /* DemoFootstepsManyVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoFootstepsManyVariables.h; path = ../DemoPages/DemoFootstepsManyVariables.h; sourceTree = "<group>"; };
+		856DC2DE3AD5CF7279EB39C0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8595DBE950CC845DA38D90CC /* FreetypeGraphicRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FreetypeGraphicRenderer.h; path = ../FreetypeRenderer/FreetypeGraphicRenderer.h; sourceTree = "<group>"; };
+		86C19C2AD65915AAF83ED250 /* IntegrationDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "IntegrationDemo-Info.plist"; path = "IntegrationDemo-Info.plist"; sourceTree = "<group>"; };
+		87C2460559AC98060808A998 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = main.m; sourceTree = "<group>"; };
+		881732C5E17C10BE5B3F9607 /* MessagePage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MessagePage.cpp; path = ../MenuSystem/MessagePage.cpp; sourceTree = "<group>"; };
+		8958EEDD7D94041913051C19 /* UniversalInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = UniversalInput.cpp; path = ../Common/UniversalInput.cpp; sourceTree = "<group>"; };
+		90545E0931355C45D443E02F /* libAkAudioInputSource.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkAudioInputSourceMac.xcodeproj"; path = ../../Plugins/AkAudioInput/Sources/AudioEngineFX/Mac/AkAudioInputSourceMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9422C780B169AAA2745CFE71 /* RenderSDL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RenderSDL.cpp; path = ../SDL/RenderSDL.cpp; sourceTree = "<group>"; };
+		963FC6CC5F429EB4D26B7AD3 /* DemoSpatialAudioGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoSpatialAudioGeometry.h; path = ../DemoPages/DemoSpatialAudioGeometry.h; sourceTree = "<group>"; };
+		9867EE5F3A6030808CE43F6A /* DemoBGM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoBGM.h; path = ../DemoPages/DemoBGM.h; sourceTree = "<group>"; };
+		9A5E0782185724FAB29182FB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		9BDD30AB6E9392582AB48C5C /* libAkRecorderADMFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkRecorderADMFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkRecorderADM/Mac/AkRecorderADMFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		A2CDDE0715E1D5A1C2CD844B /* Demo3dAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Demo3dAudio.h; path = ../DemoPages/Demo3dAudio.h; sourceTree = "<group>"; };
+		A4DC2BC9D79CCDE52BCBC348 /* GControllerMgr.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objc; name = GControllerMgr.mm; path = ../AppleCommon/GControllerMgr.mm; sourceTree = "<group>"; };
+		A4EB19C6CCAFC3FC28F87BA9 /* DemoAppLifecycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoAppLifecycle.h; path = ../DemoPages/DemoAppLifecycle.h; sourceTree = "<group>"; };
+		A52D4A49D4B8B3A1BA0DA495 /* DemoGMEPositioningPage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoGMEPositioningPage.cpp; path = ../DemoPages/PartnerPlugins/GME/DemoGMEPositioningPage.cpp; sourceTree = "<group>"; };
+		A5DF472408E8563EE99E6514 /* DemoSpatialAudioPortalReflect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoSpatialAudioPortalReflect.h; path = ../DemoPages/DemoSpatialAudioPortalReflect.h; sourceTree = "<group>"; };
+		A7371D0F83B0E651DBCD2E7C /* IntegrationDemoPlugins.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = IntegrationDemoPlugins.cpp; path = ../Common/IntegrationDemoPlugins.cpp; sourceTree = "<group>"; };
+		A78DDE0250B37C2BBA624AF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ACF7BB6F11560E3C0ACEE2A6 /* NumericControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NumericControl.h; path = ../MenuSystem/NumericControl.h; sourceTree = "<group>"; };
+		ADC46CF258DD805EE6818C8B /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SDL2.xcodeproj"; path = ../../SDL2/Mac/SDL2.xcodeproj; sourceTree = SOURCE_ROOT; };
+		ADD58E73C5E081A1B14F38D8 /* DemoChannels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoChannels.h; path = ../DemoPages/DemoChannels.h; sourceTree = "<group>"; };
+		AED252C391ECD44F7F4D0006 /* AkFileLocationBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AkFileLocationBase.cpp; path = ../../SoundEngine/Common/AkFileLocationBase.cpp; sourceTree = "<group>"; };
+		AF31AC9DEBF7ABC4D99C32E4 /* DemoExternalSources.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoExternalSources.cpp; path = ../DemoPages/DemoExternalSources.cpp; sourceTree = "<group>"; };
+		AF8ABB246AA56FA4913BD1D9 /* NumericControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = NumericControl.cpp; path = ../MenuSystem/NumericControl.cpp; sourceTree = "<group>"; };
+		B0337976B064EA80FF524700 /* DemoMicrophone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoMicrophone.cpp; path = ../DemoPages/DemoMicrophone.cpp; sourceTree = "<group>"; };
+		B0DFF29A1B6E6619A665EFCF /* DemoBankLoadingMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoBankLoadingMenu.h; path = ../DemoPages/DemoBankLoadingMenu.h; sourceTree = "<group>"; };
+		B20930B3A4A9DBD2DF2324F3 /* PartnerPluginsMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PartnerPluginsMenu.cpp; path = ../DemoPages/PartnerPlugins/PartnerPluginsMenu.cpp; sourceTree = "<group>"; };
+		B20E4886E802322B98558648 /* DemoInteractiveMusic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoInteractiveMusic.cpp; path = ../DemoPages/DemoInteractiveMusic.cpp; sourceTree = "<group>"; };
+		B2212F4A1548127FD342E336 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		B49029F2BFC366BBE31634A0 /* DemoSpeechEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoSpeechEngine.cpp; path = ../DemoPages/PartnerPlugins/speechEngine/DemoSpeechEngine.cpp; sourceTree = "<group>"; };
+		B730FBCE8E8EB74303700C62 /* libAkSilenceSource.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkSilenceSourceMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Sources/AkSilenceSource/Mac/AkSilenceSourceMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		B826F831BD089D95C569DAC2 /* SpatialAudioHelpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SpatialAudioHelpers.cpp; path = ../Common/SpatialAudioHelpers.cpp; sourceTree = "<group>"; };
+		B8797D6B1EAA3610C7A2B14C /* DemoPrepare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoPrepare.cpp; path = ../DemoPages/DemoPrepare.cpp; sourceTree = "<group>"; };
+		B98F2F6A23CFE70B4A2AFAE7 /* IntegrationDemoAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objc; name = IntegrationDemoAppDelegate.mm; path = IntegrationDemoAppDelegate.mm; sourceTree = "<group>"; };
+		BBAA588BDB11E7CCEEC18C0C /* SpatialAudioHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SpatialAudioHelpers.h; path = ../Common/SpatialAudioHelpers.h; sourceTree = "<group>"; };
+		BC2C60F13B6C96E4B18C197F /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stdafx.h; path = ../AppleCommon/stdafx.h; sourceTree = "<group>"; };
+		BC9E2D7F0E27010984294ED9 /* PlatformHooks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlatformHooks.h; path = ../Common/PlatformHooks.h; sourceTree = "<group>"; };
+		BCB7D0ADA3C06DFD94616C62 /* IntegrationDemo_Prefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntegrationDemo_Prefix.h; path = IntegrationDemo_Prefix.h; sourceTree = "<group>"; };
+		BDE070DB7D3198588742B6A9 /* DemoMarkers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoMarkers.cpp; path = ../DemoPages/DemoMarkers.cpp; sourceTree = "<group>"; };
+		BE557C96207ECEAD199B3BEE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BE9C1C0711610E1507112C52 /* libAkPeakLimiterFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkPeakLimiterFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkPeakLimiter/Mac/AkPeakLimiterFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		BF2149D2848DDBDFCCC6C3B6 /* IOBufferQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IOBufferQueue.h; path = ../AppleCommon/IOBufferQueue.h; sourceTree = "<group>"; };
+		BF67E78A5DD50CACE4D6F2F2 /* DemoDynamicDialogue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoDynamicDialogue.cpp; path = ../DemoPages/DemoDynamicDialogue.cpp; sourceTree = "<group>"; };
+		C1496B83D80980BB99F9215E /* libAkVorbisDecoder.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkVorbisDecoderMac.xcodeproj"; path = ../../../source/SoundEngine/Codecs/AkVorbisDecoder/Mac/AkVorbisDecoderMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		C22F97C19752EBBF5D153441 /* DemoOptions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoOptions.cpp; path = ../DemoPages/DemoOptions.cpp; sourceTree = "<group>"; };
+		C291A853CCF0DD1EF6EA7523 /* GentiumPlusAm-R_ttf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GentiumPlusAm-R_ttf.h"; path = "../FreetypeRenderer/Assets/GentiumPlusAm-R_ttf.h"; sourceTree = "<group>"; };
+		C408169B78802D9C0C715E06 /* DemoAppLifecycle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoAppLifecycle.cpp; path = ../DemoPages/DemoAppLifecycle.cpp; sourceTree = "<group>"; };
+		C489257BDCA1E657619CB1EB /* AkMultipleFileLocation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AkMultipleFileLocation.cpp; path = ../../SoundEngine/Common/AkMultipleFileLocation.cpp; sourceTree = "<group>"; };
+		C4CAAB948A6E2D5E3E67CA34 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		C58D1BB62BBD5875EB609DEC /* MenuControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MenuControls.h; path = ../MenuSystem/MenuControls.h; sourceTree = "<group>"; };
+		C5FFFA081794235D180C09F3 /* stdafx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stdafx.cpp; path = ../../SoundEngine/POSIX/stdafx.cpp; sourceTree = "<group>"; };
+		C7A6C80B63F9161EFFCAECFB /* DemoMIDIMetronome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoMIDIMetronome.h; path = ../DemoPages/DemoMIDIMetronome.h; sourceTree = "<group>"; };
+		C7ACB440A57AA7F09F9590A8 /* PlatformHooks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformHooks.cpp; path = ../Common/PlatformHooks.cpp; sourceTree = "<group>"; };
+		C81B3B468D87F994088EDF44 /* Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Render.h; path = ../Common/Render.h; sourceTree = "<group>"; };
+		C87180C212AE0C0D361E7C79 /* libAkPitchShifterFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkPitchShifterFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkPitchShifter/Mac/AkPitchShifterFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		C954296A099966775C275AC7 /* libAkSidechainFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkSidechainFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkSidechain/Mac/AkSidechainFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CBC58C51D3B0FD26134CFB8C /* DemoDialogueMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoDialogueMenu.cpp; path = ../DemoPages/DemoDialogueMenu.cpp; sourceTree = "<group>"; };
+		CBD933055F5DEED93A8AFE4B /* DemoFootstepsManyVariables.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoFootstepsManyVariables.cpp; path = ../DemoPages/DemoFootstepsManyVariables.cpp; sourceTree = "<group>"; };
+		CC9810E92244DBB17468C351 /* ButtonControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ButtonControl.cpp; path = ../MenuSystem/ButtonControl.cpp; sourceTree = "<group>"; };
+		CD923F6A56DD1C1A4E669111 /* Page.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Page.cpp; path = ../MenuSystem/Page.cpp; sourceTree = "<group>"; };
+		CE2CFF1B43134B66C74F68E1 /* LabelControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LabelControl.cpp; path = ../MenuSystem/LabelControl.cpp; sourceTree = "<group>"; };
+		CE7D672C6D22D9732D0B6B6F /* MultiplayerPage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MultiplayerPage.cpp; path = ../MenuSystem/MultiplayerPage.cpp; sourceTree = "<group>"; };
+		CF9E950E62AA7CC07A553DF2 /* DemoGMEVoiceChatPage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoGMEVoiceChatPage.cpp; path = ../DemoPages/PartnerPlugins/GME/DemoGMEVoiceChatPage.cpp; sourceTree = "<group>"; };
+		CFC7E78DF5708C9C0FC45ADA /* libAkCompressorFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkCompressorFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkCompressor/Mac/AkCompressorFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CFE7A2AE22398C58A5DC241F /* DemoRTPCCarEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoRTPCCarEngine.h; path = ../DemoPages/DemoRTPCCarEngine.h; sourceTree = "<group>"; };
+		D26E642F4D2B439A605E8A99 /* DemoGMEVoiceMessagePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoGMEVoiceMessagePage.h; path = ../DemoPages/PartnerPlugins/GME/DemoGMEVoiceMessagePage.h; sourceTree = "<group>"; };
+		D3B46DC2AD3031A8605DB5BD /* libAkSineSource.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkSineSourceMac.xcodeproj"; path = ../../Plugins/AkSineTone/Sources/AudioEngineFX/Mac/AkSineSourceMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		D4272BDECE0963E29B3F0E19 /* Drawing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Drawing.h; path = ../Common/Drawing.h; sourceTree = "<group>"; };
+		D4F00051E9CCC7D1707F817E /* DemoMotion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoMotion.cpp; path = ../DemoPages/DemoMotion.cpp; sourceTree = "<group>"; };
+		D5EA6DAF4CB2201EDF9B56AA /* IntegrationDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntegrationDemoAppDelegate.h; path = IntegrationDemoAppDelegate.h; sourceTree = "<group>"; };
+		D986B005BDC2204817A24CAB /* DemoDynamicDialogue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoDynamicDialogue.h; path = ../DemoPages/DemoDynamicDialogue.h; sourceTree = "<group>"; };
+		D9AB79FBCC02C5F25166188C /* DemoAutobanks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoAutobanks.h; path = ../DemoPages/DemoAutobanks.h; sourceTree = "<group>"; };
+		DA033F645F10625D37C19051 /* AkFilePackageLUT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AkFilePackageLUT.h; path = ../../SoundEngine/Common/AkFilePackageLUT.h; sourceTree = "<group>"; };
+		DACB84A33FE7587E28867ECD /* Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Control.h; path = ../MenuSystem/Control.h; sourceTree = "<group>"; };
+		DB51CAE5EC90ADD1B259F7E6 /* libAkStereoDelayFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkStereoDelayFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkStereoDelay/Mac/AkStereoDelayFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		DE8657714BC2B81292483C5F /* AkJobWorkerMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AkJobWorkerMgr.h; path = ../../SoundEngine/Common/AkJobWorkerMgr.h; sourceTree = "<group>"; };
+		DFE5A2BF218CC7CD7FE1B3E0 /* libAkFlangerFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkFlangerFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkFlanger/Mac/AkFlangerFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		DFF579B8DEDA316BE38B7F4E /* DemoSpatialAudioReflect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoSpatialAudioReflect.cpp; path = ../DemoPages/DemoSpatialAudioReflect.cpp; sourceTree = "<group>"; };
+		E0EDEF3CD9E577409FE4FD96 /* AppleInputMgr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppleInputMgr.cpp; path = ../AppleCommon/AppleInputMgr.cpp; sourceTree = "<group>"; };
+		E0F15F21178EA4F239FB42E2 /* DemoBGM.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoBGM.cpp; path = ../DemoPages/DemoBGM.cpp; sourceTree = "<group>"; };
+		E145EB7359A59368FD4C9C33 /* DemoGMEVoiceChatPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoGMEVoiceChatPage.h; path = ../DemoPages/PartnerPlugins/GME/DemoGMEVoiceChatPage.h; sourceTree = "<group>"; };
+		E31CE7ED916C11AFB45B6FEB /* DemoMusicMIDIMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoMusicMIDIMenu.cpp; path = ../DemoPages/DemoMusicMIDIMenu.cpp; sourceTree = "<group>"; };
+		E3645A006D6EC127E0CAD236 /* AkFilePackage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AkFilePackage.h; path = ../../SoundEngine/Common/AkFilePackage.h; sourceTree = "<group>"; };
+		E5AC1D7B863E48E19BD12F59 /* DemoSpatialAudio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoSpatialAudio.cpp; path = ../DemoPages/DemoSpatialAudio.cpp; sourceTree = "<group>"; };
+		E639C2B4A35C0476536864CC /* DemoMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoMotion.h; path = ../DemoPages/DemoMotion.h; sourceTree = "<group>"; };
+		E63CB65A9C970277BA0FDC67 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E7B0D36B6770CB7958D17CAF /* DemoMarkers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoMarkers.h; path = ../DemoPages/DemoMarkers.h; sourceTree = "<group>"; };
+		EA0989B92E85823ACA46B8C8 /* libAkRoomVerbFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkRoomVerbFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkRoomVerb/Mac/AkRoomVerbFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EA2AD2BF1901DAADA0BE202D /* MovableChip.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MovableChip.cpp; path = ../MenuSystem/MovableChip.cpp; sourceTree = "<group>"; };
+		EA8B8C89C34D0347FAC6482E /* DemoSpatialAudioReflect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoSpatialAudioReflect.h; path = ../DemoPages/DemoSpatialAudioReflect.h; sourceTree = "<group>"; };
+		EA9E7D0443BFC55B40C78C83 /* DemoPositioningMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoPositioningMenu.cpp; path = ../DemoPages/DemoPositioningMenu.cpp; sourceTree = "<group>"; };
+		EBA3E55D0A0D31A45EFDACA5 /* libAkSynthOneSource.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkSynthOneSourceMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Sources/AkSynthOne/Mac/AkSynthOneSourceMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EBF5A2FED66DB13038FEA2D6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		EC2B7197413B861F1C46DD89 /* Platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = Platform.h; sourceTree = "<group>"; };
+		EC9151432C3500271A4E720C /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stdafx.h; path = ../../SoundEngine/POSIX/stdafx.h; sourceTree = "<group>"; };
+		ECA5AC5410FDF4CECAF307C0 /* stdafx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stdafx.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
+		ECDF4445B84C4DB32C693B36 /* Drawing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Drawing.cpp; path = ../Common/Drawing.cpp; sourceTree = "<group>"; };
+		ED02069D3D2EC3B7A29E4985 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		ED44B45ECBFC58D596F42CCA /* DemoPositioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoPositioning.h; path = ../DemoPages/DemoPositioning.h; sourceTree = "<group>"; };
+		EF81154C41E203C270136BE8 /* IntegrationDemo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = IntegrationDemo.cpp; path = ../Common/IntegrationDemo.cpp; sourceTree = "<group>"; };
+		F25D64B6BCFABBED25192153 /* libAkParametricEQFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkParametricEQFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkParametricEQ/Mac/AkParametricEQFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F40F2BFE4899AA7045BE4E15 /* DemoPositioning.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DemoPositioning.cpp; path = ../DemoPages/DemoPositioning.cpp; sourceTree = "<group>"; };
+		F7C48963BA249AFB8BFCC038 /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Helpers.h; path = ../Common/Helpers.h; sourceTree = "<group>"; };
+		F8533A4F98B5CC1949DCE9EC /* MultiplayerPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MultiplayerPage.h; path = ../MenuSystem/MultiplayerPage.h; sourceTree = "<group>"; };
+		F8DC9BD10D5967FE9CE6962D /* DemoLocalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoLocalization.h; path = ../DemoPages/DemoLocalization.h; sourceTree = "<group>"; };
+		FA3D0437CD7A774BDBAAB7DA /* libAkRecorderFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkRecorderFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkRecorder/Mac/AkRecorderFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		FB439CF65A550DE6BC41CF41 /* libAk3DAudioBedMixerFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Ak3DAudioBedMixerFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/Ak3DAudioBedMixer/Mac/Ak3DAudioBedMixerFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		FB5C608004BAEE147814E36D /* DemoInteractiveMusic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoInteractiveMusic.h; path = ../DemoPages/DemoInteractiveMusic.h; sourceTree = "<group>"; };
+		FC0348E7B0F92CE6987D637F /* ButtonControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ButtonControl.h; path = ../MenuSystem/ButtonControl.h; sourceTree = "<group>"; };
+		FC67FA1670E3AB3F9A699565 /* libAkTimeStretchFX.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AkTimeStretchFXMac.xcodeproj"; path = ../../../source/SoundEngine/Plugins/Effects/AkTimeStretch/Mac/AkTimeStretchFXMac.xcodeproj; sourceTree = SOURCE_ROOT; };
+		FCA6606EACC72DF83D0E1888 /* SoundInputMgrBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInputMgrBase.cpp; path = ../Common/SoundInputMgrBase.cpp; sourceTree = "<group>"; };
+		FD975346125BEBC4D1E8389D /* BaseMenuPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BaseMenuPage.h; path = ../DemoPages/BaseMenuPage.h; sourceTree = "<group>"; };
+		FE13B609FB43632AC717AD14 /* DemoMicrophone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoMicrophone.h; path = ../DemoPages/DemoMicrophone.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67D4FA01A23A7F6D07B1ED9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4532C8A2B746DBEA430E5A6 /* Foundation.framework in Frameworks */,
+				988CB889A3791927F4872C2A /* Cocoa.framework in Frameworks */,
+				25E13521D2C3E4A920CEB357 /* GLUT.framework in Frameworks */,
+				F092DA3A3D56C747D7C6A252 /* AudioToolbox.framework in Frameworks */,
+				93FD2033AC787D98A5969300 /* AudioUnit.framework in Frameworks */,
+				0B1BEAC418CF81FD0A985DE0 /* CoreAudio.framework in Frameworks */,
+				EBA2C0C7496588F8FD212C81 /* AVFoundation.framework in Frameworks */,
+				B113367BEE516970A4FE5E85 /* QuartzCore.framework in Frameworks */,
+				DDD457BFDE7B823358105BAB /* CoreHaptics.framework in Frameworks */,
+				2DAF88B8479F188FCBBE5ED8 /* GameController.framework in Frameworks */,
+				FBF639AD59C44A81C9FF8620 /* IOKit.framework in Frameworks */,
+				90DA661D51900F5BA809F268 /* AppKit.framework in Frameworks */,
+				E6E4A9EA42129165EFDB24C0 /* OpenGL.framework in Frameworks */,
+				913FA4A18F76AC837F8643B5 /* libSDL2.a in Frameworks */,
+				3A18658DB95DDBB73E8F8570 /* libAk3DAudioBedMixerFX.a in Frameworks */,
+				B462B639831D9BA1A976BEFE /* libAkAudioInputSource.a in Frameworks */,
+				C73A21AE417CF215A8428091 /* libAkCompressorFX.a in Frameworks */,
+				6D88EB46EE2924D14FD4B0F7 /* libAkDelayFX.a in Frameworks */,
+				52AB39757CAFA7E3B430E2AE /* libAkFlangerFX.a in Frameworks */,
+				4D057EDCA0A00EE0306CE146 /* libAkGainFX.a in Frameworks */,
+				C755B8BE31B7D20A14CD6CC6 /* libAkGuitarDistortionFX.a in Frameworks */,
+				8EB72840AFFF29FF232FC618 /* libAkHarmonizerFX.a in Frameworks */,
+				532BE824DA007A044B366CA8 /* libAkMatrixReverbFX.a in Frameworks */,
+				20CB2CA2D0CFC1E51DD835FB /* libAkMeterFX.a in Frameworks */,
+				AEA7DA6199CAA1214D8BC89A /* libAkParametricEQFX.a in Frameworks */,
+				D2ADF5806C6C1BAF4D19D5ED /* libAkPeakLimiterFX.a in Frameworks */,
+				6EE96E81C3E8B8DA7975C7D8 /* libAkPitchShifterFX.a in Frameworks */,
+				B98ECB90ED88D7D1486F2479 /* libAkRecorderADMFX.a in Frameworks */,
+				04D245934E7B2FC74E0F5C60 /* libAkRecorderFX.a in Frameworks */,
+				81EA466A179278A283038046 /* libAkRoomVerbFX.a in Frameworks */,
+				2A549CDFDEECA349BCEF1291 /* libAkSidechainFX.a in Frameworks */,
+				ED1A0595E1495ED4EC21723B /* libAkSilenceSource.a in Frameworks */,
+				616527D1E3521EC77A965AF1 /* libAkSineSource.a in Frameworks */,
+				F8A367828E4CAD0B54B6F480 /* libAkStereoDelayFX.a in Frameworks */,
+				6A4C799BC5100C9F39ACC00D /* libAkSynthOneSource.a in Frameworks */,
+				D894854AE7E8E07E1327FAD9 /* libAkTimeStretchFX.a in Frameworks */,
+				F556396376B67738AA63F30F /* libAkToneSource.a in Frameworks */,
+				C392267AF373BE00AD98126C /* libAkTremoloFX.a in Frameworks */,
+				0C6AE1E662FA01C7163A9AB6 /* libAkMemoryMgr.a in Frameworks */,
+				8D129621B6BA3D8CAC80FBB1 /* libAkSoundEngine.a in Frameworks */,
+				4321D127D7BB314BA67CBADB /* libAkSpatialAudio.a in Frameworks */,
+				E499CBBAD6BF693EEDE23340 /* libAkStreamMgr.a in Frameworks */,
+				CB2CEF7883334FA9787F7001 /* libAkVorbisDecoder.a in Frameworks */,
+				F18A1B0DEB107E26DB1BCFF9 /* libAkOpusDecoder.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E2EF9117748BBE5A24DCFD6 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		0939D0FC5B318D4EA280DE54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF75C79F70FD0C5737BF28B1 /* libAkDelayFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		12D1B263B1D3F8CF974012B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92EF5756D921A417E3110036 /* libAkSynthOneSource.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C9FFA62804A8D7D4F18C366 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1FF0A082AEEF6FF5A27CDDC0 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				322A895A3FD6E23A1FE6A8A2 /* .. */,
+				E9F075FF7D7F1617243E082C /* AppleCommon */,
+				284CF1922248B5464C817346 /* Common */,
+				D998972123E444BC36C780BC /* DemoPages */,
+				9706210AD84314E5FD70169F /* FreetypeRenderer */,
+				4AEF43DE07F3036B432D9F7E /* MenuSystem */,
+				68FCD3605217132C57A2618F /* SDL */,
+			);
+			name = ..;
+			sourceTree = "<group>";
+		};
+		21E723864A433B9B53A6BEE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3196E5BF7FFD464833A73A02 /* libAkSineSource.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2403A75D41451C1D0BDB095A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CF52B217EF103F501274815 /* libSDL2.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2538F99BEF52C6917ED4750C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57B61525914A198B30598467 /* libAkAudioInputSource.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		284CF1922248B5464C817346 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3EA1AD7C6E8B7999C22231AE /* DemoOptionsUtil.h */,
+				ECDF4445B84C4DB32C693B36 /* Drawing.cpp */,
+				D4272BDECE0963E29B3F0E19 /* Drawing.h */,
+				489937CA6C53B0BDCD62A685 /* Helpers.cpp */,
+				F7C48963BA249AFB8BFCC038 /* Helpers.h */,
+				5A702FCF7BAFA5A9FD880381 /* IAkInputMgr.h */,
+				EF81154C41E203C270136BE8 /* IntegrationDemo.cpp */,
+				5C9C8CFC1DA09268B7742B91 /* IntegrationDemo.h */,
+				A7371D0F83B0E651DBCD2E7C /* IntegrationDemoPlugins.cpp */,
+				C7ACB440A57AA7F09F9590A8 /* PlatformHooks.cpp */,
+				BC9E2D7F0E27010984294ED9 /* PlatformHooks.h */,
+				C81B3B468D87F994088EDF44 /* Render.h */,
+				2A7C9DC8AAFC7A8A40A4EDA2 /* SoundInputBase.cpp */,
+				54F8C205FA1576CD08344E8C /* SoundInputBase.h */,
+				FCA6606EACC72DF83D0E1888 /* SoundInputMgrBase.cpp */,
+				7DFE2B94ACC4E6A7DC5300DD /* SoundInputMgrBase.h */,
+				B826F831BD089D95C569DAC2 /* SpatialAudioHelpers.cpp */,
+				BBAA588BDB11E7CCEEC18C0C /* SpatialAudioHelpers.h */,
+				8958EEDD7D94041913051C19 /* UniversalInput.cpp */,
+				78225B78DCBEA2EE31B6FB5E /* UniversalInput.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		28BEBEC5E99BF3A7972E6182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD7770D97D760A5D9F046BA5 /* libAkStreamMgr.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F47902A12B8FCBC8478D588 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1D1E6113C4BF7CFCF07881E /* libAkMemoryMgr.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		322A895A3FD6E23A1FE6A8A2 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				F5F84CDD1B28FCB49F9B6818 /* SoundEngine */,
+			);
+			name = ..;
+			sourceTree = "<group>";
+		};
+		34ABDFB06DF3B5F8705A30F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6C74C49DD1DB11B056F099B /* libAkTremoloFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3505513F9A27A49E81E33F9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				305198CA85B75C71F24F9DEB /* libAkGuitarDistortionFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		391D34FA4FD2ED77F3133EF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64D4CDE1A01D8F79AB8F8815 /* libAkVorbisDecoder.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44C347FB0198B085AC1E3D07 /* POSIX */ = {
+			isa = PBXGroup;
+			children = (
+				551A45192FD638F625E9164D /* AkDefaultIOHookDeferred.cpp */,
+				397EFD2E5409BEBDB49DC1FA /* AkDefaultIOHookDeferred.h */,
+				54C03F890ECB91DCD880D19A /* AkFileHelpers.h */,
+				C5FFFA081794235D180C09F3 /* stdafx.cpp */,
+				EC9151432C3500271A4E720C /* stdafx.h */,
+			);
+			name = POSIX;
+			sourceTree = "<group>";
+		};
+		4AEF43DE07F3036B432D9F7E /* MenuSystem */ = {
+			isa = PBXGroup;
+			children = (
+				CC9810E92244DBB17468C351 /* ButtonControl.cpp */,
+				FC0348E7B0F92CE6987D637F /* ButtonControl.h */,
+				42B901D4F41BE0002EB93AFE /* Control.cpp */,
+				DACB84A33FE7587E28867ECD /* Control.h */,
+				CE2CFF1B43134B66C74F68E1 /* LabelControl.cpp */,
+				6875D677ECDEE010AC8F9ED5 /* LabelControl.h */,
+				4ACB50334357419DBB501595 /* Menu.cpp */,
+				2421EF39CCF69F81D353B051 /* Menu.h */,
+				C58D1BB62BBD5875EB609DEC /* MenuControls.h */,
+				881732C5E17C10BE5B3F9607 /* MessagePage.cpp */,
+				15C980DE4CF5C2FE173A138F /* MessagePage.h */,
+				EA2AD2BF1901DAADA0BE202D /* MovableChip.cpp */,
+				142FAF099025C531A0E5ACE1 /* MovableChip.h */,
+				CE7D672C6D22D9732D0B6B6F /* MultiplayerPage.cpp */,
+				F8533A4F98B5CC1949DCE9EC /* MultiplayerPage.h */,
+				AF8ABB246AA56FA4913BD1D9 /* NumericControl.cpp */,
+				ACF7BB6F11560E3C0ACEE2A6 /* NumericControl.h */,
+				CD923F6A56DD1C1A4E669111 /* Page.cpp */,
+				4338B3B1E0EC167507D118A6 /* Page.h */,
+				716D0D16732F387EF7E03183 /* ToggleControl.cpp */,
+				4B36A4A3D4D731A9B7E22EC5 /* ToggleControl.h */,
+			);
+			name = MenuSystem;
+			sourceTree = "<group>";
+		};
+		4E24327311DBD3310DC56103 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AED252C391ECD44F7F4D0006 /* AkFileLocationBase.cpp */,
+				1817430569E9C6CEA93AA6C3 /* AkFileLocationBase.h */,
+				0D3EE41C973118A5E3D8A043 /* AkFilePackage.cpp */,
+				E3645A006D6EC127E0CAD236 /* AkFilePackage.h */,
+				31A58377E41EFC560A2D35E7 /* AkFilePackageLUT.cpp */,
+				DA033F645F10625D37C19051 /* AkFilePackageLUT.h */,
+				14D94FCD1BD9A53B3AE433C7 /* AkGeneratedSoundBanksResolver.cpp */,
+				1F1F585AAC54E29515979DDC /* AkGeneratedSoundBanksResolver.h */,
+				4A8DB75C95EEDA2831E9C509 /* AkJobWorkerMgr.cpp */,
+				DE8657714BC2B81292483C5F /* AkJobWorkerMgr.h */,
+				C489257BDCA1E657619CB1EB /* AkMultipleFileLocation.cpp */,
+				224728C86216E10D52C7EB2B /* AkMultipleFileLocation.h */,
+				4BE03ECD5FA0F2EB1D7FF62B /* AkPlatformProfilerHookStubs.cpp */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		51EAA3C402E668D8970B2C72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7730FEA8D7F7C24F2A1A911 /* libAkMatrixReverbFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		542C2665AC6BB2EA23EB3C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EF5E61CEB0FD2F2C9B9465D /* libAkSpatialAudio.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FB4E0928031ECF7978BC439 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				951B72908CD0891130CBBE15 /* libAkFlangerFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FEFB947DC8EC2C0445E530D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B35F205C89F56D18B887DB5 /* libAkOpusDecoder.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68FCD3605217132C57A2618F /* SDL */ = {
+			isa = PBXGroup;
+			children = (
+				9422C780B169AAA2745CFE71 /* RenderSDL.cpp */,
+				566B625B9FD0D009235F9BF3 /* SDLInputMgr.cpp */,
+				40397CC0950FB73126311562 /* SDLInputMgr.h */,
+				71810AA5B9D1F43AB49E8C3F /* SDLWindow.cpp */,
+				7E6C50CE969BD3B7A874B59D /* SDLWindow.h */,
+			);
+			name = SDL;
+			sourceTree = "<group>";
+		};
+		6C734AA30C6FFF7D3DAD5DF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BA845D41FD88910BDA8F8B4 /* libAkGainFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CBF0345C3730B46F855F8E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C650C817A1367E8BA8214837 /* libAkRoomVerbFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F768AC3DF5E90C469E0815B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAE6C64EC34EC13E906284B3 /* libAkToneSource.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		767796C7B0F7820F815892F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E651BC38E115290BE6684FD4 /* libAkStereoDelayFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83E6BCAB6DA3676F392CFE2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				192975F712CD9333DA5690DE /* libAkHarmonizerFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85E6F454F8266E38C6935ED2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F291EF88AA6439FA8AE18D1 /* libAkPeakLimiterFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88284FD806CA8E83EE73333F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86EB91566C22DD4C7CAE619C /* libAk3DAudioBedMixerFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FC92A363C5589ECA0C13221 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE28F27F211A1698D300F3 /* libAkSidechainFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9706210AD84314E5FD70169F /* FreetypeRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				E94F9A787911B03743BBDBFA /* Assets */,
+				429EC9E7413EC14D8E90ECF1 /* FreetypeGraphicRenderer.cpp */,
+				8595DBE950CC845DA38D90CC /* FreetypeGraphicRenderer.h */,
+				09122FDCB61C6A28E30B18B9 /* stb_truetype.h */,
+			);
+			name = FreetypeRenderer;
+			sourceTree = "<group>";
+		};
+		990A9E97AA7ABFD9D0C572FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57A4C3560AD9BAD55A8F7082 /* IntegrationDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3249E31EB1937683A6F7AF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB789B138BFC4E57E4B5FCF8 /* libAkCompressorFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9A80184BAE508CFF0B8ACFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A78DDE0250B37C2BBA624AF6 /* Foundation.framework */,
+				7B587975EA46A3FBB349F0F7 /* Cocoa.framework */,
+				8174D990F46C4ACD178E97F3 /* GLUT.framework */,
+				E63CB65A9C970277BA0FDC67 /* AudioToolbox.framework */,
+				C4CAAB948A6E2D5E3E67CA34 /* AudioUnit.framework */,
+				ED02069D3D2EC3B7A29E4985 /* CoreAudio.framework */,
+				70244462EE75D3CF568266DB /* AVFoundation.framework */,
+				BE557C96207ECEAD199B3BEE /* QuartzCore.framework */,
+				305D91F50DE1E79CBE74ABBB /* CoreHaptics.framework */,
+				854B0E3E6B2C7745F9761653 /* GameController.framework */,
+				9A5E0782185724FAB29182FB /* IOKit.framework */,
+				856DC2DE3AD5CF7279EB39C0 /* AppKit.framework */,
+				EBF5A2FED66DB13038FEA2D6 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4074FDFDAEEB9C50EF43A79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5CC89ED598DC2E9766C7A97 /* libAkRecorderFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B70DB3D34D3A658A9CF26442 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA242C6FF72BE152DFB0DA7A /* libAkRecorderADMFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7A30B1F7E26261BFA2682C1 /* IntegrationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0A082AEEF6FF5A27CDDC0 /* .. */,
+				1335396810630FE30D114350 /* CoreAudioInputDevice.cpp */,
+				7B4BA906287F80D96E510A2A /* CoreAudioInputDevice.h */,
+				86C19C2AD65915AAF83ED250 /* IntegrationDemo-Info.plist */,
+				D5EA6DAF4CB2201EDF9B56AA /* IntegrationDemoAppDelegate.h */,
+				B98F2F6A23CFE70B4A2AFAE7 /* IntegrationDemoAppDelegate.mm */,
+				BCB7D0ADA3C06DFD94616C62 /* IntegrationDemo_Prefix.h */,
+				B2212F4A1548127FD342E336 /* MainMenu.xib */,
+				31FFA20C97347E3FEB98C821 /* Platform.cpp */,
+				EC2B7197413B861F1C46DD89 /* Platform.h */,
+				6939584784CD4AEBD81F9380 /* SoundInput.cpp */,
+				21F500EBD3F2320BC0E2DEF0 /* SoundInput.h */,
+				35B82232EABB210711EB63E1 /* SoundInputMgr.cpp */,
+				1F2DDB0E853B61E2A75A32D8 /* SoundInputMgr.h */,
+				87C2460559AC98060808A998 /* main.m */,
+				ECA5AC5410FDF4CECAF307C0 /* stdafx.cpp */,
+				6E02E53C203E7A64646A2E76 /* stdafx.h */,
+				1C9FFA62804A8D7D4F18C366 /* Resources */,
+				A9A80184BAE508CFF0B8ACFA /* Frameworks */,
+				990A9E97AA7ABFD9D0C572FA /* Products */,
+				EC3797AC2F8E8FF50A219880 /* Projects */,
+			);
+			name = IntegrationDemo;
+			sourceTree = "<group>";
+		};
+		BAAFE607212C37FCAE8BE53F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72A650F50B51C0B3C2447EEC /* libAkParametricEQFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAE94FEC61FE5028F366FD07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E540DCD66F33E1AEDC25A7C /* libAkSilenceSource.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C31F477A8D2A2277C0740B97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEF48BD43B7CFDFEB3F72964 /* libAkSoundEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C406C1F72F76358BA85939C7 /* PartnerPlugins */ = {
+			isa = PBXGroup;
+			children = (
+				DB095B5A4260EF4E0DC57FD3 /* GME */,
+				B20930B3A4A9DBD2DF2324F3 /* PartnerPluginsMenu.cpp */,
+				4FF2B0A9A28EF9BDF118E675 /* PartnerPluginsMenu.h */,
+				D213B55DF8AD774545210A84 /* speechEngine */,
+			);
+			name = PartnerPlugins;
+			sourceTree = "<group>";
+		};
+		D213B55DF8AD774545210A84 /* speechEngine */ = {
+			isa = PBXGroup;
+			children = (
+				B49029F2BFC366BBE31634A0 /* DemoSpeechEngine.cpp */,
+				0C5D07C3C5E5A95EAEDAF2FE /* DemoSpeechEngine.h */,
+			);
+			name = speechEngine;
+			sourceTree = "<group>";
+		};
+		D93F5B1C466D336FF8068363 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30D9EA0F8903024076FC365F /* libAkPitchShifterFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D998972123E444BC36C780BC /* DemoPages */ = {
+			isa = PBXGroup;
+			children = (
+				07A2BC8835BE7D8C69165FE7 /* BaseMenuPage.cpp */,
+				FD975346125BEBC4D1E8389D /* BaseMenuPage.h */,
+				6EA12157BCD84D2C44D609D0 /* Demo3dAudio.cpp */,
+				A2CDDE0715E1D5A1C2CD844B /* Demo3dAudio.h */,
+				0E4602AEA8D10F013FBD2480 /* Demo3dBus.cpp */,
+				63C542B02A6F2D36BA921727 /* Demo3dBus.h */,
+				C408169B78802D9C0C715E06 /* DemoAppLifecycle.cpp */,
+				A4EB19C6CCAFC3FC28F87BA9 /* DemoAppLifecycle.h */,
+				0BB5E94E91F88F310CF8255D /* DemoAutobanks.cpp */,
+				D9AB79FBCC02C5F25166188C /* DemoAutobanks.h */,
+				E0F15F21178EA4F239FB42E2 /* DemoBGM.cpp */,
+				9867EE5F3A6030808CE43F6A /* DemoBGM.h */,
+				17C9A7F7DF3DB4FD6F6712AD /* DemoBankLoadingMenu.cpp */,
+				B0DFF29A1B6E6619A665EFCF /* DemoBankLoadingMenu.h */,
+				7F21A1B55D7839858C29E4A1 /* DemoChannels.cpp */,
+				ADD58E73C5E081A1B14F38D8 /* DemoChannels.h */,
+				1714A235D933C2B86C3C87DF /* DemoCommandBufferCrowd.cpp */,
+				1C59E7F04DCBF0767BA4A8DB /* DemoCommandBufferCrowd.h */,
+				CBC58C51D3B0FD26134CFB8C /* DemoDialogueMenu.cpp */,
+				4E3015A001E9877D33844CFA /* DemoDialogueMenu.h */,
+				BF67E78A5DD50CACE4D6F2F2 /* DemoDynamicDialogue.cpp */,
+				D986B005BDC2204817A24CAB /* DemoDynamicDialogue.h */,
+				AF31AC9DEBF7ABC4D99C32E4 /* DemoExternalSources.cpp */,
+				3232C10EBD5FEA1ED7D5A6BB /* DemoExternalSources.h */,
+				CBD933055F5DEED93A8AFE4B /* DemoFootstepsManyVariables.cpp */,
+				855CCE55393ED6CE37F26808 /* DemoFootstepsManyVariables.h */,
+				B20E4886E802322B98558648 /* DemoInteractiveMusic.cpp */,
+				FB5C608004BAEE147814E36D /* DemoInteractiveMusic.h */,
+				7FA5FAD24941962EC94C8078 /* DemoLocalization.cpp */,
+				F8DC9BD10D5967FE9CE6962D /* DemoLocalization.h */,
+				48C3347D8A754E70A9D7CC4B /* DemoMIDIMetronome.cpp */,
+				C7A6C80B63F9161EFFCAECFB /* DemoMIDIMetronome.h */,
+				BDE070DB7D3198588742B6A9 /* DemoMarkers.cpp */,
+				E7B0D36B6770CB7958D17CAF /* DemoMarkers.h */,
+				B0337976B064EA80FF524700 /* DemoMicrophone.cpp */,
+				FE13B609FB43632AC717AD14 /* DemoMicrophone.h */,
+				D4F00051E9CCC7D1707F817E /* DemoMotion.cpp */,
+				E639C2B4A35C0476536864CC /* DemoMotion.h */,
+				2DBA6A994B522A5A5C0CA233 /* DemoMusicCallbacks.cpp */,
+				2AA8F730D954A2AD24A671D4 /* DemoMusicCallbacks.h */,
+				E31CE7ED916C11AFB45B6FEB /* DemoMusicMIDIMenu.cpp */,
+				36764E73FB5D6FE6AB32B809 /* DemoMusicMIDIMenu.h */,
+				C22F97C19752EBBF5D153441 /* DemoOptions.cpp */,
+				151FDE94092F22BB91279524 /* DemoOptions.h */,
+				F40F2BFE4899AA7045BE4E15 /* DemoPositioning.cpp */,
+				ED44B45ECBFC58D596F42CCA /* DemoPositioning.h */,
+				EA9E7D0443BFC55B40C78C83 /* DemoPositioningMenu.cpp */,
+				6C275AC38E52581C50B98329 /* DemoPositioningMenu.h */,
+				B8797D6B1EAA3610C7A2B14C /* DemoPrepare.cpp */,
+				6B3381C19591CA974EE4AE32 /* DemoPrepare.h */,
+				01C9057E8D7D7E95ED214456 /* DemoRTPCCarEngine.cpp */,
+				CFE7A2AE22398C58A5DC241F /* DemoRTPCCarEngine.h */,
+				E5AC1D7B863E48E19BD12F59 /* DemoSpatialAudio.cpp */,
+				1392EF788F54BDD3F61A58FF /* DemoSpatialAudio.h */,
+				7CA2964E7DED234BEA152653 /* DemoSpatialAudioGeometry.cpp */,
+				963FC6CC5F429EB4D26B7AD3 /* DemoSpatialAudioGeometry.h */,
+				1554C478C9C2F6C79F3F3E7F /* DemoSpatialAudioMenu.cpp */,
+				4CB6B7CE1139B1BFF0324D7E /* DemoSpatialAudioMenu.h */,
+				034C8DB3CE31F0929979C3F5 /* DemoSpatialAudioPortalReflect.cpp */,
+				A5DF472408E8563EE99E6514 /* DemoSpatialAudioPortalReflect.h */,
+				DFF579B8DEDA316BE38B7F4E /* DemoSpatialAudioReflect.cpp */,
+				EA8B8C89C34D0347FAC6482E /* DemoSpatialAudioReflect.h */,
+				4497E84B6C4A4F404F0009FE /* DemoSpatialAudioReverbZones.cpp */,
+				2D161A9CB29D12F68DF3E89A /* DemoSpatialAudioReverbZones.h */,
+				C406C1F72F76358BA85939C7 /* PartnerPlugins */,
+			);
+			name = DemoPages;
+			sourceTree = "<group>";
+		};
+		DB095B5A4260EF4E0DC57FD3 /* GME */ = {
+			isa = PBXGroup;
+			children = (
+				699F3E957930CE2B3AE54E72 /* DemoGMEBaseMenuPage.cpp */,
+				007152EAB0117F825EA2231E /* DemoGMEBaseMenuPage.h */,
+				A52D4A49D4B8B3A1BA0DA495 /* DemoGMEPositioningPage.cpp */,
+				13FE6D5F9C0E863EDA1FE681 /* DemoGMEPositioningPage.h */,
+				085F01A9DE925792E68EAB35 /* DemoGMERoutePage.cpp */,
+				3B9207294F392B64E80A5DBC /* DemoGMERoutePage.h */,
+				1017C03C1ADF53E7CD1F97D2 /* DemoGMEServerAudioRoutePage.cpp */,
+				2BC3435E3137E988E284F2F3 /* DemoGMEServerAudioRoutePage.h */,
+				CF9E950E62AA7CC07A553DF2 /* DemoGMEVoiceChatPage.cpp */,
+				E145EB7359A59368FD4C9C33 /* DemoGMEVoiceChatPage.h */,
+				7EE23E4A18A1B2DFB2CB7456 /* DemoGMEVoiceMessagePage.cpp */,
+				D26E642F4D2B439A605E8A99 /* DemoGMEVoiceMessagePage.h */,
+				31725040187F7E195E1F45EB /* GMEDefines.h */,
+			);
+			name = GME;
+			sourceTree = "<group>";
+		};
+		E1507BBB718790E1A88B3C9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B898A82DCEFB7903A2A4EB00 /* libAkMeterFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E94F9A787911B03743BBDBFA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3406996E9226C90E8294B2C0 /* GentiumPlusAm-R.ttf */,
+				C291A853CCF0DD1EF6EA7523 /* GentiumPlusAm-R_ttf.h */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		E9F075FF7D7F1617243E082C /* AppleCommon */ = {
+			isa = PBXGroup;
+			children = (
+				E0EDEF3CD9E577409FE4FD96 /* AppleInputMgr.cpp */,
+				33D8E668CF689E13668FFF35 /* AppleInputMgr.h */,
+				7989BA172F77F675032AC1F9 /* DemoOptionsUtil.cpp */,
+				5BD7A6BB47F505C919131047 /* GControllerMgr.h */,
+				A4DC2BC9D79CCDE52BCBC348 /* GControllerMgr.mm */,
+				0AABF31A7C2179622FEE534A /* IOBufferQueue.cpp */,
+				BF2149D2848DDBDFCCC6C3B6 /* IOBufferQueue.h */,
+				BC2C60F13B6C96E4B18C197F /* stdafx.h */,
+			);
+			name = AppleCommon;
+			sourceTree = "<group>";
+		};
+		EC3797AC2F8E8FF50A219880 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				ADC46CF258DD805EE6818C8B /* SDL2.xcodeproj */,
+				FB439CF65A550DE6BC41CF41 /* Ak3DAudioBedMixerFXMac.xcodeproj */,
+				90545E0931355C45D443E02F /* AkAudioInputSourceMac.xcodeproj */,
+				CFC7E78DF5708C9C0FC45ADA /* AkCompressorFXMac.xcodeproj */,
+				5CE6F03347D26F44B271C9F1 /* AkDelayFXMac.xcodeproj */,
+				DFE5A2BF218CC7CD7FE1B3E0 /* AkFlangerFXMac.xcodeproj */,
+				16CFD050E55D5ED4817B3BDF /* AkGainFXMac.xcodeproj */,
+				656C1FBFBD6B94B5895B64C7 /* AkGuitarDistortionFXMac.xcodeproj */,
+				41012A57C7869CC7DD4BCCA2 /* AkHarmonizerFXMac.xcodeproj */,
+				44D3A95F24C917F62F3ECC9A /* AkMatrixReverbFXMac.xcodeproj */,
+				53B8CEFD63EE8390A63206D2 /* AkMeterFXMac.xcodeproj */,
+				F25D64B6BCFABBED25192153 /* AkParametricEQFXMac.xcodeproj */,
+				BE9C1C0711610E1507112C52 /* AkPeakLimiterFXMac.xcodeproj */,
+				C87180C212AE0C0D361E7C79 /* AkPitchShifterFXMac.xcodeproj */,
+				9BDD30AB6E9392582AB48C5C /* AkRecorderADMFXMac.xcodeproj */,
+				FA3D0437CD7A774BDBAAB7DA /* AkRecorderFXMac.xcodeproj */,
+				EA0989B92E85823ACA46B8C8 /* AkRoomVerbFXMac.xcodeproj */,
+				C954296A099966775C275AC7 /* AkSidechainFXMac.xcodeproj */,
+				B730FBCE8E8EB74303700C62 /* AkSilenceSourceMac.xcodeproj */,
+				D3B46DC2AD3031A8605DB5BD /* AkSineSourceMac.xcodeproj */,
+				DB51CAE5EC90ADD1B259F7E6 /* AkStereoDelayFXMac.xcodeproj */,
+				EBA3E55D0A0D31A45EFDACA5 /* AkSynthOneSourceMac.xcodeproj */,
+				FC67FA1670E3AB3F9A699565 /* AkTimeStretchFXMac.xcodeproj */,
+				7911EEC895E8C9ADF2AD6205 /* AkToneSourceMac.xcodeproj */,
+				5DA94E4779866135B033956E /* AkTremoloFXMac.xcodeproj */,
+				2DAD5C9C83C1A926E8255F20 /* AkMemoryMgrMac.xcodeproj */,
+				6456B42CEB60AB54EB995508 /* AkSoundEngineMac.xcodeproj */,
+				1472F2F096427CDE37D00657 /* AkSpatialAudioMac.xcodeproj */,
+				666ABA7111023953B51644BE /* AkStreamMgrMac.xcodeproj */,
+				C1496B83D80980BB99F9215E /* AkVorbisDecoderMac.xcodeproj */,
+				2DA346226C459F7C347C0869 /* AkOpusDecoderMac.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		F5F84CDD1B28FCB49F9B6818 /* SoundEngine */ = {
+			isa = PBXGroup;
+			children = (
+				4E24327311DBD3310DC56103 /* Common */,
+				44C347FB0198B085AC1E3D07 /* POSIX */,
+			);
+			name = SoundEngine;
+			sourceTree = "<group>";
+		};
+		FF86CBB25E321C17FE23A0FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA3B409B35AFACD5B2CDC540 /* libAkTimeStretchFX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10B7446653BF656D4DF60A62 /* IntegrationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C60A6D0BD248A77E8B8A42 /* Build configuration list for PBXNativeTarget "IntegrationDemo" */;
+			buildPhases = (
+				DC2A8E5079A50E6FD39F0E00 /* Resources */,
+				EECB040D85009E649538A62E /* Sources */,
+				67D4FA01A23A7F6D07B1ED9C /* Frameworks */,
+				3E2EF9117748BBE5A24DCFD6 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B080C6FE8ED807E3305A1895 /* PBXTargetDependency */,
+				EADBD0F0B6791B4EBAF3D438 /* PBXTargetDependency */,
+				E86EEF8AC0B8DCD5E1571A01 /* PBXTargetDependency */,
+				467178A5362FEC82050A6786 /* PBXTargetDependency */,
+				5B9EFD297A33CAF2730AFAFF /* PBXTargetDependency */,
+				FDF2EF8CD2AB51826B4021E5 /* PBXTargetDependency */,
+				100DF4C664E501D46FD6B5BE /* PBXTargetDependency */,
+				4B1B8611D23CC7956C62DC73 /* PBXTargetDependency */,
+				9677F6D0D3D130390CF952C6 /* PBXTargetDependency */,
+				169B6795AD3895FED4CE118D /* PBXTargetDependency */,
+				3D7C65365EE72C9F7307DA45 /* PBXTargetDependency */,
+				9E909E5C886E92192D0668A3 /* PBXTargetDependency */,
+				8C6AE40C04E7F46784B2CC4C /* PBXTargetDependency */,
+				F473CB290DBEAC97BA99EAF6 /* PBXTargetDependency */,
+				A4261A051426E657BC1445A2 /* PBXTargetDependency */,
+				68D211BC9DD985DF6180B9A9 /* PBXTargetDependency */,
+				629DEF74D889A262A690B5D5 /* PBXTargetDependency */,
+				E678A621D9B99B4AB2B8B762 /* PBXTargetDependency */,
+				45EFB0FBA4923AFEB4FE941E /* PBXTargetDependency */,
+				DF375C976697B860C83B2458 /* PBXTargetDependency */,
+				B9E571B39D4F76D0F3EE26A9 /* PBXTargetDependency */,
+				98CA2CDDB26086F22245F183 /* PBXTargetDependency */,
+				86980A453FDA34689411A8B5 /* PBXTargetDependency */,
+				D3EB4B3BAE3BD7048AD681CB /* PBXTargetDependency */,
+				B2A3498EBAE6469394AAE6AA /* PBXTargetDependency */,
+				AB8749ED7B01DA9600C6D0B1 /* PBXTargetDependency */,
+				769E05A87D6A49085014BB6D /* PBXTargetDependency */,
+				8587EE955173315CBEBB6080 /* PBXTargetDependency */,
+				426664D58A23FEE19CB98472 /* PBXTargetDependency */,
+				2FD71603B3163DA3FA543A00 /* PBXTargetDependency */,
+				541B07FA000AA67C0E426FF4 /* PBXTargetDependency */,
+			);
+			name = IntegrationDemo;
+			productInstallPath = "$(HOME)/Applications";
+			productName = IntegrationDemo;
+			productReference = 57A4C3560AD9BAD55A8F7082 /* IntegrationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "IntegrationDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = B7A30B1F7E26261BFA2682C1 /* IntegrationDemo */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2403A75D41451C1D0BDB095A /* Products */;
+					ProjectRef = ADC46CF258DD805EE6818C8B /* SDL2.xcodeproj */;
+				},
+				{
+					ProductGroup = 88284FD806CA8E83EE73333F /* Products */;
+					ProjectRef = FB439CF65A550DE6BC41CF41 /* Ak3DAudioBedMixerFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 2538F99BEF52C6917ED4750C /* Products */;
+					ProjectRef = 90545E0931355C45D443E02F /* AkAudioInputSourceMac.xcodeproj */;
+				},
+				{
+					ProductGroup = A3249E31EB1937683A6F7AF8 /* Products */;
+					ProjectRef = CFC7E78DF5708C9C0FC45ADA /* AkCompressorFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 0939D0FC5B318D4EA280DE54 /* Products */;
+					ProjectRef = 5CE6F03347D26F44B271C9F1 /* AkDelayFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 5FB4E0928031ECF7978BC439 /* Products */;
+					ProjectRef = DFE5A2BF218CC7CD7FE1B3E0 /* AkFlangerFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 6C734AA30C6FFF7D3DAD5DF9 /* Products */;
+					ProjectRef = 16CFD050E55D5ED4817B3BDF /* AkGainFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 3505513F9A27A49E81E33F9C /* Products */;
+					ProjectRef = 656C1FBFBD6B94B5895B64C7 /* AkGuitarDistortionFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 83E6BCAB6DA3676F392CFE2E /* Products */;
+					ProjectRef = 41012A57C7869CC7DD4BCCA2 /* AkHarmonizerFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 51EAA3C402E668D8970B2C72 /* Products */;
+					ProjectRef = 44D3A95F24C917F62F3ECC9A /* AkMatrixReverbFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = E1507BBB718790E1A88B3C9D /* Products */;
+					ProjectRef = 53B8CEFD63EE8390A63206D2 /* AkMeterFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = BAAFE607212C37FCAE8BE53F /* Products */;
+					ProjectRef = F25D64B6BCFABBED25192153 /* AkParametricEQFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 85E6F454F8266E38C6935ED2 /* Products */;
+					ProjectRef = BE9C1C0711610E1507112C52 /* AkPeakLimiterFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = D93F5B1C466D336FF8068363 /* Products */;
+					ProjectRef = C87180C212AE0C0D361E7C79 /* AkPitchShifterFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = B70DB3D34D3A658A9CF26442 /* Products */;
+					ProjectRef = 9BDD30AB6E9392582AB48C5C /* AkRecorderADMFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = B4074FDFDAEEB9C50EF43A79 /* Products */;
+					ProjectRef = FA3D0437CD7A774BDBAAB7DA /* AkRecorderFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 6CBF0345C3730B46F855F8E4 /* Products */;
+					ProjectRef = EA0989B92E85823ACA46B8C8 /* AkRoomVerbFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 8FC92A363C5589ECA0C13221 /* Products */;
+					ProjectRef = C954296A099966775C275AC7 /* AkSidechainFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = BAE94FEC61FE5028F366FD07 /* Products */;
+					ProjectRef = B730FBCE8E8EB74303700C62 /* AkSilenceSourceMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 21E723864A433B9B53A6BEE4 /* Products */;
+					ProjectRef = D3B46DC2AD3031A8605DB5BD /* AkSineSourceMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 767796C7B0F7820F815892F2 /* Products */;
+					ProjectRef = DB51CAE5EC90ADD1B259F7E6 /* AkStereoDelayFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 12D1B263B1D3F8CF974012B6 /* Products */;
+					ProjectRef = EBA3E55D0A0D31A45EFDACA5 /* AkSynthOneSourceMac.xcodeproj */;
+				},
+				{
+					ProductGroup = FF86CBB25E321C17FE23A0FF /* Products */;
+					ProjectRef = FC67FA1670E3AB3F9A699565 /* AkTimeStretchFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 6F768AC3DF5E90C469E0815B /* Products */;
+					ProjectRef = 7911EEC895E8C9ADF2AD6205 /* AkToneSourceMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 34ABDFB06DF3B5F8705A30F1 /* Products */;
+					ProjectRef = 5DA94E4779866135B033956E /* AkTremoloFXMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 2F47902A12B8FCBC8478D588 /* Products */;
+					ProjectRef = 2DAD5C9C83C1A926E8255F20 /* AkMemoryMgrMac.xcodeproj */;
+				},
+				{
+					ProductGroup = C31F477A8D2A2277C0740B97 /* Products */;
+					ProjectRef = 6456B42CEB60AB54EB995508 /* AkSoundEngineMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 542C2665AC6BB2EA23EB3C5A /* Products */;
+					ProjectRef = 1472F2F096427CDE37D00657 /* AkSpatialAudioMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 28BEBEC5E99BF3A7972E6182 /* Products */;
+					ProjectRef = 666ABA7111023953B51644BE /* AkStreamMgrMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 391D34FA4FD2ED77F3133EF0 /* Products */;
+					ProjectRef = C1496B83D80980BB99F9215E /* AkVorbisDecoderMac.xcodeproj */;
+				},
+				{
+					ProductGroup = 5FEFB947DC8EC2C0445E530D /* Products */;
+					ProjectRef = 2DA346226C459F7C347C0869 /* AkOpusDecoderMac.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				10B7446653BF656D4DF60A62 /* IntegrationDemo.app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0CF52B217EF103F501274815 /* libSDL2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDL2.a;
+			remoteRef = 24394800E85BE4B1274DA945 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		192975F712CD9333DA5690DE /* libAkHarmonizerFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkHarmonizerFX.a;
+			remoteRef = 3046085095CB25AD2594FE2D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B35F205C89F56D18B887DB5 /* libAkOpusDecoder.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkOpusDecoder.a;
+			remoteRef = 0166A75A0B52F43106888F70 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1BA845D41FD88910BDA8F8B4 /* libAkGainFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkGainFX.a;
+			remoteRef = 2A0EE51D508A18FA4E24FE6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2ACE28F27F211A1698D300F3 /* libAkSidechainFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkSidechainFX.a;
+			remoteRef = 5890B16080B1BE95BAD47376 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2E540DCD66F33E1AEDC25A7C /* libAkSilenceSource.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkSilenceSource.a;
+			remoteRef = EDDA31B47DB060EBAF5A2564 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2EF5E61CEB0FD2F2C9B9465D /* libAkSpatialAudio.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkSpatialAudio.a;
+			remoteRef = CF6FA242BCC80A045D47FA54 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		305198CA85B75C71F24F9DEB /* libAkGuitarDistortionFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkGuitarDistortionFX.a;
+			remoteRef = AB4A2E3916789F6078FA85AB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		30D9EA0F8903024076FC365F /* libAkPitchShifterFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkPitchShifterFX.a;
+			remoteRef = 24E651DA9F23DF0B229D0B1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3196E5BF7FFD464833A73A02 /* libAkSineSource.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkSineSource.a;
+			remoteRef = 9EC405202C7F71B06DB02C11 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		57B61525914A198B30598467 /* libAkAudioInputSource.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkAudioInputSource.a;
+			remoteRef = C8E4ADDB18663D2367E46F48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		64D4CDE1A01D8F79AB8F8815 /* libAkVorbisDecoder.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkVorbisDecoder.a;
+			remoteRef = 11F270E6EBDE042227D5B52B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		72A650F50B51C0B3C2447EEC /* libAkParametricEQFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkParametricEQFX.a;
+			remoteRef = 70E3F5622254290483E68F3C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86EB91566C22DD4C7CAE619C /* libAk3DAudioBedMixerFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAk3DAudioBedMixerFX.a;
+			remoteRef = C405A0F90E420DA60A50D503 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		92EF5756D921A417E3110036 /* libAkSynthOneSource.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkSynthOneSource.a;
+			remoteRef = 389E2D1FDB8440BAFE7DCDF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		951B72908CD0891130CBBE15 /* libAkFlangerFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkFlangerFX.a;
+			remoteRef = 37501336B22D7813342F36FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F291EF88AA6439FA8AE18D1 /* libAkPeakLimiterFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkPeakLimiterFX.a;
+			remoteRef = DECF9811EACA1AC7593CA04D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7730FEA8D7F7C24F2A1A911 /* libAkMatrixReverbFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkMatrixReverbFX.a;
+			remoteRef = B2E13C27580CEA8811C56079 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AAE6C64EC34EC13E906284B3 /* libAkToneSource.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkToneSource.a;
+			remoteRef = 8F81A4D4A39D4005190A2FBA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B5CC89ED598DC2E9766C7A97 /* libAkRecorderFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkRecorderFX.a;
+			remoteRef = 65AF9B887BC447E0A049E1BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B898A82DCEFB7903A2A4EB00 /* libAkMeterFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkMeterFX.a;
+			remoteRef = 6D439509CD6528DC408AACFE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C650C817A1367E8BA8214837 /* libAkRoomVerbFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkRoomVerbFX.a;
+			remoteRef = DF80DF3F5436320373946968 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB789B138BFC4E57E4B5FCF8 /* libAkCompressorFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkCompressorFX.a;
+			remoteRef = 7C0E0CF7F3AD843EDB113B71 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA242C6FF72BE152DFB0DA7A /* libAkRecorderADMFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkRecorderADMFX.a;
+			remoteRef = 327623057E62CF5251D34F3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA3B409B35AFACD5B2CDC540 /* libAkTimeStretchFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkTimeStretchFX.a;
+			remoteRef = 7300DDD3E093FC6728200E67 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF75C79F70FD0C5737BF28B1 /* libAkDelayFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkDelayFX.a;
+			remoteRef = EFF11EDBD4621D6A7836EBF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E1D1E6113C4BF7CFCF07881E /* libAkMemoryMgr.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkMemoryMgr.a;
+			remoteRef = 13F15DE92AA7901EB54706E4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E651BC38E115290BE6684FD4 /* libAkStereoDelayFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkStereoDelayFX.a;
+			remoteRef = 08806837F8DC960521E8433B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6C74C49DD1DB11B056F099B /* libAkTremoloFX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkTremoloFX.a;
+			remoteRef = AAE3696D958A057FF2A1F718 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEF48BD43B7CFDFEB3F72964 /* libAkSoundEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkSoundEngine.a;
+			remoteRef = A6CA33FACD3391BBB28BD943 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FD7770D97D760A5D9F046BA5 /* libAkStreamMgr.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAkStreamMgr.a;
+			remoteRef = DCB4AC744985AF277BBFC49E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC2A8E5079A50E6FD39F0E00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C4CDF3884811A35BF852422 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EECB040D85009E649538A62E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DD82CECAE76ED12140ED606 /* AkFileLocationBase.cpp in Sources */,
+				AFF560255CF7E90D24D548AE /* AkFilePackage.cpp in Sources */,
+				FE0AF9A1A16BA519E3CCDF13 /* AkFilePackageLUT.cpp in Sources */,
+				59BB6A0A5037C6B8F80DFC5B /* AkGeneratedSoundBanksResolver.cpp in Sources */,
+				5BB124AD56AF69BB417346DF /* AkJobWorkerMgr.cpp in Sources */,
+				F271B10B7CB08A38DC3970E4 /* AkMultipleFileLocation.cpp in Sources */,
+				4A86EB446A4EBDF95D670BF9 /* AkPlatformProfilerHookStubs.cpp in Sources */,
+				8C1C37B4D91FA81D25EE2D0E /* AkDefaultIOHookDeferred.cpp in Sources */,
+				0130D8087AE3C849B84EBD3D /* stdafx.cpp in Sources */,
+				133E3777FFBC7A76337465EC /* AppleInputMgr.cpp in Sources */,
+				9D409BAB01D693E6BBE89334 /* DemoOptionsUtil.cpp in Sources */,
+				AEEED62CFA29E49D2E0F0886 /* GControllerMgr.mm in Sources */,
+				CDE76F4E21363CDD8CEEA5CF /* IOBufferQueue.cpp in Sources */,
+				B0AFAA301A923FBE69DECABB /* Drawing.cpp in Sources */,
+				83996A15B4708DF134EC5CC2 /* Helpers.cpp in Sources */,
+				1C568B90D087A4B9E20A16D1 /* IntegrationDemo.cpp in Sources */,
+				572CFF0ED34963ABDF8BB329 /* IntegrationDemoPlugins.cpp in Sources */,
+				5C1E55E232FB6CF156E3EEB7 /* PlatformHooks.cpp in Sources */,
+				E06734B1F6BDD5C817ADE52B /* SoundInputBase.cpp in Sources */,
+				169110DE97A1F7C75FDB5ED1 /* SoundInputMgrBase.cpp in Sources */,
+				3C769D060E7C7B84ACEE60FC /* SpatialAudioHelpers.cpp in Sources */,
+				70006416B220795FE3CB59E0 /* UniversalInput.cpp in Sources */,
+				826DD69A625B7A43F8D3302C /* BaseMenuPage.cpp in Sources */,
+				5AE03D1A397DE1A59DA5C216 /* Demo3dAudio.cpp in Sources */,
+				8E16687CB4DE7294AD659BCE /* Demo3dBus.cpp in Sources */,
+				6D197615D53373F4017AD1A9 /* DemoAppLifecycle.cpp in Sources */,
+				00D93C41E680117CD6B44714 /* DemoAutobanks.cpp in Sources */,
+				90EBFFDCDE1356CF5D8BD4FE /* DemoBGM.cpp in Sources */,
+				FC26F87F753EDBDB36318D84 /* DemoBankLoadingMenu.cpp in Sources */,
+				D328A6D61C17336670898780 /* DemoChannels.cpp in Sources */,
+				9D019D30DAE10DD010F2EF3F /* DemoCommandBufferCrowd.cpp in Sources */,
+				0DD1E001B3CC38048EDD37E8 /* DemoDialogueMenu.cpp in Sources */,
+				B350A267B93419F1C5AC2341 /* DemoDynamicDialogue.cpp in Sources */,
+				71865A85CA0CA0D1F86FE2F5 /* DemoExternalSources.cpp in Sources */,
+				58490416A69C07722CE5172E /* DemoFootstepsManyVariables.cpp in Sources */,
+				F6E8B73B19126DE63709EF11 /* DemoInteractiveMusic.cpp in Sources */,
+				71B732B56C954D9F1292102B /* DemoLocalization.cpp in Sources */,
+				74F693F72082DFA48A9F4BB1 /* DemoMIDIMetronome.cpp in Sources */,
+				512A377BE61EF73331F486EB /* DemoMarkers.cpp in Sources */,
+				3D666B1F4A610C14F2F21FCE /* DemoMicrophone.cpp in Sources */,
+				354E0CB85DD456442CB7EA30 /* DemoMotion.cpp in Sources */,
+				0A9FFE110D8BBA0A3A6F45E4 /* DemoMusicCallbacks.cpp in Sources */,
+				F06A7252EB2EBAE6B0882078 /* DemoMusicMIDIMenu.cpp in Sources */,
+				B51703658DECD89BB825A5BA /* DemoOptions.cpp in Sources */,
+				CEBD78F9B1D2E998EE6FDE9B /* DemoPositioning.cpp in Sources */,
+				E9CB974BC4D56F8C62467839 /* DemoPositioningMenu.cpp in Sources */,
+				DEDD0BBCFED8DA0B219D6020 /* DemoPrepare.cpp in Sources */,
+				D2E259383ED79AB341B8B5D3 /* DemoRTPCCarEngine.cpp in Sources */,
+				203BFDDD15E210C70A813FCC /* DemoSpatialAudio.cpp in Sources */,
+				1143B57FE52932CED4EA3553 /* DemoSpatialAudioGeometry.cpp in Sources */,
+				419874FE24826B9D3EBEB3B7 /* DemoSpatialAudioMenu.cpp in Sources */,
+				FA43915AF6383D904D1AA7A1 /* DemoSpatialAudioPortalReflect.cpp in Sources */,
+				E97939D08679DD99CD34D03D /* DemoSpatialAudioReflect.cpp in Sources */,
+				0ABF03CF51CE862E038BF447 /* DemoSpatialAudioReverbZones.cpp in Sources */,
+				71B73801832CAE80806C2F47 /* DemoGMEBaseMenuPage.cpp in Sources */,
+				DBC4154B9C9E4782701B9A06 /* DemoGMEPositioningPage.cpp in Sources */,
+				F8EC6590B4EDAED67B2FF8BC /* DemoGMERoutePage.cpp in Sources */,
+				A7206EBD675DE9DF0AD9AAE1 /* DemoGMEServerAudioRoutePage.cpp in Sources */,
+				1D14013B73685938A1AE40D9 /* DemoGMEVoiceChatPage.cpp in Sources */,
+				596FB01AD0D4DD2F17D845C1 /* DemoGMEVoiceMessagePage.cpp in Sources */,
+				ADC97286BED80579064DAFF9 /* PartnerPluginsMenu.cpp in Sources */,
+				341C75FA8204FB15937131F4 /* DemoSpeechEngine.cpp in Sources */,
+				DFD3CE41EE6C755072D154A5 /* FreetypeGraphicRenderer.cpp in Sources */,
+				ACE72EB8D91EE4A3EAE8D960 /* ButtonControl.cpp in Sources */,
+				05BFF2CAC31CD874B2BFC5A0 /* Control.cpp in Sources */,
+				DCC92CC7E46AD5777CC43A15 /* LabelControl.cpp in Sources */,
+				826755C99117C6629F2EAEAC /* Menu.cpp in Sources */,
+				B8269C35602BADDB9CD01CEB /* MessagePage.cpp in Sources */,
+				2A7184DD1B69C9BBF7D67B22 /* MovableChip.cpp in Sources */,
+				D311229D4F8FA5487E1DD6E2 /* MultiplayerPage.cpp in Sources */,
+				4D223C43F95464D89B87889E /* NumericControl.cpp in Sources */,
+				DAE607AC4131B5F03FF282AA /* Page.cpp in Sources */,
+				B27E4A295BDDB7AD8D733516 /* ToggleControl.cpp in Sources */,
+				4D25D3502ACB898E22E335D1 /* RenderSDL.cpp in Sources */,
+				581D91A32B68F81414F51848 /* SDLInputMgr.cpp in Sources */,
+				C91043D396A94382B58BF6D0 /* SDLWindow.cpp in Sources */,
+				3E6EE0F26EC34B3907BE9515 /* CoreAudioInputDevice.cpp in Sources */,
+				BE5CF85102BDEBC20A407EBF /* IntegrationDemoAppDelegate.mm in Sources */,
+				96A2FA7D475B8A02606F99B3 /* Platform.cpp in Sources */,
+				C48C157BEB695F35A1347899 /* SoundInput.cpp in Sources */,
+				7B31ADF741A5AB819175471F /* SoundInputMgr.cpp in Sources */,
+				BDE9F5374637E1FB30F41CA6 /* main.m in Sources */,
+				162EA1EC754C2B1E9E7D91A8 /* stdafx.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		100DF4C664E501D46FD6B5BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkGainFX.a;
+			targetProxy = F03B7861CFE78ABDD4D10C69 /* PBXContainerItemProxy */;
+		};
+		169B6795AD3895FED4CE118D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkMatrixReverbFX.a;
+			targetProxy = 6AC3C5919EC2EBEFE37C302F /* PBXContainerItemProxy */;
+		};
+		2FD71603B3163DA3FA543A00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkVorbisDecoder.a;
+			targetProxy = 19B99EB70654BEE43B14713F /* PBXContainerItemProxy */;
+		};
+		3D7C65365EE72C9F7307DA45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkMeterFX.a;
+			targetProxy = 85638B44726AA6834B1882D1 /* PBXContainerItemProxy */;
+		};
+		426664D58A23FEE19CB98472 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkStreamMgr.a;
+			targetProxy = BB6646F55FC290EE1902CEF6 /* PBXContainerItemProxy */;
+		};
+		45EFB0FBA4923AFEB4FE941E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkSilenceSource.a;
+			targetProxy = B02FFAF1912EB0BEB7E42E14 /* PBXContainerItemProxy */;
+		};
+		467178A5362FEC82050A6786 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkCompressorFX.a;
+			targetProxy = 0B97477588FAC88FE470B22C /* PBXContainerItemProxy */;
+		};
+		4B1B8611D23CC7956C62DC73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkGuitarDistortionFX.a;
+			targetProxy = 66CE10FCD3488BDD3B071ABC /* PBXContainerItemProxy */;
+		};
+		541B07FA000AA67C0E426FF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkOpusDecoder.a;
+			targetProxy = 02AAB2242E3D6CC9803DBA1C /* PBXContainerItemProxy */;
+		};
+		5B9EFD297A33CAF2730AFAFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkDelayFX.a;
+			targetProxy = 652673A97824A4721F7C75F5 /* PBXContainerItemProxy */;
+		};
+		629DEF74D889A262A690B5D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkRoomVerbFX.a;
+			targetProxy = EC4D62EC3EC56C3383D399C6 /* PBXContainerItemProxy */;
+		};
+		68D211BC9DD985DF6180B9A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkRecorderFX.a;
+			targetProxy = FFAE2C1C2AD589B1F713AB41 /* PBXContainerItemProxy */;
+		};
+		769E05A87D6A49085014BB6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkSoundEngine.a;
+			targetProxy = 19A1B1A2B6722E143764E828 /* PBXContainerItemProxy */;
+		};
+		8587EE955173315CBEBB6080 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkSpatialAudio.a;
+			targetProxy = 8BC3620B9F2CD79B91CE5212 /* PBXContainerItemProxy */;
+		};
+		86980A453FDA34689411A8B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkTimeStretchFX.a;
+			targetProxy = 5D163A03C9180E1E52DCEA11 /* PBXContainerItemProxy */;
+		};
+		8C6AE40C04E7F46784B2CC4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkPeakLimiterFX.a;
+			targetProxy = F5D11D17AB88E0E5AF2E636E /* PBXContainerItemProxy */;
+		};
+		9677F6D0D3D130390CF952C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkHarmonizerFX.a;
+			targetProxy = E85D54C3063738FF75C370C1 /* PBXContainerItemProxy */;
+		};
+		98CA2CDDB26086F22245F183 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkSynthOneSource.a;
+			targetProxy = 99A5CA6900C1DB92DB2E1F52 /* PBXContainerItemProxy */;
+		};
+		9E909E5C886E92192D0668A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkParametricEQFX.a;
+			targetProxy = C0EDB178A5B05940152DF6EF /* PBXContainerItemProxy */;
+		};
+		A4261A051426E657BC1445A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkRecorderADMFX.a;
+			targetProxy = EC3445F0AF2E0CEA798E0923 /* PBXContainerItemProxy */;
+		};
+		AB8749ED7B01DA9600C6D0B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkMemoryMgr.a;
+			targetProxy = 0BF82B922BB405E49525DAFF /* PBXContainerItemProxy */;
+		};
+		B080C6FE8ED807E3305A1895 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libSDL2.a;
+			targetProxy = 7867F3C17FC87D992225DE94 /* PBXContainerItemProxy */;
+		};
+		B2A3498EBAE6469394AAE6AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkTremoloFX.a;
+			targetProxy = 2A49F12D5F764BECAE214669 /* PBXContainerItemProxy */;
+		};
+		B9E571B39D4F76D0F3EE26A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkStereoDelayFX.a;
+			targetProxy = 573D8B8040E31C54953B759F /* PBXContainerItemProxy */;
+		};
+		D3EB4B3BAE3BD7048AD681CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkToneSource.a;
+			targetProxy = 5996C39A9B5CDAC683A5A6F4 /* PBXContainerItemProxy */;
+		};
+		DF375C976697B860C83B2458 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkSineSource.a;
+			targetProxy = CB999769B48F1AB2B0FE006E /* PBXContainerItemProxy */;
+		};
+		E678A621D9B99B4AB2B8B762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkSidechainFX.a;
+			targetProxy = EDD82AD7CDCD3A12C3FDFE7A /* PBXContainerItemProxy */;
+		};
+		E86EEF8AC0B8DCD5E1571A01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkAudioInputSource.a;
+			targetProxy = C38AB3A7AE8B5E72ACE258D1 /* PBXContainerItemProxy */;
+		};
+		EADBD0F0B6791B4EBAF3D438 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAk3DAudioBedMixerFX.a;
+			targetProxy = 3FB037BE0DAA96FE218FC884 /* PBXContainerItemProxy */;
+		};
+		F473CB290DBEAC97BA99EAF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkPitchShifterFX.a;
+			targetProxy = 407C3D5B19314693B6806CC9 /* PBXContainerItemProxy */;
+		};
+		FDF2EF8CD2AB51826B4021E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libAkFlangerFX.a;
+			targetProxy = F0C2375D30DE43EB63126BEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		509061A71C955ED406315337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Release/bin/IntegrationDemo";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INFOPLIST_FILE = "IntegrationDemo-Info.plist";
+				INSTALL_PATH = "\"$(HOME)/Applications\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audiokinetic.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = IntegrationDemo;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		5CBB007A72758872C7FFABA3 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					AK_ENABLE_ASSERTS,
+					LUA_USE_MACOSX,
+					AK_PLATFORM_SUPPORTS_MOTION,
+					AK_PLATFORM_SUPPORTS_GME,
+					AK_RENDER_SDL,
+					AK_INPUT_SDL,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = "../../WwiseProject/GeneratedSoundBanks ../AppleCommon . ../Common ../FreetypeRenderer ../FreetypeRenderer/Assets ../MenuSystem ../../SoundEngine/POSIX ../../SoundEngine/Common ../../../include ../DemoPages ../WwiseProject/GeneratedSoundBanks ../../3rdParty/sdl2/include ../SDL";
+				LIBRARY_SEARCH_PATHS = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Profile/lib";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OBJROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Profile/obj/IntegrationDemo";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-Wno-null-conversion",
+					"-Wno-invalid-offsetof",
+					"-Wno-nontrivial-memcall",
+					"-Wno-unknown-warning-option",
+					"-Wno-deprecated-declarations",
+					"-Wno-switch",
+					"-fno-objc-msgsend-selector-stubs",
+					"-Qunused-arguments",
+				);
+				OTHER_LDFLAGS = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Profile/lib/libCommunicationCentral.a";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audiokinetic.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Profile/bin/IntegrationDemo";
+			};
+			name = Profile;
+		};
+		97A9E4BD9852A0A4A614E74E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					_DEBUG,
+					LUA_USE_MACOSX,
+					AK_PLATFORM_SUPPORTS_MOTION,
+					AK_PLATFORM_SUPPORTS_GME,
+					AK_RENDER_SDL,
+					AK_INPUT_SDL,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = "../../WwiseProject/GeneratedSoundBanks ../AppleCommon . ../Common ../FreetypeRenderer ../FreetypeRenderer/Assets ../MenuSystem ../../SoundEngine/POSIX ../../SoundEngine/Common ../../../include ../DemoPages ../WwiseProject/GeneratedSoundBanks ../../3rdParty/sdl2/include ../SDL";
+				LIBRARY_SEARCH_PATHS = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Debug/lib";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OBJROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Debug/obj/IntegrationDemo";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-Wno-null-conversion",
+					"-Wno-invalid-offsetof",
+					"-Wno-nontrivial-memcall",
+					"-Wno-unknown-warning-option",
+					"-Wno-deprecated-declarations",
+					"-Wno-switch",
+					"-fno-objc-msgsend-selector-stubs",
+					"-Qunused-arguments",
+				);
+				OTHER_LDFLAGS = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Debug/lib/libCommunicationCentral.a";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audiokinetic.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Debug/bin/IntegrationDemo";
+			};
+			name = Debug;
+		};
+		CA2CB7237286B40FD9C692C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Debug/bin/IntegrationDemo";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INFOPLIST_FILE = "IntegrationDemo-Info.plist";
+				INSTALL_PATH = "\"$(HOME)/Applications\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audiokinetic.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = IntegrationDemo;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		D822060E02FBB8F8CAB4AE99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					AK_OPTIMIZED,
+					LUA_USE_MACOSX,
+					AK_PLATFORM_SUPPORTS_MOTION,
+					AK_PLATFORM_SUPPORTS_GME,
+					AK_RENDER_SDL,
+					AK_INPUT_SDL,
+				);
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = "../../WwiseProject/GeneratedSoundBanks ../AppleCommon . ../Common ../FreetypeRenderer ../FreetypeRenderer/Assets ../MenuSystem ../../SoundEngine/POSIX ../../SoundEngine/Common ../../../include ../DemoPages ../WwiseProject/GeneratedSoundBanks ../../3rdParty/sdl2/include ../SDL";
+				LIBRARY_SEARCH_PATHS = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Release/lib";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OBJROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Release/obj/IntegrationDemo";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-Wno-null-conversion",
+					"-Wno-invalid-offsetof",
+					"-Wno-nontrivial-memcall",
+					"-Wno-unknown-warning-option",
+					"-Wno-deprecated-declarations",
+					"-Wno-switch",
+					"-fno-objc-msgsend-selector-stubs",
+					"-Qunused-arguments",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audiokinetic.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SYMROOT = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Release/bin/IntegrationDemo";
+			};
+			name = Release;
+		};
+		EB8DB3B1D4B4C2039D434769 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "../../../Mac_Xcode$(XCODE_VERSION_MAJOR)/Profile/bin/IntegrationDemo";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BCB4VLKTK5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_AUTO_VECTORIZATION = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_FAST_MATH = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_STRICT_ALIASING = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_UNROLL_LOOPS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESIS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INFOPLIST_FILE = "IntegrationDemo-Info.plist";
+				INSTALL_PATH = "\"$(HOME)/Applications\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.audiokinetic.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = IntegrationDemo;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Profile;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18C60A6D0BD248A77E8B8A42 /* Build configuration list for PBXNativeTarget "IntegrationDemo.app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA2CB7237286B40FD9C692C5 /* Debug */,
+				EB8DB3B1D4B4C2039D434769 /* Profile */,
+				509061A71C955ED406315337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "IntegrationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97A9E4BD9852A0A4A614E74E /* Debug */,
+				5CBB007A72758872C7FFABA3 /* Profile */,
+				D822060E02FBB8F8CAB4AE99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

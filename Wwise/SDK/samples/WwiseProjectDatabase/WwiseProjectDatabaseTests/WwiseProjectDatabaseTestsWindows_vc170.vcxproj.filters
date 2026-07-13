@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="WwiseProjectDatabase">
+      <UniqueIdentifier>{4BB9F5BD-B7F0-3D55-C0FA-A1782CB1644E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WwiseProjectDatabase\AdapterTypes">
+      <UniqueIdentifier>{B0BE20DD-9CA5-E2D4-45F6-48F231BC5B3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WwiseProjectDatabase\AdapterTypes\Standard">
+      <UniqueIdentifier>{50FEF107-BC6E-F480-858D-6E09F1BC2C82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WwiseProjectDatabase\Metadata">
+      <UniqueIdentifier>{5B5098FA-47A1-833C-7005-72FE5CB516A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WwiseProjectDatabase\Ref">
+      <UniqueIdentifier>{D79692C9-43A4-C0AF-CC8A-BC9A38978C66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{5865280E-C479-50BF-8DFB-F31EF9CE4CF0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\WwiseProjectDatabase.h">
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\IWwiseDirectoryVisitor.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseProjectDatabaseLoggingUtils.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseProjectDatabaseStandardLogging.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardArray.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardAsync.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardFuture.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardGuid.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardJsonObject.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardMap.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardMultiMap.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardPair.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardParallelFor.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardSet.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardSharedPtr.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardString.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardTask.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardTuple.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseStandardTypes.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseArray.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseDataTypesAdapter.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseFuture.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseGuid.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseJsonObject.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseMap.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseMultiMap.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwisePair.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseProjectDatabaseLogging.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseProjectDatabaseLoggingSeverity.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseSet.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseSharedPtr.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseString.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseTask.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseTuple.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\AdapterTypes\WwiseWrapperTypes.h">
+      <Filter>WwiseProjectDatabase\AdapterTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\IWwiseMetadataLoader.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataAcousticTexture.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataActionEntries.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataBasicReference.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataBus.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataCollections.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataDialogue.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataEvent.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataExternalSource.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataForwardDeclarations.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataGameParameter.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataGroupValueReference.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLanguage.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLoadable.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLoader.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataMedia.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlatform.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlatformInfo.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlugin.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginGroup.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginInfo.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginLib.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataProject.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataProjectInfo.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataRootFile.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataRootPaths.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSettings.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSoundBank.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSoundBanksInfo.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataState.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataStateGroup.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitch.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchContainer.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchGroup.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchValue.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataTrigger.h">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseAnyRef.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefAcousticTexture.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefAudioDevice.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefAuxBus.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefBus.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefCollections.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefCustomPlugin.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefDialogueArgument.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefDialogueEvent.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefEvent.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefExternalSource.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefForwardDeclarations.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefGameParameter.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefLanguage.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefMedia.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPlatform.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPlatformInfo.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginInfo.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginLib.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginShareSet.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefProjectInfo.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefRootFile.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSoundBank.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSoundBanksInfo.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefState.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefStateGroup.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitch.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitchContainer.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitchGroup.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefTrigger.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\Ref\WwiseRefType.h">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseDBSharedLanguageId.h">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseDataStructure.h">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseDatabaseIdentifiers.h">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseDirectoryVisitor.h">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseGeneratedFiles.h">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WwiseProjectDatabase\WwiseSharedDBPlatformId.h">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\stdafx.h">
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\WwiseProjectDatabase.cpp">
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseProjectDatabaseLoggingUtils.cpp">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\AdapterTypes\Standard\WwiseProjectDatabaseStandardLogging.cpp">
+      <Filter>WwiseProjectDatabase\AdapterTypes\Standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataAcousticTexture.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataActionEntries.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataBasicReference.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataBus.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataDialogue.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataEvent.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataExternalSource.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataGameParameter.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataGroupValueReference.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLanguage.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLoadable.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataLoader.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataMedia.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlatform.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlatformInfo.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPlugin.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginGroup.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginInfo.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataPluginLib.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataProject.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataProjectInfo.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataRootFile.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataRootPaths.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSettings.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSoundBank.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSoundBanksInfo.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataState.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataStateGroup.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitch.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchContainer.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchGroup.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataSwitchValue.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Metadata\WwiseMetadataTrigger.cpp">
+      <Filter>WwiseProjectDatabase\Metadata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseAnyRef.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefAcousticTexture.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefAudioDevice.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefAuxBus.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefBus.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefCustomPlugin.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefDialogueArgument.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefDialogueEvent.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefEvent.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefExternalSource.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefGameParameter.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefLanguage.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefMedia.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPlatform.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPlatformInfo.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginInfo.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginLib.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefPluginShareSet.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefProjectInfo.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefRootFile.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSoundBank.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSoundBanksInfo.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefState.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefStateGroup.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitch.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitchContainer.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefSwitchGroup.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\Ref\WwiseRefTrigger.cpp">
+      <Filter>WwiseProjectDatabase\Ref</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\WwiseDataStructure.cpp">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\WwiseDatabaseIdentifiers.cpp">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\WwiseDirectoryVisitor.cpp">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\WwiseProjectDatabase\WwiseGeneratedFiles.cpp">
+      <Filter>WwiseProjectDatabase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\stdafx.cpp">
+    </ClCompile>
+    <ClCompile Include="Tests\WwiseProjectDatabaseAdapterTests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\WwiseProjectDatabaseLoggingTests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\WwiseProjectDatabaseTests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\main.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
