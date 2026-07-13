@@ -125,16 +125,24 @@ jobs:
           echo "---"
           echo "所有受支持的压缩文件处理完毕。"
 
+
       - name: 提交变动
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
+
           # 检查暂存区是否有变动
           if ! git diff --staged --quiet; then
             echo "检测到暂存的变动，正在提交..."
             git commit -m "Chore: 自动解压并删除多种格式压缩包"
+
+            # ---- 新增：rebase 拉取远端最新代码 ----
+            echo "正在 rebase 远端最新变更..."
+            git pull --rebase origin main
+            # ------------------------------------
+
             git push
           else
             echo "没有文件变动需要提交。"
           fi
+
