@@ -1,0 +1,13 @@
+
+<h2>Bus Configuration</h2>
+<p>バス出力コンフィギュレーションのフォーマットを指定するもので、このバスの処理ステータスに影響することがある。この設定でミキシングをバスのパイプラインのさらに先に後回ししたり、バスに挿入されたEffectを処理するチャンネル数を減らしたりすることができ、CPUやメモリを節約できる。</p>
+<p>以下のようなオプションがある:</p>
+<ul>
+<li><strong>Same as parent</strong> - 親バスのバスコンフィギュレーションを継承し、また、非ミキシングバスとなる可能性がある。処理を必要とせずにそのままバスのプロパティをバスの入力に適用できるため、CPUやメモリを節約できる。ただし、このバスにEffectなどの特定機能がある場合は、処理が行われ節約の可能性が失われる。詳細については <a href="HelpDoc=understanding_the_bus_icons">バスのアイコンと処理ステータスを理解する</a> を参照。</li>
+<li><strong>Same as main mix</strong> - このバスパイプラインの終わりにあるAudio DeviceのMain Mixのバスコンフィギュレーションを継承する。このオプションでは実行時にエンドポイントによってバスコンフィギュレーションが決まるため、柔軟性を確保できる。</li>
+<li><strong>Same as passthrough mix</strong> - このバスパイプラインの終わりにあるAudio DeviceのPassthrough Mixのバスコンフィギュレーションを継承する。このオプションでは実行時にエンドポイントによってバスコンフィギュレーションが決まるため、柔軟性を確保できる。3DオーディオがアクティブでエンドポイントがPassthrough Mixに対応していれば、バス出力のフォーマットは2.0となる。それ以外の場合は、このバスは<strong>Same as main mix</strong>を選択した時と同じように機能する。</li>
+<li><strong>Audio Objects</strong> - バスがAudio Objectを出す。これらはMetadataを伴うオーディオバッファであり、すべての条件が満たされていれば、エンドポイントに送りスペーシャリゼーションエフェクトでレンダリングすることができる。</li>
+</ul>
+<p>Main Audio BusなどすべてのトップレベルバスのBus Configurationは、自動的に<strong>Defined by device</strong>に設定される。これらのバスは必ず関連Audio Deviceのバスコンフィギュレーションを継承するためである。</p>
+<p>これらを含む、リストのさまざまなオプションの詳細については <a href="HelpDoc=understanding_channel_configurations">バスコンフィギュレーションを理解する</a> を参照。</p>
+<p>Default value: Same as parent<br/></p>

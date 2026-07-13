@@ -1,0 +1,36 @@
+// Details.wafm
+
+{
+  "ak.dlg.Details": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      {
+        "Name": "Location",
+        "Type": "TextEdit",
+        "Text": "Details view's Location widget..."
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 400,
+          "Height": 100,
+          "MinWidth": 300,
+          "MinHeight": 100,
+          "Children": [
+            {
+              "Name": "Location",
+              "Positions": [5, 5, 390, 25],
+              "AnchorSets": ["side-left", "side-top", "side-right"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

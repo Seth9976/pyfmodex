@@ -1,0 +1,8 @@
+
+<h2>Delay Error Tolerance</h2>
+<p>Sets the maximum allowable discrepancy between the effective delay and the desired delay. When the delay change rate is limited by the <strong>Pitch Limit</strong>, a difference between the effective and desired delay may occur. If this difference exceeds the specified tolerance, the system adjusts the delay using a short crossfade between the effective delay and the target delay.</p>
+<p>This tolerance is approximately expressed as a percentage of the target delay. For example, with a tolerance of 25% and a target delay of 100 ms, the maximum error allowed is 25 ms. However, the mapping is not strictly linear: a value of 100% means that any discrepancy is tolerated, regardless of its size.</p>
+<p>Depending on the audio content, crossfading may introduce a slight artifact. Setting the <strong>Delay Error Tolerance</strong> involves balancing the acceptable timing error against the potential artifacts caused by crossfading.</p>
+<p>This value will not be updated if the reflect length/delay is actively changing. This parameter can be controlled by RTPCs and States; but, updating of the RTPC or State during game play is not recommended. Real-time updates are honored but not guaranteed to be handled without artifacts.</p>
+<p>Default value: 25<br/>
+Range: 0 to 100<br/></p>

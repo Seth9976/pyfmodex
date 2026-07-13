@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "functions": [
+        {
+            "id": "ak.wwise.ui.getSelectedFiles",
+            "restrict": [
+                "userInterface"
+            ],
+            "seeAlso": [
+                "ak.wwise.ui.getSelectedObjects"
+            ],
+            "description": "Retrieves the list of files currently selected by the user in the active view. Note that this function is not available in WwiseConsole.",
+            "argsSchema": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+            },
+            "resultSchema": {
+                "type": "object",
+                "properties": {
+                    "files": {
+                        "type": "array",
+                        "description": "The selected files. Can be empty if no file is selected.",
+                        "items": {
+                            "type": "string",
+                            "description": "The selected absolute file path."
+                        }
+                    }
+                },
+                "required": [
+                    "files"
+                ],
+                "additionalProperties": false
+            },
+            "optionsSchema": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+            },
+            "examples": [
+                {
+                    "title": "Getting the selected files",
+                    "description": "Retrieves the absolute file paths of the current view.",
+                    "args": {},
+                    "result": {
+                        "files": [
+                            "PathToFile 1",
+                            "PathToFile 2"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "topics": [],
+    "validators": []
+}

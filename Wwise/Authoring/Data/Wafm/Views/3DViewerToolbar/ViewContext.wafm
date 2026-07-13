@@ -1,0 +1,426 @@
+// ViewContext.wafm
+
+{
+  "ak.dlg.Ak3DToolbar.ViewContext": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      // Icon Size
+      {
+        "Name": "IconSizeIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_IconSize_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "IconSizeLabel",
+        "Type": "Label",
+        "Text": "Icon Size",
+        "TooltipText": "Icon Size",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "IconSizeSuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      {
+        "Name": "IconSizePin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Text Size
+      {
+        "Name": "TextSizeIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_AllText_Normal",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "TextSizeLabel",
+        "Type": "Label",
+        "Text": "Text Size",
+        "TooltipText": "Text Size",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "TextSizeSuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      {
+        "Name": "TextSizePin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Game Units Per Meter
+      {
+        "Name": "GameUnitsIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_GameUnitsPerMeters_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "GameUnitsLabel",
+        "Type": "Label",
+        "Text": "Game Units Per Meter",
+        "TooltipText": "Game Units Per Meter",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "GameUnitsSuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      {
+        "Name": "GameUnitsPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Show Grid
+      {
+        "Name": "ShowGridIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_Grid_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowGridCheckbox",
+        "Type": "Checkbox",
+        "Text": "Grid",
+        "TooltipText": "Show World Grid"
+      },
+      {
+        "Name": "ShowGridPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Grid Subdivision
+      {
+        "Name": "SubdivisionLabel",
+        "Type": "Label",
+        "Text": "Grid Subdivision Size",
+        "TooltipText": "World Grid Subdivision Size",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "SubdivisionSuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      // Show World Axis
+      {
+        "Name": "WorldAxisIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_WorldAxis_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "WorldAxisCheckbox",
+        "Type": "Checkbox",
+        "Text": "World Axis",
+        "TooltipText": "Show World Axis"
+      },
+      {
+        "Name": "WorldAxisPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // World Orientation
+      {
+        "Name": "OrientationLabel",
+        "Type": "Label",
+        "Text": "World Orientation",
+        "TooltipText": "World Orientation",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "OrientationButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Y_Up",
+            "Icon": "3DToolBar_WorldOrientationY",
+            "Mode": "Radio",
+            "TooltipText": "Y Up",
+            "Width": 40
+          },
+          {
+            "Name": "Z_Up",
+            "Icon": "3DToolBar_WorldOrientationZ",
+            "Mode": "Radio",
+            "TooltipText": "Z Up",
+            "Width": 40
+          },
+          {
+            "Name": "X_Up",
+            "Icon": "3DToolBar_WorldOrientationX",
+            "Mode": "Radio",
+            "TooltipText": "X Up",
+            "Width": 40
+          }
+        ]
+      },
+      {
+        "Name": "OrientationPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Camera Splitter
+      {
+        "Name": "CameraSeparator",
+        "Type": "LayoutSplitter"
+      },
+      // Walk Movement Speed
+      {
+        "Name": "WalkSpeedIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_CameraSpeed_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "WalkSpeedLabel",
+        "Type": "Label",
+        "Text": "Camera Speed",
+        "TooltipText": "Camera Walk Speed",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "WalkSpeedSuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      {
+        "Name": "WalkSpeedPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Shift Key Multiplier
+      {
+        "Name": "ShiftMultIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_CameraAcceleration_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShiftMultLabel",
+        "Type": "Label",
+        "Text": "Camera Acceleration",
+        "TooltipText": "Camera Shift Key Multiplier",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "ShiftMultSuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      {
+        "Name": "ShiftMultPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 340,
+          "Height": 255,
+          "Children": [
+            // Icon Size
+            {
+              "Name": "IconSizeIcon",
+              "Positions": [ 10, 12, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "IconSizeLabel",
+              "Positions": [ 40, 10, 155, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "IconSizeSuperRange",
+              "Positions": [ 200, 10, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "IconSizePin",
+              "Positions": [ 310, 12, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Text Size
+            {
+              "Name": "TextSizeIcon",
+              "Positions": [ 10, 37, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "TextSizeLabel",
+              "Positions": [ 40, 35, 155, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "TextSizeSuperRange",
+              "Positions": [ 200, 35, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "TextSizePin",
+              "Positions": [ 310, 37, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Game Units Per Meter
+            {
+              "Name": "GameUnitsIcon",
+              "Positions": [ 10, 62, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GameUnitsLabel",
+              "Positions": [ 40, 60, 155, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GameUnitsSuperRange",
+              "Positions": [ 200, 60, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GameUnitsPin",
+              "Positions": [ 310, 62, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Grid
+            {
+              "Name": "ShowGridIcon",
+              "Positions": [ 10, 87, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowGridCheckbox",
+              "Positions": [ 40, 85, 260, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowGridPin",
+              "Positions": [ 310, 87, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Grid Subdivision
+            {
+              "Name": "SubdivisionLabel",
+              "Positions": [ 40, 110, 155, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "SubdivisionSuperRange",
+              "Positions": [ 200, 110, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show World Axis
+            {
+              "Name": "WorldAxisIcon",
+              "Positions": [ 10, 137, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "WorldAxisCheckbox",
+              "Positions": [ 40, 135, 260, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "WorldAxisPin",
+              "Positions": [ 310, 137, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // World Orientation
+            {
+              "Name": "OrientationLabel",
+              "Positions": [ 40, 160, 145, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "OrientationButtonGroup",
+              "Positions": [ 180, 160, 120, 25 ],
+              "AnchorSets": [ "side-right", "side-top" ]
+            },
+            {
+              "Name": "OrientationPin",
+              "Positions": [ 310, 162, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Camera Splitter
+            {
+              "Name": "CameraSeparator",
+              "Positions": [ 0, 185, 340, 10 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Walk Movement Speed
+            {
+              "Name": "WalkSpeedIcon",
+              "Positions": [ 10, 197, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "WalkSpeedLabel",
+              "Positions": [ 40, 195, 155, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "WalkSpeedSuperRange",
+              "Positions": [ 200, 195, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "WalkSpeedPin",
+              "Positions": [ 310, 197, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Shift Key Multiplier
+            {
+              "Name": "ShiftMultIcon",
+              "Positions": [ 10, 222, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShiftMultLabel",
+              "Positions": [ 40, 220, 155, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShiftMultSuperRange",
+              "Positions": [ 200, 220, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShiftMultPin",
+              "Positions": [ 310, 222, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

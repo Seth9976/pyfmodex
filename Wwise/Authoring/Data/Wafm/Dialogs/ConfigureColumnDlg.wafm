@@ -1,0 +1,121 @@
+{
+  "ak.dlg.ConfigureColumnDlg": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      {
+        "Name": "okButton",
+        "Type": "PushButton",
+        "Text": "OK",
+        "ModalResult": "Ok"
+      },
+      {
+        "Name": "cancelButton",
+        "Type": "PushButton",
+        "Text": "Cancel",
+        "ModalResult": "Cancel"
+      },
+      {
+        "Name": "columnConfigurationTree",
+        "Type": "Tree",
+        "TextStyle": [
+          "JustifyLeft"
+        ]
+      },
+      {
+        "Name": "resetToDefaultButton",
+        "Type": "PushButton",
+        "Text": "Reset to default"
+      },
+      {
+        "Name": "columnConfigurationLabel",
+        "Type": "Label",
+        "Text": "Drag and drop to reorder",
+        "TextStyle": [
+          "JustifyLeft"
+        ]
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 541,
+          "Height": 308,
+          "MinWidth": 541,
+          "MinHeight": 308,
+          "Children": [
+            {
+              "Name": "okButton",
+              "Positions": [
+                346,
+                271,
+                88,
+                25
+              ],
+              "AnchorSets": [
+                "side-left",
+                "side-top"
+              ]
+            },
+            {
+              "Name": "cancelButton",
+              "Positions": [
+                441,
+                271,
+                87,
+                25
+              ],
+              "AnchorSets": [
+                "side-left",
+                "side-top"
+              ]
+            },
+            {
+              "Name": "columnConfigurationTree",
+              "Positions": [
+                12,
+                35,
+                515,
+                224
+              ],
+              "AnchorSets": [
+                "side-left",
+                "side-top"
+              ]
+            },
+            {
+              "Name": "resetToDefaultButton",
+              "Positions": [
+                12,
+                271,
+                109,
+                25
+              ],
+              "AnchorSets": [
+                "side-left",
+                "side-top"
+              ]
+            },
+            {
+              "Name": "columnConfigurationLabel",
+              "Positions": [
+                12,
+                14,
+                515,
+                14
+              ],
+              "AnchorSets": [
+                "side-left",
+                "side-top"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

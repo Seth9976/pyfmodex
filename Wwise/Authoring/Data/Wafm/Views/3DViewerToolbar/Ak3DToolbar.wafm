@@ -1,0 +1,619 @@
+// Ak3DToolbar.wafm
+{
+  "ak.dlg.Ak3DToolbar": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      // View Category
+      {
+        "Name": "ViewCategoryButton",
+        "Type": "PushButton",
+        "Text": "View",
+        "Style": "Dropdown",
+        "TooltipText": "3D View Options"
+      },
+      {
+        "Name": "IconSizeButton",
+        "Type": "PushButton",
+        "Icon": "3DToolBar_IconSize",
+        "TooltipText": "Icon Size"
+      },
+      {
+        "Name": "TextSizeButton",
+        "Type": "PushButton",
+        "Icon": "3DToolBar_AllText",
+        "TooltipText": "Text Size"
+      },
+      {
+        "Name": "GameUnitsButton",
+        "Type": "PushButton",
+        "Icon": "3DToolBar_GameUnitsPerMeters",
+        "TooltipText": "Game Units Per Meter"
+      },
+      {
+        "Name": "GridButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Grid",
+            "Mode": "Toggle",
+            "Icon": "3DToolBar_Grid",
+            "TooltipText": "Show World Grid",
+            "Width": 30
+          },
+          {
+            "Name": "Subdivision",
+            "Mode": "Push",
+            "Text": "10",
+            "TooltipText": "World Grid Subdivision Size",
+            "Width": 45
+          }
+        ]
+      },
+      {
+        "Name": "WorldAxisButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_WorldAxis",
+        "TooltipText": "Show World Axis"
+      },
+      {
+        "Name": "OrientationButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Y_Up",
+            "Icon": "3DToolBar_WorldOrientationY",
+            "Mode": "Radio",
+            "TooltipText": "Y Up",
+            "Width": 40
+          },
+          {
+            "Name": "Z_Up",
+            "Icon": "3DToolBar_WorldOrientationZ",
+            "Mode": "Radio",
+            "TooltipText": "Z Up",
+            "Width": 40
+          },
+          {
+            "Name": "X_Up",
+            "Icon": "3DToolBar_WorldOrientationX",
+            "Mode": "Radio",
+            "TooltipText": "X Up",
+            "Width": 40
+          }
+        ]
+      },
+      {
+        "Name": "WalkSpeedButton",
+        "Type": "PushButton",
+        "Icon": "3DToolBar_CameraSpeed",
+        "TooltipText": "Camera Walk Speed"
+      },
+      {
+        "Name": "ShiftMultButton",
+        "Type": "PushButton",
+        "Icon": "3DToolBar_CameraAcceleration",
+        "TooltipText": "Camera Shift Key Multiplier"
+      },
+      // Game Object Category
+      {
+        "Name": "GameObjectCategoryButton",
+        "Type": "PushButton",
+        "Text": "Game Object",
+        "Style": "Dropdown",
+        "TooltipText": "Game Object Options"
+      },
+      {
+        "Name": "GONameButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_GameObjectName",
+        "TooltipText": "Show Game Object Name"
+      },
+      {
+        "Name": "GOPositionButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_GameObjectPosition",
+        "TooltipText": "Show Game Object Position"
+      },
+      {
+        "Name": "GOInputChannelsButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_GameObjectInputChannels",
+        "TooltipText": "Show Game Object Input Channels"
+      },
+      {
+        "Name": "GOVoicesButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_GameObjectVoices",
+        "TooltipText": "Show Game Object Voices"
+      },
+      {
+        "Name": "ActiveVoicesButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_ActiveVoicesOnly",
+        "TooltipText": "Show Active Voices Only"
+      },
+      {
+        "Name": "VirtualVoicesButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_VirtualVoices",
+        "TooltipText": "Show Virtual Voices"
+      },
+      {
+        "Name": "AxisButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Show",
+            "Mode": "Toggle",
+            "Icon": "3DToolBar_Axis",
+            "TooltipText": "Show Game Object Axis",
+            "Width": 30
+          },
+          {
+            "Name": "Size",
+            "Mode": "Push",
+            "Text": "10",
+            "TooltipText": "Game Object Axis Size",
+            "Width": 45
+          }
+        ]
+      },
+      {
+        "Name": "OpacityButton",
+        "Type": "PushButton",
+        "Icon": "3DToolBar_RadiusOpacity",
+        "TooltipText": "Game Object Radius Opacity"
+      },
+      {
+        "Name": "ShowInaudibleRadiusButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_InaudibleRadius",
+        "TooltipText": "Show Inaudible Game Object Radius"
+      },
+      {
+        "Name": "ShowConeButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_AttenuationCone",
+        "TooltipText": "Show Attenuation Cone"
+      },
+      {
+        "Name": "ShowRadiusButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_AttenuationRadius",
+        "TooltipText": "Show Attenuation Radius"
+      },
+      {
+        "Name": "SpreadButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Show",
+            "Mode": "Toggle",
+            "Icon": "3DToolBar_AttenuationSpread",
+            "TooltipText": "Show Spread Cones",
+            "Width": 30
+          },
+          {
+            "Name": "Size",
+            "Mode": "Push",
+            "Text": "10",
+            "TooltipText": "Spread Cones Size",
+            "Width": 45
+          }
+        ]
+      },
+      // Acoustics Category
+      {
+        "Name": "AcousticsCategoryButton",
+        "Type": "PushButton",
+        "Text": "Acoustics",
+        "Style": "Dropdown",
+        "TooltipText": "Acoustics Options"
+      },
+      {
+        "Name": "ShowDiffractionButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Paths",
+            "Icon": "3DToolBar_DiffractionPaths",
+            "Mode": "ExclusiveToggle",
+            "TooltipText": "Show Diffraction Paths",
+            "Width": 40
+          },
+          {
+            "Name": "Rays",
+            "Icon": "3DToolBar_DiffractionRays",
+            "Mode": "ExclusiveToggle",
+            "TooltipText": "Show Diffraction Rays",
+            "Width": 40
+          }
+        ]
+      },
+      {
+        "Name": "ShowEdgesButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_DiffractionEdge",
+        "TooltipText": "Show Diffraction Edges"
+      },
+      {
+        "Name": "ShowReceptorsButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_DiffractionEdgeReceptors",
+        "TooltipText": "Show Diffraction Edge Receptors"
+      },
+      {
+        "Name": "ShowVirtualButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_VirtualEmitters",
+        "TooltipText": "Show Virtual Positions"
+      },
+      {
+        "Name": "ShowInaudiblePathsButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_InaudiblePaths",
+        "TooltipText": "Show Inaudible Paths"
+      },
+      {
+        "Name": "ShowReflectionButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Paths",
+            "Icon": "3DToolBar_ReflectionPaths",
+            "Mode": "ExclusiveToggle",
+            "TooltipText": "Show Reflection Paths",
+            "Width": 40
+          },
+          {
+            "Name": "Rays",
+            "Icon": "3DToolBar_ReflectionRays",
+            "Mode": "ExclusiveToggle",
+            "TooltipText": "Show Reflection Rays",
+            "Width": 40
+          }
+        ]
+      },
+      {
+        "Name": "ShowImgSourcesButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_ImageSources",
+        "TooltipText": "Show Reflection Image Sources"
+      },
+      {
+        "Name": "PortalInfoButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_PortalInfo",
+        "TooltipText": "Show Portal Info"
+      },
+      {
+        "Name": "DiffractionPercButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_Diffraction%",
+        "TooltipText": "Show Diffraction %"
+      },
+      {
+        "Name": "TransmissionPercButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_Transmission%",
+        "TooltipText": "Show Transmission %"
+      },
+      {
+        "Name": "WireframeButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_WireFrame",
+        "TooltipText": "Display as Wire Frame"
+      },
+      {
+        "Name": "TransparentTrianglesButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_TransparentTriangles",
+        "TooltipText": "Display Transparent Triangles"
+      },
+      {
+        "Name": "RZTransitionRegionButton",
+        "Type": "ToggleButton",
+        "Icon": "3DToolBar_ReverbZoneTransitionRegions",
+        "TooltipText": "Display Reverb Zone Transition Regions"
+      },
+      {
+        "Name": "GeometryOpacityButton",
+        "Type": "PushButton",
+        "Icon": "3DToolBar_GeometryOpacity",
+        "TooltipText": "Geometry Opacity"
+      },
+      {
+        "Name": "PortalOpacityButton",
+        "Type": "PushButton",
+        "Icon": "3DToolBar_PortalOpacity",
+        "TooltipText": "Portal Opacity"
+      },
+      {
+        "Name": "ExtentOpacityButton",
+        "Type": "PushButton",
+        "Icon": "3DToolBar_RoomExtentOpacity",
+        "TooltipText": "Room Extent Opacity"
+      },
+      {
+        "Name": "ClustersButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Show",
+            "Mode": "Toggle",
+            "Icon": "3DToolBar_Clusters",
+            "TooltipText": "Show Clusters [Experimental]",
+            "Width": 30
+          },
+          {
+            "Name": "Size",
+            "Mode": "Push",
+            "Text": "10",
+            "TooltipText": "Cluster Size [Experimental]",
+            "Width": 45
+          }
+        ]
+      },
+      // Debug Category
+      {
+        "Name": "DebugCategoryButton",
+        "Type": "PushButton",
+        "Text": "Debug",
+        "Style": "Dropdown",
+        "TooltipText": "Spatial Audio Debug Options"
+      },
+      {
+        "Name": "SelectedButton",
+        "Type": "ToggleButton",
+        "Text": "Selected",
+        "TooltipText": "Display Selected"
+      },
+      {
+        "Name": "DifferencesButton",
+        "Type": "ToggleButton",
+        "Text": "Differences",
+        "TooltipText": "Display Differences"
+      },
+      {
+        "Name": "DifferenceTypeComboBox",
+        "Type": "ComboBox",
+        "Items": [ "All", "Identical", "Missing", "Unexpected", "Modified", "Missing+Unexpected" ],
+        "TooltipText": "Filter Difference Type",
+        "ActiveItem": 0
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "OverflowHBox",
+          "Spacing": 5,
+          "Width": 1,
+          "Height": 1,
+          "Children": [
+            // View Category
+            {
+              "Name": "ViewCategoryButton",
+              "Section": 0,
+              "Width": 60
+            },
+            {
+              "Name": "IconSizeButton",
+              "Section": 0,
+              "Width": 30
+            },
+            {
+              "Name": "TextSizeButton",
+              "Section": 0,
+              "Width": 30
+            },
+            {
+              "Name": "GameUnitsButton",
+              "Section": 0,
+              "Width": 30
+            },
+            {
+              "Name": "GridButtonGroup",
+              "Section": 0
+            },
+            {
+              "Name": "WorldAxisButton",
+              "Section": 0,
+              "Width": 30
+            },
+            {
+              "Name": "OrientationButtonGroup",
+              "Section": 0
+            },
+            {
+              "Name": "WalkSpeedButton",
+              "Section": 0,
+              "Width": 30
+            },
+            {
+              "Name": "ShiftMultButton",
+              "Section": 0,
+              "Width": 30
+            },
+            // Game Object Category
+            {
+              "Name": "GameObjectCategoryButton",
+              "Section": 1,
+              "Width": 100
+            },
+            {
+              "Name": "GONameButton",
+              "Section": 1,
+              "Width": 30
+            },
+            {
+              "Name": "GOInputChannelsButton",
+              "Section": 1,
+              "Width": 30
+            },
+            {
+              "Name": "GOPositionButton",
+              "Section": 1,
+              "Width": 30
+            },
+            {
+              "Name": "GOVoicesButton",
+              "Section": 1,
+              "Width": 30
+            },
+            {
+              "Name": "ActiveVoicesButton",
+              "Section": 1,
+              "Width": 30
+            },
+            {
+              "Name": "VirtualVoicesButton",
+              "Section": 1,
+              "Width": 30
+            },
+            {
+              "Name": "AxisButtonGroup",
+              "Section": 1
+            },
+            {
+              "Name": "OpacityButton",
+              "Section": 1,
+              "Width": 30
+            },
+            {
+              "Name": "ShowInaudibleRadiusButton",
+              "Section": 1,
+              "Width": 30
+            },
+            {
+              "Name": "ShowConeButton",
+              "Section": 1,
+              "Width": 30
+            },
+            {
+              "Name": "ShowRadiusButton",
+              "Section": 1,
+              "Width":  30
+            },
+            {
+              "Name": "SpreadButtonGroup",
+              "Section": 1
+            },
+            // Acoustics Category
+            {
+              "Name": "AcousticsCategoryButton",
+              "Section": 2,
+              "Width": 85
+            },
+            {
+              "Name": "ShowDiffractionButtonGroup",
+              "Section": 2
+            },
+            {
+              "Name": "ShowEdgesButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "ShowReceptorsButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "ShowVirtualButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "ShowInaudiblePathsButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "ShowReflectionButtonGroup",
+              "Section": 2
+            },
+            {
+              "Name": "ShowImgSourcesButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "PortalInfoButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "DiffractionPercButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "TransmissionPercButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "WireframeButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "TransparentTrianglesButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "RZTransitionRegionButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "GeometryOpacityButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "PortalOpacityButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "ExtentOpacityButton",
+              "Section": 2,
+              "Width": 30
+            },
+            {
+              "Name": "ClustersButtonGroup",
+              "Section": 2
+            },
+            // Debug Category
+            {
+              "Name": "DebugCategoryButton",
+              "Section": 3,
+              "Width": 70
+            },
+            {
+              "Name": "SelectedButton",
+              "Section": 3,
+              "Width": 70
+            },
+            {
+              "Name": "DifferencesButton",
+              "Section": 3,
+              "Width": 80
+            },
+            {
+              "Name": "DifferenceTypeComboBox",
+              "Section": 3,
+              "Width": 150
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

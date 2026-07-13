@@ -1,0 +1,53 @@
+{
+    "version": 1,
+    "functions": [
+        {
+            "id": "ak.wwise.core.profiler.setCursorTime",
+            "restrict": [
+                "userInterface",
+                "commandLine"
+            ],
+            "seeAlso": [
+                "ak.wwise.core.profiler.getCursorTime",
+                "ak.wwise.core.profiler.moveCursor",
+                "ak.wwise.core.profiler.getVoices",
+                "ak.wwise.core.profiler.getBusses",
+                "ak.wwise.core.profiler.getVoiceContributions"
+            ],
+            "description": "Sets the user time cursor of the profiler to the specified time, in milliseconds, and returns the new time. Use the time obtained from the other profiler functions. Note that the specified time will be snapped to a buffer interval (~10ms). This sets the cursor position in the profiler views. To synchronize the user time cursor to the latest capture time, use \\ref ak_wwise_ui_commands_execute with \\c ToggleFollowCapture.",
+            "argsSchema": {
+                "type": "object",
+                "properties": {
+                    "time": {
+                        "type": "integer",
+                        "description": "The time to set the user cursor to, in milliseconds."
+                    }
+                },
+                "required": [
+                    "time"
+                ],
+                "additionalProperties": false
+            },
+            "resultSchema": {
+                "type": "object",
+                "properties": {
+                    "return": {
+                        "type": "integer",
+                        "description": "The new position of the user Time Cursor, in ms. This could differ from the specified time due to snapping."
+                    }
+                },
+				"required": [
+					"return"
+				],
+                "additionalProperties": false
+            },
+            "optionsSchema": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+            }
+        }
+    ],
+    "topics": [],
+    "validators": []
+}

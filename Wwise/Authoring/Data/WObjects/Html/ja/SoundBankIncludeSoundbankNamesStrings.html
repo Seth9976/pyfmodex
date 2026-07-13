@@ -1,0 +1,9 @@
+
+<h2>Use SoundBank Names for Filenames</h2>
+<p>以下の場合にSoundBank名とIDのどちらを使うのかを設定する。</p>
+<ul>
+<li>生成されたSoundBankファイルを命名する（例えば「Init.bnk」や「1355168291.bnk」など）。</li>
+<li>1つのSoundBankが別のSoundBank内のメディアを参照する時のターゲットを特定する。</li>
+</ul>
+<p>ゲームのLow-Level I/Oの実装方法によっては、AK::SoundBank::LoadBank()の呼び出し方法に本オプションが影響することがある。詳細については、Wwise SDKドキュメントの <a href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=soundengine__banks__general.html">SoundBank名の使用</a> を参照（サウンドエンジン統合のウォークスルー &gt; Wwise要素のゲームへの統合 &gt; バンクの統合 &gt; 統合の詳細 - バンク &gt; 概説）。</p>
+<p>Default value: true<br/></p>

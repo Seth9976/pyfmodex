@@ -1,0 +1,11 @@
+
+<h2>Use game-defined aux sends</h2>
+<p>오브젝트가 연관된 게임 오브젝트의 게임 정의 보조 센드를 사용할지 여부를 결정합니다. 게임 정의 보조 센드는 Auxiliary Bus와 보조 음량의 조합입니다.</p>
+<p>이 옵션이 활성화되면, 해당 오브젝트는 게임으로부터 전달되는 다음 함수의 값에 영향을 받습니다:</p>
+<ul>
+<li><a href="https://www.audiokinetic.com/library/?source=SDK&amp;id=ak__soundengine__setgameobjectauxsendvalues.html">AK::SoundEngine::SetGameObjectAuxSendValues()</a></li>
+<li><a href="https://www.audiokinetic.com/library/?source=SDK&amp;id=ak__soundengine__setgameobjectoutputbusvolume.html">AK::SoundEngine::SetGameObjectOutputBusVolume()</a></li>
+</ul>
+<p>또한, 게임이 Spatial Audio를 초기화하고 Wwise에 Rooms와 Portals 데이터를 전달한 경우, 이 옵션이 해당 오브젝트가 게임 오브젝트의 위치를 기준으로 Rooms 및 Portals에 정의된 Auxiliary Bus로 센드를 보낼지 여부를 결정합니다.</p>
+<p>이 옵션에 대한 자세한 내용은 <a href="HelpDoc=understanding_sends">센드 이해하기</a> 를 참고하세요.</p>
+<p>Default value: false<br/></p>

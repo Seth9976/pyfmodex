@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layout Name="Designer">
+	<StackPanel Name="StackPanel" ID="{79A98775-B864-4EC5-9646-4C5C5067292A}" Width="1617" Height="783" Orientation="Vertical">
+		<StackPanel Name="StackPanel" ID="{C4AFB57B-D1F3-414D-8EBC-BCDC94C79E0B}" Width="1074" Height="702" Orientation="Horizontal">
+			<StackPanel Name="StackPanel" ID="{39949670-A96A-47C5-8EEF-F8AD26BD6B34}" Width="256.6923" Height="916.5259" Orientation="Vertical">
+				<View Name="ProjectExplorer" ID="{E773AA9A-2F00-45F1-BD61-3C13C321BE6C}" Width="283" Height="609.1901" SelectionChannel="1">
+					<ViewData/>
+				</View>
+				<Splitter ID="{E0ED2E4A-31F5-40B8-87B5-E6C1E587C8E1}"/>
+				<StackPanel Name="StackPanel" ID="{60D149B9-8B11-463F-AE6F-48C773683D82}" Width="283" Height="302.4456" Orientation="Vertical">
+					<View Name="ContextualHelp" ID="{9B1406AD-1EB0-47B6-94E9-B6BAB022C4E8}" Width="283" Height="145.2707" SelectionChannel="1"/>
+					<Splitter ID="{F065CDBB-BAA9-4FB8-9C1E-AE4E87FEF074}"/>
+					<View Name="Transport" ID="{43D54130-63C0-4034-A41C-B7B8161708CD}" Width="283" Height="152.285" SelectionChannel="1"/>
+				</StackPanel>
+			</StackPanel>
+			<Splitter ID="{29BE4E59-5A0B-45BD-9C01-8E8DFAD58D5A}"/>
+			<StackPanel Name="StackPanel" ID="{F8C66865-0FF7-49DA-B570-C0097B4DAA76}" Width="1512.154" Height="916.5259" Orientation="Horizontal">
+				<ObjectTabPanel Name="ObjectTabPanel" ID="{D5805147-985E-4C5B-B817-369AF1B7184D}" Width="1405.308" Height="916.5259">
+					<ObjectPanel Name="ObjectPanel" ID="{881FB2EB-747B-47DE-A304-17D8B9243E25}" Width="0" Height="0" BottomEditorState="Normal">
+						<EditorPriority>
+							<EditorId UniqueViewId="AttenuationEditor" PluginId="4294967295" EffectIndex="0"/>
+							<EditorId UniqueViewId="SourceEditor" PluginId="6553602" EffectIndex="0"/>
+							<EditorId UniqueViewId="SourceEditor" PluginId="6619138" EffectIndex="0"/>
+							<EditorId UniqueViewId="SourceEditor" PluginId="6684674" EffectIndex="0"/>
+							<EditorId UniqueViewId="SourceEditor" PluginId="7798786" EffectIndex="0"/>
+							<EditorId UniqueViewId="SourceEditor" PluginId="7864322" EffectIndex="0"/>
+							<EditorId UniqueViewId="SourceEditor" PluginId="9699330" EffectIndex="0"/>
+							<EditorId UniqueViewId="SourceEditor" PluginId="13107202" EffectIndex="0"/>
+							<EditorId UniqueViewId="SourceEditor" PluginId="16" EffectIndex="0"/>
+							<EditorId UniqueViewId="MusicSegmentEditor" PluginId="4294967295" EffectIndex="0"/>
+							<EditorId UniqueViewId="MusicSwitchEditor" PluginId="4294967295" EffectIndex="0"/>
+							<EditorId UniqueViewId="MusicPlaylistEditor" PluginId="4294967295" EffectIndex="0"/>
+							<EditorId UniqueViewId="BlendTrackEditor" PluginId="4294967295" EffectIndex="0"/>
+						</EditorPriority>
+						<PreferredHeights>
+							<PreferredHeight EditorUniqueViewId="AttenuationEditor" EditorPluginId="4294967295" EditorEffectIndex="0" Height="621.4757"/>
+							<PreferredHeight EditorUniqueViewId="ContentsEditor" EditorPluginId="4294967295" EditorEffectIndex="0" Height="376.6871"/>
+						</PreferredHeights>
+						<SideBarRight Width="362.2856" CollapseState="0" Visibility="true"/>
+					</ObjectPanel>
+				</ObjectTabPanel>
+				<Splitter ID="{EC125748-7CEB-4B07-8CFC-4474B18FE327}"/>
+				<View Name="Meter" ID="{30014862-C726-4292-B045-5C47FDB894A1}" Width="75.69226" Height="916.5259" SelectionChannel="1"/>
+			</StackPanel>
+		</StackPanel>
+	</StackPanel>
+</Layout>

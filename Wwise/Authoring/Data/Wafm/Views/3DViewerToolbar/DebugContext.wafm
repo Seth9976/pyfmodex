@@ -1,0 +1,105 @@
+// ­DebugContext.wafm
+
+{
+  "ak.dlg.Ak3DToolbar.DebugContext": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      // Display Selected
+      {
+        "Name": "SelectedCheckbox",
+        "Type": "Checkbox",
+        "Text": "Selected",
+        "TooltipText": "Display Selected"
+      },
+      {
+        "Name": "SelectedPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Differences
+      {
+        "Name": "DifferencesCheckbox",
+        "Type": "Checkbox",
+        "Text": "Differences",
+        "TooltipText": "Display Differences"
+      },
+      {
+        "Name": "DifferencesPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Difference Type
+      {
+        "Name": "DifferenceTypeLabel",
+        "Type": "Label",
+        "Text": "Filter",
+        "TooltipText": "Filter Difference Type",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "DifferenceTypeComboBox",
+        "Type": "ComboBox",
+        "Items": [ "All", "Identical", "Missing", "Unexpected", "Modified", "Missing+Unexpected" ],
+        "ActiveItem": 0
+      },
+      {
+        "Name": "DifferenceTypePin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 330,
+          "Height": 96,
+          "Children": [
+            // Display Selected
+            {
+              "Name": "SelectedCheckbox",
+              "Positions": [ 10, 10, 280, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "SelectedPin",
+              "Positions": [ 300, 12, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Differences
+            {
+              "Name": "DifferencesCheckbox",
+              "Positions": [ 10, 35, 280, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "DifferencesPin",
+              "Positions": [ 300, 37, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Difference Type
+            {
+              "Name": "DifferenceTypeLabel",
+              "Positions": [ 10, 60, 125, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "DifferenceTypeComboBox",
+              "Positions": [ 140, 60, 150, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "DifferenceTypePin",
+              "Positions": [ 300, 62, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

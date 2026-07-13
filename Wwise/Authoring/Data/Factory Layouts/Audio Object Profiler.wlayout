@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layout Name="Audio Object Profiler">
+	<StackPanel Name="StackPanel" ID="{329D8460-0649-4BD0-B907-674890B32C3D}" Width="1633" Height="902" Orientation="Vertical">
+		<StackPanel Name="StackPanel" ID="{634FB60F-8955-4DFB-943F-0DB313DEE6A7}" Width="1633" Height="898" Orientation="Vertical">
+			<StackPanel Name="StackPanel" ID="{4F04E3DF-5F44-406D-A8F2-D53F333AA766}" Width="1773.692" Height="642.6829" Orientation="Horizontal">
+				<StackPanel Name="StackPanel" ID="{3DBF30F5-F191-41C4-8C76-CAF2C2485C3E}" Width="1479.077" Height="642.6829" Orientation="Horizontal">
+					<View Name="AudioObjectList" ID="{6F902377-F5E4-4114-A528-FD995923C040}" Width="712" Height="326" SelectionChannel="1"/>
+					<Splitter ID="{6E565D64-F85A-4C98-A6B2-658F923B8CD6}"/>
+					<View Name="AudioObject3DViewer" ID="{476BC3E5-A383-4D64-92FB-76D469072AE0}" Width="258" Height="326" SelectionChannel="1"/>
+				</StackPanel>
+				<Splitter ID="{0A603A92-3E17-42B1-BC39-F4BB1F1A2B94}"/>
+				<StackPanel Name="StackPanel" ID="{6D7E9C09-7F70-417A-A69A-F977938C805A}" Width="289.7692" Height="642.6829" Orientation="Vertical">
+					<View Name="AudioObjectMeter" ID="{9E69BB1A-0989-4EC3-8FE4-B681F326C39A}" Width="792.8461" Height="227.5" SelectionChannel="1"/>
+					<Splitter ID="{88C9ECC6-938C-4323-B0E2-77499AC39094}"/>
+					<View Name="AudioObjectMetadata" ID="{90F68070-F535-4477-B900-1293CE587A4C}" Width="792.8461" Height="227.5" SelectionChannel="1"/>
+				</StackPanel>
+			</StackPanel>
+			<Splitter ID="{93336DAC-2BB6-41E1-AF0A-D80475832A94}"/>
+			<View Name="VoiceMonitor" ID="{D5A2C222-3BF4-410E-8D6D-9EC69C9B4F6B}" Width="1773.692" Height="268.9529" SelectionChannel="1"/>
+		</StackPanel>
+	</StackPanel>
+</Layout>

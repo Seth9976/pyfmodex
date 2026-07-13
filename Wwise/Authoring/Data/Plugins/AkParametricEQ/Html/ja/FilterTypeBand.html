@@ -1,0 +1,15 @@
+
+<h2>Type</h2>
+<p>指定した帯域に適用するフィルタのタイプ：</p>
+<ul>
+<li><strong>Low Pass Flat</strong> 指定した周波数から高周波数を固定傾斜で減衰させる。この点より下では信号の周波数応答はフラットだが、より高い周波数は、カットオフ周波数点を超えると次第に減衰していく。減衰率はRolloffプロパティで制御できる。For example, using Low Pass Flat, you can reduce the high-frequency sounds of a water fountain to make it sound more like a pot of boiling water.</li>
+<li><strong>High Pass Flat</strong> 指定した周波数から低周波数を固定傾斜で減衰させる。この点より上では信号の周波数応答はフラットだが、より低い周波数は、カットオフ周波数点より下では次第に減衰していく。減衰率はRolloffで制御できる。For example, using High Pass Flat you can reduce the low-frequency sounds of a water fountain to make it sound like sizzling bacon.</li>
+<li><strong>Low Pass Q</strong> 指定した周波数から高周波数を減衰させる。This provides a boost in volume at the cutoff frequency based on the Q. Higher frequencies are progressively more attenuated above the cutoff frequency point. 減衰率はRolloffで制御できる。For example, you can reduce the high frequencies and adjust the Q level  to make footsteps sound far away or muffled.</li>
+<li><strong>High Pass Q</strong> 指定した周波数から低周波数を減衰させる。この場合はQに応じてカットオフ周波数でボリュームが増加する。より低い周波数は、カットオフ周波数点より下では次第に減衰していく。減衰率はRolloffプロパティで制御できる。For example, you can reduce the low frequencies and adjust the Q level to make footsteps sound sharper on a harder surface.</li>
+<li><strong>Band Pass</strong>：指定された中心周波数の周りの全ての周波数を除去する。The range of frequencies around the center is controlled by the Q. For example, you can reduce or increase a wide band of frequencies to make a voice sound very close or muffled depending on the direction of the band.</li>
+<li><strong>Notch</strong>：指定周波数範囲の固定減衰に幅変化を提供する。The range of frequencies around the center is controlled by the Q. For example, use this narrow band to emphasize or underemphasize specific frequencies to make a voice sound more clear or give the effect of it being fuzzy.</li>
+<li><strong>Low Shelf</strong>：低周波数の指定範囲にゲイン/減衰を提供する。この曲線タイプは、Bass Tone Controlとしても知られている。For example, use this to identify and cut muddy frequencies to have a cleaner instrument sound.</li>
+<li><strong>High Shelf</strong>：高周波数の指定範囲にゲイン/減衰を提供する。この曲線タイプは、Treble Tone Controlとしても知られている。For example, configure the highest frequencies of the audio to provide crisper vocals.</li>
+<li><strong>Peaking (default)</strong> to provide amplification/attenuation of a specified frequency range with a varying width. The range of frequencies around the peak is controlled by the Q. Use to precisely boost or reduce frequencies, for example to add a crisper sound to a snare drum. Choose a narrow or wider band allowing for more precision.</li>
+</ul>
+<p>Default value: Peaking<br/></p>

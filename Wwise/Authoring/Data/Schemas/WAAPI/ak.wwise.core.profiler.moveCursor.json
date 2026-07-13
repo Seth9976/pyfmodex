@@ -1,0 +1,71 @@
+{
+    "version": 1,
+    "functions": [
+        {
+            "id": "ak.wwise.core.profiler.moveCursor",
+            "restrict": [
+                "userInterface",
+                "commandLine"
+            ],
+            "seeAlso": [
+                "ak.wwise.core.profiler.getCursorTime",
+                "ak.wwise.core.profiler.setCursorTime",
+                "ak.wwise.core.profiler.getVoices",
+                "ak.wwise.core.profiler.getBusses",
+                "ak.wwise.core.profiler.getVoiceContributions"
+            ],
+            "description": "Moves the user time cursor of the profiler to a specific position (first, last, next, previous), and returns the new time. This sets the cursor position in the profiler views.",
+            "argsSchema": {
+                "type": "object",
+                "properties": {
+                    "position": {
+                        "type": "string",
+                        "description": "The position to move the cursor to.",
+                        "oneOf": [
+                            {
+                                "enum": [ "first" ],
+                                "description": "Move the cursor to the first captured frame."
+                            },
+                            {
+                                "enum": [ "last" ],
+                                "description": "Move the cursor to the last captured frame."
+                            },
+                            {
+                                "enum": [ "next" ],
+                                "description": "Move the cursor to the next frame."
+                            },
+                            {
+                                "enum": [ "previous" ],
+                                "description": "Move the cursor to the previous frame."
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "position"
+                ],
+                "additionalProperties": false
+            },
+            "resultSchema": {
+                "type": "object",
+                "properties": {
+                    "return": {
+                        "type": "integer",
+                        "description": "The new position of the user Time Cursor, in ms."
+                    }
+                },
+				"required": [
+					"return"
+				],
+                "additionalProperties": false
+            },
+            "optionsSchema": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+            }
+        }
+    ],
+    "topics": [],
+    "validators": []
+}

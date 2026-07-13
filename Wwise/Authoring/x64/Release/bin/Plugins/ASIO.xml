@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The content of this file includes portions of the AUDIOKINETIC Wwise Technology
+released in source code form as part of the SDK installer package.
+
+Commercial License Usage
+
+Licensees holding valid commercial licenses to the AUDIOKINETIC Wwise Technology
+may use this file in accordance with the end user license agreement provided
+with the software or, alternatively, in accordance with the terms contained in a
+written agreement between you and Audiokinetic Inc.
+
+Apache License Usage
+
+Alternatively, this file may be used under the Apache License, Version 2.0 (the
+"Apache License"); you may not use this file except in compliance with the
+Apache License. You may obtain a copy of the Apache License at
+http://www.apache.org/licenses/LICENSE-2.0.
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the Apache License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for
+the specific language governing permissions and limitations under the License.
+
+  Copyright (c) 2015 Audiokinetic Inc.
+-->
+<!--
+See https://www.audiokinetic.com/library/edge/?source=SDK&id=plugin__xml.html
+for the documentation about the plugin xml format
+-->
+<PluginModule>
+  <SinkPlugin Name="ASIO Output" CompanyID="0" PluginID="168" EngineDllName="ASIO" EngineStaticLibName="ASIOSourceSink">
+    <PluginInfo CanUnlink="true">
+      <PlatformSupport>
+        <Platform Name="Windows"></Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    <Properties>
+      <Property Name="ChannelConfig" Type="int32" SupportLink="false">
+        <UserInterface DisplayName="Channel Configuration"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>0</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <!-- Serialized channel config: MSB mask(20) type(4) nchannels(8) -->
+              <Value DisplayName="Detect">0</Value>
+              <Value DisplayName="1.0">16641</Value>
+              <Value DisplayName="2.0">12546</Value>
+              <Value DisplayName="2.1">45315</Value>
+              <Value DisplayName="3.0">28931</Value>
+              <Value DisplayName="4.0">6304004</Value>
+              <Value DisplayName="5.1">6353158</Value>
+              <Value DisplayName="7.1">6549768</Value>
+              <Value DisplayName="5.1.2">90239240</Value>
+              <Value DisplayName="5.1.4">761327882</Value>
+              <Value DisplayName="7.1.2">90435850</Value>
+              <Value DisplayName="7.1.4">761524492</Value>
+              <Value DisplayName="Ambisonics 1st order">516</Value> <!-- 0x00000204 -->
+              <Value DisplayName="Ambisonics 2nd order">521</Value> <!-- 0x00000209 -->
+              <Value DisplayName="Ambisonics 3rd order">528</Value> <!-- 0x00000210 -->
+              <Value DisplayName="Ambisonics 4th order">537</Value> <!-- 0x00000219 -->
+              <Value DisplayName="Ambisonics 5th order">548</Value> <!-- 0x00000224 -->
+              <Value DisplayName="Auro 10.1">769716491</Value>
+              <Value DisplayName="Auro 11.1">803270924</Value>
+              <Value DisplayName="Auro 13.1">803467534</Value>
+              <Value DisplayName="LFE">33025</Value>
+              <Value DisplayName="Anonymous 24">24</Value>
+              <Value DisplayName="Anonymous 31">31</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="BaseChannel" Type="int32">
+        <UserInterface DisplayName="Base Channel" />
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>1</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int32">
+              <Min>1</Min>
+              <Max>255</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+    </Properties>
+  </SinkPlugin>
+  <SourcePlugin Name="ASIO Input" CompanyID="0" PluginID="204" EngineDllName="ASIO">
+    <PluginInfo CanUnlink="true">
+      <PlatformSupport>
+        <Platform Name="Windows"></Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    <Properties>
+      <Property Name="ChannelConfig" Type="int32" SupportLink="false">
+        <UserInterface DisplayName="Channel Configuration"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>0</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <!-- Serialized channel config: MSB mask(20) type(4) nchannels(8) -->
+              <Value DisplayName="Detect">0</Value>
+              <Value DisplayName="1.0">16641</Value>
+              <Value DisplayName="2.0">12546</Value>
+              <Value DisplayName="2.1">45315</Value>
+              <Value DisplayName="3.0">28931</Value>
+              <Value DisplayName="4.0">6304004</Value>
+              <Value DisplayName="5.1">6353158</Value>
+              <Value DisplayName="7.1">6549768</Value>
+              <Value DisplayName="5.1.2">90239240</Value>
+              <Value DisplayName="5.1.4">761327882</Value>
+              <Value DisplayName="7.1.2">90435850</Value>
+              <Value DisplayName="7.1.4">761524492</Value>
+              <Value DisplayName="Ambisonics 1st order">516</Value> <!-- 0x00000204 -->
+              <Value DisplayName="Ambisonics 2nd order">521</Value> <!-- 0x00000209 -->
+              <Value DisplayName="Ambisonics 3rd order">528</Value> <!-- 0x00000210 -->
+              <Value DisplayName="Ambisonics 4th order">537</Value> <!-- 0x00000219 -->
+              <Value DisplayName="Ambisonics 5th order">548</Value> <!-- 0x00000224 -->
+              <Value DisplayName="Auro 10.1">769716491</Value>
+              <Value DisplayName="Auro 11.1">803270924</Value>
+              <Value DisplayName="Auro 13.1">803467534</Value>
+              <Value DisplayName="LFE">33025</Value>
+              <Value DisplayName="Anonymous 24">24</Value>
+              <Value DisplayName="Anonymous 31">31</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="BaseChannel" Type="int32">
+        <UserInterface DisplayName="Base Channel" />
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>1</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int32">
+              <Min>1</Min>
+              <Max>255</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+    </Properties>
+  </SourcePlugin>
+</PluginModule>

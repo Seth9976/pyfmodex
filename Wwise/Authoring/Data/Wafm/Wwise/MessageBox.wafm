@@ -1,0 +1,39 @@
+{
+  "ak.dlg.MessageBox": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      {
+        "Name": "IconImage",
+        "Type": "Image"
+      },
+      {
+        "Name": "MessageLabel",
+        "Type": "Label"
+      },
+      {
+        "Name": "DontAskAgainCheckbox",
+        "Type": "Checkbox",
+        "Text": "Don't ask me again"
+      },
+      {
+        "Name": "DontWarnAgainCheckbox",
+        "Type": "Checkbox",
+        "Text": "Don't warn me again"
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 100,
+          "Height": 100,
+          "Children": []
+        }
+      ]
+    }
+  }
+}

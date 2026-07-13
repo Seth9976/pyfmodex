@@ -1,0 +1,9 @@
+
+<h2>Preserve System-Eligible Audio Objects</h2>
+<p>플러그인이 3D 공간화된 Audio Object를 Main Mix로 믹스하지 않고 그대로 통과시킬지 여부를 결정합니다.</p>
+<ul>
+<li><strong>When Audio Device supports it</strong>: 플러그인이 버스 파이프라인의 끝에 있는 Audio Device를 확인해서 System-Eligible Audio Object를 믹스할지 그대로 통과시킬지를 결정합니다. Audio Device가 System Audio Object를 지원하면 해당 오브젝트가 유지되고, 그렇지 않으면 믹스됩니다.</li>
+<li><strong>Always</strong>: Audio Device의 기능과 관계없이 System-Eligible Audio Object는 System-Eligible Audio Object Limit에 도달할 때까지 유지됩니다.</li>
+<li><strong>Never</strong>: Audio Device의 기능과 관계없이 System-Eligible Audio Object는 항상 Main Mix로 믹스됩니다.</li>
+</ul>
+<p>Default value: When Audio Device supports it<br/></p>

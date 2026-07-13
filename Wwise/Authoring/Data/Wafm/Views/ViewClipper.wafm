@@ -1,0 +1,22 @@
+// ViewClipper.wafm
+
+{
+  "ak.dlg.ViewClipper": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "BinLayout",
+          "Width": 600,
+          "Height": 400,
+          "Children": []
+        }
+      ]
+    }
+  }
+}

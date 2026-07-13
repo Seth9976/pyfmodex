@@ -1,0 +1,747 @@
+// AcousticsContext.wafm
+
+{
+  "ak.dlg.Ak3DToolbar.AcousticsContext": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      // Show Diffraction
+      {
+        "Name": "ShowDiffractionLabel",
+        "Type": "Label",
+        "Text": "Diffraction",
+        "TooltipText": "Show Diffraction Paths/Rays",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "ShowDiffractionButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Paths",
+            "Icon": "3DToolBar_DiffractionPaths",
+            "Mode": "ExclusiveToggle",
+            "TooltipText": "Show Diffraction Paths",
+            "Width": 45
+          },
+          {
+            "Name": "Rays",
+            "Icon": "3DToolBar_DiffractionRays",
+            "Mode": "ExclusiveToggle",
+            "TooltipText": "Show Diffraction Rays",
+            "Width": 45
+          }
+        ]
+      },
+      {
+        "Name": "ShowDiffractionPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Show Diffraction Edges
+      {
+        "Name": "ShowEdgesIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_DiffractionEdge_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowEdgesCheckbox",
+        "Type": "Checkbox",
+        "Text": "Diffraction Edges",
+        "TooltipText": "Show Diffraction Edges"
+      },
+      {
+        "Name": "ShowEdgesPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Show Edge Receptors
+      {
+        "Name": "ShowReceptorsIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_DiffractionEdgeReceptors_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowReceptorsCheckbox",
+        "Type": "Checkbox",
+        "Text": "Edge Receptors",
+        "TooltipText": "Show Diffraction Edge Receptors"
+      },
+      {
+        "Name": "ShowReceptorsPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Show Virtual Emitters
+      {
+        "Name": "ShowVirtualIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_VirtualEmitters_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowVirtualCheckbox",
+        "Type": "Checkbox",
+        "Text": "Virtual Positions",
+        "TooltipText": "Show Virtual Positions"
+      },
+      {
+        "Name": "ShowVirtualPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Show Inaudible Paths
+      {
+        "Name": "ShowInaudibleIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_InaudiblePaths_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowInaudibleCheckbox",
+        "Type": "Checkbox",
+        "Text": "Inaudible Paths",
+        "TooltipText": "Show Inaudible Paths"
+      },
+      {
+        "Name": "ShowInaudiblePin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Reflection Subcategory
+      {
+        "Name": "ReflectionSeparator",
+        "Type": "LayoutSplitter"
+      },
+      // Show Reflection
+      {
+        "Name": "ShowReflectionLabel",
+        "Type": "Label",
+        "Text": "Reflection",
+        "TooltipText": "Show Reflection Paths/Rays",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "ShowReflectionButtonGroup",
+        "Type": "ButtonGroup",
+        "Children": [
+          {
+            "Name": "Paths",
+            "Icon": "3DToolBar_ReflectionPaths",
+            "Mode": "ExclusiveToggle",
+            "TooltipText": "Show Reflection Paths",
+            "Width": 45
+          },
+          {
+            "Name": "Rays",
+            "Icon": "3DToolBar_ReflectionRays",
+            "Mode": "ExclusiveToggle",
+            "TooltipText": "Show Reflection Rays",
+            "Width": 45
+          }
+        ]
+      },
+      {
+        "Name": "ShowReflectionPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Show Image Sources
+      {
+        "Name": "ShowImgSourcesIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_ImageSources_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowImgSourcesCheckbox",
+        "Type": "Checkbox",
+        "Text": "Image Sources",
+        "TooltipText": "Show Reflection Image Sources"
+      },
+      {
+        "Name": "ShowImgSourcesPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Acoustic Labels Splitter
+      {
+        "Name": "AcousticLabelsSeparator",
+        "Type": "LayoutSplitter"
+      },
+      // Portal Info
+      {
+        "Name": "PortalInfoIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_PortalInfo_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "PortalInfoCheckbox",
+        "Type": "Checkbox",
+        "Text": "Portal Info",
+        "TooltipText": "Show Portal Info"
+      },
+      {
+        "Name": "PortalInfoPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Diffraction %
+      {
+        "Name": "DiffractionPercIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_Diffraction%_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "DiffractionPercCheckbox",
+        "Type": "Checkbox",
+        "Text": "Diffraction %",
+        "TooltipText": "Show Diffraction %"
+      },
+      {
+        "Name": "DiffractionPercPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Transmission %
+      {
+        "Name": "TransmissionPercIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_Transmission%_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "TransmissionPercCheckbox",
+        "Type": "Checkbox",
+        "Text": "Transmission %",
+        "TooltipText": "Show Transmission %"
+      },
+      {
+        "Name": "TransmissionPercPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Visuals Subcategory
+      {
+        "Name": "VisualsSeparator",
+        "Type": "LayoutSplitter"
+      },
+      // Display as Wire Frame
+      {
+        "Name": "WireframeIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_WireFrame_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "WireframeCheckbox",
+        "Type": "Checkbox",
+        "Text": "Wire Frame",
+        "TooltipText": "Display as Wire Frame"
+      },
+      {
+        "Name": "WireframePin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Display Transparent Triangles
+      {
+        "Name": "TransparentTrianglesIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_TransparentTriangles_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "TransparentTrianglesCheckbox",
+        "Type": "Checkbox",
+        "Text": "Transparent Triangles",
+        "TooltipText": "Display Transparent Triangles"
+      },
+      {
+        "Name": "TransparentTrianglesPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Display Reverb Zone Transition Regions
+      {
+        "Name": "RZTransitionRegionIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_ReverbZoneTransitionRegions_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "RZTransitionRegionCheckbox",
+        "Type": "Checkbox",
+        "Text": "Transition Regions",
+        "TooltipText": "Display Reverb Zone Transition Regions"
+      },
+      {
+        "Name": "RZTransitionRegionPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Geometry Opacity
+      {
+        "Name": "GeometryOpacityIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_GeometryOpacity_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "GeometryOpacityLabel",
+        "Type": "Label",
+        "Text": "Geometry Opacity",
+        "TooltipText": "Geometry Opacity",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "GeometryOpacitySuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      {
+        "Name": "GeometryOpacityPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Portal Opacity
+      {
+        "Name": "PortalOpacityIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_PortalOpacity_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "PortalOpacityLabel",
+        "Type": "Label",
+        "Text": "Portal Opacity",
+        "TooltipText": "Portal Opacity",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "PortalOpacitySuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      {
+        "Name": "PortalOpacityPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Room Extent Opacity
+      {
+        "Name": "ExtentOpacityIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_RoomExtentOpacity_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ExtentOpacityLabel",
+        "Type": "Label",
+        "Text": "Room Extent Opacity",
+        "TooltipText": "Room Extent Opacity",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "ExtentOpacitySuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      {
+        "Name": "ExtentOpacityPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Clustering Subcategory
+      {
+        "Name": "ClusteringSplitter",
+        "Type": "LayoutSplitter"
+      },
+      // Display Clusters
+      {
+        "Name": "ClustersIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_Clusters_Normal",
+        "HAlign": "Center",
+        "VAlign": "Center",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ClustersCheckbox",
+        "Type": "Checkbox",
+        "Text": "Clusters",
+        "TooltipText": "Show Clusters [Experimental]"
+      },
+      {
+        "Name": "ClustersPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Clusters Size
+      {
+        "Name": "ClusterSizeLabel",
+        "Type": "Label",
+        "Text": "Clusters Size",
+        "TooltipText": "Cluster Size [Experimental]",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "ClusterSizeSuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 330,
+          "Height": 510,
+          "Children": [
+            // Show Diffraction
+            {
+              "Name": "ShowDiffractionLabel",
+              "Positions": [ 40, 10, 110, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowDiffractionButtonGroup",
+              "Positions": [ 190, 10, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowDiffractionPin",
+              "Positions": [ 300, 12, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Diffraction Edges
+            {
+              "Name": "ShowEdgesIcon",
+              "Positions": [ 10, 37, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowEdgesCheckbox",
+              "Positions": [ 40, 35, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowEdgesPin",
+              "Positions": [ 300, 37, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Edge Receptors
+            {
+              "Name": "ShowReceptorsIcon",
+              "Positions": [ 10, 62, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowReceptorsCheckbox",
+              "Positions": [ 40, 60, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowReceptorsPin",
+              "Positions": [ 300, 62, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Virtual Emitters
+            {
+              "Name": "ShowVirtualIcon",
+              "Positions": [ 10, 87, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowVirtualCheckbox",
+              "Positions": [ 40, 85, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowVirtualPin",
+              "Positions": [ 300, 87, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Inaudible Paths
+            {
+              "Name": "ShowInaudibleIcon",
+              "Positions": [ 10, 112, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowInaudibleCheckbox",
+              "Positions": [ 40, 110, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowInaudiblePin",
+              "Positions": [ 300, 112, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Reflection Subcategory
+            {
+              "Name": "ReflectionSeparator",
+              "Positions": [ 0, 135, 330, 10 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Reflection
+            {
+              "Name": "ShowReflectionLabel",
+              "Positions": [ 40, 145, 110, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowReflectionButtonGroup",
+              "Positions": [ 190, 145, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowReflectionPin",
+              "Positions": [ 300, 147, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Image Sources
+            {
+              "Name": "ShowImgSourcesIcon",
+              "Positions": [ 10, 172, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowImgSourcesCheckbox",
+              "Positions": [ 40, 170, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowImgSourcesPin",
+              "Positions": [ 300, 172, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Acoustic Labels Splitter
+            {
+              "Name": "AcousticLabelsSeparator",
+              "Positions": [ 0, 195, 330, 10 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Portal Info
+            {
+              "Name": "PortalInfoIcon",
+              "Positions": [ 10, 207, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "PortalInfoCheckbox",
+              "Positions": [ 40, 205, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "PortalInfoPin",
+              "Positions": [ 300, 207, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Diffraction %
+            {
+              "Name": "DiffractionPercIcon",
+              "Positions": [ 10, 232, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "DiffractionPercCheckbox",
+              "Positions": [ 40, 230, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "DiffractionPercPin",
+              "Positions": [ 300, 232, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Transmission %
+            {
+              "Name": "TransmissionPercIcon",
+              "Positions": [ 10, 257, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "TransmissionPercCheckbox",
+              "Positions": [ 40, 255, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "TransmissionPercPin",
+              "Positions": [ 300, 257, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Visuals Subcategory
+            {
+              "Name": "VisualsSeparator",
+              "Positions": [ 0, 280, 330, 10 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Display as Wire Frame
+            {
+              "Name": "WireframeIcon",
+              "Positions": [ 10, 292, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "WireframeCheckbox",
+              "Positions": [ 40, 290, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "WireframePin",
+              "Positions": [ 300, 292, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Display Transparent Triangles
+            {
+              "Name": "TransparentTrianglesIcon",
+              "Positions": [ 10, 317, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "TransparentTrianglesCheckbox",
+              "Positions": [ 40, 315, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "TransparentTrianglesPin",
+              "Positions": [ 300, 317, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Display Reverb Zone Transition Regions
+            {
+              "Name": "RZTransitionRegionIcon",
+              "Positions": [ 10, 342, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "RZTransitionRegionCheckbox",
+              "Positions": [ 40, 340, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "RZTransitionRegionPin",
+              "Positions": [ 300, 342, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Geometry Opacity
+            {
+              "Name": "GeometryOpacityIcon",
+              "Positions": [ 10, 367, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GeometryOpacityLabel",
+              "Positions": [ 40, 365, 145, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GeometryOpacitySuperRange",
+              "Positions": [ 190, 365, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GeometryOpacityPin",
+              "Positions": [ 300, 367, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Portal Opacity
+            {
+              "Name": "PortalOpacityIcon",
+              "Positions": [ 10, 392, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "PortalOpacityLabel",
+              "Positions": [ 40, 390, 145, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "PortalOpacitySuperRange",
+              "Positions": [ 190, 390, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "PortalOpacityPin",
+              "Positions": [ 300, 392, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Room Extent Opacity
+            {
+              "Name": "ExtentOpacityIcon",
+              "Positions": [ 10, 417, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ExtentOpacityLabel",
+              "Positions": [ 40, 415, 145, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ExtentOpacitySuperRange",
+              "Positions": [ 190, 415, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ExtentOpacityPin",
+              "Positions": [ 300, 417, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Clustering Subcategory
+            {
+              "Name": "ClusteringSplitter",
+              "Positions": [ 0, 440, 330, 10 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Display Clusters
+            {
+              "Name": "ClustersIcon",
+              "Positions": [ 10, 452, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ClustersCheckbox",
+              "Positions": [ 40, 450, 250, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ClustersPin",
+              "Positions": [ 300, 452, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Clusters Size
+            {
+              "Name": "ClusterSizeLabel",
+              "Positions": [ 40, 475, 145, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ClusterSizeSuperRange",
+              "Positions": [ 190, 475, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

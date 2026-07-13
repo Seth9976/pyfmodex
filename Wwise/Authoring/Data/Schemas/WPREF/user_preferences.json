@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "schemas": [
+    {
+      "id": "wpref",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "patternProperties": {
+            "^.*$": {}
+          },
+          "additionalProperties": true
+        },
+        "topic": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "properties",
+        "topic",
+        "version"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

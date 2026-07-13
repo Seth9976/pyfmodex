@@ -1,0 +1,10 @@
+
+<h2>Passthrough Mix</h2>
+<p>プラグインが、パススルー（スペーシャリゼーションなし）のミックスを表す追加のAudio Objectを生成するかどうかを決定する。</p>
+<ul>
+<li><strong>When Audio Device supports it</strong>:プラグインが、バスパイプラインの末端にあるAudio Deviceを参照し、パススルーミックスを生成するかどうかを判断する。Audio Deviceが対応する場合に限り、パススルーミックスを生成する。</li>
+<li><strong>Always</strong>:Audio Deviceの機能にかかわらず、パススルーミックスを生成する。</li>
+<li><strong>Never</strong>:Audio Deviceの機能にかかわらず、パススルーミックスを生成しない。</li>
+</ul>
+<p><strong>Note</strong>：パススルーミックスを生成しない場合、パススルーミックスにミキシングされるAudio ObjectがMain Mixにミキシングされる。</p>
+<p>Default value: When Audio Device supports it<br/></p>

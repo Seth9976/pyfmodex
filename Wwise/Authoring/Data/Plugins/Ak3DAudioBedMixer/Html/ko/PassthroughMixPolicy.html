@@ -1,0 +1,10 @@
+
+<h2>Passthrough Mix</h2>
+<p>플러그인이 패스스루(비공간화) 믹스를 위한 추가 Audio Object를 생성할지 여부를 결정합니다.</p>
+<ul>
+<li><strong>When Audio Device supports it</strong>: 플러그인이 버스 파이프라인의 끝에 있는 Audio Device를 확인해서 패스스루 믹스를 생성할지 여부를 결정합니다. Audio Device가 이를 지원할 경우에만 패스 스루 믹스가 생성됩니다.</li>
+<li><strong>Always</strong>: Audio Device의 기능과 관계없이 항상 패스스루 믹스를 생성합니다.</li>
+<li><strong>Never</strong>: Audio Device의 기능과 관계없이 항상 패스스루 믹스를 생성하지 않습니다.</li>
+</ul>
+<p><strong>참고</strong>: 패스 스루 믹스가 생성되지 않는 경우, 패스스루 믹스로 믹스될 예정이었던 Audio Object들은 Main Mix로 믹스됩니다.</p>
+<p>Default value: When Audio Device supports it<br/></p>

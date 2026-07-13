@@ -1,0 +1,136 @@
+{
+  "ak.dlg.ModalProjectExplorerDialog": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      {
+        "Name": "Label",
+        "Type": "Label"
+      },
+      {
+        "Name": "Tree",
+        "Type": "Tree",
+        "OpenFindPanelByDefault": true
+      },
+      {
+        "Name": "OkButton",
+        "Type": "PushButton",
+        "Text": "OK",
+        "ModalResult": "Ok"
+      },
+      {
+        "Name": "CancelButton",
+        "Type": "PushButton",
+        "Text": "Cancel",
+        "ModalResult": "Cancel"
+      },
+      {
+        "Name": "LocationSelectorObjectNameLabel",
+        "Type": "Label",
+        "Text": "Name:",
+        "TextStyle": [
+          "JustifyLeft"
+        ]
+      },
+      {
+        "Name": "LocationSelectorObjectName",
+        "Type": "TextEdit",
+        "Text": ""
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 554,
+          "Height": 454,
+          "MinWidth": 200,
+          "MinHeight": 200,
+          "Children": [
+            {
+              "Name": "Label",
+              "Positions": [
+                5,
+                5,
+                545,
+                20
+              ],
+              "AnchorSets": [
+                "side-left",
+                "side-top"
+              ]
+            },
+            {
+              "Name": "Tree",
+              "Positions": [
+                5,
+                25,
+                540,
+                355
+              ],
+              "AnchorSets": [
+                "side-all"
+              ]
+            },
+            {
+              "Name": "OkButton",
+              "Positions": [
+                360,
+                420,
+                88,
+                24
+              ],
+              "AnchorSets": [
+                "side-right",
+                "side-bottom"
+              ]
+            },
+            {
+              "Name": "CancelButton",
+              "Positions": [
+                456,
+                420,
+                88,
+                24
+              ],
+              "AnchorSets": [
+                "side-right",
+                "side-bottom"
+              ]
+            },
+            {
+              "Name": "LocationSelectorObjectNameLabel",
+              "Positions": [
+                5,
+                394,
+                39,
+                20
+              ],
+              "AnchorSets": [
+                "side-left",
+                "side-bottom"
+              ]
+            },
+            {
+              "Name": "LocationSelectorObjectName",
+              "Positions": [
+                52,
+                390,
+                492,
+                23
+              ],
+              "AnchorSets": [
+                "side-left",
+                "side-right",
+                "side-bottom"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

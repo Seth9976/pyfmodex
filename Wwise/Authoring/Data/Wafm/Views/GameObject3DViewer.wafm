@@ -1,0 +1,333 @@
+// GameObject3DViewer.wafm
+
+{
+  "ak.dlg.GameObject3DViewer": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      // VoiceFilterDialog
+      {
+        "Name": "LocalFilter",
+        "Type": "ToggleButton",
+        "Icon": "Filter_Unlink",
+        "TooltipText": "Unlink Filter"
+      },
+      {
+        "Name": "FilterEdit",
+        "Type": "TextEdit",
+        "GhostText": "Text Filter"
+      },
+      {
+        "Name": "ObjectFilterCaption",
+        "Type": "WObjectCaption",
+        "Text": "Object Filter",
+        "FontStyle": "Italic",
+        "TextStyle": [ "JustifyLeft" ],
+        "TextIndent": 5,
+        "TextColor": "Caption_TextDisabledColor",
+        "RightBitmap": "Filter_Magnifier"
+      },
+      {
+        "Name": "BrowseButton",
+        "Type": "PushButton",
+        "Text": "...",
+        "TooltipText": "Browse For Object"
+      },
+      {
+        "Name": "MuteSoloButton",
+        "Type": "ToggleButton",
+        "Icon": "Filter_MuteSolo",
+        "TooltipText": "Turn ON Mute/Solo Filtering"
+      },
+      {
+        "Name": "MoreCommandsButton",
+        "Type": "PushButton",
+        "Icon": "General_ActionsWithTriangle",
+        "TooltipText": "Filter Actions"
+      },
+      {
+        "Name": "GameObjectFilterButton",
+        "Type": "ToggleButton",
+        "Icon": "Filter_GameObjects",
+        "TooltipText": "Enable Game Object Filters",
+        "Pressed": true
+      },
+      {
+        "Name": "FilterList",
+        "Type": "Tree",
+        "PreferenceID": "filterList",
+        "OpenFindPanelByDefault": true
+      },
+      {
+        "Name": "GameObjectList",
+        "Type": "Tree",
+        "PreferenceID": "gameObjectList"
+      },
+      // GameObject3DView
+      {
+        "Name": "CameraButton",
+        "Type": "PushButton",
+        "Icon": "View3dToolbar_Camera",
+        "Style": "Dropright",
+        "TooltipText": "Select Camera"
+      },
+      {
+        "Name": "CameraCaption",
+        "Type": "Caption",
+        "Text": "Perspective 1"
+      },
+      {
+        "Name": "ResetCameraButton",
+        "Type": "PushButton",
+        "Icon": "General_Reset",
+        "TooltipText": "Reset Camera"
+      },
+      {
+        "Name": "LocateButton",
+        "Type": "PushButton",
+        "Icon": "View3dToolbar_FrameFollowed",
+        "Style": "Dropright",
+        "TooltipText": "Locate Game Object"
+      },
+      {
+        "Name": "LocateCaption",
+        "Type": "WObjectCaption",
+        "Text": "None"
+      },
+      {
+        "Name": "FollowButton",
+        "Type": "ToggleButton",
+        "Icon": "View3dToolbar_Follow",
+        "TooltipText": "Follow Game Object"
+      },
+      {
+        "Name": "FrameAllButton",
+        "Type": "PushButton",
+        "Icon": "View3dToolbar_FrameAll",
+        "TooltipText": "Frame All"
+      },
+      {
+        "Name": "DisplayOptionsButton",
+        "Type": "ToggleButton",
+        "Icon": "General_EyeWithDots",
+        "TooltipText": "Display Options",
+        "Pressed": true
+      },
+      {
+        "Name": "GameObject3DCtrl",
+        "Type": "Scene3DView"
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 800,
+          "Height": 600,
+          "MinWidth": 640,
+          "MinHeight": 225,
+          "Children": [
+            {
+              "Name": "MainLayout",
+              "Type": "SplitLayout",
+              "AnchorSets": ["side-all"],
+              "Positions": [0, 8, 800, 592],
+              "Orientation": "Horizontal",
+              "Splitters": [
+                {
+                  "Name": "Splitter",
+                  "CollapseMode": "Left",
+                  "Position": 325,
+                  "Anchor": "side-left"
+                }
+              ],
+              "Children": [
+                // VoiceFilterDialog
+                {
+                  "Name": "LeftPanel",
+                  "Type": "BinLayout",
+                  "MinSize": 0,
+                  "Children": [
+                    {
+                      "Name": "LeftBox",
+                      "Type": "AnchorLayout",
+                      "Children": [
+                        {
+                          "Name": "LocalFilter",
+                          "Positions": [0, 0, 23, 23],
+                          "AnchorSets": ["side-left", "side-top"]
+                        },
+                        {
+                          "Name": "FilterLayout",
+                          "Type": "SplitLayout",
+                          "AnchorSets": ["side-left", "side-right", "side-top"],
+                          "Positions": [27, 0, 184, 23],
+                          "Orientation": "Horizontal",
+                          "Splitters": [
+                            {
+                              "Name": "Splitter",
+                              "Position": 92,
+                              "Anchor": "side-right"
+                            }
+                          ],
+                          "Children": [
+                            {
+                              "Name": "LeftPanel",
+                              "Type": "BinLayout",
+                              "MinSize": 30,
+                              "Children": [
+                                {
+                                  "Name": "FilterEdit"
+                                }
+                              ]
+                            },
+                            {
+                              "Name": "RightPanel",
+                              "Type": "BinLayout",
+                              "MinSize": 30,
+                              "Children": [
+                                {
+                                  "Name": "ObjectFilterCaption"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "Name": "BrowseButton",
+                          "Positions": [216, 0, 23, 23],
+                          "AnchorSets": ["side-right", "side-top"]
+                        },
+                        {
+                          "Name": "MuteSoloButton",
+                          "Positions": [243, 0, 23, 23],
+                          "AnchorSets": ["side-right", "side-top"]
+                        },
+                        {
+                          "Name": "MoreCommandsButton",
+                          "Positions": [270, 0, 23, 23],
+                          "AnchorSets": ["side-right", "side-top"]
+                        },
+                        {
+                          "Name": "GameObjectFilterButton",
+                          "Positions": [302, 0, 23, 23],
+                          "AnchorSets": ["side-right", "side-top"]
+                        },
+                        {
+                          "Name": "ListLayout",
+                          "Type": "SplitLayout",
+                          "AnchorSets": ["side-all"],
+                          "Positions": [0, 31, 325, 561],
+                          "Orientation": "Vertical",
+                          "Splitters": [
+                            {
+                              "Name": "Splitter",
+                              "CollapseMode": "Top",
+                              "Position": 315,
+                              "Anchor": "side-top"
+                            }
+                          ],
+                          "Children": [
+                            {
+                              "Name": "TopPanel",
+                              "Type": "BinLayout",
+                              "MinSize": 0,
+                              "Children": [
+                                {
+                                  "Name": "FilterList"
+                                }
+                              ]
+                            },
+                            {
+                              "Name": "BottomPanel",
+                              "Type": "BinLayout",
+                              "MinSize": 50,
+                              "Children": [
+                                {
+                                  "Name": "GameObjectList"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                // GameObject3DView
+                {
+                  "Name": "RightPanel",
+                  "Type": "BinLayout",
+                  "MinSize": 0,
+                  "Children": [
+                    {
+                      "Name": "RightBox",
+                      "Type": "AnchorLayout",
+                      "Children": [
+                        {
+                          "Name": "CameraButton",
+                          "Positions": [0, 0, 40, 23],
+                          "AnchorSets": ["side-left", "side-top"]
+                        },
+                        {
+                          "Name": "CameraCaption",
+                          "Positions": [42, 0, 95, 23],
+                          "AnchorSets": ["side-left", "side-top"]
+                        },
+                        {
+                          "Name": "ResetCameraButton",
+                          "Positions": [138, 0, 23, 23],
+                          "AnchorSets": ["side-left", "side-top"]
+                        },
+                        {
+                          "Name": "LocateButton",
+                          "Positions": [173, 0, 40, 23],
+                          "AnchorSets": ["side-left", "side-top"]
+                        },
+                        {
+                          "Name": "LocateCaption",
+                          "Positions": [215, 0, 165, 23],
+                          "AnchorSets": ["side-left", "side-top"]
+                        },
+                        {
+                          "Name": "FollowButton",
+                          "Positions": [381, 0, 23, 23],
+                          "AnchorSets": ["side-left", "side-top"]
+                        },
+                        {
+                          "Name": "FrameAllButton",
+                          "Positions": [416, 0, 23, 23],
+                          "AnchorSets": ["side-left", "side-top"]
+                        },
+                        {
+                          "Name": "DisplayOptionsButton",
+                          "Positions": [447, 0, 23, 23],
+                          "AnchorSets": ["side-right", "side-top"]
+                        },
+                        {
+                          "Name": "GameObject3DToolbar",
+                          "Type": "BinLayout",
+                          "Positions": [0, 31, 470, 23],
+                          "AnchorSets": ["side-left", "side-top", "side-right"],
+                          "Children": []
+                        },
+                        {
+                          "Name": "GameObject3DCtrl",
+                          "Positions": [0, 62, 470, 530],
+                          "AnchorSets": ["side-all"]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

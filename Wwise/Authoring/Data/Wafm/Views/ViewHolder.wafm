@@ -1,0 +1,35 @@
+// ViewHolder.wafm
+
+{
+  "ak.dlg.ViewHolder": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      {
+        "Name": "DockWidgetArea",
+        "Type": "DockWidgetArea"
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 600,
+          "Height": 400,
+          "MinWidth": 100,
+          "MinHeight": 25,
+          "Children": [
+            {
+              "Name": "DockWidgetArea",
+              "Positions": [0, 0, 600, 400],
+              "AnchorSets": ["side-all"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

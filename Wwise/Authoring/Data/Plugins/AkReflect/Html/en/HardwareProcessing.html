@@ -1,0 +1,9 @@
+
+<h2>Use Hardware Processing</h2>
+<p>Available only on select platforms. This property leverages hardware acceleration for image source processing. When enabled, hardware acceleration can reduce Reflect&rsquo;s CPU use.</p>
+<?div platform="PS5" open="1"?>
+<p><span class="condition" name="PlatformSpecific">When enabled on the PS5, there are the following limitations:
+- The maximum image source delay time must be explicitly specified with the Max Image Source Delay Time property. Image sources that have delays greater than this value are not rendered.
+- The speed of sound cannot be used as a RTPC.
+- Material filters are rendered in Favor Performance mode only.
+</span><?div platform="PS5" open="0"?></p>

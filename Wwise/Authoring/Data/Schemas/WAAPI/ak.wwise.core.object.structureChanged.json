@@ -1,0 +1,152 @@
+{
+    "version": 1,
+    "functions": [],
+    "topics": [
+        {
+            "id": "ak.wwise.core.object.structureChanged",
+            "restrict": [
+                "userInterface",
+                "commandLine"
+            ],
+            "seeAlso": [
+                "ak.wwise.core.object.childAdded",
+                "ak.wwise.core.object.childRemoved",
+                "ak.wwise.core.object.created",
+                "ak.wwise.core.object.nameChanged",
+                "ak.wwise.core.object.postDeleted",
+                "ak.wwise.core.object.preDeleted"
+            ],
+            "description": "Sent when the project structure changes. Publishes a summary of the changes. The publication is sent after the undo stack is modified. The changes are grouped in batch and redundant changes are collapsed.",
+            "optionsSchema": {
+                "type": "object",
+                "properties": {
+                    "return": {
+                        "$ref": "waapi_definitions.json#/definitions/returnExpression",
+                        "description": "Data to be returned for the objects involved in the structure changes."
+                    },
+                    "includeLoadedAndUnloadedNestedObjects": {
+                        "type": "boolean",
+                        "description": "If true, all loaded or unloaded objects are provided when a Work Unit is loaded or unloaded. If false or not provided, only the Work Unit objects that are loaded or unloaded is provided. Note that several Work Unit objects could be provided in a single structure change operation since Work Unit objects can be children of other Work Unit objects."
+                    }
+                },
+                "additionalProperties": false
+            },
+            "publishSchema": {
+                "type": "object",
+                "properties": {
+                    "summary": {
+                        "type": "string",
+                        "description": "The operation that triggered the changes. Generally, the name of the top-level undo operation."
+                    },
+					"objects": {
+						"type": "array",
+						"description": "The list of changed objects.",
+						"items": {
+							"type": "object",
+							"description": "The details of the changes made to an object.",
+							"properties": {
+								"object":{
+									"$ref": "waapi_definitions.json#/definitions/objectReturn",
+									"description": "The changed object."
+								},
+								"changes":{
+									"type": "array",
+									"description": "The list of changes.",
+									"items": {
+										"type": "object",
+										"description": "A change to the specified object.",
+										"properties":{
+											"type": {
+												"type":"string",
+												"description": "The type of change. Some types include additional information in the sub element of the same name.",
+												"enum":["create","delete","nameChange", "notesChange","parentChange","ownerChange","load","unload"]
+											},
+											"parentChange": {
+												"type" : "object",
+												"description": "The changed parent of an object. Sent when type='parentChange'.",
+												"properties": {
+													"oldParent": {
+														"description": "The old parent. Might be an empty object when no previous parent is found.",
+														"$ref": "waapi_definitions.json#/definitions/objectReturn"
+													},
+													"newParent": {
+														"description": "The new parent. Might be an empty object when no new parent is found.",
+														"$ref": "waapi_definitions.json#/definitions/objectReturn"
+													}
+												},
+												"required": ["oldParent", "newParent"],
+												"additionalProperties": "false"
+											},
+											"ownerChange": {
+												"type" : "object",
+												"description": "The changed owner of an object. Sent when type='ownerChange'.",
+												"properties": {
+													"referenceName": {
+														"type": "string",
+														"description": "The name of the reference for which the owner changed."
+													},
+													"oldOwner": {
+														"description": "The old owner. Might be an empty object when no previous owner is found.",
+														"$ref": "waapi_definitions.json#/definitions/objectReturn"
+													},
+													"newOwner": {
+														"description": "The new owner. Might be an empty object when no new owner is found.",
+														"$ref": "waapi_definitions.json#/definitions/objectReturn"
+													}
+												},
+												"required": ["referenceName", "oldOwner", "newOwner"],
+												"additionalProperties": "false"
+											},
+											"nameChange": {
+												"type" : "object",
+												"description": "The changed name of an object. Sent when type='nameChange'.",
+												"properties": {
+													"oldName": {
+														"description": "The old name.",
+														"type": "string"
+													},
+													"newName": {
+														"description": "The new name.",
+														"type": "string"
+													}
+												},
+												"required": ["oldName", "newName"],
+												"additionalProperties": "false"
+											},
+											"notesChange": {
+												"type" : "object",
+												"description": "The changed notes of an object. Sent when type='notesChange'.",
+												"properties": {
+													"oldName": {
+														"description": "The old notes.",
+														"type": "string"
+													},
+													"newName": {
+														"description": "The new notes.",
+														"type": "string"
+													}
+												},
+												"required": ["oldNotes", "newNotes"],
+												"additionalProperties": "false"
+											}										},
+										"required": ["type"],
+										"additionalProperties": "false"
+									}
+								}
+							},
+							"required": ["object", "changes"],
+							"additionalProperties": "false"
+						}
+					}
+                },
+                "required": [
+                    "summary",
+                    "objects"
+                ],
+                "additionalProperties": false
+            }
+        }
+    ],
+    "validators": [],
+    "definitions": {}
+}

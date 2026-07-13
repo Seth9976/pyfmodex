@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2006 Audiokinetic Inc. -->
+<PluginModule>
+  
+  <!-- Compressor properties -->
+  <!-- (Make sure to keep Expander up-to-date, below!) -->
+  <EffectPlugin Name="Wwise Compressor" CompanyID="0" PluginID="108" DisplayName="Compressor">
+    <PluginInfo MenuPath="00-Wwise">
+      <PlatformSupport>
+        <Platform Name="Any">
+          <CanBeInsertOnBusses>true</CanBeInsertOnBusses>
+          <CanBeInsertOnAudioObjects>true</CanBeInsertOnAudioObjects>
+          <CanBeRendered>true</CanBeRendered>
+          <CanSendMonitorData>true</CanSendMonitorData>
+        </Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    <Properties>
+      <Property Name="Threshold" Type="Real32" SupportRTPCType="Additive" DocId="CompressorThreshold" DisplayName="Threshold" DisplayGroup="Dynamics">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>0</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96.3</Min>
+              <Max>0</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="Ratio" Type="Real32" SupportRTPCType="Exclusive" DocId="CompressorRatio" DisplayName="Ratio" DisplayGroup="Dynamics">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>1.5</DefaultValue>
+        <AudioEnginePropertyID>1</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>1</Min>
+              <Max>50</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="AttackTime" Type="Real32" SupportRTPCType="Additive" DocId="CompressorAttackTime" DisplayName="Attack Time" DisplayGroup="Dynamics">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>2</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="ReleaseTime" Type="Real32" SupportRTPCType="Additive" DocId="CompressorReleaseTime" DisplayName="Release Time" DisplayGroup="Dynamics">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>3</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="OutputGain" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DocId="CompressorOutputGain" DisplayName="Output Gain">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>4</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="ProcessLFE" Type="bool" DocId="CompressorProcessLFE" DisplayName="Process LFE">
+        <DefaultValue>true</DefaultValue>
+        <AudioEnginePropertyID>5</AudioEnginePropertyID>
+      </Property>
+      <Property Name="ChannelLink" Type="bool" DocId="CompressorChannelLink" DisplayName="Channel Link">
+        <DefaultValue>true</DefaultValue>
+        <AudioEnginePropertyID>6</AudioEnginePropertyID>
+      </Property>
+      <Property Name="ChannelLinkPercentage" Type="Real32" DocId="CompressorChannelLinkPercentage" DisplayName="Channel Link Percentage">
+        <UserInterface Step="1" Decimals="0" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>9</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="ChannelLink" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>false</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainMeterRange" Type="Real32" IsVisible="false">
+        <DefaultValue>-24</DefaultValue>
+      </Property>
+      <Property Name="SidechainScope" Type="int32" DocId="CompressorSidechainMixScope" DisplayName="Sidechain Scope">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>7</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Global">0</Value>
+              <Value DisplayName="Game Object">1</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Reference Name="SidechainRef" DocId="CompressorSidechainMix" DisplayName="Sidechain Mix Source" ShortDisplayName="Sidechain Mix Source">
+        <AudioEnginePropertyID>8</AudioEnginePropertyID>
+        <Restrictions>
+          <TypeEnumerationRestriction>
+            <Type Name="SidechainMix" />
+          </TypeEnumerationRestriction>
+        </Restrictions>
+      </Reference>
+    </Properties>
+  </EffectPlugin>
+  
+  <!-- Expander properties -->
+  <EffectPlugin Name="Wwise Expander" CompanyID="0" PluginID="109" DisplayName="Expander">
+    <PluginInfo MenuPath="00-Wwise">
+      <PlatformSupport>
+        <Platform Name="Any">
+          <CanBeInsertOnBusses>true</CanBeInsertOnBusses>
+          <CanBeInsertOnAudioObjects>true</CanBeInsertOnAudioObjects>
+          <CanBeRendered>true</CanBeRendered>
+          <CanSendMonitorData>true</CanSendMonitorData>
+        </Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    <Properties>
+      <Property Name="Threshold" Type="Real32" SupportRTPCType="Additive" DocId="ExpanderThreshold" DisplayName="Threshold" DisplayGroup="Dynamics">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>-40</DefaultValue>
+        <AudioEnginePropertyID>0</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96.3</Min>
+              <Max>0</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="Ratio" Type="Real32" SupportRTPCType="Exclusive" DocId="ExpanderRatio" DisplayName="Ratio" DisplayGroup="Dynamics">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>3</DefaultValue>
+        <AudioEnginePropertyID>1</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>1</Min>
+              <Max>50</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="AttackTime" Type="Real32" SupportRTPCType="Additive" DocId="ExpanderAttackTime" DisplayName="Attack Time" DisplayGroup="Dynamics">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>2</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="ReleaseTime" Type="Real32" SupportRTPCType="Additive" DocId="ExpanderReleaseTime" DisplayName="Release Time" DisplayGroup="Dynamics">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.01</DefaultValue>
+        <AudioEnginePropertyID>3</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="OutputGain" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DocId="ExpanderOutputGain" DisplayName="Output Gain">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>4</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="ProcessLFE" Type="bool" DocId="ExpanderProcessLFE" DisplayName="Process LFE">
+        <DefaultValue>true</DefaultValue>
+        <AudioEnginePropertyID>5</AudioEnginePropertyID>
+      </Property>
+      <Property Name="ChannelLink" Type="bool" DocId="ExpanderChannelLink" DisplayName="Channel Link">
+        <DefaultValue>true</DefaultValue>
+        <AudioEnginePropertyID>6</AudioEnginePropertyID>
+      </Property>
+      <Property Name="ChannelLinkPercentage" Type="Real32" DocId="ExpanderChannelLinkPercentage" DisplayName="Channel Link Percentage">
+        <UserInterface Step="1" Decimals="0" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>9</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="ChannelLink" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>false</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainMeterRange" Type="Real32" IsVisible="false">
+        <DefaultValue>-24</DefaultValue>
+      </Property>
+      <Property Name="SidechainScope" Type="int32" DocId="ExpanderSidechainMixScope" DisplayName="Sidechain Scope">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>7</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Global">0</Value>
+              <Value DisplayName="Game Object">1</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Reference Name="SidechainRef" DocId="ExpanderSidechainMix" DisplayName="Sidechain Mix Source" ShortDisplayName="Sidechain Mix Source">
+        <AudioEnginePropertyID>8</AudioEnginePropertyID>
+        <Restrictions>
+          <TypeEnumerationRestriction>
+            <Type Name="SidechainMix" />
+          </TypeEnumerationRestriction>
+        </Restrictions>
+      </Reference>
+    </Properties>
+  </EffectPlugin>
+</PluginModule>

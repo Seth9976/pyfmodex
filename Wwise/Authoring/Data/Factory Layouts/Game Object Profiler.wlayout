@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layout Name="Game Object Profiler">
+	<StackPanel Name="StackPanel" ID="{6F1BB5F2-47A4-4221-A9E3-6DC85F5F4397}" Width="1633" Height="734" Orientation="Vertical">
+		<StackPanel Name="StackPanel" ID="{7D19DEB3-2739-4A8D-90B7-4F1203EE2B5C}" Width="1096" Height="449" Orientation="Vertical">
+			<View Name="GameObject3DViewer" ID="{36FC185D-BDFF-42EA-9D07-11814DC47588}" Width="1773.692" Height="650.1086" SelectionChannel="1"/>
+			<Splitter ID="{00D792CC-422E-452B-930D-AFF3D66D6D4A}"/>
+			<StackPanel Name="StackPanel" ID="{F87E2018-313E-418F-8CFC-1C1219A3628A}" Width="1773.692" Height="261.5271" Orientation="Horizontal">
+				<View Name="VoiceMonitor" ID="{565159EC-A20E-4329-8EE3-C75E62F7ACF3}" Width="886.8461" Height="514.7193" SelectionChannel="1"/>
+				<Splitter ID="{09931E00-D759-4B1F-A6AA-94CB755B6E49}"/>
+				<View Name="GameSyncMonitor" ID="{9E77DFE3-7835-40B4-8BA5-6F5EB887DACC}" Width="886.8461" Height="514.7193" SelectionChannel="1"/>
+			</StackPanel>
+		</StackPanel>
+	</StackPanel>
+</Layout>

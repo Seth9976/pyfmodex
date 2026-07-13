@@ -1,0 +1,3611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2006 Audiokinetic Inc. -->
+<PluginModule>
+  <EffectPlugin Name="Wwise Parametric EQ" CompanyID="0" PluginID="105" DisplayName="Parametric EQ">
+    <PluginInfo MenuPath="00-Wwise">
+      <PlatformSupport>
+        <Platform Name="Any">
+          <CanBeInsertOnBusses>true</CanBeInsertOnBusses>
+          <CanBeInsertOnAudioObjects>true</CanBeInsertOnAudioObjects>
+          <CanBeRendered>true</CanBeRendered>
+        </Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    <Properties>
+      <Property Name="OutputLevel" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DisplayName="Output Gain" DisplayCategory="EQ">
+        <UserInterface Step="0.5" Fine="0.1" Decimals="2"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>0</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="ProcessLFE" Type="bool" DisplayName="Process LFE" DisplayCategory="EQ">
+        <DefaultValue>true</DefaultValue>
+        <AudioEnginePropertyID>1</AudioEnginePropertyID>
+      </Property>
+      <Reference Name="DynamicsSidechainRef" DocId="DynamicsSidechainMix" DisplayName="Sidechain Mix Source" ShortDisplayName="Mix Source" DisplayCategory="EQ" DisplayGroup="Sidechain">
+        <AudioEnginePropertyID>2</AudioEnginePropertyID>
+        <Restrictions>
+          <TypeEnumerationRestriction>
+            <Type Name="SidechainMix" />
+          </TypeEnumerationRestriction>
+        </Restrictions>
+      </Reference>
+      <Property Name="SidechainScope" DocId="DynamicsSidechainScope" Type="int32" DisplayName="Sidechain Mix Scope" ShortDisplayName="Mix Scope" DisplayCategory="EQ" DisplayGroup="Sidechain">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>3</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Global">0</Value>
+              <Value DisplayName="Game Object">1</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="NumBands" Type="int32" DisplayName="Number of Bands" ShortDisplayName="Num Bands" DisplayCategory="EQ">
+        <UserInterface ControlClass="ReadOnlyText" />
+        <DefaultValue>3</DefaultValue>
+        <AudioEnginePropertyID>4</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int32">
+              <Min>1</Min>
+              <Max>8</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="BandListen" Type="int32" DisplayName="Listen to Band" ShortDisplayName="Listen Band" Temporary="true" DisplayCategory="EQ" IsVisible="false">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>5</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int32">
+              <Min>0</Min>
+              <Max>8</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="DynamicsListen" Type="int32" DisplayName="Listen to Dynamics Band" ShortDisplayName="Listen Dynamics" Temporary="true" DisplayCategory="EQ" IsVisible="false">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>6</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int32">
+              <Min>0</Min>
+              <Max>8</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+
+      <!-- Band 1 controls -->
+      <Property Name="OnOffBand1" DocId="OnOffBand" Type="bool" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 1 Enable" ShortDisplayName="Enable" DisplayCategory="1">
+        <DefaultValue>true</DefaultValue>
+        <AudioEnginePropertyID>100</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FilterTypeBand1" DocId="FilterTypeBand" Type="int32" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 1 Filter Type" ShortDisplayName="Type" DisplayCategory="1">
+        <DefaultValue>4</DefaultValue>
+        <AudioEnginePropertyID>101</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Low Pass Flat">0</Value>
+              <Value DisplayName="High Pass Flat">1</Value>
+              <Value DisplayName="Low Pass Q">7</Value>
+              <Value DisplayName="High Pass Q">8</Value>
+              <Value DisplayName="Band Pass">2</Value>
+              <Value DisplayName="Notch">3</Value>
+              <Value DisplayName="Peaking">6</Value>
+              <Value DisplayName="Low Shelf">4</Value>
+              <Value DisplayName="High Shelf">5</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FrequencyBand1" DocId="FrequencyBand" Type="Real32" SupportRTPCType="Exclusive" DataMeaning="Frequency" DisplayName="Band 1 Frequency" ShortDisplayName="Frequency" DisplayCategory="1">
+        <UserInterface Decimals="0"/>
+        <DefaultValue>60</DefaultValue>
+        <AudioEnginePropertyID>102</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainBand1" DocId="GainBand" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DisplayName="Band 1 Gain" ShortDisplayName="Gain" DisplayCategory="1">
+        <UserInterface Step="0.5" Fine="0.1" Decimals="1"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>103</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="QFactorBand1" DocId="QFactorBand" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Band 1 Quality Factor" ShortDisplayName="Q" DisplayCategory="1">
+        <UserInterface Step="0.1" Fine="0.01" Decimals="3" SliderType="8"/>
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>104</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0.025</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Band Pass -->
+                <Value>2</Value>
+                <!-- Notch -->
+                <Value>3</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+                <!-- LPF/HPF with Q -->
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RolloffRateBand1" DocId="RolloffBand" Type="int32" DisplayName="Band 1 Rolloff" ShortDisplayName="Rolloff" DisplayCategory="1">
+        <DefaultValue>12</DefaultValue>
+        <AudioEnginePropertyID>105</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="12 dB/oct">12</Value>
+              <Value DisplayName="24 dB/oct">24</Value>
+              <Value DisplayName="36 dB/oct">36</Value>
+              <Value DisplayName="48 dB/oct">48</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Pass, High Pass, Low shelf, high shelf -->
+                <Value>0</Value>
+                <Value>1</Value>
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="DynamicsEnableBand1" DocId="DynamicsEnable" Type="bool" DisplayCategory="1" DisplayGroup="Dynamics" DisplayName="Band 1 Enable Dynamics" ShortDisplayName="Enable">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>106</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ThresholdBand1" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsThreshold" DisplayCategory="1" DisplayGroup="Dynamics" DisplayName="Band 1 Dynamics Threshold" ShortDisplayName="Threshold">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>107</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RangeBand1" Type="Real32" SupportRTPCType="Exclusive" DocId="DynamicsRange" DisplayCategory="1" DisplayGroup="Dynamics" DisplayName="Band 1 Dynamics Range" ShortDisplayName="Range">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>108</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-30</Min>
+              <Max>30</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="AttackTimeBand1" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsAttack" DisplayCategory="1" DisplayGroup="Dynamics" DisplayName="Band 1 Dynamics Attack" ShortDisplayName="Attack">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>109</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ReleaseTimeBand1" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsRelease" DisplayCategory="1" DisplayGroup="Dynamics" DisplayName="Band 1 Dynamics Release" ShortDisplayName="Release">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>110</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand1" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>1</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+
+      <!-- Band 2 controls -->
+      <Property Name="OnOffBand2" DocId="OnOffBand" Type="bool" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 2 Enable" ShortDisplayName="Enable" DisplayCategory="2">
+        <DefaultValue>true</DefaultValue>
+        <AudioEnginePropertyID>200</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FilterTypeBand2" DocId="FilterTypeBand" Type="int32" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 2 Filter Type" ShortDisplayName="Type" DisplayCategory="2">
+        <DefaultValue>6</DefaultValue>
+        <AudioEnginePropertyID>201</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Low Pass Flat">0</Value>
+              <Value DisplayName="High Pass Flat">1</Value>
+              <Value DisplayName="Low Pass Q">7</Value>
+              <Value DisplayName="High Pass Q">8</Value>
+              <Value DisplayName="Band Pass">2</Value>
+              <Value DisplayName="Notch">3</Value>
+              <Value DisplayName="Peaking">6</Value>
+              <Value DisplayName="Low Shelf">4</Value>
+              <Value DisplayName="High Shelf">5</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FrequencyBand2" DocId="FrequencyBand" Type="Real32" SupportRTPCType="Exclusive" DataMeaning="Frequency" DisplayName="Band 2 Frequency" ShortDisplayName="Frequency" DisplayCategory="2">
+        <UserInterface Decimals="0"/>
+        <DefaultValue>90</DefaultValue>
+        <AudioEnginePropertyID>202</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainBand2" DocId="GainBand" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DisplayName="Band 2 Gain" ShortDisplayName="Gain" DisplayCategory="2">
+        <UserInterface Step="0.5" Fine="0.1" Decimals="1"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>203</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="QFactorBand2" DocId="QFactorBand" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Band 2 Quality Factor" ShortDisplayName="Q" DisplayCategory="2">
+        <UserInterface Step="0.1" Fine="0.01" Decimals="3" SliderType="8"/>
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>204</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0.025</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Band Pass -->
+                <Value>2</Value>
+                <!-- Notch -->
+                <Value>3</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+                <!-- LPF/HPF with Q -->
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RolloffRateBand2" DocId="RolloffBand" Type="int32" DisplayName="Band 2 Rolloff" ShortDisplayName="Rolloff" DisplayCategory="2">
+        <DefaultValue>12</DefaultValue>
+        <AudioEnginePropertyID>205</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="12 dB/oct">12</Value>
+              <Value DisplayName="24 dB/oct">24</Value>
+              <Value DisplayName="36 dB/oct">36</Value>
+              <Value DisplayName="48 dB/oct">48</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Pass, High Pass, Low shelf, high shelf -->
+                <Value>0</Value>
+                <Value>1</Value>
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="DynamicsEnableBand2" DocId="DynamicsEnable" Type="bool" DisplayCategory="2" DisplayGroup="Dynamics" DisplayName="Band 2 Enable Dynamics" ShortDisplayName="Enable">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>206</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ThresholdBand2" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsThreshold" DisplayCategory="2" DisplayGroup="Dynamics" DisplayName="Band 2 Dynamics Threshold" ShortDisplayName="Threshold">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>207</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RangeBand2" Type="Real32" SupportRTPCType="Exclusive" DocId="DynamicsRange" DisplayCategory="2" DisplayGroup="Dynamics" DisplayName="Band 2 Dynamics Range" ShortDisplayName="Range">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>208</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-30</Min>
+              <Max>30</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="AttackTimeBand2" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsAttack" DisplayCategory="2" DisplayGroup="Dynamics" DisplayName="Band 2 Dynamics Attack" ShortDisplayName="Attack">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>209</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ReleaseTimeBand2" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsRelease" DisplayCategory="2" DisplayGroup="Dynamics" DisplayName="Band 2 Dynamics Release" ShortDisplayName="Release">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>210</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand2" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>2</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+
+      <!-- Band 3 controls -->
+      <Property Name="OnOffBand3" DocId="OnOffBand" Type="bool" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 3 Enable" ShortDisplayName="Enable" DisplayCategory="3">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>300</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FilterTypeBand3" DocId="FilterTypeBand" Type="int32" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 3 Filter Type" ShortDisplayName="Type" DisplayCategory="3">
+        <DefaultValue>6</DefaultValue>
+        <AudioEnginePropertyID>301</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Low Pass Flat">0</Value>
+              <Value DisplayName="High Pass Flat">1</Value>
+              <Value DisplayName="Low Pass Q">7</Value>
+              <Value DisplayName="High Pass Q">8</Value>
+              <Value DisplayName="Band Pass">2</Value>
+              <Value DisplayName="Notch">3</Value>
+              <Value DisplayName="Peaking">6</Value>
+              <Value DisplayName="Low Shelf">4</Value>
+              <Value DisplayName="High Shelf">5</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FrequencyBand3" DocId="FrequencyBand" Type="Real32" SupportRTPCType="Exclusive" DataMeaning="Frequency" DisplayName="Band 3 Frequency" ShortDisplayName="Frequency" DisplayCategory="3">
+        <UserInterface Decimals="0"/>
+        <DefaultValue>300</DefaultValue>
+        <AudioEnginePropertyID>302</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainBand3" DocId="GainBand" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DisplayName="Band 3 Gain" ShortDisplayName="Gain" DisplayCategory="3">
+        <UserInterface Step="0.5" Fine="0.1" Decimals="1"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>303</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="QFactorBand3" DocId="QFactorBand" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Band 3 Quality Factor" ShortDisplayName="Q" DisplayCategory="3">
+        <UserInterface Step="0.1" Fine="0.01" Decimals="3" SliderType="8"/>
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>304</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0.025</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Band Pass -->
+                <Value>2</Value>
+                <!-- Notch -->
+                <Value>3</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+                <!-- LPF/HPF with Q -->
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RolloffRateBand3" DocId="RolloffBand" Type="int32" DisplayName="Band 3 Rolloff" ShortDisplayName="Rolloff" DisplayCategory="3">
+        <DefaultValue>12</DefaultValue>
+        <AudioEnginePropertyID>305</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="12 dB/oct">12</Value>
+              <Value DisplayName="24 dB/oct">24</Value>
+              <Value DisplayName="36 dB/oct">36</Value>
+              <Value DisplayName="48 dB/oct">48</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Pass, High Pass, Low shelf, high shelf -->
+                <Value>0</Value>
+                <Value>1</Value>
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="DynamicsEnableBand3" DocId="DynamicsEnable" Type="bool" DisplayCategory="3" DisplayGroup="Dynamics" DisplayName="Band 3 Enable Dynamics" ShortDisplayName="Enable">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>306</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ThresholdBand3" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsThreshold" DisplayCategory="3" DisplayGroup="Dynamics" DisplayName="Band 3 Dynamics Threshold" ShortDisplayName="Threshold">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>307</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RangeBand3" Type="Real32" SupportRTPCType="Exclusive" DocId="DynamicsRange" DisplayCategory="3" DisplayGroup="Dynamics" DisplayName="Band 3 Dynamics Range" ShortDisplayName="Range">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>308</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-30</Min>
+              <Max>30</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="AttackTimeBand3" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsAttack" DisplayCategory="3" DisplayGroup="Dynamics" DisplayName="Band 3 Dynamics Attack" ShortDisplayName="Attack">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>309</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ReleaseTimeBand3" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsRelease" DisplayCategory="3" DisplayGroup="Dynamics" DisplayName="Band 3 Dynamics Release" ShortDisplayName="Release">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>310</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand3" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>3</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+
+      <!-- Band 4 controls -->
+      <Property Name="OnOffBand4" DocId="OnOffBand" Type="bool" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 4 Enable" ShortDisplayName="Enable" DisplayCategory="4">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>400</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FilterTypeBand4" DocId="FilterTypeBand" Type="int32" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 4 Filter Type" ShortDisplayName="Type" DisplayCategory="4">
+        <DefaultValue>6</DefaultValue>
+        <AudioEnginePropertyID>401</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Low Pass Flat">0</Value>
+              <Value DisplayName="High Pass Flat">1</Value>
+              <Value DisplayName="Low Pass Q">7</Value>
+              <Value DisplayName="High Pass Q">8</Value>
+              <Value DisplayName="Band Pass">2</Value>
+              <Value DisplayName="Notch">3</Value>
+              <Value DisplayName="Peaking">6</Value>
+              <Value DisplayName="Low Shelf">4</Value>
+              <Value DisplayName="High Shelf">5</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FrequencyBand4" DocId="FrequencyBand" Type="Real32" SupportRTPCType="Exclusive" DataMeaning="Frequency" DisplayName="Band 4 Frequency" ShortDisplayName="Frequency" DisplayCategory="4">
+        <UserInterface Decimals="0"/>
+        <DefaultValue>600</DefaultValue>
+        <AudioEnginePropertyID>402</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainBand4" DocId="GainBand" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DisplayName="Band 4 Gain" ShortDisplayName="Gain" DisplayCategory="4">
+        <UserInterface Step="0.5" Fine="0.1" Decimals="1"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>403</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="QFactorBand4" DocId="QFactorBand" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Band 4 Quality Factor" ShortDisplayName="Q" DisplayCategory="4">
+        <UserInterface Step="0.1" Fine="0.01" Decimals="3" SliderType="8"/>
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>404</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0.025</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Band Pass -->
+                <Value>2</Value>
+                <!-- Notch -->
+                <Value>3</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+                <!-- LPF/HPF with Q -->
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RolloffRateBand4" DocId="RolloffBand" Type="int32" DisplayName="Band 4 Rolloff" ShortDisplayName="Rolloff" DisplayCategory="4">
+        <DefaultValue>12</DefaultValue>
+        <AudioEnginePropertyID>405</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="12 dB/oct">12</Value>
+              <Value DisplayName="24 dB/oct">24</Value>
+              <Value DisplayName="36 dB/oct">36</Value>
+              <Value DisplayName="48 dB/oct">48</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Pass, High Pass, Low shelf, high shelf -->
+                <Value>0</Value>
+                <Value>1</Value>
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="DynamicsEnableBand4" DocId="DynamicsEnable" Type="bool" DisplayCategory="4" DisplayGroup="Dynamics" DisplayName="Band 4 Enable Dynamics" ShortDisplayName="Enable">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>406</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ThresholdBand4" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsThreshold" DisplayCategory="4" DisplayGroup="Dynamics" DisplayName="Band 4 Dynamics Threshold" ShortDisplayName="Threshold">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>407</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RangeBand4" Type="Real32" SupportRTPCType="Exclusive" DocId="DynamicsRange" DisplayCategory="4" DisplayGroup="Dynamics" DisplayName="Band 4 Dynamics Range" ShortDisplayName="Range">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>408</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-30</Min>
+              <Max>30</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="AttackTimeBand4" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsAttack" DisplayCategory="4" DisplayGroup="Dynamics" DisplayName="Band 4 Dynamics Attack" ShortDisplayName="Attack">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>409</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ReleaseTimeBand4" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsRelease" DisplayCategory="4" DisplayGroup="Dynamics" DisplayName="Band 4 Dynamics Release" ShortDisplayName="Release">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>410</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand4" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>4</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+
+      <!-- Band 5 controls -->
+      <Property Name="OnOffBand5" DocId="OnOffBand" Type="bool" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 5 Enable" ShortDisplayName="Enable" DisplayCategory="5">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>500</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FilterTypeBand5" DocId="FilterTypeBand" Type="int32" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 5 Filter Type" ShortDisplayName="Type" DisplayCategory="5">
+        <DefaultValue>6</DefaultValue>
+        <AudioEnginePropertyID>501</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Low Pass Flat">0</Value>
+              <Value DisplayName="High Pass Flat">1</Value>
+              <Value DisplayName="Low Pass Q">7</Value>
+              <Value DisplayName="High Pass Q">8</Value>
+              <Value DisplayName="Band Pass">2</Value>
+              <Value DisplayName="Notch">3</Value>
+              <Value DisplayName="Peaking">6</Value>
+              <Value DisplayName="Low Shelf">4</Value>
+              <Value DisplayName="High Shelf">5</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FrequencyBand5" DocId="FrequencyBand" Type="Real32" SupportRTPCType="Exclusive" DataMeaning="Frequency" DisplayName="Band 5 Frequency" ShortDisplayName="Frequency" DisplayCategory="5">
+        <UserInterface Decimals="0"/>
+        <DefaultValue>900</DefaultValue>
+        <AudioEnginePropertyID>502</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainBand5" DocId="GainBand" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DisplayName="Band 5 Gain" ShortDisplayName="Gain" DisplayCategory="5">
+        <UserInterface Step="0.5" Fine="0.1" Decimals="1"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>503</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="QFactorBand5" DocId="QFactorBand" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Band 5 Quality Factor" ShortDisplayName="Q" DisplayCategory="5">
+        <UserInterface Step="0.1" Fine="0.01" Decimals="3" SliderType="8"/>
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>504</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0.025</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Band Pass -->
+                <Value>2</Value>
+                <!-- Notch -->
+                <Value>3</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+                <!-- LPF/HPF with Q -->
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RolloffRateBand5" DocId="RolloffBand" Type="int32" DisplayName="Band 5 Rolloff" ShortDisplayName="Rolloff" DisplayCategory="5">
+        <DefaultValue>12</DefaultValue>
+        <AudioEnginePropertyID>505</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="12 dB/oct">12</Value>
+              <Value DisplayName="24 dB/oct">24</Value>
+              <Value DisplayName="36 dB/oct">36</Value>
+              <Value DisplayName="48 dB/oct">48</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Pass, High Pass, Low shelf, high shelf -->
+                <Value>0</Value>
+                <Value>1</Value>
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="DynamicsEnableBand5" DocId="DynamicsEnable" Type="bool" DisplayCategory="5" DisplayGroup="Dynamics" DisplayName="Band 5 Enable Dynamics" ShortDisplayName="Enable">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>506</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ThresholdBand5" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsThreshold" DisplayCategory="5" DisplayGroup="Dynamics" DisplayName="Band 5 Dynamics Threshold" ShortDisplayName="Threshold">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>507</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RangeBand5" Type="Real32" SupportRTPCType="Exclusive" DocId="DynamicsRange" DisplayCategory="5" DisplayGroup="Dynamics" DisplayName="Band 5 Dynamics Range" ShortDisplayName="Range">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>508</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-30</Min>
+              <Max>30</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="AttackTimeBand5" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsAttack" DisplayCategory="5" DisplayGroup="Dynamics" DisplayName="Band 5 Dynamics Attack" ShortDisplayName="Attack">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>509</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ReleaseTimeBand5" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsRelease" DisplayCategory="5" DisplayGroup="Dynamics" DisplayName="Band 5 Dynamics Release" ShortDisplayName="Release">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>510</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand5" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>5</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+
+      <!-- Band 6 controls -->
+      <Property Name="OnOffBand6" DocId="OnOffBand" Type="bool" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 6 Enable" ShortDisplayName="Enable" DisplayCategory="6">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>600</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FilterTypeBand6" DocId="FilterTypeBand" Type="int32" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 6 Filter Type" ShortDisplayName="Type" DisplayCategory="6">
+        <DefaultValue>6</DefaultValue>
+        <AudioEnginePropertyID>601</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Low Pass Flat">0</Value>
+              <Value DisplayName="High Pass Flat">1</Value>
+              <Value DisplayName="Low Pass Q">7</Value>
+              <Value DisplayName="High Pass Q">8</Value>
+              <Value DisplayName="Band Pass">2</Value>
+              <Value DisplayName="Notch">3</Value>
+              <Value DisplayName="Peaking">6</Value>
+              <Value DisplayName="Low Shelf">4</Value>
+              <Value DisplayName="High Shelf">5</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FrequencyBand6" DocId="FrequencyBand" Type="Real32" SupportRTPCType="Exclusive" DataMeaning="Frequency" DisplayName="Band 6 Frequency" ShortDisplayName="Frequency" DisplayCategory="6">
+        <UserInterface Decimals="0"/>
+        <DefaultValue>3000</DefaultValue>
+        <AudioEnginePropertyID>602</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainBand6" DocId="GainBand" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DisplayName="Band 6 Gain" ShortDisplayName="Gain" DisplayCategory="6">
+        <UserInterface Step="0.5" Fine="0.1" Decimals="1"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>603</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="QFactorBand6" DocId="QFactorBand" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Band 6 Quality Factor" ShortDisplayName="Q" DisplayCategory="6">
+        <UserInterface Step="0.1" Fine="0.01" Decimals="3" SliderType="8"/>
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>604</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0.025</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Band Pass -->
+                <Value>2</Value>
+                <!-- Notch -->
+                <Value>3</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+                <!-- LPF/HPF with Q -->
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RolloffRateBand6" DocId="RolloffBand" Type="int32" DisplayName="Band 6 Rolloff" ShortDisplayName="Rolloff" DisplayCategory="6">
+        <DefaultValue>12</DefaultValue>
+        <AudioEnginePropertyID>605</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="12 dB/oct">12</Value>
+              <Value DisplayName="24 dB/oct">24</Value>
+              <Value DisplayName="36 dB/oct">36</Value>
+              <Value DisplayName="48 dB/oct">48</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Pass, High Pass, Low shelf, high shelf -->
+                <Value>0</Value>
+                <Value>1</Value>
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="DynamicsEnableBand6" DocId="DynamicsEnable" Type="bool" DisplayCategory="6" DisplayGroup="Dynamics" DisplayName="Band 6 Enable Dynamics" ShortDisplayName="Enable">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>606</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ThresholdBand6" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsThreshold" DisplayCategory="6" DisplayGroup="Dynamics" DisplayName="Band 6 Dynamics Threshold" ShortDisplayName="Threshold">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>607</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RangeBand6" Type="Real32" SupportRTPCType="Exclusive" DocId="DynamicsRange" DisplayCategory="6" DisplayGroup="Dynamics" DisplayName="Band 6 Dynamics Range" ShortDisplayName="Range">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>608</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-30</Min>
+              <Max>30</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="AttackTimeBand6" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsAttack" DisplayCategory="6" DisplayGroup="Dynamics" DisplayName="Band 6 Dynamics Attack" ShortDisplayName="Attack">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>609</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ReleaseTimeBand6" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsRelease" DisplayCategory="6" DisplayGroup="Dynamics" DisplayName="Band 6 Dynamics Release" ShortDisplayName="Release">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>610</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand6" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>6</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+
+      <!-- Band 7 controls -->
+      <Property Name="OnOffBand7" DocId="OnOffBand" Type="bool" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 7 Enable" ShortDisplayName="Enable" DisplayCategory="7">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>700</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FilterTypeBand7" DocId="FilterTypeBand" Type="int32" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 7 Filter Type" ShortDisplayName="Type" DisplayCategory="7">
+        <DefaultValue>6</DefaultValue>
+        <AudioEnginePropertyID>701</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Low Pass Flat">0</Value>
+              <Value DisplayName="High Pass Flat">1</Value>
+              <Value DisplayName="Low Pass Q">7</Value>
+              <Value DisplayName="High Pass Q">8</Value>
+              <Value DisplayName="Band Pass">2</Value>
+              <Value DisplayName="Notch">3</Value>
+              <Value DisplayName="Peaking">6</Value>
+              <Value DisplayName="Low Shelf">4</Value>
+              <Value DisplayName="High Shelf">5</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FrequencyBand7" DocId="FrequencyBand" Type="Real32" SupportRTPCType="Exclusive" DataMeaning="Frequency" DisplayName="Band 7 Frequency" ShortDisplayName="Frequency" DisplayCategory="7">
+        <UserInterface Decimals="0"/>
+        <DefaultValue>6000</DefaultValue>
+        <AudioEnginePropertyID>702</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainBand7" DocId="GainBand" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DisplayName="Band 7 Gain" ShortDisplayName="Gain" DisplayCategory="7">
+        <UserInterface Step="0.5" Fine="0.1" Decimals="1"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>703</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="QFactorBand7" DocId="QFactorBand" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Band 7 Quality Factor" ShortDisplayName="Q" DisplayCategory="7">
+        <UserInterface Step="0.1" Fine="0.01" Decimals="3" SliderType="8"/>
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>704</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0.025</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Band Pass -->
+                <Value>2</Value>
+                <!-- Notch -->
+                <Value>3</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+                <!-- LPF/HPF with Q -->
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RolloffRateBand7" DocId="RolloffBand" Type="int32" DisplayName="Band 7 Rolloff" ShortDisplayName="Rolloff" DisplayCategory="7">
+        <DefaultValue>12</DefaultValue>
+        <AudioEnginePropertyID>705</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="12 dB/oct">12</Value>
+              <Value DisplayName="24 dB/oct">24</Value>
+              <Value DisplayName="36 dB/oct">36</Value>
+              <Value DisplayName="48 dB/oct">48</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Pass, High Pass, Low shelf, high shelf -->
+                <Value>0</Value>
+                <Value>1</Value>
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="DynamicsEnableBand7" DocId="DynamicsEnable" Type="bool" DisplayCategory="7" DisplayGroup="Dynamics" DisplayName="Band 7 Enable Dynamics" ShortDisplayName="Enable">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>706</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ThresholdBand7" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsThreshold" DisplayCategory="7" DisplayGroup="Dynamics" DisplayName="Band 7 Dynamics Threshold" ShortDisplayName="Threshold">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>707</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RangeBand7" Type="Real32" SupportRTPCType="Exclusive" DocId="DynamicsRange" DisplayCategory="7" DisplayGroup="Dynamics" DisplayName="Band 7 Dynamics Range" ShortDisplayName="Range">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>708</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-30</Min>
+              <Max>30</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="AttackTimeBand7" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsAttack" DisplayCategory="7" DisplayGroup="Dynamics" DisplayName="Band 7 Dynamics Attack" ShortDisplayName="Attack">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>709</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ReleaseTimeBand7" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsRelease" DisplayCategory="7" DisplayGroup="Dynamics" DisplayName="Band 7 Dynamics Release" ShortDisplayName="Release">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>710</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand7" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>7</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+
+      <!-- Band 8 controls -->
+      <Property Name="OnOffBand8" DocId="OnOffBand" Type="bool" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 8 Enable" ShortDisplayName="Enable" DisplayCategory="8">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>800</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FilterTypeBand8" DocId="FilterTypeBand" Type="int32" SupportRTPCType="Exclusive" ForceRTPCCurveSegmentShape="Constant" DisplayName="Band 8 Filter Type" ShortDisplayName="Type" DisplayCategory="8">
+        <DefaultValue>6</DefaultValue>
+        <AudioEnginePropertyID>801</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Low Pass Flat">0</Value>
+              <Value DisplayName="High Pass Flat">1</Value>
+              <Value DisplayName="Low Pass Q">7</Value>
+              <Value DisplayName="High Pass Q">8</Value>
+              <Value DisplayName="Band Pass">2</Value>
+              <Value DisplayName="Notch">3</Value>
+              <Value DisplayName="Peaking">6</Value>
+              <Value DisplayName="Low Shelf">4</Value>
+              <Value DisplayName="High Shelf">5</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="FrequencyBand8" DocId="FrequencyBand" Type="Real32" SupportRTPCType="Exclusive" DataMeaning="Frequency" DisplayName="Band 8 Frequency" ShortDisplayName="Frequency" DisplayCategory="8">
+        <UserInterface Decimals="0"/>
+        <DefaultValue>9000</DefaultValue>
+        <AudioEnginePropertyID>802</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="GainBand8" DocId="GainBand" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" DisplayName="Band 8 Gain" ShortDisplayName="Gain" DisplayCategory="8">
+        <UserInterface Step="0.5" Fine="0.1" Decimals="1"/>
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>803</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-24</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="QFactorBand8" DocId="QFactorBand" Type="Real32" SupportRTPCType="Exclusive" DisplayName="Band 8 Quality Factor" ShortDisplayName="Q" DisplayCategory="8">
+        <UserInterface Step="0.1" Fine="0.01" Decimals="3" SliderType="8"/>
+        <DefaultValue>1</DefaultValue>
+        <AudioEnginePropertyID>804</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0.025</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Band Pass -->
+                <Value>2</Value>
+                <!-- Notch -->
+                <Value>3</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+                <!-- LPF/HPF with Q -->
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RolloffRateBand8" DocId="RolloffBand" Type="int32" DisplayName="Band 8 Rolloff" ShortDisplayName="Rolloff" DisplayCategory="8">
+        <DefaultValue>12</DefaultValue>
+        <AudioEnginePropertyID>805</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="12 dB/oct">12</Value>
+              <Value DisplayName="24 dB/oct">24</Value>
+              <Value DisplayName="36 dB/oct">36</Value>
+              <Value DisplayName="48 dB/oct">48</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Pass, High Pass, Low shelf, high shelf -->
+                <Value>0</Value>
+                <Value>1</Value>
+                <Value>7</Value>
+                <Value>8</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="DynamicsEnableBand8" DocId="DynamicsEnable" Type="bool" DisplayCategory="8" DisplayGroup="Dynamics" DisplayName="Band 8 Enable Dynamics" ShortDisplayName="Enable">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>806</AudioEnginePropertyID>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ThresholdBand8" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsThreshold" DisplayCategory="8" DisplayGroup="Dynamics" DisplayName="Band 8 Dynamics Threshold" ShortDisplayName="Threshold">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>807</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-96</Min>
+              <Max>24</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="RangeBand8" Type="Real32" SupportRTPCType="Exclusive" DocId="DynamicsRange" DisplayCategory="8" DisplayGroup="Dynamics" DisplayName="Band 8 Dynamics Range" ShortDisplayName="Range">
+        <UserInterface Step="0.1" Decimals="1" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>808</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-30</Min>
+              <Max>30</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="AttackTimeBand8" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsAttack" DisplayCategory="8" DisplayGroup="Dynamics" DisplayName="Band 8 Dynamics Attack" ShortDisplayName="Attack">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>809</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="ReleaseTimeBand8" Type="Real32" SupportRTPCType="Additive" DocId="DynamicsRelease" DisplayCategory="8" DisplayGroup="Dynamics" DisplayName="Band 8 Dynamics Release" ShortDisplayName="Release">
+        <UserInterface Step="0.01" Decimals="3" Fine="0.001" />
+        <DefaultValue>0.1</DefaultValue>
+        <AudioEnginePropertyID>810</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>0</Min>
+              <Max>2</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="OnOffBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="DynamicsEnableBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="FilterTypeBand8" Action="Enable">
+            <Condition>
+              <Enumeration Type="int32">
+                <!-- Low Shelf -->
+                <Value>4</Value>
+                <!-- High Shelf -->
+                <Value>5</Value>
+                <!-- Peaking -->
+                <Value>6</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+          <PropertyDependency Name="NumBands" Action="Show">
+            <Condition>
+              <Range Type="int32">
+                <Min>8</Min>
+                <Max>8</Max>
+              </Range>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+    </Properties>
+  </EffectPlugin>
+</PluginModule>

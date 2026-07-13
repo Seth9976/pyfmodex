@@ -1,0 +1,37 @@
+// SuperRangeContext.wafm
+
+{
+  "ak.dlg.Ak3DToolbar.SuperRangeContext": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      {
+        "Name": "SuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 170,
+          "Height": 50,
+          "Children": [
+            {
+              "Name": "SuperRange",
+              "Positions": [ 10, 9, 150, 30 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

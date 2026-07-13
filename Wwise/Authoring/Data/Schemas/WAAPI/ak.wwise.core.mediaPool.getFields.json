@@ -1,0 +1,61 @@
+{
+    "version": 1,
+    "functions": [
+        {
+            "id": "ak.wwise.core.mediaPool.getFields",
+            "restrict": [
+                "userInterface",
+                "commandLine"
+            ],
+            "seeAlso": [
+                "ak.wwise.core.mediaPool.get"
+            ],
+            "description": "Retrieve all fields present in the Media Pool. You can then use the fields to query the Media Pool. The Media Pool discovers some fields when it scans audio files. Others, such as WAV fields, are always available.",
+            "argsSchema": {
+                "type": "object",
+                "additionalProperties": false
+            },
+            "resultSchema": {
+                "type": "object",
+                "properties": {
+                    "return": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "waapi_definitions.json#/definitions/mediaPoolField",
+                            "description": "The field name."
+                        },
+                        "description": "The list of fields available to use in Media Pool queries."
+                    }
+                },
+                "additionalProperties": false
+
+            },
+            "optionsSchema": {
+                "type": "object",
+                "additionalProperties": false
+            },
+            "examples": [
+                {
+                    "title": "Getting all the fields from the Media Pool",
+                    "description": "Get all the fields available in the Media Pool.",
+                    "args": {},
+                    "result": { "return": [
+                        "Filename",
+                        "WAV/Duration",
+                        "WAV/Sample Rate",
+                        "WAV/Bit Depth",
+                        "WAV/Channels",
+                        "WAV/Channel Configuration",
+                        "WAV/Data Size",
+                        "WAV/Loop Start",
+                        "WAV/Loop End",
+                        "WAV/Marker Count",
+                        "WAV/Samples"
+                    ] }
+                }
+            ]
+        }
+    ],
+    "topics": [],
+    "validators": []
+}

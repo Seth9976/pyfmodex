@@ -1,0 +1,465 @@
+{
+    "version": 1,
+    "functions": [
+        {
+            "id": "ak.wwise.core.mediaPool.get",
+            "restrict": [
+                "userInterface",
+                "commandLine"
+            ],
+            "seeAlso": [
+                "ak.wwise.core.mediaPool.getFields"
+            ],
+            "description": "Retrieve files from Media Pool. Use the return options to specify which properties of the files to return.",
+            "argsSchema": {
+                "type": "object",
+                "properties": {
+                    "searchText": {
+                        "type": "string",
+                        "description": "The text for the fuzzy search in the Media Pool. The search is case-insensitive. When not specified, all files matching the specified filter and specified databases are returned."
+                    },
+                    "databases": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "waapi_definitions.json#/definitions/objectArg",
+                            "description": "The ID (GUID) or path of the database to include in the search. For the database representing the project originals, use the path '\\\\Databases\\\\Project Originals'."
+                        },
+                        "description": "The list of databases to include. If not specified, all databases are included."
+                    },
+                    "filters": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "description": "The filter to apply to the search.",
+                            "properties": {
+                                "type": {
+                                    "type":"string",
+                                    "anyOf": [
+                                        {
+                                            "enum": ["field"],
+                                            "description": "Filter by a specific field in the Media Pool. See ak.core.mediaPool.getFields for the list of supported fields."
+                                        },
+                                        {
+                                            "enum": ["audioDescription"],
+                                            "description": "Filter by description of the desired audio content. You can also specify a weight for the filter."
+                                        },
+                                        {
+                                            "enum": ["audioSimilarity"],
+                                            "description": "Filter by audio similarity, which find files that are similar to the audio file at the specified path. You can also specify a weight for the filter."
+                                        }
+                                    ],
+                                    "description": "The type of the filter."
+                                },
+                                "weight": {
+                                    "type": "number",
+                                    "description": "The weight of the filter. Normally as decimal value between 0 and 1. The higher the weight, the more important the filter is in the search results. If not specified, a default weight of 1 is used. The weight is only used for audio similarity filters."
+                                },
+                                "field": {
+                                    "$ref": "waapi_definitions.json#/definitions/mediaPoolField",
+                                    "description": "The name of the field by which to filter. Possible fields include standard WAV fields, file system fields, extracted audio features, and metadata fields from the IXML chunk. The supported fields depend on files in the Media Pool databases. See ak.core.mediaPool.getFields for the list of supported fields. Use this property when the type is 'field'."
+                                },
+                                "operator": {
+                                    "description": "The type of operator to use to evaluate a field value. Supported operators vary by field type (numeric or text). Use this property when the type is 'field'.",
+                                    "type":"string",
+                                    "oneOf": [
+                                        {
+                                            "enum": ["equals"],
+                                            "description": "The field value is exactly equal to the specified value."
+                                        },
+                                        {
+                                            "enum": ["notEquals"],
+                                            "description": "The field value is not equal to the specified value."
+                                        },
+                                        {
+                                            "enum": ["contains"],
+                                            "description": "The field value contains the specified text (case-sensitive). Text value only."
+                                        },
+                                        {
+                                            "enum": ["startsWith"],
+                                            "description": "The field value begins with the specified text. Text value only."
+                                        },
+                                        {
+                                            "enum": ["endsWith"],
+                                            "description": "The field value ends with the specified text. Text value only."
+                                        },
+                                        {
+                                            "enum": ["matchesRegex"],
+                                            "description": "The field value matches the specified regular expression. Text value only."
+                                        },
+                                        {
+                                            "enum": ["lessThan"],
+                                            "description": "The numeric field value is less than the specified value. Numeric value only."
+                                        },
+                                        {
+                                            "enum": ["greaterThan"],
+                                            "description": "The numeric field value is greater than the specified value. Numeric value only."
+                                        },
+                                        {
+                                            "enum": ["lessThanOrEqual"],
+                                            "description": "The numeric field value is less than or equal to the specified value. Numeric value only."
+                                        },
+                                        {
+                                            "enum": ["greaterThanOrEqual"],
+                                            "description": "The numeric field value is greater than or equal to the specified value. Numeric value only."
+                                        }
+                                    ]
+                                },
+                                "value": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string",
+                                            "description": "The value to which to compare the field if the field is a text value."
+                                        },
+                                        {
+                                            "type": "number",
+                                            "description": "The value to which to compare the field if the field is a numeric value."
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "The description text to use when the filter type is audio description."
+                                        },
+                                        {
+                                            "type": "string",
+                                            "description": "The path to an audio file when the filter type is audio similarity."
+                                        }
+                                    ]
+                                }
+                            },                        
+                            "required": [
+                                "type",
+                                "value"
+                            ]
+                        },
+                        "description": "The list of filters to apply. When not specified, no filters are applied."
+                    },
+                    "maxResults": {
+                        "type": "integer",
+                        "description": "The maximum number of results to return. If not specified, a maximum 1000 files are returned."
+                    }
+                },
+                "required": [],
+                "additionalProperties": false
+            },
+            "resultSchema": {
+                "type": "object",
+                "properties": {
+                    "return": {
+                        "type": "array",
+                        "description": "The list of files matching the search criteria. Each file is represented as an object with properties defined by the options.",
+                        "items": {
+                            "type": "object",
+                            "description": "A file in the Media Pool. The properties of the file depend on the options.",
+                            "additionalProperties": true
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "optionsSchema": {
+                "type": "object",
+                "properties": {
+                    "return": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "waapi_definitions.json#/definitions/mediaPoolReturnOption",
+                            "description": "A property to return for each file. The name is case-sensitive. Not all properties are available for all files."
+                        },
+                        "description": "The list of properties to return for each file. If not specified, the following properties are returned: 'Path', 'FileId', 'Db'."
+                    }
+                },
+                "additionalProperties": false
+            },
+            "examples": [
+                {
+                    "title": "Getting all files from a specific database in the Media Pool",
+                    "description": "Query the media with FootStep database id.",
+                    "args": {
+                        "databases": ["{4BAA7169-B669-4FDC-8711-4E80202396EC}"] 
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Path": "C:\\WAV\\FootStep\\Concrete\\Concrete_Footstep_01.wav",
+                                "FileId": "{06E33651-DBB1-414E-9771-4969C3A9EF6E}",
+                                "Db": {
+                                    "id": "{4BAA7169-B669-4FDC-8711-4E80202396EC}",
+                                    "name": "FootStep"
+                                }
+                            },
+                            {
+                                "Path": "C:\\WAV\\FootStep\\Concrete\\Concrete_Footstep_02.wav",
+                                "FileId": "{72FDEC4C-5E71-4551-8D74-C306E7BBF4B4}",
+                                "Db": {
+                                    "id": "{4BAA7169-B669-4FDC-8711-4E80202396EC}",
+                                    "name": "FootStep"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Getting all files from the Project Originals database",
+                    "description": "Query the media with Project Originals database id.",
+                    "args": {
+                        "databases": ["\\Databases\\Project Originals"] 
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Path": "C:\\MyProject\\Originals\\SFX\\Concrete_Footstep_01.wav",
+                                "FileId": "{2392B2A9-D4A0-4395-A867-57AE8901BC13}",
+                                "Db": {
+                                    "id": "{D8CFE25E-5600-4120-86BD-9079EFA32F98}",
+                                    "name": "Project Originals"
+                                }
+                            },
+                            {
+                                "Path": "C:\\MyProject\\Originals\\SFX\\Concrete_Footstep_02.wav",
+                                "FileId": "{A460921E-24BF-45E1-A934-2336419AF936}",
+                                "Db": {
+                                    "id": "{D8CFE25E-5600-4120-86BD-9079EFA32F98}",
+                                    "name": "Project Originals"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Searching the Media Pool for files with a specific keyword",
+                    "description": "Performs a text search for the keyword 'Concrete' in the Media Pool.",
+                    "args": {
+                        "searchText": "Concrete"
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Path": "C:\\WAV\\FootStep\\Concrete\\Concrete_Footstep_01.wav",
+                                "FileId": "{E7A5D7C1-3B8F-4B7B-8E2E-1A2B3C4D5E6F}",
+                                "Db": {
+                                    "id": "{D8CFE25E-5600-4120-86BD-9079EFA32F98}",
+                                    "name": "FootStep"
+                                }
+                            },
+                            {
+                                "Path": "C:\\WAV\\FootStep\\Concrete\\Concrete_Footstep_02.wav",
+                                "FileId": "{F3B9A1C5-8A7D-4C6E-9F3A-2B1C8D7E6F5A}",
+                                "Db": {
+                                    "id": "{D8CFE25E-5600-4120-86BD-9079EFA32F98}",
+                                    "name": "FootStep"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Filtering files by duration in the Media Pool",
+                    "description": "Retrieves audio files that are longer than 5 seconds.",
+                    "args": {
+                        "filters": [
+                            {
+                                "type": "field",
+                                "field": "WAV/Duration",
+                                "operator": "greaterThan",
+                                "value": 5
+                            }
+                        ]
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Path": "C:\\WAV\\Ambiance\\Ambiance_Forest_Long.wav",
+                                "FileId": "{A1B2C3D4-5678-9012-3456-789012345678}",
+                                "Db": {
+                                    "id": "{12345678-ABCD-EFGH-IJKL-MNOPQRSTUVWX}",
+                                    "name": "Ambiance"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Filtering files by regular expression in the Media Pool",
+                    "description": "Retrieves all files ending with '_01.wav' or '_02.wav' using a regex filter on the filename.",
+                    "args": {
+                        "filters": [
+                            {
+                                "type": "field",
+                                "field": "Filename",
+                                "operator": "matchesRegex",
+                                "value": ".*_0[12]\\.wav$"
+                            }
+                        ]
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Path": "C:\\WAV\\FootStep\\Concrete\\Concrete_Footstep_01.wav",
+                                "FileId": "{E7A5D7C1-3B8F-4B7B-8E2E-1A2B3C4D5E6F}",
+                                "Db": {
+                                    "id": "{D8CFE25E-5600-4120-86BD-9079EFA32F98}",
+                                    "name": "FootStep"
+                                }
+                            },
+                            {
+                                "Path": "C:\\WAV\\Weapons\\Gun_Shot_02.wav",
+                                "FileId": "{B2C3D4E5-F6A7-B8C9-D0E1-F2A3B4C5D6E7}",
+                                "Db": {
+                                    "id": "{ABCDEF12-3456-7890-ABCD-EF1234567890}",
+                                    "name": "Weapons"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Finding files by audio description in the Media Pool",
+                    "description": "Searches for files that match the description 'a powerful explosion with debris'.",
+                    "args": {
+                        "filters": [
+                            {
+                                "type": "audioDescription",
+                                "value": "a powerful explosion with debris",
+                                "weight": 0.8
+                            }
+                        ]
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Path": "C:\\WAV\\Explosions\\Explosion_Large_01.wav",
+                                "FileId": "{98765432-10FE-DCBA-9876-543210FEDCBA}",
+                                "Db": {
+                                    "id": "{FEDCBA98-7654-3210-FEDC-BA9876543210}",
+                                    "name": "Explosions"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Finding files by audio similarity in the Media Pool",
+                    "description": "Searches for audio files that sound similar to a specified file.",
+                    "args": {
+                        "filters": [
+                            {
+                                "type": "audioSimilarity",
+                                "value": "C:\\WAV\\FootStep\\Reference\\Wood_Creak_Reference.wav",
+                                "weight": 1.0
+                            }
+                        ]
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Path": "C:\\WAV\\Foley\\Wood_Creak_01.wav",
+                                "FileId": "{CDEF1234-5678-90AB-CDEF-1234567890AB}",
+                                "Db": {
+                                    "id": "{B9A8C7E6-D5F4-A3B2-C1E0-F9A8B7C6D5E4}",
+                                    "name": "Foley"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Limiting the number of results in the Media Pool",
+                    "description": "Searches for 'footstep' but limits the returned results to the first 3 matches.",
+                    "args": {
+                        "searchText": "footstep",
+                        "maxResults": 3
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Path": "C:\\WAV\\FootStep\\Concrete\\Concrete_Footstep_01.wav",
+                                "FileId": "{E7A5D7C1-3B8F-4B7B-8E2E-1A2B3C4D5E6F}",
+                                "Db": {
+                                    "id": "{D8CFE25E-5600-4120-86BD-9079EFA32F98}",
+                                    "name": "FootStep"
+                                }
+                            },
+                            {
+                                "Path": "C:\\WAV\\FootStep\\Concrete\\Concrete_Footstep_02.wav",
+                                "FileId": "{32A1B2C3-4D5E-6F7A-8B9C-D0E1F2A3B4C5}",
+                                "Db": {
+                                    "id": "{D8CFE25E-5600-4120-86BD-9079EFA32F98}",
+                                    "name": "FootStep"
+                                }
+                            },
+                            {
+                                "Path": "C:\\WAV\\FootStep\\Concrete\\Concrete_Footstep_03.wav",
+                                "FileId": "{F3B9A1C5-8A7D-4C6E-9F3A-2B1C8D7E6F5A}",
+                                "Db": {
+                                    "id": "{D8CFE25E-5600-4120-86BD-9079EFA32F98}",
+                                    "name": "FootStep"
+                                }
+                            }                            
+                        ]
+                    }
+                },
+                {
+                    "title": "Customizing the return values in the Media Pool",
+                    "description": "Searches for files and returns only their filename, duration, and sample rate.",
+                    "args": {
+                        "searchText": "Gun"
+                    },
+                    "options": {
+                        "return": [
+                            "Filename",
+                            "WAV/Duration",
+                            "WAV/Sample Rate"
+                        ]
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Filename": "Gun_Shot_01.wav",
+                                "WAV/Duration": 0.85,
+                                "WAV/Sample Rate": 48000
+                            },
+                            {
+                                "Filename": "Gun_Shot_02.wav",
+                                "WAV/Duration": 0.92,
+                                "WAV/Sample Rate": 48000
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Combining multiple filters with a custom return in the Media Pool",
+                    "description": "Searches the 'Project Originals' database for stereo files with 'wind' in the name, and returns their path and channel configuration.",
+                    "args": {
+                        "searchText": "wind",
+                        "databases": [
+                            "\\Databases\\Project Originals"
+                        ],
+                        "filters": [
+                            {
+                                "type": "field",
+                                "field": "WAV/Channels",
+                                "operator": "equals",
+                                "value": 2
+                            }
+                        ]
+                    },
+                    "options": {
+                        "return": [
+                            "Path",
+                            "WAV/Channel Configuration"
+                        ]
+                    },
+                    "result": {
+                        "return": [
+                            {
+                                "Path": "C:\\MyProject\\Originals\\SFX\\Ambiance_Wind_Stereo.wav",
+                                "WAV/Channel Configuration": "2.0"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "topics": [],
+    "validators": []
+}

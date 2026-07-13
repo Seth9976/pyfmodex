@@ -1,0 +1,533 @@
+// GameObjectContext.wafm
+
+{
+  "ak.dlg.Ak3DToolbar.GameObjectContext": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      // GO Name
+      {
+        "Name": "GONameIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_GameObjectName_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "GONameCheckbox",
+        "Type": "Checkbox",
+        "Text": "Name",
+        "TooltipText": "Show Game Object Name"
+      },
+      {
+        "Name": "GONamePin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // GO Input Channels
+      {
+        "Name": "GOInputChannelsIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_GameObjectInputChannels_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "GOInputChannelsCheckbox",
+        "Type": "Checkbox",
+        "Text": "Input Channels",
+        "TooltipText": "Show Game Object Input Channels"
+      },
+      {
+        "Name": "GOInputChannelsPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // GO Position
+      {
+        "Name": "GOPositionIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_GameObjectPosition_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "GOPositionCheckbox",
+        "Type": "Checkbox",
+        "Text": "Position",
+        "TooltipText": "Show Game Object Position"
+      },
+      {
+        "Name": "GOPositionPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // GO Voices
+      {
+        "Name": "GOVoicesIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_GameObjectVoices_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "GOVoicesCheckbox",
+        "Type": "Checkbox",
+        "Text": "Voices",
+        "TooltipText": "Show Game Object Voices"
+      },
+      {
+        "Name": "GOVoicesPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Game Object Labels Splitter
+      {
+        "Name": "GameObjectLabelsSeparator",
+        "Type": "LayoutSplitter"
+      },
+      // Active Voices
+      {
+        "Name": "ActiveVoicesIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_ActiveVoicesOnly_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ActiveVoicesCheckbox",
+        "Type": "Checkbox",
+        "Text": "Active Voices Only",
+        "TooltipText": "Show Active Voices Only"
+      },
+      {
+        "Name": "ActiveVoicesPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Virtual Voices
+      {
+        "Name": "VirtualVoicesIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_VirtualVoices_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "VirtualVoicesCheckbox",
+        "Type": "Checkbox",
+        "Text": "Virtual Voices",
+        "TooltipText": "Show Virtual Voices"
+      },
+      {
+        "Name": "VirtualVoicesPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Show Axis
+      {
+        "Name": "ShowAxisIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_Axis_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowAxisCheckbox",
+        "Type": "Checkbox",
+        "Text": "Axis",
+        "TooltipText": "Show Game Object Axis"
+      },
+      {
+        "Name": "ShowAxisPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Axis Length
+      {
+        "Name": "AxisLengthLabel",
+        "Type": "Label",
+        "Text": "Axis Size",
+        "TooltipText": "Game Object Axis Size",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "AxisLengthSuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      // Opacity
+      {
+        "Name": "OpacityIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_RadiusOpacity_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "OpacityLabel",
+        "Type": "Label",
+        "Text": "Radius Opacity",
+        "TooltipText": "Game Object Radius Opacity",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "OpacitySuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      },
+      {
+        "Name": "OpacityPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Show Inaudible Radius
+      {
+        "Name": "ShowInaudibleRadiusIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_InaudibleRadius_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowInaudibleRadiusCheckbox",
+        "Type": "Checkbox",
+        "Text": "Inaudible Radius",
+        "TooltipText": "Show Inaudible Game Object Radius"
+      },
+      {
+        "Name": "ShowInaudibleRadiusPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Attenuation Splitter
+      {
+        "Name": "AttenuationSeparator",
+        "Type": "LayoutSplitter"
+      },
+      // Show Cone
+      {
+        "Name": "ShowConeIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_AttenuationCone_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowConeCheckbox",
+        "Type": "Checkbox",
+        "Text": "Attenuation Cone",
+        "TooltipText": "Show Attenuation Cone"
+      },
+      {
+        "Name": "ShowConePin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Show Radius
+      {
+        "Name": "ShowRadiusIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_AttenuationRadius_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowRadiusCheckbox",
+        "Type": "Checkbox",
+        "Text": "Attenuation Radius",
+        "TooltipText": "Show Attenuation Radius"
+      },
+      {
+        "Name": "ShowRadiusPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Spread Splitter
+      {
+        "Name": "SpreadSeparator",
+        "Type": "LayoutSplitter"
+      },
+      // Show Spread
+      {
+        "Name": "ShowSpreadIcon",
+        "Type": "Image",
+        "Bitmap": "3DToolBar_AttenuationSpread_Checked",
+        "Stretch": "Fit"
+      },
+      {
+        "Name": "ShowSpreadCheckbox",
+        "Type": "Checkbox",
+        "Text": "Spread",
+        "TooltipText": "Show Spread Cones"
+      },
+      {
+        "Name": "ShowSpreadPin",
+        "Type": "ToggleButton",
+        "Icon": "Checkbox_PinList"
+      },
+      // Spread Size
+      {
+        "Name": "SpreadSizeLabel",
+        "Type": "Label",
+        "Text": "Spread Size",
+        "TooltipText": "Spread Cones Size",
+        "TextStyle": [ "VerticallyCentered" ]
+      },
+      {
+        "Name": "SpreadSizeSuperRange",
+        "Type": "SuperRange",
+        "Range": [ 0.0, 1.0 ],
+        "Increments": [ 0.01, 0.001 ],
+        "Precision": 2,
+        "Value": 1.0
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 300,
+          "Height": 400,
+          "Children": [
+            // GO Name
+            {
+              "Name": "GONameIcon",
+              "Positions": [ 10, 12, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GONameCheckbox",
+              "Positions": [ 40, 10, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GONamePin",
+              "Positions": [ 270, 12, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // GO Input Channels
+            {
+              "Name": "GOInputChannelsIcon",
+              "Positions": [ 10, 37, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GOInputChannelsCheckbox",
+              "Positions": [ 40, 35, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GOInputChannelsPin",
+              "Positions": [ 270, 37, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // GO Position
+            {
+              "Name": "GOPositionIcon",
+              "Positions": [ 10, 62, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GOPositionCheckbox",
+              "Positions": [ 40, 60, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GOPositionPin",
+              "Positions": [ 270, 62, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // GO Voices
+            {
+              "Name": "GOVoicesIcon",
+              "Positions": [ 10, 87, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GOVoicesCheckbox",
+              "Positions": [ 40, 85, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "GOVoicesPin",
+              "Positions": [ 270, 87, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Game Object Labels Splitter
+            {
+              "Name": "GameObjectLabelsSeparator",
+              "Positions": [ 0, 110, 300, 10 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Active Voices
+            {
+              "Name": "ActiveVoicesIcon",
+              "Positions": [ 10, 122, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ActiveVoicesCheckbox",
+              "Positions": [ 40, 120, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ActiveVoicesPin",
+              "Positions": [ 270, 122, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Virtual Voices
+            {
+              "Name": "VirtualVoicesIcon",
+              "Positions": [ 10, 147, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "VirtualVoicesCheckbox",
+              "Positions": [ 40, 147, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "VirtualVoicesPin",
+              "Positions": [ 270, 147, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Axis
+            {
+              "Name": "ShowAxisIcon",
+              "Positions": [ 10, 172, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowAxisCheckbox",
+              "Positions": [ 40, 170, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowAxisPin",
+              "Positions": [ 270, 172, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Axis length
+            {
+              "Name": "AxisLengthLabel",
+              "Positions": [ 40, 195, 115, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "AxisLengthSuperRange",
+              "Positions": [ 160, 195, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Opacity
+            {
+              "Name": "OpacityIcon",
+              "Positions": [ 10, 222, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "OpacityLabel",
+              "Positions": [ 40, 220, 115, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "OpacitySuperRange",
+              "Positions": [ 160, 220, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "OpacityPin",
+              "Positions": [ 270, 222, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Inaudible Radius
+            {
+              "Name": "ShowInaudibleRadiusIcon",
+              "Positions": [ 10, 247, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowInaudibleRadiusCheckbox",
+              "Positions": [ 40, 245, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowInaudibleRadiusPin",
+              "Positions": [ 270, 247, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Attenuation Splitter
+            {
+              "Name": "AttenuationSeparator",
+              "Positions": [ 0, 270, 300, 10 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Cone
+            {
+              "Name": "ShowConeIcon",
+              "Positions": [ 10, 282, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowConeCheckbox",
+              "Positions": [ 40, 280, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowConePin",
+              "Positions": [ 270, 282, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Radius
+            {
+              "Name": "ShowRadiusIcon",
+              "Positions": [ 10, 307, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowRadiusCheckbox",
+              "Positions": [ 40, 305, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowRadiusPin",
+              "Positions": [ 270, 307, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Spread Splitter
+            {
+              "Name": "SpreadSeparator",
+              "Positions": [ 0, 330, 300, 10 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Show Spread
+            {
+              "Name": "ShowSpreadIcon",
+              "Positions": [ 10, 342, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowSpreadCheckbox",
+              "Positions": [ 40, 340, 220, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "ShowSpreadPin",
+              "Positions": [ 270, 342, 20, 20 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            // Spread Size
+            {
+              "Name": "SpreadSizeLabel",
+              "Positions": [ 40, 367, 115, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            },
+            {
+              "Name": "SpreadSizeSuperRange",
+              "Positions": [ 160, 367, 100, 25 ],
+              "AnchorSets": [ "side-left", "side-top" ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

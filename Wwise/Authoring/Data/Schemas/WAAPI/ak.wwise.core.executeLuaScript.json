@@ -1,0 +1,117 @@
+{
+    "version": 1,
+    "functions": [
+        {
+            "id": "ak.wwise.core.executeLuaScript",
+            "restrict": [ "commandLine", "userInterface" ],
+            "description": "Execute Lua code from a file path (using \\c luaScript) or directly as a string (using \\c luaString). Optionally, specify additional Lua search paths, additional modules, and additional Lua scripts to load prior to the main script. The script can return a value, which can be any of the Lua types, including tables. All WAAPI arguments will be passed to the Lua script in the \\c wa_args global variable, as a Lua table. Define your own key-values in the WAAPI arguments and access them from the Lua code. Use \\c wa_call to call a WAAPI function from the Lua script. See \\ref ak_wwise_waapi_getfunctions and \\ref ak_wwise_waapi_getschema to learn more about the functions available and their schema before using \\c wa_call. If both \\c luaScript and \\c luaString are provided, the script file will be executed first, followed by the string code. Note that the Lua environment is reset at each call to this function.",
+            "argsSchema": {
+                "type": "object",
+                "properties": {
+                    "luaScript": {
+                        "type": "string",
+                        "description": "Defines the main Lua file path to load and execute. Use this when your Lua code is stored in a file. Use an absolute file path. When this is used, the directory containing the script is automatically added to the Lua module search path, allowing the script to use \\c require to load additional modules from that directory."
+                    },
+                    "luaString": {
+                        "type": "string",
+                        "description": "Defines the main Lua code to execute as a string. Use this when you want to execute Lua code directly without creating a file, which is useful for simple scripts, dynamic code generation, or inline execution. The code can span multiple lines and can use \\c require to load modules from the configured Lua paths. This parameter is mutually optional with \\c luaScript - you can use either one or both. Note: Unlike \\c luaScript, using \\c luaString does not automatically modify the Lua module search path (\\c package.path). If you need to load modules relative to a specific directory, use \\c luaPaths to explicitly add search paths."
+                    },
+                    "luaPaths": {
+                        "$ref": "common_definitions.json#/definitions/arrayOfString",
+                        "description":"Defines an array of paths to be used to search additional Lua modules using the \\c require system. Each path should contain a \\c ? placeholder that will be replaced with the module name. Example: \\c 'C:/path_to_folder/?.lua'. These paths are added to the Lua \\c package.path before the main script or string is executed."
+                    },
+                    "requires": {
+                        "$ref": "common_definitions.json#/definitions/arrayOfString",
+                        "description": "Defines additional modules to be loaded at runtime using the \\c require system. Each module will be loaded before the main script or string is executed. Note that the following folders are automatically added to the Lua module search path: \\c PROJECT/Add-ons/Lua, \\c APPDATA/Audiokinetic/Wwise/Add-ons/Lua, \\c INSTALLDIR/Authoring/Data/Add-ons/Lua. You can place custom modules in these directories and reference them here by name."
+                    },
+                    "doFiles": {
+                        "$ref": "common_definitions.json#/definitions/arrayOfString",
+                        "description": "Defines additional Lua files or directories to load before the main Lua script or string is executed. If a file path is provided, that specific file will be executed. If a directory path is provided, all \\c .lua files in that directory and its subdirectories will be loaded recursively. This is useful for loading helper functions, configuration, or setup code that the main script depends on."
+                    }
+                },
+                "required": [],
+                "additionalProperties": true
+            },
+            "resultSchema": {
+                "type": "object",
+                "properties": {
+                    "return": {
+                        "type": ["boolean", "object", "array", "number", "string"],
+                        "description": "Result returned by the Lua script. Use a return statement at the end of the script. In the case of a script that does not return any value, this field will be false."
+                    }
+                },
+                "required": [ "return" ],
+                "additionalProperties": false
+            },
+            "optionsSchema": {
+                "type": "object",
+                "properties": { },
+                "additionalProperties": false
+            },
+            "examples": [
+                {
+                    "title": "Execute a simple Lua string",
+                    "description": "Executes Lua code provided as a string and returns a simple value. This is useful for quick inline scripts without creating a file.",
+                    "args": {
+                        "luaString": "return 42"
+                    },
+                    "result": {
+                        "return": 42
+                    }
+                },
+                {
+                    "title": "Execute Lua string with arguments",
+                    "description": "Executes Lua code that accesses custom arguments passed via \\c wa_args. All additional arguments in the WAAPI call are accessible as fields in the \\c wa_args table within the Lua code.",
+                    "args": {
+                        "luaString": "return { sum = wa_args.a + wa_args.b, product = wa_args.a * wa_args.b }",
+                        "a": 10,
+                        "b": 20
+                    },
+                    "result": {
+                        "return": {
+                            "sum": 30,
+                            "product": 200
+                        }
+                    }
+                },
+                {
+                    "title": "Execute Lua string with wa_call",
+                    "description": "Executes Lua code that calls WAAPI functions using \\c wa_call. This demonstrates how to interact with the Wwise API from within the Lua code, such as adding a log message.",
+                    "args": {
+                        "luaString": "wa_call('ak.wwise.core.log.addItem', { message = wa_args.message, severity = 'Message' }, {})\nreturn 'success'",
+                        "message": "Hello from Lua string"
+                    },
+                    "result": {
+                        "return": "success"
+                    }
+                },
+                {
+                    "title": "Execute Lua string with conditional logic",
+                    "description": "Executes Lua code with control flow logic. The \\c luaString can contain multiple lines and use standard Lua control structures like if/else, loops, and functions.",
+                    "args": {
+                        "luaString": "if wa_args.value > 10 then\n  return 'greater'\nelse\n  return 'less or equal'\nend",
+                        "value": 15
+                    },
+                    "result": {
+                        "return": "greater"
+                    }
+                },
+                {
+                    "title": "Execute Lua file from path",
+                    "description": "Executes a Lua script from a file path. This is the traditional way to execute Lua scripts and is preferred for longer, more complex scripts. Custom arguments can be passed and accessed via \\c wa_args within the script file.",
+                    "args": {
+                        "luaScript": "C:\\scripts\\my_script.lua",
+                        "customArg": "value"
+                    },
+                    "result": {
+                        "return": {
+                            "status": "Script executed successfully"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "topics": [],
+    "validators": []
+}

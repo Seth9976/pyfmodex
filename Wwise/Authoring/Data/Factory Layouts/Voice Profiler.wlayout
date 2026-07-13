@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layout Name="Voice Profiler">
+	<StackPanel Name="StackPanel" ID="{A98C9E98-0BC7-4BE5-BF36-889F7EEC1161}" Width="1634" Height="735" Orientation="Vertical">
+		<StackPanel Name="StackPanel" ID="{76E149F8-1333-446E-B4CC-88A279B22882}" Width="886.8461" Height="916.5259" Orientation="Vertical">
+			<StackPanel Name="StackPanel" ID="{264EDE24-4F46-465D-B938-35BF6B40B9A7}" Width="1773.692" Height="458.2629" Orientation="Horizontal">
+				<View Name="VoiceExplorer" ID="{D8C48AE8-2717-43B5-9258-D84F2D548674}" Width="397.1538" Height="458.2629" SelectionChannel="1"/>
+				<Splitter ID="{2D133071-DCE7-4AB1-8FA3-86F233D7E64D}"/>
+				<View Name="VoiceInspector" ID="{ECD48DA9-375A-40E1-BB4B-6A87815479F7}" Width="1371.692" Height="458.2629" SelectionChannel="1"/>
+			</StackPanel>
+			<Splitter ID="{A0839A41-EDC4-4130-B927-944F277312BF}"/>
+			<View Name="VoiceMonitor" ID="{51678F77-A1F4-4639-989F-54B3926B4F9D}" Width="886.8461" Height="453.3728" SelectionChannel="1"/>
+		</StackPanel>
+	</StackPanel>
+	<LastPositions>
+		<ViewPosition Name="VoiceInspector" WindowPlacement_Flags="0" WindowPlacement_ShowCmd="Normal" WindowPlacement_MinPos_X="-1" WindowPlacement_MinPos_Y="-1" WindowPlacement_MaxPos_X="-1" WindowPlacement_MaxPos_Y="-1" WindowPlacement_NormalPos_Left="2058" WindowPlacement_NormalPos_Top="1717" WindowPlacement_NormalPos_Right="3367" WindowPlacement_NormalPos_Bottom="2138"/>
+	</LastPositions>
+</Layout>

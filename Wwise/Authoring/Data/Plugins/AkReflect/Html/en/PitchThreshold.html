@@ -1,0 +1,6 @@
+
+<h2>Pitch Limit</h2>
+<p>Sets the maximum allowable Doppler pitch shift (in cents). Pitch shifting is caused by changes in delay time, so the rate of delay change is capped to stay within the specified pitch limit. When this rate is reduced to honor the limit, a discrepancy can occur between the effective delay and the desired delay. This discrepancy can be managed using the <strong>Delay Error Tolerance</strong> property.</p>
+<p>This value will not be updated if the reflect length/delay is actively changing. This parameter can be controlled by RTPCs and States; but, updating of the RTPC or State during game play is not recommended. Real-time updates are honored but not guaranteed to be handled without artifacts.</p>
+<p>Default value: 300<br/>
+Range: 0 to 9600<br/></p>

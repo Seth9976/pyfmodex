@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2006 Audiokinetic Inc. -->
+<PluginModule>
+	<EffectPlugin Name="Wwise Recorder (ADM)" CompanyID="0" PluginID="198" DisplayName="Recorder (ADM)">
+		<PluginInfo MenuPath="00-Wwise">
+			<PlatformSupport>
+				<Platform Name="Any">
+					<CanBeInsertOnBusses>true</CanBeInsertOnBusses>
+					<CanBeInsertOnAudioObjects>false</CanBeInsertOnAudioObjects>
+				</Platform>
+			</PlatformSupport>
+		</PluginInfo>
+		<Properties>
+			<Property Name="Profile" Type="int16" DisplayName="Profile" DisplayGroup="File Attributes" IsVisible="false">
+				<DefaultValue>0</DefaultValue>
+				<Restrictions>
+					<ValueRestriction>
+						<Enumeration Type="int16">
+							<Value DisplayName="EBU TECH 3392 ADM BROADCAST PRODUCTION PROFILE">0</Value>
+							<Value DisplayName="Dolby Atmos® Master ADM Profile Version 1.1">1</Value>
+						</Enumeration>
+					</ValueRestriction>
+				</Restrictions>
+				<AudioEnginePropertyID>0</AudioEnginePropertyID>
+			</Property>
+			<Property Name="ChannelCount" Type="int16" DisplayName="Channel Count" DisplayGroup="File Attributes">
+				<DefaultValue>64</DefaultValue>
+				<Restrictions>
+					<ValueRestriction>
+						<Range Type="int16">
+							<Min>2</Min>
+							<Max>128</Max>
+						</Range>
+					</ValueRestriction>
+				</Restrictions>
+				<AudioEnginePropertyID>1</AudioEnginePropertyID>
+			</Property>
+			<Property Name="MainMixChannelConfig" Type="int32" DisplayName="Main Mix Channel Configuration" DisplayGroup="File Attributes">
+				<DefaultValue>6549768</DefaultValue>
+				<Restrictions>
+					<ValueRestriction>
+						<Enumeration Type="int32">
+							<!-- Dolby Atmos Profile Version 1.1 configurations -->
+							<Value DisplayName="2.0">12546</Value>
+							<Value DisplayName="3.0">28931</Value>
+							<Value DisplayName="5.0">6320389</Value>
+							<Value DisplayName="5.1">6353158</Value>
+							<!-- <Value DisplayName="7.0">6516999</Value> not in ITU-R BS.2094-1 -->
+							<Value DisplayName="7.1">6549768</Value>
+							<!-- <Value DisplayName="7.0.2">90403081</Value> not in ITU-R BS.2094-1 -->
+							<!-- <Value DisplayName="7.1.2">90435850</Value> not in ITU-R BS.2094-1 -->
+
+							<!-- ITU-R BS.2094-1 configurations -->
+							<Value DisplayName="7.1.4">761524492</Value>
+						</Enumeration>
+					</ValueRestriction>
+				</Restrictions>
+				<AudioEnginePropertyID>2</AudioEnginePropertyID>
+			</Property>
+			<Property Name="Passthrough" Type="bool" DisplayName="Enable Passthrough Mix" DisplayGroup="File Attributes">
+				<DefaultValue>false</DefaultValue>
+				<AudioEnginePropertyID>3</AudioEnginePropertyID>
+			</Property>
+			<Property Name="PreserveExtraBeds" Type="bool" DisplayName="Preserve Extra Beds" DisplayGroup="File Attributes">
+				<DefaultValue>false</DefaultValue>
+				<AudioEnginePropertyID>4</AudioEnginePropertyID>
+			</Property>
+			<Property Name="AuthoringFilename" Type="string" IsVisible="false">
+				<DefaultValue>AKRecorderADM-%s.wav</DefaultValue>
+				<AudioEnginePropertyID>10</AudioEnginePropertyID>
+			</Property>
+			<Property Name="GameFilename" Type="string" IsVisible="false">
+				<DefaultValue/>
+				<AudioEnginePropertyID>9</AudioEnginePropertyID>
+			</Property>
+			<Property Name="ApplyDownstreamVolume" Type="bool" DisplayName="Apply Downstream Volume" DisplayGroup="Recorder Input">
+				<DefaultValue>false</DefaultValue>
+				<AudioEnginePropertyID>8</AudioEnginePropertyID>
+			</Property>
+			<Property Name="Hold" Type="bool" SupportRTPCType="Exclusive" DisplayName="Hold">
+				<DefaultValue>false</DefaultValue>
+				<AudioEnginePropertyID>11</AudioEnginePropertyID>
+			</Property>
+		</Properties>
+	</EffectPlugin>
+</PluginModule>

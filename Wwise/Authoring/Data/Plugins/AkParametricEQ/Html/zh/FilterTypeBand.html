@@ -1,0 +1,15 @@
+
+<h2>Type</h2>
+<p>类型。决定给定频段应用哪种滤波器：</p>
+<ul>
+<li><strong>Low Pass Flat</strong> —— 低通。从指定频率中提供高频率的固定斜率衰减。 在低于该点时，信号具有平坦的频率响应；但在截止频率点以上，频率越高衰减得越厉害。衰减的速率可通过 Rolloff 属性来控制。For example, using Low Pass Flat, you can reduce the high-frequency sounds of a water fountain to make it sound more like a pot of boiling water.</li>
+<li><strong>High Pass Flat</strong> —— 高通。从指定频率中提供低频率的固定斜率衰减。 在高于该点时，信号具有平坦的频率响应；但在截止频率点以下，频率越低衰减得越厉害。衰减的速率可通过 Rolloff 属性来控制。For example, using High Pass Flat you can reduce the low-frequency sounds of a water fountain to make it sound like sizzling bacon.</li>
+<li><strong>Low Pass Q</strong> – 从给定频率开始对高频成分实施衰减。This provides a boost in volume at the cutoff frequency based on the Q. Higher frequencies are progressively more attenuated above the cutoff frequency point. 衰减的速率可通过 Rolloff 属性来控制。For example, you can reduce the high frequencies and adjust the Q level  to make footsteps sound far away or muffled.</li>
+<li><strong>High Pass Q</strong> – 从给定频率开始对低频成分实施衰减。藉此，可基于 Q 值在截止频率处调高音量；在截止频率点以下，频率越低衰减越厉害。衰减的速率可通过 Rolloff 属性来控制。For example, you can reduce the low frequencies and adjust the Q level to make footsteps sound sharper on a harder surface.</li>
+<li><strong>Band Pass</strong> —— 带通。拒绝指定中心频率周围的所有频率。 The range of frequencies around the center is controlled by the Q. For example, you can reduce or increase a wide band of frequencies to make a voice sound very close or muffled depending on the direction of the band.</li>
+<li><strong>Notch</strong> —— 带阻。为指定频率范围的固定衰减提供一个不同的宽度。 The range of frequencies around the center is controlled by the Q. For example, use this narrow band to emphasize or underemphasize specific frequencies to make a voice sound more clear or give the effect of it being fuzzy.</li>
+<li><strong>Low Shelf</strong> —— 低架。为指定范围的低频率提供增益/衰减。 此曲线类型也被称为 Bass Tone Control（低音控制）。 For example, use this to identify and cut muddy frequencies to have a cleaner instrument sound.</li>
+<li><strong>High Shelf</strong> —— 高架。为指定范围的高频率提供增益/衰减。 此曲线类型也被称为 Treble Tone Control（高音控制）。 For example, configure the highest frequencies of the audio to provide crisper vocals.</li>
+<li><strong>Peaking (default)</strong> to provide amplification/attenuation of a specified frequency range with a varying width. The range of frequencies around the peak is controlled by the Q. Use to precisely boost or reduce frequencies, for example to add a crisper sound to a snare drum. Choose a narrow or wider band allowing for more precision.</li>
+</ul>
+<p>Default value: Peaking<br/></p>

@@ -1,0 +1,87 @@
+{
+  "ak.dlg.ResetLayoutsDlg": {
+    "Version": 1,
+    "Type": "Dialog",
+    "RootWidget": "MainDialog",
+    "Metadata": {},
+    "Widgets": [
+      {
+        "Name": "DialogInfo",
+        "Type": "Label",
+        "Text": "Choose layouts you would like to revert to their factory settings.",
+        "TextStyle": ["VerticallyCentered"]
+      },
+      {
+        "Name": "LayoutsList",
+        "Type": "Tree"
+      },
+      {
+        "Name": "SelectAllButton",
+        "Type": "PushButton",
+        "Text": "Select All"
+      },
+      {
+        "Name": "SelectNoneButton",
+        "Type": "PushButton",
+        "Text": "Select None"
+      },
+      {
+        "Name": "ResetLayoutsButton",
+        "Type": "PushButton",
+        "Text": "Reset Layouts",
+        "TooltipText": "Reset Layouts"
+      },
+      {
+        "Name": "CancelButton",
+        "Type": "PushButton",
+        "Text": "Cancel",
+        "TooltipText": "Cancel the dialog",
+        "ModalResult": "Cancel"
+      }
+    ],
+    "Layouts": {
+      "Settings": [
+        {
+          "Name": "MainDialog",
+          "Type": "AnchorLayout",
+          "Width": 615,
+          "Height": 343,
+          "MinWidth": 615,
+          "MinHeight": 343,
+          "Children": [
+            {
+              "Name": "DialogInfo",
+              "Positions": [5, 5, 605, 20],
+              "AnchorSets": ["side-left", "side-top"]
+            },
+            {
+              "Name": "LayoutsList",
+              "Positions": [5, 30, 605, 273],
+              "AnchorSets": ["side-left", "side-top"]
+            },
+            {
+              "Name": "SelectAllButton",
+              "Positions": [5, 308, 100, 22],
+              "AnchorSets": ["side-left", "side-top"]
+            },
+            {
+              "Name": "SelectNoneButton",
+              "Positions": [110, 308, 100, 22],
+              "AnchorSets": ["side-left", "side-top"]
+            },
+            {
+              "Name": "ResetLayoutsButton",
+              "Positions": [405, 308, 100, 28],
+              "AnchorSets": ["side-right", "side-bottom"]
+            },
+            {
+              "Name": "CancelButton",
+              "Positions": [510, 308, 100, 28],
+              "AnchorSets": ["side-right", "side-bottom"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

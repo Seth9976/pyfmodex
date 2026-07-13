@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2024 Audiokinetic Inc. -->
+<PluginModule>
+  <EffectPlugin Name="Ak Sidechain Send" CompanyID="0" PluginID="193" DisplayName="Sidechain Send">
+    <PluginInfo MenuPath="00-Wwise">
+      <PlatformSupport>
+        <Platform Name="Any">
+          <CanBeInsertOnBusses>true</CanBeInsertOnBusses>
+          <CanBeInsertOnAudioObjects>false</CanBeInsertOnAudioObjects>
+          <CanBeRendered>false</CanBeRendered>
+        </Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    
+    <Properties>
+      <Property Name="SidechainScope" DocId="Scope" Type="int16" DisplayName="Sidechain Scope">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>1</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int16">
+              <Value DisplayName="Global">0</Value>
+              <Value DisplayName="Game Object">1</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      
+      <Property Name="Volume" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" SupportLink="true" DisplayName="Volume">
+        <UserInterface Step="1" Fine="0.1" Decimals="1" UIMin="-96" UIMax="12" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>2</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-200</Min>
+              <Max>200</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      
+      <Property Name="LPF" Type="int16" DataMeaning="Frequency" SupportRTPCType="Exclusive" SupportLink="true" DisplayName="Low-Pass Frequency" IsVisible="true">
+        <DefaultValue>20</DefaultValue>
+        <AudioEnginePropertyID>3</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int16">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="EnableLPF" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      <Property Name="HPF" Type="int16" DataMeaning="Frequency" SupportRTPCType="Exclusive" SupportLink="true" DisplayName="High-Pass Frequency" IsVisible="true">
+        <DefaultValue>20</DefaultValue>
+        <AudioEnginePropertyID>4</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int16">
+              <Min>20</Min>
+              <Max>20000</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+        <Dependencies>
+          <PropertyDependency Name="EnableHPF" Action="Enable">
+            <Condition>
+              <Enumeration Type="bool">
+                <Value>true</Value>
+              </Enumeration>
+            </Condition>
+          </PropertyDependency>
+        </Dependencies>
+      </Property>
+      
+      <Property Name="DelayOutput" Type="bool" DisplayName="Delay Output">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>5</AudioEnginePropertyID>
+      </Property>
+      
+      <Property Name="EnableLPF" Type="bool" SupportLink="true" DisplayName="Enable Low-Pass Filter" IsVisible="true">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>6</AudioEnginePropertyID>
+      </Property>
+      <Property Name="EnableHPF" Type="bool" SupportLink="true" DisplayName="Enable High-Pass Filter" IsVisible="true">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>7</AudioEnginePropertyID>
+      </Property>
+
+      <Reference Name="SidechainRef" DocId="SidechainMixDestination" DisplayName="Sidechain Mix Destination" ShortDisplayName="Sidechain Mix Destination">
+        <AudioEnginePropertyID>0</AudioEnginePropertyID>
+        <Restrictions>
+          <TypeEnumerationRestriction>
+            <Type Name="SidechainMix" />
+          </TypeEnumerationRestriction>
+        </Restrictions>
+      </Reference>
+      
+    </Properties>
+  </EffectPlugin>
+  
+  <EffectPlugin Name="Ak Sidechain Receive" CompanyID="0" PluginID="194" DisplayName="Sidechain Receive">
+    <PluginInfo MenuPath="00-Wwise">
+      <PlatformSupport>
+        <Platform Name="Any">
+          <CanBeInsertOnBusses>true</CanBeInsertOnBusses>
+          <CanBeInsertOnAudioObjects>true</CanBeInsertOnAudioObjects>
+          <CanBeRendered>false</CanBeRendered>
+        </Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    
+    <Properties>
+      <Property Name="SidechainScope" DocId="Scope" Type="int16" DisplayName="Sidechain Scope">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>1</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Global">0</Value>
+              <Value DisplayName="Game Object">1</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="Volume" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" SupportLink="true" DisplayName="Volume">
+        <UserInterface Step="1" Fine="0.1" Decimals="1" UIMin="-96" UIMax="12" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>2</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-200</Min>
+              <Max>200</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      
+      <!-- Copied here only because of alignment across sidechain plug-ins. Could be removed in the future -->
+      <Property Name="LPF" Type="int16" SupportRTPCType="Additive" SupportLink="true" DisplayName="Low-Pass Frequency" IsVisible="false">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>3</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int16">
+              <Min>0</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="HPF" Type="int16" SupportRTPCType="Additive" SupportLink="true" DisplayName="High-Pass Frequency" IsVisible="false">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>4</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int16">
+              <Min>0</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="EnableLPF" Type="bool" SupportLink="true" DisplayName="Enable Low-Pass Filter" IsVisible="true">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>6</AudioEnginePropertyID>
+      </Property>
+      <Property Name="EnableHPF" Type="bool" SupportLink="true" DisplayName="Enable High-Pass Filter" IsVisible="true">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>7</AudioEnginePropertyID>
+      </Property>
+      
+      <Reference Name="SidechainRef" DocId="SidechainMixSource" DisplayName="Sidechain Mix Source" ShortDisplayName="Sidechain Mix Source">
+        <AudioEnginePropertyID>0</AudioEnginePropertyID>
+        <Restrictions>
+          <TypeEnumerationRestriction>
+            <Type Name="SidechainMix" />
+          </TypeEnumerationRestriction>
+        </Restrictions>
+      </Reference>
+    </Properties>
+  </EffectPlugin>
+
+  <SourcePlugin Name="Ak Sidechain Source" CompanyID="0" PluginID="195" EngineStaticLibName="AkSidechainSource" DisplayName="Sidechain Source">
+    <PluginInfo CanUnlink="true" MenuPath="00-Wwise">
+      <PlatformSupport>
+        <Platform Name="Any"></Platform>
+      </PlatformSupport>
+    </PluginInfo>
+    <Properties>
+      <Property Name="SidechainScope" DocId="Scope" Type="int16" DisplayName="Sidechain Scope">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>1</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Enumeration Type="int32">
+              <Value DisplayName="Global">0</Value>
+              <Value DisplayName="Game Object">1</Value>
+            </Enumeration>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="Volume" Type="Real32" SupportRTPCType="Additive" DataMeaning="Decibels" SupportLink="true" DisplayName="Volume">
+        <UserInterface Step="1" Fine="0.1" Decimals="1" UIMin="-96" UIMax="12" />
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>2</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="Real32">
+              <Min>-200</Min>
+              <Max>200</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      
+      <!-- LPF/HPF props copied here only because of alignment across sidechain plug-ins. Could be removed in the future -->
+      <Property Name="LPF" Type="int16" SupportRTPCType="Additive" SupportLink="true" DisplayName="Low-Pass Frequency" IsVisible="false">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>3</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int16">
+              <Min>0</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="HPF" Type="int16" SupportRTPCType="Additive" SupportLink="true" DisplayName="High-Pass Frequency" IsVisible="false">
+        <DefaultValue>0</DefaultValue>
+        <AudioEnginePropertyID>4</AudioEnginePropertyID>
+        <Restrictions>
+          <ValueRestriction>
+            <Range Type="int16">
+              <Min>0</Min>
+              <Max>100</Max>
+            </Range>
+          </ValueRestriction>
+        </Restrictions>
+      </Property>
+      <Property Name="EnableLPF" Type="bool" SupportLink="true" DisplayName="Enable Low-Pass Filter" IsVisible="true">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>6</AudioEnginePropertyID>
+      </Property>
+      <Property Name="EnableHPF" Type="bool" SupportLink="true" DisplayName="Enable High-Pass Filter" IsVisible="true">
+        <DefaultValue>false</DefaultValue>
+        <AudioEnginePropertyID>7</AudioEnginePropertyID>
+      </Property>
+      
+      <Reference Name="SidechainRef" DocId="SidechainMixSource" DisplayName="Sidechain Mix Source" ShortDisplayName="Sidechain Mix Source">
+        <AudioEnginePropertyID>0</AudioEnginePropertyID>
+        <Restrictions>
+          <TypeEnumerationRestriction>
+            <Type Name="SidechainMix" />
+          </TypeEnumerationRestriction>
+        </Restrictions>
+      </Reference>
+    </Properties>
+  </SourcePlugin>
+
+</PluginModule>

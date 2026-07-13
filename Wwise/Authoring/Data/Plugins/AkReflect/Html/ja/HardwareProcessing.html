@@ -1,0 +1,9 @@
+
+<h2>Use Hardware Processing</h2>
+<p>一部のプラットフォームでのみ利用可能。このプロパティは、イメージソース処理にハードウェアアクセラレーションを活用する。有効にすると、ハードウェアアクセラレーションによってReflectのCPU使用量を削減できる場合がある。</p>
+<?div platform="PS5" open="1"?>
+<p><span class="condition" name="PlatformSpecific">PS5で有効にした場合、以下の制限がある：
+- 最大のイメージソースディレイ時間をMax Image Source Delay Timeプロパティで明示的に指定する必要がある。この値より長いディレイを設定したイメージソースはレンダリングされない。
+- 音速をRTPCとして使用できない。
+- 素材のフィルタはFavor Performanceモードでのみレンダリングされる。
+</span><?div platform="PS5" open="0"?></p>
